@@ -1,0 +1,86 @@
+name: Pack patch zip
+
+on:
+  push:
+    paths:
+      - '**/*.yml'
+      - '**/*.json'
+      - '**/*.py'
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Verify files
+        run: |
+          cd .ci && make && cd ..
+          mkdir -p output/json
+          i=0
+          FILES="patches/json/*.json"
+          for f in $FILES
+          do
+            python .ci/json_check.py $f
+            .ci/example-01.exe $f
+            ((i=i+1))
+          done
+          echo "$i file(s) verified"
+
+      - name: Process files
+        run: |
+          python .ci/file-autogen.py
+          python .ci/remove-ids.py
+          current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
+          msg="Patch database version: $current"
+          msg_md="Patch archive built on: \`$current\`"
+          echo $msg > output/json/build.txt
+          echo $msg > build.txt
+          echo $msg_md > patch_built.md
+          echo $msg
+          mv output patch1
+
+      - name: Pack zip
+        run: |
+          mkdir out
+          mv patch1 out/patches
+          cd out
+          zip -r ../patch1.zip patches/*
+          cd ..
+          mkdir patch1_artifact 
+          mv out/patches patch1_artifact/patches
+          cp patch1.zip CNAME build.txt .github/README.md patch_built.md out/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: patch1
+          path: patch1_artifact
+
+      - name: Deploy
+        if: |
+          github.ref_name == 'main' &&
+          github.event_name == 'push' &&
+          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+        run: |
+          cd out
+          git init
+          git add -A
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m 'Deploy patch asset'
+
+      - name: Force push to destination branch
+        if: |
+          github.ref_name == 'main' &&
+          github.event_name == 'push' &&
+          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          force: true
+          directory: out
