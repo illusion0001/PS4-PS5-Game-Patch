@@ -1,0 +1,839 @@
+{
+  "patch": [
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (For Base Console)",
+      "author": "illusion",
+      "note": "Unlocks framerate on Base/Slim PS4",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02021e32",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02021e3c",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02021e41",
+          "value": "eb06"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion",
+      "note": "Fixes framepacing issues at the cost of slightly increased input latency.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02021e32",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02021e3c",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02021e41",
+          "value": "eb06"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x031650c9",
+          "value": "4589b534040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x031650d0",
+          "value": "418bbd30040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x031650d7",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x031650dc",
+          "value": "90909090"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x04090d4c",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x04090d50",
+          "value": "0x000002d0"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x04090d4c",
+          "value": "0x00000640"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x04090d50",
+          "value": "0x00000384"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x0201466f",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x02014679",
+          "value": "0x00000438"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable MenuMan.EnableTopMenuDebug",
+      "author": "illusion",
+      "note": "Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0203064b",
+          "value": "b801000000"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01c6cfaa",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (For Base Console)",
+      "author": "illusion",
+      "note": "Unlocks framerate on Base/Slim PS4",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02106663",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0210666d",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02106672",
+          "value": "eb06"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion",
+      "note": "Fixes framepacing issues at the cost of slightly increased input latency.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02106663",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0210666d",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02106672",
+          "value": "eb06"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0319dcd9",
+          "value": "4589b534040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0319dce0",
+          "value": "418bbd30040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0319dce7",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0319dcec",
+          "value": "90909090"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040d4e3c",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040d4e40",
+          "value": "0x000002d0"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040d4e3c",
+          "value": "0x00000640"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040d4e40",
+          "value": "0x00000384"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x020486cf",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x020486d9",
+          "value": "0x00000438"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable MenuMan.EnableTopMenuDebug",
+      "author": "illusion",
+      "note": "Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02063aab",
+          "value": "b801000000"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01ca0a7a",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.08",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (For Base Console)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "Unlocks framerate on Base/Slim PS4",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x020e0ab3",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e0abd",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e0ac2",
+          "value": "eb06"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.08",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040b4e7c",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040b4e80",
+          "value": "0x000002d0"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.08",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for Base)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040b4e7c",
+          "value": "0x00000640"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040b4e80",
+          "value": "0x00000384"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.08",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for Pro)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x0202172f",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x02021739",
+          "value": "0x00000438"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.08",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01c7a9ea",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (For Base Console)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "Unlocks framerate on Base/Slim PS4",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x020e7f43",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e7f4d",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e7f52",
+          "value": "eb06"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040bce7c",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040bce80",
+          "value": "0x000002d0"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for Base)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040bce7c",
+          "value": "0x00000640"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040bce80",
+          "value": "0x00000384"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for Pro)",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x0202885f",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x02028869",
+          "value": "0x00000438"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01c8032a",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (For Base Console)",
+      "author": "illusion",
+      "note": "Unlocks framerate on Base/Slim PS4",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x020e8083",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e8088",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e8092",
+          "value": "0f1f840000000000"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Framepacing Fix",
+      "author": "illusion",
+      "note": "Fixes framepacing issues at the cost of slightly increased input latency.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x020e8083",
+          "value": "b805000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e8088",
+          "value": "48b90900000009000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020e8092",
+          "value": "0f1f840000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x032bd760",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x032bd765",
+          "value": "ff25a520e600"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040c0e7c",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040c0e80",
+          "value": "0x000002d0"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x040c0e7c",
+          "value": "0x00000640"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x040c0e80",
+          "value": "0x00000384"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x0202898f",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x02028999",
+          "value": "0x00000438"
+        }
+      ]
+    },
+    {
+      "title": "Elden Ring",
+      "app_titleid": [
+        "CUSA28863",
+        "CUSA18723",
+        "CUSA28527"
+      ],
+      "app_ver": "01.10",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01c7f1da",
+          "value": "0x01"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "patch": [
+    {
+      "title": "Sleeping Dogs: Definitive Edition",
+      "app_titleid": [
+        "CUSA01111",
+        "CUSA01004"
+      ],
+      "app_ver": "01.01",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "CPU/GPU Limited. For use with 9th generation of game consoles.",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x00b0788b",
+          "value": "0x00000000"
+        }
+      ]
+    }
+  ]
+}

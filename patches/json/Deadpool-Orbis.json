@@ -1,0 +1,24 @@
+{
+  "patch": [
+    {
+      "title": "Deadpool",
+      "app_titleid": [
+        "CUSA03528",
+        "CUSA03245"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x00b41aa1",
+          "value": "0x00"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "patch": [
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "app_titleid": [
+        "CUSA07511"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch",
+      "author": "illusion",
+      "note": "This game already runs with uncapped framerate.\nOnly useful for Base Console.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02928934",
+          "value": "740d"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02afec8d",
+          "value": "6767e87d0a2200"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02d1f710",
+          "value": "c3488b05c872e102c70000008642c389"
+        }
+      ]
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "app_titleid": [
+        "CUSA07511"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Startup Videos",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x022580c2",
+          "value": "48e987060000"
+        }
+      ]
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "app_titleid": [
+        "CUSA07511"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Motion Blur",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01b8ae71",
+          "value": "eb40"
+        }
+      ]
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "app_titleid": [
+        "CUSA07511"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Film Grain",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x0195c32f",
+          "value": "0xeb"
+        }
+      ]
+    },
+    {
+      "title": "Hellblade: Senua's Sacrifice",
+      "app_titleid": [
+        "CUSA07511"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Post Processing",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0195c2b5",
+          "value": "48e9"
+        }
+      ]
+    }
+  ]
+}

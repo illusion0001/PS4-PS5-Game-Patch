@@ -1,0 +1,47 @@
+{
+  "patch": [
+    {
+      "title": "Assassin's Creed III Remastered",
+      "app_titleid": [
+        "CUSA11560"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "ac3_engine_orbis_fn.elf",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00ca8d8f",
+          "value": "31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00ca8e1a",
+          "value": "31f6"
+        }
+      ]
+    },
+    {
+      "title": "Assassin's Creed Liberation Remastered",
+      "app_titleid": [
+        "CUSA11560"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "acl_engine_orbis_fn.elf",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x016e1eaf",
+          "value": "be00000000"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "patch": [
+    {
+      "title": "Final Fantasy XV (Final Fantasy 15)",
+      "app_titleid": [
+        "CUSA01633",
+        "CUSA01615",
+        "CUSA01706",
+        "CUSA01570"
+      ],
+      "app_ver": "01.30",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Frame Pacing Fix For 30FPS Modes",
+      "author": "illusion",
+      "note": "60FPS will run as is. Only 30FPS Modes are affected.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0108d17f",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0109db20",
+          "value": "b878000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0109db25",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0109db30",
+          "value": "e954beca03"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49989",
+          "value": "e8b6000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d4998e",
+          "value": "bf0001114e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49993",
+          "value": "4883fe3c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49997",
+          "value": "740f"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49999",
+          "value": "4883fe1e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d4999d",
+          "value": "7402"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d4999f",
+          "value": "eb0e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499a1",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499a6",
+          "value": "eb02"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499a8",
+          "value": "31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499aa",
+          "value": "e801d3b8ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499af",
+          "value": "e89f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d499b4",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a44",
+          "value": "488905d5e5ad00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a4b",
+          "value": "48893dd6e5ad00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a52",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a53",
+          "value": "488b05c6e5ad00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a5a",
+          "value": "488b3dc7e5ad00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04d49a61",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "patch": [
+    {
+      "title": "Resident Evil 2",
+      "app_titleid": [
+        "CUSA09193"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch",
+      "author": "illusion",
+      "note": "720p for Base, 1080p for Pro.",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x043c62d7",
+          "value": "0x3f2b851f"
+        }
+      ]
+    },
+    {
+      "title": "Resident Evil 2",
+      "app_titleid": [
+        "CUSA09193"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Limit (Proper Frame-Pacing)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0436e473",
+          "value": "48e8db070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0436ec54",
+          "value": "418b7f10be01000000c3"
+        }
+      ]
+    }
+  ]
+}

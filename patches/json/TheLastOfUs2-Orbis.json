@@ -1,0 +1,1629 @@
+{
+  "patch": [
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00a141dd",
+          "value": "b000"
+        },
+        {
+          "type": "float32",
+          "addr": "0x00ba0ecf",
+          "value": "1.0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0174ef88",
+          "value": "48e823c02b01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afb1",
+          "value": "8b4f60"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afb4",
+          "value": "48891d75509f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afbb",
+          "value": "4889158e509f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afc2",
+          "value": "4c890d8f509f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afc9",
+          "value": "4c8d0d80010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afd0",
+          "value": "488d1d51509f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afd7",
+          "value": "b800eea388"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afdc",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afde",
+          "value": "0f8488000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afe4",
+          "value": "b8210de0b2"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afe9",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0afeb",
+          "value": "0f8490000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0aff1",
+          "value": "b88c0a3298"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0aff6",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0aff8",
+          "value": "0f8498000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0affe",
+          "value": "b8dd229b6a"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b003",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b005",
+          "value": "0f84a0000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b00b",
+          "value": "b8c60cdf31"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b010",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b012",
+          "value": "0f84a8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b018",
+          "value": "b8d9951c4a"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b01d",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b01f",
+          "value": "0f84b0000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b025",
+          "value": "b80a656f99"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b02a",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b02c",
+          "value": "0f84b8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b032",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b033",
+          "value": "b8a20ff751"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b038",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b03a",
+          "value": "0f84bf000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b040",
+          "value": "b875f44c8e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b045",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b047",
+          "value": "0f84c7000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b04d",
+          "value": "b8e2683441"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b052",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b054",
+          "value": "0f84cf000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b05a",
+          "value": "b8cdcb0831"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b05f",
+          "value": "39c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b061",
+          "value": "0f84d7000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b067",
+          "value": "e9e4000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b06c",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b06f",
+          "value": "488d152e120000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b076",
+          "value": "c6031f"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b079",
+          "value": "e8ed000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b07e",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b081",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b084",
+          "value": "488d15b9010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b08b",
+          "value": "c60320"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b08e",
+          "value": "e8d8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b093",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b096",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b099",
+          "value": "488d1584060000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0a0",
+          "value": "c60321"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0a3",
+          "value": "e8c3000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0a8",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ab",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ae",
+          "value": "488d15df070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0b5",
+          "value": "c60322"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0b8",
+          "value": "e8ae000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0bd",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0c0",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0c3",
+          "value": "488d151a090000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ca",
+          "value": "c60323"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0cd",
+          "value": "e899000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0d2",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0d5",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0d8",
+          "value": "488d15050c0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0df",
+          "value": "c60324"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0e2",
+          "value": "e884000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0e7",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ea",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ed",
+          "value": "488d15900d0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0f4",
+          "value": "c60325"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0f7",
+          "value": "e86f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0fc",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b0ff",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b102",
+          "value": "488d154b0e0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b109",
+          "value": "c60326"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b10c",
+          "value": "e85a000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b111",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b114",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b117",
+          "value": "488d15360f0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b11e",
+          "value": "c60327"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b121",
+          "value": "e845000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b126",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b129",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b12c",
+          "value": "488d15f10f0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b133",
+          "value": "c60328"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b136",
+          "value": "e830000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b13b",
+          "value": "41ffe1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b13e",
+          "value": "41b428"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b141",
+          "value": "488d15dc100000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b148",
+          "value": "c60329"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b14b",
+          "value": "e81b000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b150",
+          "value": "e826000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b155",
+          "value": "488b1dd44e9f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b15c",
+          "value": "488b15ed4e9f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b163",
+          "value": "4c8b0dee4e9f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b16a",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b16b",
+          "value": "48c7435800000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b173",
+          "value": "48895350"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b177",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b17b",
+          "value": "48893dee4e9f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b182",
+          "value": "488b5350"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b186",
+          "value": "4883435828"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b18b",
+          "value": "48035358"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b18f",
+          "value": "803a30"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b192",
+          "value": "7410"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b194",
+          "value": "807f2f01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b198",
+          "value": "7412"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b19a",
+          "value": "48895730"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b19e",
+          "value": "c6472f01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1a2",
+          "value": "eb08"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1a4",
+          "value": "48c7435800000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1ac",
+          "value": "48893dbd4e9f00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1b3",
+          "value": "41b401"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1b6",
+          "value": "83fe05"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02a0b1b9",
+          "value": "c3"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b26c",
+          "value": "hammer-modern                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b294",
+          "value": "hammer-scar                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b2bc",
+          "value": "crowbar-one-hand                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b2e4",
+          "value": "pipe-wrench                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b30c",
+          "value": "club-1h-scar                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b334",
+          "value": "club-1h-police                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b35c",
+          "value": "machete-black                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b384",
+          "value": "machete-wood                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b3ac",
+          "value": "machete-scar                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b3d4",
+          "value": "hatchet-modern                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b3fc",
+          "value": "hatchet-black                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b424",
+          "value": "hatchet-scar                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b44c",
+          "value": "scythe-scar                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b474",
+          "value": "hatchet-tomahawk                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b49c",
+          "value": "baseball-bat                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b4c4",
+          "value": "baseball-bat-metal                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b4ec",
+          "value": "two-by-four                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b514",
+          "value": "lead-pipe                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b53c",
+          "value": "club-2h-scar                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b564",
+          "value": "two-hand-axe                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b58c",
+          "value": "two-hand-axe-scar                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b5b4",
+          "value": "fireman-axe                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b5dc",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b604",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b62c",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b654",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b67c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b6a4",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b6cc",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b6f4",
+          "value": "pickaxe-scar                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b71c",
+          "value": "pickaxe-scar-player                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b744",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b74c",
+          "value": "pistol-beretta                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b774",
+          "value": "pistol-revolver-taurus                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b79c",
+          "value": "bow-ellie                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b7c4",
+          "value": "shotgun-remington-pump                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b7ec",
+          "value": "rifle-remington-bolt                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b814",
+          "value": "rifle-galil                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b83c",
+          "value": "rifle-mpx5                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b864",
+          "value": "rifle-remington-81                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b88c",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b8bc",
+          "value": "pistol-glock                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b8e4",
+          "value": "shotgun-baserri-over-under             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b90c",
+          "value": "shotgun-dbl-barrel-abby                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b934",
+          "value": "crossbow                               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b95c",
+          "value": "rifle-vepr                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b984",
+          "value": "pistol-xcaliber                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b9ac",
+          "value": "flamethrower                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b9d4",
+          "value": "pistol-revolver-taurus-owen            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0b9fc",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ba0c",
+          "value": "                                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ba34",
+          "value": "pistol-ruger                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ba5c",
+          "value": "pistol-ruger                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ba84",
+          "value": "pistol-browning-jesse                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0baac",
+          "value": "pistol-browning                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bad4",
+          "value": "pistol-colt-1911-silver                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bafc",
+          "value": "pistol-beretta-black                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bb24",
+          "value": "pistol-revolver-taurus                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bb4c",
+          "value": "pistol-revolver-taurus-owen            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bb74",
+          "value": "shotgun-remington-pump-sawedoff        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bb9c",
+          "value": "shotgun-pump-stock                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bbc4",
+          "value": "rifle-marlin-lever                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bbec",
+          "value": "rifle-winchester-lever                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bc14",
+          "value": "rifle-remington-81                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bc3c",
+          "value": "rifle-mini-14-manny                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bc64",
+          "value": "rifle-mini-14-wood                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bc8c",
+          "value": "rifle-m14-sniper                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bcb4",
+          "value": "bow-lev                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bcdc",
+          "value": "bow-joel                               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bd04",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bd0c",
+          "value": "molotov                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bd34",
+          "value": "pipe-bomb                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bd5c",
+          "value": "beer-bottle                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bd84",
+          "value": "throw-brick                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bdac",
+          "value": "stun-bomb                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bdd4",
+          "value": "smoke-bomb                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bdfc",
+          "value": "pat-snowball                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0be24",
+          "value": "trap-mine                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0be4c",
+          "value": "molotov                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0be74",
+          "value": "ski-aquarium-dog-toy                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0be9c",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0beac",
+          "value": "bandage-apply                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bed4",
+          "value": "bandage-apply                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0befc",
+          "value": "syringe                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bf24",
+          "value": "                                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bf4c",
+          "value": "                                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bf74",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bf7c",
+          "value": "pistol-ruger                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bfa4",
+          "value": "pistol-revolver-militia                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bfcc",
+          "value": "rifle-mini-14                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0bff4",
+          "value": "rifle-bolt-m24                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c01c",
+          "value": "shotgun-remington-pump-black           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c044",
+          "value": "                                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c06c",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c07c",
+          "value": "shotgun-dbl-barrel-scar                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c0a4",
+          "value": "pistol-browning-scar                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c0cc",
+          "value": "pistol-revolver-scar                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c0f4",
+          "value": "bow-scar                               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c11c",
+          "value": "rifle-bolt-scar                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c144",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c14c",
+          "value": "pistol-cz75-black                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c174",
+          "value": "pistol-revolver-357                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c19c",
+          "value": "rifle-m14-dark                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c1c4",
+          "value": "rifle-bolt-m24-dark                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c1ec",
+          "value": "shotgun-pump-stock-black               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c214",
+          "value": "rifle-mpx5-tilt                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c23c",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c24c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c274",
+          "value": "                                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c29c",
+          "value": "bandage-apply                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c2c4",
+          "value": "0"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c2cc",
+          "value": "knife-survival-mel                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c2f4",
+          "value": "bloater-pustule                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c31c",
+          "value": "pistol-colt-1911-dark                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c344",
+          "value": "knife-hunting                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c36c",
+          "value": "shiv-d                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c394",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c3bc",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c3e4",
+          "value": "rifle-m14-sniper                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c40c",
+          "value": "bow-workbench                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c434",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c45c",
+          "value": "bow-ellie                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c484",
+          "value": "rifle-m14-sniper                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c4ac",
+          "value": "bow-scar                               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c4d4",
+          "value": "molotov                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c4fc",
+          "value": "pipe-bomb                              "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c524",
+          "value": "gas-mask-lev                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c54c",
+          "value": "rifle-m14-sniper                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c574",
+          "value": "shotgun-pump-stock                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c59c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c5c4",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c5ec",
+          "value": "shiv-b                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c614",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c63c",
+          "value": "hatchet-tomahawk                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c664",
+          "value": "short-pipe                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c68c",
+          "value": "switchblade                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c6b4",
+          "value": "rifle-m14-sniper                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c6dc",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c704",
+          "value": "torch-game                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c72c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c754",
+          "value": "molotov                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c77c",
+          "value": "machete-wood-joel                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c7a4",
+          "value": "knife-hunting                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c7cc",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c7f4",
+          "value": "shiv-f                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c81c",
+          "value": "shiv-a                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c844",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c86c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c894",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c8bc",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c8e4",
+          "value": "fob-basketball                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c90c",
+          "value": "bloater-pustule                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c934",
+          "value": "rifle-ruger-scar                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c95c",
+          "value": "shotgun-remington-pump-sawedoff        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c984",
+          "value": "amp-gift-shop-toy-orca                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c9ac",
+          "value": "machete-black                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c9d4",
+          "value": "bloater-pustule                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0c9fc",
+          "value": "bloater-pustule                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ca24",
+          "value": "bow-toy                                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ca4c",
+          "value": "shiv-e                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ca74",
+          "value": "dagger-scar-lev                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0ca9c",
+          "value": "invisible-cube                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cac4",
+          "value": "firecracker                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0caec",
+          "value": "shotgun-remington-pump                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cb14",
+          "value": "short-pipe                             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cb3c",
+          "value": "dagger-scar                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cb64",
+          "value": "NO_ART_GROUP                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cb8c",
+          "value": "rifle-bolt-m24                         "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cbb4",
+          "value": "sledgehammer                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cbdc",
+          "value": "shiv-c                                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cc04",
+          "value": "pistol-cz75-dina                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cc2c",
+          "value": "tennis-ball-throw                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x02a0cc54",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02bbb5f0",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "1080p for PS4 Pro",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x00a17631",
+          "value": "0x00000000"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.07",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x005d26b8",
+          "value": "0x75"
+        },
+        {
+          "type": "float32",
+          "addr": "0x0075f70f",
+          "value": "1.0"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.07",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Improved Infinite Ammo Cheat",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x019df257",
+          "value": "e83453e2ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x019df25c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x019df25d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01804590",
+          "value": "488b0519303602"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01804597",
+          "value": "803de3a61a0200"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0180459e",
+          "value": "80b8ac43000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x018045a5",
+          "value": "7507"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x018045a7",
+          "value": "41ff8e14080000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x018045ae",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

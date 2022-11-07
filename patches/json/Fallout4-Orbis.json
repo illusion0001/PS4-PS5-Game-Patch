@@ -1,0 +1,51 @@
+{
+  "patch": [
+    {
+      "title": "Fallout 4",
+      "app_titleid": [
+        "CUSA02557",
+        "CUSA02962",
+        "CUSA03450"
+      ],
+      "app_ver": "01.34",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x014b4fb7",
+          "value": "0x00000000"
+        }
+      ]
+    },
+    {
+      "title": "Fallout 4",
+      "app_titleid": [
+        "CUSA02557",
+        "CUSA02962",
+        "CUSA03450"
+      ],
+      "app_ver": "01.34",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for Base)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x014b4a98",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x014b4a9c",
+          "value": "0x000002d0"
+        }
+      ]
+    }
+  ]
+}

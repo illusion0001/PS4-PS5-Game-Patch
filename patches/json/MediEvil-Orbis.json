@@ -1,0 +1,59 @@
+{
+  "patch": [
+    {
+      "title": "MediEvil",
+      "app_titleid": [
+        "CUSA11227",
+        "CUSA12982"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x025af801",
+          "value": "e82c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x025af832",
+          "value": "c7048b00008642c5fa10048bc3"
+        }
+      ]
+    },
+    {
+      "title": "MediEvil",
+      "app_titleid": [
+        "CUSA11227",
+        "CUSA12982"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02b58719",
+          "value": "e8c790feff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b58746",
+          "value": "1b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b417e0",
+          "value": "e996f40101c5f82e0c8b4c8d148b813c8b0000f041740d41c78204d6000000000000eb0b41c78204d6000002000000c3"
+        }
+      ]
+    }
+  ]
+}

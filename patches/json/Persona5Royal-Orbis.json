@@ -1,0 +1,155 @@
+{
+  "patch": [
+    {
+      "title": "Persona 5: Royal",
+      "app_titleid": [
+        "CUSA17416",
+        "CUSA17419",
+        "CUSA08644"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion, ZEROx",
+      "note": "Patch may accelerate some game effects by 2x.\nGame will softlock at centain places with 60FPS Patch enabled. Be sure to frequently save and switch to 30FPS with X + DPad Down to progress further.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0049add2",
+          "value": "c6058fad4f023c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0049add9",
+          "value": "eb56"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0049ae2b",
+          "value": "eba5"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0049d7bc",
+          "value": "e8cf810500"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0049d7c1",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f5990",
+          "value": "488d0d49ff4902"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f5997",
+          "value": "eb08"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59a0",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59a1",
+          "value": "813dddd81c0240400000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59ab",
+          "value": "7533"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59ad",
+          "value": "813da9014a0240400000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59b7",
+          "value": "7435"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59b9",
+          "value": "803d4cff49023c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59c0",
+          "value": "7505"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59c2",
+          "value": "41b01e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59c5",
+          "value": "eb03"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59c7",
+          "value": "41b03c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59ca",
+          "value": "4488053bff4902"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59d1",
+          "value": "44880590014a02"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59d8",
+          "value": "41b840400000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59de",
+          "value": "eb07"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59e0",
+          "value": "448b05a1d81c02"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59e7",
+          "value": "44890572014a02"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59ee",
+          "value": "448a0573014a02"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59f5",
+          "value": "44880510ff4902"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59fc",
+          "value": "8b712c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004f59ff",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

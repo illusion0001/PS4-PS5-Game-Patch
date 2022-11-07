@@ -1,0 +1,199 @@
+{
+  "patch": [
+    {
+      "title": "Bloodborne: Network Test",
+      "app_titleid": [
+        "CUSA01322"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion, manfightdragon",
+      "note": "Caps framerate to 30 with proper frame pacing.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00c346e5",
+          "value": "40c6c002"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02908da2",
+          "value": "be0100000089c79090909090"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne: Network Test",
+      "app_titleid": [
+        "CUSA01322"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (with Deltatime)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00c346e5",
+          "value": "40c6c002"
+        },
+        {
+          "type": "utf16",
+          "addr": "0x056b4040",
+          "value": "withSkip"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c34ea5",
+          "value": "e850d9ea01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c34eaa",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c34eab",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c34eac",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae27fa",
+          "value": "c5e258c9"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae27fe",
+          "value": "c5f258ca"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae2802",
+          "value": "c5fa1125366fd003"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae280a",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c27178",
+          "value": "48e802b4eb01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c2717e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae2580",
+          "value": "4c8915c171d003"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae2587",
+          "value": "448b15b271d003"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae258e",
+          "value": "448955c8"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae2592",
+          "value": "4c8b15af71d003"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ae2599",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne: Network Test",
+      "app_titleid": [
+        "CUSA01322"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x06297018",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x0629701c",
+          "value": "0x000002d0"
+        },
+        {
+          "type": "byte",
+          "addr": "0x056b1410",
+          "value": "0x00"
+        },
+        {
+          "type": "byte",
+          "addr": "0x056b1440",
+          "value": "0x00"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne: Network Test",
+      "app_titleid": [
+        "CUSA01322"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Chromatic Aberration",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01905491",
+          "value": "48b100"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne: Network Test",
+      "app_titleid": [
+        "CUSA01322"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Motion Blur",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x0198a0e7",
+          "value": "0xeb"
+        }
+      ]
+    }
+  ]
+}

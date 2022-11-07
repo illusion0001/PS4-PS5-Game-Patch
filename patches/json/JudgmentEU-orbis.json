@@ -1,0 +1,42 @@
+{
+  "patch": [
+    {
+      "title": "Judgment",
+      "app_titleid": [
+        "CUSA13197"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01b42ed4",
+          "value": "be00000000"
+        }
+      ]
+    },
+    {
+      "title": "Judgment",
+      "app_titleid": [
+        "CUSA13197"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Virtua Fighter 5 Unlocker",
+      "author": "Silent, illusion",
+      "note": "Turns \"Virtua Fighter 5: Final Showdown\" in Club SEGA into full game!\nMore details: https://cookieplmonster.github.io/2021/04/19/virtua-fighter-5-final-showdown-unlocker/",
+      "patch_list": [
+        {
+          "type": "bytes16",
+          "addr": "0x008a11fd",
+          "value": "0x0000"
+        }
+      ]
+    }
+  ]
+}

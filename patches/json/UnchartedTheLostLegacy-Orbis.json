@@ -1,0 +1,24 @@
+{
+  "patch": [
+    {
+      "title": "Uncharted: The Lost Legacy",
+      "app_titleid": [
+        "CUSA09564",
+        "CUSA07875"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x017238b7",
+          "value": "eb4c"
+        }
+      ]
+    }
+  ]
+}

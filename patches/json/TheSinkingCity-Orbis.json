@@ -1,0 +1,33 @@
+{
+  "patch": [
+    {
+      "title": "The Sinking City",
+      "app_titleid": [
+        "CUSA13152"
+      ],
+      "app_ver": "01.04",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02204e3a",
+          "value": "48e831146d00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02204706",
+          "value": "e8761b6d00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x028d6270",
+          "value": "cc41c7048e00008642c4c17a10048eeb0dc744210455558541c5fa106104c3"
+        }
+      ]
+    }
+  ]
+}

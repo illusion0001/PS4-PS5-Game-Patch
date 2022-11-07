@@ -1,0 +1,210 @@
+{
+  "patch": [
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock (With Delta Time)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0278c407",
+          "value": "c7430805000000eb07"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0278c50c",
+          "value": "41b601"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion",
+      "note": "Caps framerate to 30 with proper frame pacing.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0278c407",
+          "value": "c7430805000000eb07"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02dbdb44",
+          "value": "488b1ded10f102be01000000eb03"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "720p Resolution",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x05d22d84",
+          "value": "00050000d0020000"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "900p Resolution",
+      "author": "Whitehawkx",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x05d22d84",
+          "value": "4006000084030000"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Bypass Network Check",
+      "author": "Unknown",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02309e80",
+          "value": "e91c02"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Developer Debug Menu",
+      "author": "Whitehawkx",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02766352",
+          "value": "01"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Top Menu Debug",
+      "author": "Whitehawkx",
+      "note": "Hidden Pause Menu",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01defd96",
+          "value": "b201"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "All Menu Options",
+      "author": "Whitehawkx, Lance McDonald",
+      "note": "Enables equipment, item and status menus",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x022a29a9",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022a29aa",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022a29ab",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022a29ac",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022a29ad",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022a29ae",
+          "value": "90"
+        }
+      ]
+    },
+    {
+      "title": "Dark Souls III: Network Stress Test",
+      "app_titleid": [
+        "CUSA03500"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Video Recording",
+      "author": "Whitehawkx",
+      "note": "Re-enables built-in video recording (share button)",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0276375c",
+          "value": "c745ec00000000"
+        }
+      ]
+    }
+  ]
+}

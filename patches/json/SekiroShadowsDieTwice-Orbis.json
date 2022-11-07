@@ -1,0 +1,86 @@
+{
+  "patch": [
+    {
+      "title": "Sekiro: Shadows Die Twice",
+      "app_titleid": [
+        "CUSA12047"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion",
+      "note": "Caps framerate to 30 with proper frame pacing.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02366f27",
+          "value": "95"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x034cdc27",
+          "value": "bf0001114ebe01000000eb12"
+        }
+      ]
+    },
+    {
+      "title": "Sekiro: Shadows Die Twice",
+      "app_titleid": [
+        "CUSA12047"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "Only needed for Base console, enhanced consoles already have framerate unlocked.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02366f27",
+          "value": "95"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x023670c3",
+          "value": "48e96b000000"
+        }
+      ]
+    },
+    {
+      "title": "Sekiro: Shadows Die Twice",
+      "app_titleid": [
+        "CUSA12047"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p Base, 1080p Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x04229d44",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x04229d44",
+          "value": "0x000002d0"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x023603ff",
+          "value": "0x00000780"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x02360409",
+          "value": "0x00000438"
+        }
+      ]
+    }
+  ]
+}

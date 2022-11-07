@@ -1,0 +1,155 @@
+{
+  "patch": [
+    {
+      "title": "Spyro Reignited Trilogy",
+      "app_titleid": [
+        "CUSA12085"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x030cb321",
+          "value": "48e82b040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x030cb752",
+          "value": "c6835007000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x030cb759",
+          "value": "8a8350070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x030cb75f",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "Spyro Reignited Trilogy",
+      "app_titleid": [
+        "CUSA12085"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (1080p for PS4 Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc66",
+          "value": "e82c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc97",
+          "value": "c7048b0000c842"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc9e",
+          "value": "eb06"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dca6",
+          "value": "c5fa10048b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dcab",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "Spyro Reignited Trilogy",
+      "app_titleid": [
+        "CUSA12085"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (900p for PS4/PS4 Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc66",
+          "value": "e82c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc97",
+          "value": "c7048bf6a8a642"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc9e",
+          "value": "eb06"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dca6",
+          "value": "c5fa10048b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dcab",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "Spyro Reignited Trilogy",
+      "app_titleid": [
+        "CUSA12085"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p for PS4/PS4 Pro)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc66",
+          "value": "e82c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc97",
+          "value": "c7048b0a578542"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dc9e",
+          "value": "eb06"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dca6",
+          "value": "c5fa10048b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02b5dcab",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

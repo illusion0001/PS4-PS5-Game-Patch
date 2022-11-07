@@ -1,0 +1,46 @@
+{
+  "patch": [
+    {
+      "title": "Red Dead Redemption 2",
+      "app_titleid": [
+        "CUSA03041",
+        "CUSA08519",
+        "CUSA08568"
+      ],
+      "app_ver": "01.29",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Unlock FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0578ab57",
+          "value": "be00000000"
+        }
+      ]
+    },
+    {
+      "title": "Red Dead Redemption 2",
+      "app_titleid": [
+        "CUSA03041",
+        "CUSA08519",
+        "CUSA08568"
+      ],
+      "app_ver": "01.29",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x009b4f44",
+          "value": "909090909090"
+        }
+      ]
+    }
+  ]
+}

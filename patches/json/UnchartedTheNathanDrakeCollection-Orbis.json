@@ -1,0 +1,1147 @@
+{
+  "patch": [
+    {
+      "title": "Uncharted: Drake's Fortune Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x008a0d42",
+          "value": "41c686ba39000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted: Drake's Fortune Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Restore DevKit Menus",
+      "author": "illusion, TheMagicalBlob",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x006d00ae",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de0db",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de11c",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de19b",
+          "value": "e9f80c0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dee98",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df5b1",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0066df04",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0066e158",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df732",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df793",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df7f4",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df855",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df956",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df9b7",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfa50",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfa96",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfaa8",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfaba",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfb1b",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfb7c",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfbb5",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfe10",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfe73",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004e002a",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004fe7b4",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00500b3e",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x006a3dff",
+          "value": "b801000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted: Drake's Fortune Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x00d5ca17",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted: Drake's Fortune Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x009cf259",
+          "value": "41c686ba39000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted: Drake's Fortune Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Restore DevKit Menus",
+      "author": "illusion, TheMagicalBlob",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x006d069e",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de1cb",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de20c",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004de28b",
+          "value": "e9f80c0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004def88",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df6a1",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0066e474",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0066e6c8",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df822",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df883",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df8e4",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004fe8e4",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004df945",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfa46",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfb40",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfb86",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfb98",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfbaa",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfc0b",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfc6c",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dfca5",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dff00",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004dff63",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004e011a",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x006a43ef",
+          "value": "b801000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x01271464",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00a373aa",
+          "value": "41c686ba39000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Restore DevKit Menus",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x005c06bf",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c06ff",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00941c93",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0723",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0c60",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007760d2",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007760f6",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007762a6",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007762e3",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00776317",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00777699",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0d3d",
+          "value": "e92d000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0dc6",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0dcb",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00638db2",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00638dd6",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063bf08",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063c1e8",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063c20c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063c4bd",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00824d3a",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00825840",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00825840",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0082580a",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0e2b",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0e4b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0ea7",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005be650",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0eac",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c0ed0",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1250",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1255",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1279",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c132c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1331",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1351",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c13ad",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c13b2",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1441",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1461",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c146e",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1473",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1493",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c14a0",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c14a5",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c14dd",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1931",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1955",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1ca4",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c1ca9",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c373d",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c3761",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c3a44",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c3a49",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00402c93",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00402cb7",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00402d5e",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00402d90",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0054c0a3",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008f56d0",
+          "value": "b801000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Bug Fix: Quit to Menu Crash",
+      "author": "ZEROx, illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x004ade75",
+          "value": "e887cc6100"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004ade7a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004ade7b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004ade7c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004ade7d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab00",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab01",
+          "value": "4983ff00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab05",
+          "value": "0f8509000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab0b",
+          "value": "48c7c701000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab12",
+          "value": "eb07"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab14",
+          "value": "498dbf20060000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab1b",
+          "value": "4883ff00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00acab1f",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x0145de94",
+          "value": "0x01"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x010e22fe",
+          "value": "41c686ba39000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 2: Among Thieves Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "big2-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Restore DevKit Menus",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00893d88",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00893e97",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00895910",
+          "value": "e9c9000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c9c49c",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c9ec64",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c9ee37",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00c9f245",
+          "value": "48e918000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00ca8845",
+          "value": "e90f010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00895e57",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00896020",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00896102",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00939f7b",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00946d94",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e38862",
+          "value": "e91a000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e389f9",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e3aaa6",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e3b158",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e3c2c0",
+          "value": "b001c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e3c710",
+          "value": "b001c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008962c9",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089cd70",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00896659",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a9d70",
+          "value": "b001c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089ce53",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089dd20",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089de03",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e160",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e243",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e400",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e4e3",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e788",
+          "value": "48e91c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e7b2",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e894",
+          "value": "48e91c000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e8be",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089e9a0",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089ea98",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0089fcb8",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a0ac0",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a0ba2",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a81b9",
+          "value": "48e926000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a82c0",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a83a3",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a8b20",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008a8c03",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005faaac",
+          "value": "48e91f000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005fae95",
+          "value": "e9c5000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005fb370",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 3: Drake's Deception Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "big3-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x009651d0",
+          "value": "c685043a000000"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 3: Drake's Deception Remastered",
+      "app_titleid": [
+        "CUSA02343",
+        "CUSA02344",
+        "CUSA02826",
+        "CUSA02320"
+      ],
+      "app_ver": "01.02",
+      "app_elf": "big3-ps4_Shipping.elf",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x0097424b",
+          "value": "0x01"
+        }
+      ]
+    }
+  ]
+}

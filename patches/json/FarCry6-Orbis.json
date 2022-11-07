@@ -1,0 +1,28 @@
+{
+  "patch": [
+    {
+      "title": "Far Cry 6",
+      "app_titleid": [
+        "CUSA15778"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00df3471",
+          "value": "eb0e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00df3481",
+          "value": "31f6"
+        }
+      ]
+    }
+  ]
+}

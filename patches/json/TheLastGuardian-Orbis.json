@@ -1,0 +1,24 @@
+{
+  "patch": [
+    {
+      "title": "The Last Gurdian",
+      "app_titleid": [
+        "CUSA03627",
+        "CUSA03745"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "CPU Limited, for use with 9th generation of consoles.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01051467",
+          "value": "e9b3000000"
+        }
+      ]
+    }
+  ]
+}

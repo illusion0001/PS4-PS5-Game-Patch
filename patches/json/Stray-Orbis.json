@@ -1,0 +1,63 @@
+{
+  "patch": [
+    {
+      "title": "Stray",
+      "app_titleid": [
+        "CUSA24899"
+      ],
+      "app_ver": "01.03",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01a10c60",
+          "value": "c7048b01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c67",
+          "value": "8b048b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c6a",
+          "value": "89c1"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c6c",
+          "value": "c1f91f"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c6f",
+          "value": "c4e270f2c0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c74",
+          "value": "4883c408"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c78",
+          "value": "5b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c79",
+          "value": "5d"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a10c7a",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

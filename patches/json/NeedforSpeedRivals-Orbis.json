@@ -1,0 +1,52 @@
+{
+  "patch": [
+    {
+      "title": "Need for Speed: Rivals",
+      "app_titleid": [
+        "CUSA00113"
+      ],
+      "app_ver": "01.04",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock (Proof of Concept)",
+      "author": "illusion",
+      "note": "Game can now be run at any FPS without slow down or speedups, although logics are still borked.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00890b83",
+          "value": "48b201"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x009f2906",
+          "value": "48e8940d9101"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x023036a0",
+          "value": "41c7462800007042c4817a104628c3"
+        }
+      ]
+    },
+    {
+      "title": "Need for Speed: Rivals",
+      "app_titleid": [
+        "CUSA00113"
+      ],
+      "app_ver": "01.04",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x009cb1cd",
+          "value": "0x3f2b851f"
+        }
+      ]
+    }
+  ]
+}

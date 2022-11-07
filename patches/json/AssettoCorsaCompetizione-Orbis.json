@@ -1,0 +1,33 @@
+{
+  "patch": [
+    {
+      "title": "Assetto Corsa Competizione",
+      "app_titleid": [
+        "CUSA17301"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p)",
+      "author": "illusion",
+      "note": "CPU Limited in Races.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x038b6740",
+          "value": "e9cbe338fe41c7048e00008642c4c17a10048ec3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0328ffa8",
+          "value": "48e9"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x03292e32",
+          "value": "48e80d396200"
+        }
+      ]
+    }
+  ]
+}

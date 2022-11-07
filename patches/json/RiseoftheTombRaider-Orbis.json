@@ -1,0 +1,47 @@
+{
+  "patch": [
+    {
+      "title": "Rise of the Tomb Raider",
+      "app_titleid": [
+        "CUSA05794"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "CPU Limited in some areas.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0088e26c",
+          "value": "31f6"
+        }
+      ]
+    },
+    {
+      "title": "Rise of the Tomb Raider",
+      "app_titleid": [
+        "CUSA05794"
+      ],
+      "app_ver": "01.06",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x008a8076",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x008a8082",
+          "value": "0x000002d0"
+        }
+      ]
+    }
+  ]
+}

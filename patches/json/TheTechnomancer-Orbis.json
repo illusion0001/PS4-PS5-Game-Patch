@@ -1,0 +1,24 @@
+{
+  "patch": [
+    {
+      "title": "The Technomancer",
+      "app_titleid": [
+        "CUSA03803",
+        "CUSA03824"
+      ],
+      "app_ver": "01.04",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x007784be",
+          "value": "be0000000090"
+        }
+      ]
+    }
+  ]
+}

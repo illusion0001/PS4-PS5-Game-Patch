@@ -1,0 +1,968 @@
+{
+  "patch": [
+    {
+      "title": "Uncharted 4: A Thief's End",
+      "app_titleid": [
+        "CUSA00341",
+        "CUSA00917",
+        "CUSA00918",
+        "CUSA04529"
+      ],
+      "app_ver": "01.33",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01677ec7",
+          "value": "eb2c"
+        }
+      ]
+    },
+    {
+      "title": "Uncharted 4: A Thief's End",
+      "app_titleid": [
+        "CUSA00341",
+        "CUSA00917",
+        "CUSA00918",
+        "CUSA04529"
+      ],
+      "app_ver": "01.33",
+      "app_elf": "big4-mp.elf",
+      "patch_ver": "1.0",
+      "name": "Dev Menu Restore for MP executable",
+      "author": "illusion + TheMagicalBlob",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x006238a7",
+          "value": "4831c0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x006717ee",
+          "value": "c60425285bd40201"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0050bef0",
+          "value": "31c0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0050bef2",
+          "value": "8905309c8302"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0050bef8",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00674b61",
+          "value": "48e959ffffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a5c9",
+          "value": "48b300"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a711",
+          "value": "e935010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005c8e8f",
+          "value": "31c9"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c728c5",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c728e9",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c78132",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c771f4",
+          "value": "e98d060000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c797b5",
+          "value": "e998000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c796de",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c79702",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c7b8d0",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46bb6",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46be1",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f4e09a",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f4e534",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f4e558",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f51062",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c90770",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c9079b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c97921",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c9b094",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c9b0b8",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c9c6e7",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c7b973",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c7b997",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c89b53",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01c6f7bd",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00800831",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080085b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080097f",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0081f560",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00800ab4",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008205b0",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00801057",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00801063",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080108d",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00801311",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080327d",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008032a7",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008033c2",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008033ce",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008033f8",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00804cf3",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00803014",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080303e",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008030d4",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080315a",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d3d4e",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d3d79",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d3d9c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d3ec0",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a16c50",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a146d0",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d5e17",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d6486",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d6a50",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007ace80",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007e3720",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01b136a0",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00b2ae40",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d663d",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007d69ba",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007e406c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007e5506",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080512b",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00805155",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008bada8",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00dd1de0",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008b90ed",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008b911d",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008b914f",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080bf02",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00805271",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080527d",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008052a7",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080bf02",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080554b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00805557",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00805581",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00805e35",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a686f0",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080877c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00808788",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008087b2",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00809785",
+          "value": "e9f9000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080bf02",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0187ae71",
+          "value": "e90b000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d156",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d182",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d2d3",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d2fe",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d329",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d351",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d356",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063d35b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00bdc74f",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22a9",
+          "value": "488903"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22ac",
+          "value": "c7839000000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22b6",
+          "value": "c7839400000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22c0",
+          "value": "c6839800000001"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22c7",
+          "value": "c7839c00000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22d1",
+          "value": "c783a000000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22db",
+          "value": "c683a400000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22e2",
+          "value": "c5f81183b4000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22ea",
+          "value": "c5f81183a8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22f2",
+          "value": "e8f9c5df00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00be22f7",
+          "value": "9090909090909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x019de926",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x019ded33",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x019deab3",
+          "value": "e97b020000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080bf84",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080bfb5",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080d5bf",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080f0d4",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080f10e",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080f3c8",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080f473",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0080f49d",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00810f6b",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01b2e368",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01b2e38c",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01b2f078",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01b2df00",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00811008",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00811032",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x008110bf",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01cab7df",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01cab884",
+          "value": "e90d3e0000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00811270",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0081129a",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00811a38",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a339",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a345",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a371",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a3a8",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00797360",
+          "value": "31c0c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a43f",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a444",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0064a4df",
+          "value": "9090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f4fa72",
+          "value": "e8e5ec3600"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be75c",
+          "value": "4c8d25651d1c00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be763",
+          "value": "bfb0000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be768",
+          "value": "be10000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be76d",
+          "value": "31c9"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be76f",
+          "value": "4c89e2"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be772",
+          "value": "4d89e0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be775",
+          "value": "e86611e3ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be77a",
+          "value": "4889c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be77d",
+          "value": "488d3578000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be784",
+          "value": "31d2"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be786",
+          "value": "4889df"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be789",
+          "value": "e8c2c3b7ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be78e",
+          "value": "488d0523204500"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be795",
+          "value": "c7839400000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be79f",
+          "value": "c7839800000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7a9",
+          "value": "48c7435800000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7b1",
+          "value": "4d85f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7b4",
+          "value": "488903"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7b7",
+          "value": "48c783a000000000000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7c2",
+          "value": "4c89b3a8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7c9",
+          "value": "c7839000000001000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7d3",
+          "value": "740b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7d5",
+          "value": "49895e38"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7d9",
+          "value": "41ff86c0000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7e0",
+          "value": "488bbd68feffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7e7",
+          "value": "4889de"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7ea",
+          "value": "e80133b8ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7ef",
+          "value": "4c8d25d21c1c00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7f6",
+          "value": "bfc8000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x022be7fb",
+          "value": "c3"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x022be7fc",
+          "value": "Volumetric Flare..."
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063c9eb",
+          "value": "909090909090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063cbd2",
+          "value": "488d0507125401"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0063cc04",
+          "value": "48c7435800000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007f473b",
+          "value": "488d3d15000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007f4742",
+          "value": "31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007f4744",
+          "value": "e8d7455d01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x007f4749",
+          "value": "eb2b"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x007f4757",
+          "value": "big4-mp.elf"
+        }
+      ]
+    }
+  ]
+}

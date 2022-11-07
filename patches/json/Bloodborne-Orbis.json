@@ -1,0 +1,912 @@
+{
+  "patch": [
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x04d99138",
+          "value": "0x00000000"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x04d99154",
+          "value": "0x00000000"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x04d9916e",
+          "value": "0x00000000"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "30 FPS Fix (Proper Frame Pacing)",
+      "author": "illusion, Lance McDonald (manfightdragon)",
+      "note": "Caps framerate to 30 with proper frame pacing.",
+      "patch_list": [
+        {
+          "type": "float32",
+          "addr": "0x02434883",
+          "value": "0.016666667"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02ad61df",
+          "value": "be010000004989dc9090909090"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Chromatic Aberration",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0269faa8",
+          "value": "c783ac000000000000009090"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Motion Blur",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x026a057b",
+          "value": "eb16"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS (With Deltatime)",
+      "author": "Lance McDonald (manfightdragon)",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00fbc40f",
+          "value": "eb1d"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e16",
+          "value": "eb19"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e18",
+          "value": "4156"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e1a",
+          "value": "41c746080000003f"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e22",
+          "value": "c4c17a5e4608"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e28",
+          "value": "415e"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e2a",
+          "value": "e933070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e2f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d2e30",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d3557",
+          "value": "c4c17a104608"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013d355d",
+          "value": "e9b6f8ffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9b71",
+          "value": "e933010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9b76",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9b77",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9ca9",
+          "value": "488d054868d403"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cb0",
+          "value": "488b00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cb3",
+          "value": "8b8064020000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cb9",
+          "value": "8945b8"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cbc",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cbd",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cbe",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cbf",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc0",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc1",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc2",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc3",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc4",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc5",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc6",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc7",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc8",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cc9",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cca",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9ccb",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9ccc",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9ccd",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cce",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9ccf",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cd0",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cd1",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01bf9cd2",
+          "value": "e9a1feffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020367c7",
+          "value": "488d351cd2c702"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x020369e8",
+          "value": "488d35b5cfc702"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc181",
+          "value": "488d3d70437803"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc188",
+          "value": "488b3f"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc18b",
+          "value": "c5fa598764020000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc193",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc194",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc195",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc196",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc197",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc198",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc199",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc19a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc19b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc19c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc19d",
+          "value": "e96e010000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc308",
+          "value": "e974feffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc30d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc30e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021bc30f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cea",
+          "value": "eb24"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cec",
+          "value": "488d1d05885c03"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cf3",
+          "value": "488b1b"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cf6",
+          "value": "c5fa108364020000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cfe",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377cff",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d00",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d01",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d02",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d03",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d04",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d05",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d06",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d07",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d08",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d09",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d0a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d0b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d0c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d0d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d0e",
+          "value": "eb42"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02377d48",
+          "value": "eba2"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e3d",
+          "value": "8b8364020000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e43",
+          "value": "8945c8"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e46",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e47",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e48",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e49",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e4f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e50",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e51",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e52",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e53",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e54",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e55",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e56",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e57",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e58",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e59",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e5f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e60",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e61",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e62",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e63",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02418e64",
+          "value": "488d05a5765203"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0243487e",
+          "value": "41c74424188988883c"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02434887",
+          "value": "48b90000000001000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02483ec1",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02483ec2",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02483ec3",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02483ec4",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02483ec5",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02715d71",
+          "value": "e881090000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02715d76",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02715d77",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02715d78",
+          "value": "90"
+        },
+        {
+          "type": "utf16",
+          "addr": "0x04cb39ea",
+          "value": "This 60fps patch was"
+        },
+        {
+          "type": "utf16",
+          "addr": "0x04cb39a4",
+          "value": "Made with love, by Lance McDonald"
+        }
+      ]
+    },
+    {
+      "title": "Bloodborne",
+      "app_titleid": [
+        "CUSA00900",
+        "CUSA00207",
+        "CUSA03173",
+        "CUSA00208",
+        "CUSA01363"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p)",
+      "author": "Lance McDonald (manfightdragon)",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x055289f8",
+          "value": "0x00000500"
+        },
+        {
+          "type": "bytes32",
+          "addr": "0x055289fc",
+          "value": "0x000002d0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c55",
+          "value": "b880070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c5a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c5b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c5c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c5d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c5e",
+          "value": "c4e1fa2ac8"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c63",
+          "value": "b838040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c68",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c69",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c6a",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a44c6b",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452c7",
+          "value": "b880070000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452cc",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452cd",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452ce",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452cf",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452d0",
+          "value": "c4e1fa2ac8"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452d5",
+          "value": "b838040000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452da",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452db",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452dc",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01a452dd",
+          "value": "90"
+        }
+      ]
+    }
+  ]
+}

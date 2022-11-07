@@ -1,0 +1,34 @@
+{
+  "patch": [
+    {
+      "title": "Driveclub",
+      "app_titleid": [
+        "CUSA00003",
+        "CUSA00064"
+      ],
+      "app_ver": "01.28",
+      "app_elf": "eboot.bin",
+      "patch_ver": "2.0",
+      "name": "60 FPS",
+      "author": "illusion, u/Charlie_Muggins",
+      "note": "2.0 features deltatime.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01184800",
+          "value": "b801000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01184725",
+          "value": "48b001"
+        },
+        {
+          "type": "bytes16",
+          "addr": "0x00a6306e",
+          "value": "0x9090"
+        }
+      ]
+    }
+  ]
+}

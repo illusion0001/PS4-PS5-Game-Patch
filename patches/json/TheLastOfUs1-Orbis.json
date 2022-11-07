@@ -1,0 +1,1273 @@
+{
+  "patch": [
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Improved Loading Times",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x013302c8",
+          "value": "48e8f4000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013302ce",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013303c2",
+          "value": "c680d506000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013303c9",
+          "value": "c6403001"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x013303cd",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Infected's Severed Head Crash Bug Fix",
+      "author": "illusion, ZEROx",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0095a067",
+          "value": "e810465000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a06c",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a06d",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a06e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a06f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a070",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0095a071",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e5e67c",
+          "value": "488985d0f3ffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e5e683",
+          "value": "4883fb00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e5e687",
+          "value": "0f8404000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e5e68d",
+          "value": "488b4340"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00e5e691",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x00401c79",
+          "value": "0x01"
+        },
+        {
+          "type": "bytes16",
+          "addr": "0x00a92c41",
+          "value": "0x2e85"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00404649",
+          "value": "4831c0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0082dec6",
+          "value": "488b3553854601"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0082de79",
+          "value": "e8f85dca00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0082df5f",
+          "value": "488b3dba844601"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x014d3c76",
+          "value": "be0100000048893d9e277c00c6059f277c0001c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0082dd39",
+          "value": "48e84b5fca0090"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x014d3c8a",
+          "value": "48830596277c0020488d35bf4b3d0048033588277c00c3"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8878",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8898",
+          "value": "pistol-uber-t1                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a88b8",
+          "value": "rifle-improvised-fullauto      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a88d8",
+          "value": "super-soaker                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a88f8",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8918",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8938",
+          "value": "two-by-four                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8958",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8978",
+          "value": "turret-sniper                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8998",
+          "value": "pistol-uber-t1                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a89b8",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a89d8",
+          "value": "radio                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a89f8",
+          "value": "molotov                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8a18",
+          "value": "bandage-apply                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8a38",
+          "value": "mp-parcel                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8a58",
+          "value": "gren-launcher-improvised       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8a78",
+          "value": "shotgun-dbl-barrel             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8a98",
+          "value": "machete-blade                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8ab8",
+          "value": "bow-dark                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8ad8",
+          "value": "rifle-variable                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8af8",
+          "value": "mini-14-rifle                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8b18",
+          "value": "two-by-four                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8b38",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8b58",
+          "value": "pistol-shotgun                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8b78",
+          "value": "flamethrower                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8b98",
+          "value": "desert-eagle-t1                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8bb8",
+          "value": "beer-bottle                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8bd8",
+          "value": "lead-pipe                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8bf8",
+          "value": "lead-pipe                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8c18",
+          "value": "flashlight                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8c38",
+          "value": "rifle-sniper                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8c58",
+          "value": "m4-rifle-t1                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8c78",
+          "value": "smoke-bomb                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8c98",
+          "value": "throw-brick                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8cb8",
+          "value": "shotgun-pump-stock             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8cd8",
+          "value": "silenced-galil-rifle           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8cf8",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8d18",
+          "value": "bloater-pustule                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8d38",
+          "value": "taurus-66b4-revolver           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8d58",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8d78",
+          "value": "rifle-improvised-assault       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8d98",
+          "value": "throwing-knife                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8db8",
+          "value": "rifle-bolt                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8dd8",
+          "value": "beretta-jaguar-pistol          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8df8",
+          "value": "bow                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8e18",
+          "value": "molotov                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8e38",
+          "value": "bill-knife                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8e58",
+          "value": "baseball-bat                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8e78",
+          "value": "mini-14-rifle                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8e98",
+          "value": "pistol-9mm                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8eb8",
+          "value": "mal-gas-can                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8ed8",
+          "value": "machete-blade                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8ef8",
+          "value": "none                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8f18",
+          "value": "rifle-improvised-assault       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8f38",
+          "value": "binoculars                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8f58",
+          "value": "switchblade                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8f78",
+          "value": "rifle-improvised-fullauto      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8f98",
+          "value": "baseball-bat                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018a8fb8",
+          "value": "hatchet                        "
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Restore Full Rendering Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0045f63c",
+          "value": "e8ef246d00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00b337b5",
+          "value": "e992010000"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Light Theme for Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0040d326",
+          "value": "b900000000"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00401c22",
+          "value": "c687a534000001"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Intro Skip",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0040214a",
+          "value": "c687e534000001"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Infected's Severed Head Crash Bug Fix",
+      "author": "illusion, ZEROx",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00abc859",
+          "value": "e872535600"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc85e",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc85f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc860",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc861",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc862",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00abc863",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01021bd0",
+          "value": "488985e0f3ffff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01021bd7",
+          "value": "4883fb00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01021bdb",
+          "value": "7404"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01021bdd",
+          "value": "488b4340"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01021be1",
+          "value": "c3"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "University Nailbomb Softlock Fix",
+      "author": "illusion, ZEROx",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00aa27a7",
+          "value": "e9a4389dff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00aa27ac",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00aa27ad",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00aa27ae",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00aa27af",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00aa27b0",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476050",
+          "value": "448905994c7a01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476057",
+          "value": "4c8d052acf5c01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0047605e",
+          "value": "418138f08ebc40"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476065",
+          "value": "7422"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476067",
+          "value": "418138cff066a4"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0047606e",
+          "value": "7419"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476070",
+          "value": "4181386a06b69a"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476077",
+          "value": "7410"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476079",
+          "value": "4181385c5d8111"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476080",
+          "value": "7407"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476082",
+          "value": "418138c85fd34a"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476089",
+          "value": "448b05604c7a01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476090",
+          "value": "0f851bc76200"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00476096",
+          "value": "e91cc96200"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "byte",
+          "addr": "0x004021a4",
+          "value": "0x75"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Restore Full Rendering Menu",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0046df6c",
+          "value": "e84f6b8400"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00cb6e75",
+          "value": "e993010000"
+        }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Give Player Weapon Fix",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00475db0",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475db5",
+          "value": "48893d597d8501"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dbc",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dbd",
+          "value": "488b07"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dc0",
+          "value": "488905597d8501"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dc7",
+          "value": "4831c0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dca",
+          "value": "be01000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dcf",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dd0",
+          "value": "488305917d850120"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475dd8",
+          "value": "488d3571d73d01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475ddf",
+          "value": "480335837d8501"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00475de6",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00919311",
+          "value": "488b35fd473b01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00919392",
+          "value": "488b3d7c473b01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00919189",
+          "value": "48e841ccb5ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0091918f",
+          "value": "90"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00919399",
+          "value": "e81fcab5ff"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x009192c9",
+          "value": "e8e2cab5ff"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853570",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853590",
+          "value": "pistol-uber-t1                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018535b0",
+          "value": "baseball-bat                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018535d0",
+          "value": "hatchet                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018535f0",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853610",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853630",
+          "value": "two-by-four                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853650",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853670",
+          "value": "turret-sniper                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853690",
+          "value": "rifle-lever-action             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018536b0",
+          "value": "pistol-uber-t1                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018536d0",
+          "value": "shiv                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018536f0",
+          "value": "radio                          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853710",
+          "value": "molotov                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853730",
+          "value": "bandage-apply                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853750",
+          "value": "mp-parcel                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853770",
+          "value": "gren-launcher-improvised       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853790",
+          "value": "shotgun-dbl-barrel             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018537b0",
+          "value": "machete-blade                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018537d0",
+          "value": "bow-dark                       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018537f0",
+          "value": "rifle-variable                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853810",
+          "value": "mini-14-rifle                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853830",
+          "value": "two-by-four                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853850",
+          "value": "pistol-shotgun                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853870",
+          "value": "rifle-improvised-fullauto      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853890",
+          "value": "super-soaker                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018538b0",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018538d0",
+          "value": "beer-bottle                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018538f0",
+          "value": "crossbow-dlc                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853910",
+          "value": "lead-pipe                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853930",
+          "value": "lead-pipe                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853950",
+          "value": "flamethrower                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853970",
+          "value": "desert-eagle-t1                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853990",
+          "value": "flashlight                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018539b0",
+          "value": "rifle-sniper                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018539d0",
+          "value": "m4-rifle-t1                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x018539f0",
+          "value": "smoke-bomb                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853a10",
+          "value": "throw-brick                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853a30",
+          "value": "shotgun-pump-stock             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853a50",
+          "value": "silenced-galil-rifle           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853a70",
+          "value": "NO_ART_GROUP                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853a90",
+          "value": "bloater-pustule                "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853ab0",
+          "value": "taurus-66b4-revolver           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853ad0",
+          "value": "nail-bomb                      "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853af0",
+          "value": "rifle-improvised-assault       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853b10",
+          "value": "throwing-knife                 "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853b30",
+          "value": "rifle-bolt                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853b50",
+          "value": "beretta-jaguar-pistol          "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853b70",
+          "value": "bow                            "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853b90",
+          "value": "molotov                        "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853bb0",
+          "value": "bill-knife                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853bd0",
+          "value": "baseball-bat                   "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853bf0",
+          "value": "mini-14-rifle                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853c10",
+          "value": "pistol-glock-burst             "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853c30",
+          "value": "pistol-9mm                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853c50",
+          "value": "shotgun-tactical               "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853c70",
+          "value": "mal-gas-can                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853c90",
+          "value": "machete-blade                  "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853cb0",
+          "value": "none                           "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853cd0",
+          "value": "rifle-improvised-assault       "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853cf0",
+          "value": "binoculars                     "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853d10",
+          "value": "switchblade                    "
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01853d30",
+          "value": "rifle-improvised-fullauto      "
+        }
+      ]
+    }
+  ]
+}

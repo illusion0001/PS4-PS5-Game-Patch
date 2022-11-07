@@ -1,0 +1,65 @@
+{
+  "patch": [
+    {
+      "title": "Marvel's Spider-Man Miles Morales",
+      "app_titleid": [
+        "CUSA17722",
+        "CUSA17776",
+        "CUSA20177",
+        "CUSA17839",
+        "CUSA18748"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes32",
+          "addr": "0x039b6804",
+          "value": "0x42700000"
+        }
+      ]
+    },
+    {
+      "title": "Marvel's Spider-Man Miles Morales",
+      "app_titleid": [
+        "CUSA17722",
+        "CUSA17776",
+        "CUSA20177",
+        "CUSA17839",
+        "CUSA18748"
+      ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Debug Menu",
+      "author": "illusion",
+      "note": "DOES NOT WORK!! NEEDS MORE REVERSE ENGINEERING",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01cb671d",
+          "value": "48e8abd83602"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04023fce",
+          "value": "c6401c01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04023fd2",
+          "value": "c7801015000001000100"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x04023fdc",
+          "value": "c3"
+        }
+      ]
+    }
+  ]
+}

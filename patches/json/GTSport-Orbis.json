@@ -1,0 +1,116 @@
+{
+  "patch": [
+    {
+      "title": "Gran Turismo Sport",
+      "app_titleid": [
+        "CUSA03220",
+        "CUSA03667",
+        "CUSA02168"
+      ],
+      "app_ver": "01.68",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Online Saving",
+      "author": "Nenkai, illusion",
+      "note": "Originally discovered by Nenkai, ported to permanent executable patch by illusion.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x021364c0",
+          "value": "00"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x021364d0",
+          "value": "online_save=0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021364de",
+          "value": "00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x005e0254",
+          "value": "48e8e65eb501"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136140",
+          "value": "488d3dd99ecc00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136147",
+          "value": "488d3572030000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0213614e",
+          "value": "4989f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136151",
+          "value": "4c8937"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136154",
+          "value": "4c8d7610"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136158",
+          "value": "4c897708"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0213615c",
+          "value": "4d31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0213615f",
+          "value": "4889fe"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136162",
+          "value": "bf02000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x02136167",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x021200d0",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "Gran Turismo Sport",
+      "app_titleid": [
+        "CUSA03220",
+        "CUSA03667",
+        "CUSA02168"
+      ],
+      "app_ver": "01.68",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Debug Menu",
+      "author": "",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "utf8",
+          "addr": "0x02f72b10",
+          "value": "debug"
+        }
+      ]
+    }
+  ]
+}

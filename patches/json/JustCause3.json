@@ -1,0 +1,30 @@
+{
+  "patch": [
+    {
+      "title": "Just Cause 3",
+      "app_titleid": [
+        "CUSA01493",
+        "CUSA02747",
+        "CUSA02748"
+      ],
+      "app_ver": "01.05",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00a1f817",
+          "value": "4831c9"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01ddd118",
+          "value": "41c7c403000000"
+        }
+      ]
+    }
+  ]
+}
