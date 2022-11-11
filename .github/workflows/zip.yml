@@ -58,12 +58,6 @@ jobs:
           mv out/patches patch1_artifact/patches
           cp patch1.zip CNAME build.txt .github/README.md patch_built.md out/
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: patch1
-          path: patch1_artifact
-
       - name: Upload log
         if: success() || failure()
         uses: actions/upload-artifact@v3
