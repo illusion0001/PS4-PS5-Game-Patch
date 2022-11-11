@@ -2,11 +2,9 @@ name: Pack patch zip
 
 on:
   push:
-    paths:
-      - '**/*.c'
-      - '**/*.yml'
-      - '**/*.json'
-      - '**/*.py'
+    paths-ignore:
+      - "**/*.md"
+      - '**/*.txt'
 
 jobs:
   checks:
