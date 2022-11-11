@@ -3,6 +3,7 @@ name: Pack patch zip
 on:
   push:
     paths:
+      - '**/*.c'
       - '**/*.yml'
       - '**/*.json'
       - '**/*.py'
@@ -24,8 +25,8 @@ jobs:
           FILES="patches/json/*.json"
           for f in $FILES
           do
-            python .ci/json_check.py $f
-            .ci/example-01.exe $f
+            python .ci/json_check.py $f >> json_py.log
+            .ci/example-01.exe $f >> json_c.log
             ((i=i+1))
           done
           echo "$i file(s) verified"
@@ -59,6 +60,14 @@ jobs:
         with:
           name: patch1
           path: patch1_artifact
+
+      - name: Upload log
+        uses: actions/upload-artifact@v3
+        with:
+          name: log
+          path: |
+            json_py.log
+            json_c.log
 
       - name: Deploy
         if: |
