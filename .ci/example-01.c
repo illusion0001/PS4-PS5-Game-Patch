@@ -4,10 +4,7 @@
 #include "tiny-json/tiny-json.h"
 
 #define MAX_TOKENS 4096
-
-int debug_printf(const char* FMT, ...){
-    return 0;
-}
+#define debug_printf(a, args...) printf("[%s] (%s:%d) " a,  __func__,__FILE__, __LINE__, ##args)
 
 int main(int argc, char *argv[]) {
     if( argc == 2 ) {
