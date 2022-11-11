@@ -4,9 +4,10 @@ Patches for PlayStation 4 Games
 ## Features
 * `.json` support
 
-### Usage:
+### Usage
+<br>[Download](https://goldhen.github.io/GoldHEN_Patch_Repository/patch1.zip) and extract zip contents to `/user/data/GoldHEN/`
 
-### Storage:
+### Storage
 * Use `FTP` to upload patch files to:
   * `/user/data/GoldHEN/patches/json/`
 * Naming conversion for single or multiple games: `GameName.{format}` (English name only)
