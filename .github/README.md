@@ -1,11 +1,12 @@
 # GoldHEN Patch Repository
-Patches for PlayStation 4 Games
+Patches for PlayStation 4 Games.
 
 ## Features
 * `.json` support
 
-### Usage
-<br>[Download](https://goldhen.github.io/GoldHEN_Patch_Repository/patch1.zip) and extract zip contents to `/user/data/GoldHEN/`
+## Usage
+
+[Download](https://goldhen.github.io/GoldHEN_Patch_Repository/patch1.zip) and extract zip contents to `/user/data/GoldHEN/`
 
 ### Storage
 * Use `FTP` to upload patch files to:
@@ -16,13 +17,12 @@ Patches for PlayStation 4 Games
 
 ## Developing patches
 
-Plugin system and GoldHEN Cheat Manager looks for patches by `TitleID.json` (this is automatically generated from a python script when downloading/updating)
-
-You may edit the individual file for your title id or edit the base file and upload it to your PS4 as `TitleID.json`.
+Plugin system and GoldHEN Cheat Manager looks for patches by `TitleID.json`. (this is automatically generated from a python script using `app_titleid` when downloading/updating)
+<br>You may edit the individual file for your Title ID or edit the base file and upload it to your PS4 as `TitleID.json`.
 
 ```bash
 export PS4_IP=192.168.1.138 # your PS4 ip address
-export PS4_FTP_PORT=2121
+export PS4_FTP_PORT=2121 # your PS4 ftp port (2121 via GoldHEN payload)
 # sending base file as CUSA00000.json
 curl -T ExampleGame.json ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.json
 # sending CUSA00000.json as CUSA00000.json
@@ -59,8 +59,10 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
 | `bytes`   | Hex, any size (no spaces) | `"####"`               |
 | `float32` | Float, single             | `"1.0"`                |
 | `float64` | Float, double             | `"1.0"`                |
-| `utf8`    | String, UTF-8             | `"string"`             |
-| `utf16`   | String, UTF-16            | `"string"`             |
+| `utf8`    | String, UTF-8*            | `"string"`             |
+| `utf16`   | String, UTF-16*           | `"string"`             |
+
+* Note: Strings are automatically null terminated.
 
 #### Example patch
 
