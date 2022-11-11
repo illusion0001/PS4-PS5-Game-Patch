@@ -62,6 +62,7 @@ jobs:
           path: patch1_artifact
 
       - name: Upload log
+        if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
           name: log
