@@ -1,5 +1,5 @@
 CC = clang
-CFLAGS = -O2 -std=c99 -Wall -pedantic
+CFLAGS = -O2 -std=c11
 
 src = $(wildcard *.c)
 src += $(wildcard tiny-json/*.c)

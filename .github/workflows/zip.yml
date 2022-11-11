@@ -2,11 +2,14 @@ name: Pack patch zip
 
 on:
   push:
-    paths:
-      - '**/*.c'
-      - '**/*.yml'
-      - '**/*.json'
-      - '**/*.py'
+    paths-ignore:
+      - "**/*.md"
+      - '**/*.txt'
+  pull_request:
+    paths-ignore:
+      - "**/*.md"
+      - '**/*.txt'
+  workflow_dispatch:
 
 jobs:
   checks:
