@@ -6,7 +6,15 @@ Patches for PlayStation 4 Games.
 
 ## Usage
 
-[Download](https://goldhen.github.io/GoldHEN_Patch_Repository/patch1.zip) and extract zip contents to `/user/data/GoldHEN/`
+#### Manual Installation
+- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip)
+- Extract it to `/data/GoldHEN/`
+
+#### Easy Installation
+- Patches can be configured, install/update via:
+  - [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest)
+  - Itemzflow Game Manager
+- Run your game.
 
 ### Storage
 * Use `FTP` to upload patch files to:
