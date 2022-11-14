@@ -7,6 +7,27 @@
         "CUSA24705",
         "CUSA28563"
       ],
+      "app_ver": "01.18",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x02b7ac40",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "Horizon Forbidden West",
+      "app_titleid": [
+        "CUSA28561",
+        "CUSA24705",
+        "CUSA28563"
+      ],
       "app_ver": "01.17",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
