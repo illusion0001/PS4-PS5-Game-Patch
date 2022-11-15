@@ -7,6 +7,188 @@
         "CUSA03667",
         "CUSA02168"
       ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Online Saving",
+      "author": "Nenkai, illusion",
+      "note": "Originally discovered by Nenkai, ported to permanent executable patch by illusion.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01e02772",
+          "value": "00"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01e02773",
+          "value": "online_save=0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02781",
+          "value": "00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0059fac7",
+          "value": "48e85a2c8601"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02727",
+          "value": "488d3df218cf00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e0272e",
+          "value": "488d353d000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02735",
+          "value": "4989f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02738",
+          "value": "4c8937"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e0273b",
+          "value": "4c8d7601"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e0273f",
+          "value": "4c897708"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02743",
+          "value": "4d31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02746",
+          "value": "4889fe"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e02749",
+          "value": "bf02000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01e0274e",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01dffc00",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "Gran Turismo Sport",
+      "app_titleid": [
+        "CUSA03220",
+        "CUSA03667",
+        "CUSA02168"
+      ],
+      "app_ver": "01.14",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Online Saving",
+      "author": "Nenkai, illusion",
+      "note": "Originally discovered by Nenkai, ported to permanent executable patch by illusion.",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x01f46ff2",
+          "value": "00"
+        },
+        {
+          "type": "utf8",
+          "addr": "0x01f46ff3",
+          "value": "online_save=0"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f47001",
+          "value": "00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0059fb1d",
+          "value": "48e884749a01"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fa7",
+          "value": "488d3d7290d600"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fae",
+          "value": "488d353d000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fb5",
+          "value": "4989f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fb8",
+          "value": "4c8937"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fbb",
+          "value": "4c8d7601"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fbf",
+          "value": "4c897708"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fc3",
+          "value": "4d31f6"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fc6",
+          "value": "4889fe"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fc9",
+          "value": "bf02000000"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f46fce",
+          "value": "c3"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01f44460",
+          "value": "31c0c3"
+        }
+      ]
+    },
+    {
+      "title": "Gran Turismo Sport",
+      "app_titleid": [
+        "CUSA03220",
+        "CUSA03667",
+        "CUSA02168"
+      ],
       "app_ver": "01.68",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
