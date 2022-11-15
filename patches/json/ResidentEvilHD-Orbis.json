@@ -6,7 +6,7 @@
         "CUSA01067"
       ],
       "app_ver": "01.00",
-      "app_elf": "bh1hd.elf",
+      "app_elf": "eboot.bin",
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
