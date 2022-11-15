@@ -3,7 +3,8 @@
     {
       "title": "Resident Evil: Zero",
       "app_titleid": [
-        "CUSA03178"
+        "CUSA03178",
+        "CUSA02882"
       ],
       "app_ver": "01.01",
       "app_elf": "bh0hd.elf",
@@ -22,7 +23,8 @@
     {
       "title": "Resident Evil: HD",
       "app_titleid": [
-        "CUSA03178"
+        "CUSA03178",
+        "CUSA02882"
       ],
       "app_ver": "01.01",
       "app_elf": "bh1hd.elf",
