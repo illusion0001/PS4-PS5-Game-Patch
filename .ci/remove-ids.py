@@ -11,6 +11,5 @@ if __name__ == '__main__':
       length_id = len(json_id)
       for i in range(0, length_id):
         del json_id[i]['app_titleid']
-      write = json.dumps(cont, indent=2)
       with open(patches, 'w') as fw:
-        fw.write(write)
+        fw.write(f'{json.dumps(cont, indent=2)}\n')

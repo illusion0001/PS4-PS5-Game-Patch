@@ -13,7 +13,5 @@ if __name__ == '__main__':
       patch_file['base_file'] = patches
       for i in range(0, len(json_id[0][app_titleid_str])):
         out = ('output/json/{}.json'.format(json_id[0][app_titleid_str][i]))
-        print('new file from id: {}'.format(out))
         with open(out, 'w') as fw:
-          write_data = json.dumps(patch_file, indent=2)
-          fw.write(write_data)
+          fw.write(json.dumps(patch_file, indent=2))
