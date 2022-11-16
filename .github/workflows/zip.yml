@@ -56,7 +56,7 @@ jobs:
           cd ..
           mkdir patch1_artifact 
           mv out/patches patch1_artifact/patches
-          cp patch1.zip CNAME build.txt .github/README.md patch_built.md out/
+          cp patch1.zip build.txt .github/README.md patch_built.md out/
 
       - name: Upload log
         if: success() || failure()
