@@ -10,14 +10,64 @@
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
-      "name": "Skip Intro Logos",
+      "name": "Boot with loose files exclusively",
       "author": "illusion",
-      "note": "",
+      "note": "Work in Progress, you will not be able to boot game without raw files extracted to `/data/GoldHEN/AFR/(title id)/`!!.",
       "patch_list": [
         {
-          "type": "byte",
-          "addr": "0x01378a40",
-          "value": "0xc3"
+          "type": "bytes",
+          "addr": "0x008501da",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0086c7da",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0086c8b6",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0086cb23",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0086cbdc",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0086cfca",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x014ce352",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x014e0b7a",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x01515f92",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0151caf1",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x018ce7de",
+          "value": "2f617070"
         }
       ]
     },
