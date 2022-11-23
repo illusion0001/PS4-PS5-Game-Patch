@@ -24,12 +24,13 @@ jobs:
         run: |
           cd .ci && make && cd ..
           mkdir -p output/json
+          mkdir -p output/misc
           i=0
           FILES="patches/json/*.json"
           for f in $FILES
           do
-            python .ci/json_check.py $f >> json_py.log
-            .ci/example-01.exe $f >> json_c.log
+            python .ci/json_check.py $f
+            .ci/example-01.exe $f
             ((i=i+1))
           done
           echo "$i file(s) verified"
@@ -42,6 +43,7 @@ jobs:
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
           echo $msg > output/json/build.txt
+          echo $msg > output/misc/patch_ver.txt
           echo $msg > build.txt
           echo $msg_md > patch_built.md
           echo $msg
@@ -57,15 +59,6 @@ jobs:
           mkdir patch1_artifact 
           mv out/patches patch1_artifact/patches
           cp patch1.zip build.txt .github/README.md patch_built.md out/
-
-      - name: Upload log
-        if: success() || failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: log
-          path: |
-            json_py.log
-            json_c.log
 
       - name: Deploy
         if: |
