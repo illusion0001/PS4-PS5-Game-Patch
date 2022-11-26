@@ -76,6 +76,32 @@
           "value": "4831c09090"
         }
       ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2) Demo",
+      "app_titleid": [
+        "CUSA06596",
+        "CUSA06760",
+        "CUSA07241"
+      ],
+      "app_ver": "01.01",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Print+DebugPrint to TTY",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00e7ebe6",
+          "value": "488d35a3673d00"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00ddc0c2",
+          "value": "488d35c7924700"
+        }
+      ]
     }
   ]
 }
