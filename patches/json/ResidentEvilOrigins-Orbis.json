@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x0072564d",
-          "value": "0x42700000"
-        }
+        { "type": "bytes32", "addr": "0x0072564d", "value": "0x42700000" }
       ]
     },
     {
@@ -31,11 +27,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x00725aed",
-          "value": "0x42700000"
-        }
+        { "type": "bytes32", "addr": "0x00725aed", "value": "0x42700000" }
       ]
     },
     {
@@ -50,16 +42,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x004b577b",
-          "value": "0x42700000"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x004b577f",
-          "value": "0x42700000"
-        }
+        { "type": "bytes32", "addr": "0x004b577b", "value": "0x42700000" },
+        { "type": "bytes32", "addr": "0x004b577f", "value": "0x42700000" }
       ]
     },
     {
@@ -74,16 +58,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x004b5b1b",
-          "value": "0x42700000"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x004b5b1f",
-          "value": "0x42700000"
-        }
+        { "type": "bytes32", "addr": "0x004b5b1b", "value": "0x42700000" },
+        { "type": "bytes32", "addr": "0x004b5b1f", "value": "0x42700000" }
       ]
     }
   ]

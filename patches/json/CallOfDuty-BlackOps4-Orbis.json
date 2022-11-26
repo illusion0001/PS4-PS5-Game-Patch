@@ -12,11 +12,7 @@
       "author": "DeathRGH",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00e3103b",
-          "value": "4189d1"
-        }
+        { "type": "bytes", "addr": "0x00e3103b", "value": "4189d1" }
       ]
     }
   ]

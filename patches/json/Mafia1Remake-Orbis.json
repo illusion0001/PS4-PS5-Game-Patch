@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "CPU/GPU Limited.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0312a2a1",
-          "value": "eb0590"
-        }
+        { "type": "bytes", "addr": "0x0312a2a1", "value": "eb0590" }
       ]
     }
   ]

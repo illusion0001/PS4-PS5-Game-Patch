@@ -13,16 +13,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x01b23444",
-          "value": "4d69fc48010000"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x01b2344b",
-          "value": "6641c7461e803f"
-        }
+        { "type": "bytes", "addr": "0x01b23444", "value": "4d69fc48010000" },
+        { "type": "bytes", "addr": "0x01b2344b", "value": "6641c7461e803f" }
       ]
     },
     {
@@ -38,16 +30,8 @@
       "author": "Lance McDonald (manfightdragon)",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x006e2ae5",
-          "value": "803534a8740401"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x006e2aec",
-          "value": "9090"
-        }
+        { "type": "bytes", "addr": "0x006e2ae5", "value": "803534a8740401" },
+        { "type": "bytes", "addr": "0x006e2aec", "value": "9090" }
       ]
     }
   ]

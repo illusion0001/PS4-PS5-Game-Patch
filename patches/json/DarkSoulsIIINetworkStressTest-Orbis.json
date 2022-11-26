@@ -12,16 +12,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0278c407",
-          "value": "c7430805000000eb07"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0278c50c",
-          "value": "41b601"
-        }
+        { "type": "bytes", "addr": "0x0278c407", "value": "c7430805000000eb07" },
+        { "type": "bytes", "addr": "0x0278c50c", "value": "41b601" }
       ]
     },
     {
@@ -36,16 +28,8 @@
       "author": "illusion",
       "note": "Caps framerate to 30 with proper frame pacing.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0278c407",
-          "value": "c7430805000000eb07"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x02dbdb44",
-          "value": "488b1ded10f102be01000000eb03"
-        }
+        { "type": "bytes", "addr": "0x0278c407", "value": "c7430805000000eb07" },
+        { "type": "bytes", "addr": "0x02dbdb44", "value": "488b1ded10f102be01000000eb03" }
       ]
     },
     {
@@ -60,11 +44,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x05d22d84",
-          "value": "00050000d0020000"
-        }
+        { "type": "bytes", "addr": "0x05d22d84", "value": "00050000d0020000" }
       ]
     },
     {
@@ -79,11 +59,7 @@
       "author": "Whitehawkx",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x05d22d84",
-          "value": "4006000084030000"
-        }
+        { "type": "bytes", "addr": "0x05d22d84", "value": "4006000084030000" }
       ]
     },
     {
@@ -98,11 +74,7 @@
       "author": "Unknown",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x02309e80",
-          "value": "e91c02"
-        }
+        { "type": "bytes", "addr": "0x02309e80", "value": "e91c02" }
       ]
     },
     {
@@ -117,11 +89,7 @@
       "author": "Whitehawkx",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x02766352",
-          "value": "01"
-        }
+        { "type": "bytes", "addr": "0x02766352", "value": "01" }
       ]
     },
     {
@@ -136,11 +104,7 @@
       "author": "Whitehawkx",
       "note": "Hidden Pause Menu",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x01defd96",
-          "value": "b201"
-        }
+        { "type": "bytes", "addr": "0x01defd96", "value": "b201" }
       ]
     },
     {
@@ -155,36 +119,12 @@
       "author": "Whitehawkx, Lance McDonald",
       "note": "Enables equipment, item and status menus",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x022a29a9",
-          "value": "90"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x022a29aa",
-          "value": "90"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x022a29ab",
-          "value": "90"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x022a29ac",
-          "value": "90"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x022a29ad",
-          "value": "90"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x022a29ae",
-          "value": "90"
-        }
+        { "type": "bytes", "addr": "0x022a29a9", "value": "90" },
+        { "type": "bytes", "addr": "0x022a29aa", "value": "90" },
+        { "type": "bytes", "addr": "0x022a29ab", "value": "90" },
+        { "type": "bytes", "addr": "0x022a29ac", "value": "90" },
+        { "type": "bytes", "addr": "0x022a29ad", "value": "90" },
+        { "type": "bytes", "addr": "0x022a29ae", "value": "90" }
       ]
     },
     {
@@ -199,11 +139,7 @@
       "author": "Whitehawkx",
       "note": "Re-enables built-in video recording (share button)",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0276375c",
-          "value": "c745ec00000000"
-        }
+        { "type": "bytes", "addr": "0x0276375c", "value": "c745ec00000000" }
       ]
     }
   ]

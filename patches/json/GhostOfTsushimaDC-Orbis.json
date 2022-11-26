@@ -13,11 +13,7 @@
       "author": "illusion",
       "note": "Enable \"Better Framerate Mode\" in the game options menu on Neo. Not very useful for Base Console due to hardware limits.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00b03b1a",
-          "value": "eb12"
-        }
+        { "type": "bytes", "addr": "0x00b03b1a", "value": "eb12" }
       ]
     },
     {
@@ -33,16 +29,8 @@
       "author": "illusion",
       "note": "Enable \"Better Framerate Mode\" in the game options menu on Neo.",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x00b02bd1",
-          "value": "0x00000640"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x00b02bd5",
-          "value": "0x00000384"
-        }
+        { "type": "bytes32", "addr": "0x00b02bd1", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x00b02bd5", "value": "0x00000384" }
       ]
     },
     {
@@ -58,11 +46,7 @@
       "author": "illusion",
       "note": "Enable \"Better Framerate Mode\" in the game options menu on Neo.",
       "patch_list": [
-        {
-          "type": "byte",
-          "addr": "0x00b02bea",
-          "value": "0x00"
-        }
+        { "type": "byte", "addr": "0x00b02bea", "value": "0x00" }
       ]
     }
   ]

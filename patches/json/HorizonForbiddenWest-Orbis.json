@@ -14,11 +14,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x02b7ac40",
-          "value": "31c0c3"
-        }
+        { "type": "bytes", "addr": "0x02b7ac40", "value": "31c0c3" }
       ]
     },
     {
@@ -35,11 +31,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00566f83",
-          "value": "be00000000"
-        }
+        { "type": "bytes", "addr": "0x00566f83", "value": "be00000000" }
       ]
     },
     {
@@ -56,21 +48,9 @@
       "author": "illusion",
       "note": "Skips long intro video and first time language selection screen.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x019e1bb7",
-          "value": "c6801801000001"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x019e1bbe",
-          "value": "b001"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x019e1bc0",
-          "value": "c3"
-        }
+        { "type": "bytes", "addr": "0x019e1bb7", "value": "c6801801000001" },
+        { "type": "bytes", "addr": "0x019e1bbe", "value": "b001" },
+        { "type": "bytes", "addr": "0x019e1bc0", "value": "c3" }
       ]
     }
   ]

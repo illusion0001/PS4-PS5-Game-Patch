@@ -17,31 +17,11 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0179f2a5",
-          "value": "b80000803f"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0179f2aa",
-          "value": "4189471c"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0179f2ae",
-          "value": "c3"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0179f30f",
-          "value": "e891ffffff"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0179f314",
-          "value": "9090"
-        }
+        { "type": "bytes", "addr": "0x0179f2a5", "value": "b80000803f" },
+        { "type": "bytes", "addr": "0x0179f2aa", "value": "4189471c" },
+        { "type": "bytes", "addr": "0x0179f2ae", "value": "c3" },
+        { "type": "bytes", "addr": "0x0179f30f", "value": "e891ffffff" },
+        { "type": "bytes", "addr": "0x0179f314", "value": "9090" }
       ]
     },
     {
@@ -61,26 +41,10 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0189059a",
-          "value": "48e871000000"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x01890611",
-          "value": "c6400d01"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x01890615",
-          "value": "c7809812000001000100"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x0189061f",
-          "value": "c3"
-        }
+        { "type": "bytes", "addr": "0x0189059a", "value": "48e871000000" },
+        { "type": "bytes", "addr": "0x01890611", "value": "c6400d01" },
+        { "type": "bytes", "addr": "0x01890615", "value": "c7809812000001000100" },
+        { "type": "bytes", "addr": "0x0189061f", "value": "c3" }
       ]
     }
   ]

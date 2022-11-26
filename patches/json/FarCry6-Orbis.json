@@ -12,16 +12,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00df3471",
-          "value": "eb0e"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x00df3481",
-          "value": "31f6"
-        }
+        { "type": "bytes", "addr": "0x00df3471", "value": "eb0e" },
+        { "type": "bytes", "addr": "0x00df3481", "value": "31f6" }
       ]
     }
   ]

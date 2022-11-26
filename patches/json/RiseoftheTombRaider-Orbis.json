@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "CPU Limited in some areas.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0088e26c",
-          "value": "31f6"
-        }
+        { "type": "bytes", "addr": "0x0088e26c", "value": "31f6" }
       ]
     },
     {
@@ -31,16 +27,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x008a8076",
-          "value": "0x00000500"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x008a8082",
-          "value": "0x000002d0"
-        }
+        { "type": "bytes32", "addr": "0x008a8076", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x008a8082", "value": "0x000002d0" }
       ]
     }
   ]

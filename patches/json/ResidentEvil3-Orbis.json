@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x0349c9fc",
-          "value": "0x3f2b851f"
-        }
+        { "type": "bytes32", "addr": "0x0349c9fc", "value": "0x3f2b851f" }
       ]
     }
   ]

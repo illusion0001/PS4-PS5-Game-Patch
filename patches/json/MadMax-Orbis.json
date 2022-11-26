@@ -13,11 +13,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0132b900",
-          "value": "be00000000909090"
-        }
+        { "type": "bytes", "addr": "0x0132b900", "value": "be00000000909090" }
       ]
     },
     {
@@ -33,16 +29,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x00e8ef48",
-          "value": "0x00000500"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x00e8ef4c",
-          "value": "0x000002d0"
-        }
+        { "type": "bytes32", "addr": "0x00e8ef48", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x00e8ef4c", "value": "0x000002d0" }
       ]
     },
     {
@@ -58,11 +46,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "byte",
-          "addr": "0x00ea3f5a",
-          "value": "0x00"
-        }
+        { "type": "byte", "addr": "0x00ea3f5a", "value": "0x00" }
       ]
     }
   ]

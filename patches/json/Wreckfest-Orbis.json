@@ -14,11 +14,7 @@
       "author": "illusion",
       "note": "Uses adapative sync.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0054060b",
-          "value": "95"
-        }
+        { "type": "bytes", "addr": "0x0054060b", "value": "95" }
       ]
     },
     {
@@ -35,11 +31,7 @@
       "author": "illusion",
       "note": "Uses adapative sync.",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00e92380",
-          "value": "31c0c3"
-        }
+        { "type": "bytes", "addr": "0x00e92380", "value": "31c0c3" }
       ]
     }
   ]

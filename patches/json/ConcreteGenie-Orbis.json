@@ -14,11 +14,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x03394c96",
-          "value": "7469"
-        }
+        { "type": "bytes", "addr": "0x03394c96", "value": "7469" }
       ]
     },
     {
@@ -35,11 +31,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0313d546",
-          "value": "c740000a578542"
-        }
+        { "type": "bytes", "addr": "0x0313d546", "value": "c740000a578542" }
       ]
     },
     {
@@ -56,11 +48,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x01fb0219",
-          "value": "eb58"
-        }
+        { "type": "bytes", "addr": "0x01fb0219", "value": "eb58" }
       ]
     }
   ]

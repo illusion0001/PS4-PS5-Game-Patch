@@ -13,11 +13,7 @@
       "author": "illusion",
       "note": "CPU/GPU Limited. For use with 9th generation of game consoles.",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x00b0788b",
-          "value": "0x00000000"
-        }
+        { "type": "bytes32", "addr": "0x00b0788b", "value": "0x00000000" }
       ]
     }
   ]

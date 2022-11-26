@@ -14,11 +14,7 @@
       "author": "illusion",
       "note": "CPU Limited.",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x00e6bf3e",
-          "value": "0x00000001"
-        }
+        { "type": "bytes32", "addr": "0x00e6bf3e", "value": "0x00000001" }
       ]
     },
     {
@@ -35,11 +31,7 @@
       "author": "illusion, GraFfiX_221211",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x01137b5e",
-          "value": "0x00000001"
-        }
+        { "type": "bytes32", "addr": "0x01137b5e", "value": "0x00000001" }
       ]
     },
     {
@@ -56,16 +48,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x0333a794",
-          "value": "0x00000000"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x02c6afb8",
-          "value": "0x00000000"
-        }
+        { "type": "bytes32", "addr": "0x0333a794", "value": "0x00000000" },
+        { "type": "bytes32", "addr": "0x02c6afb8", "value": "0x00000000" }
       ]
     }
   ]

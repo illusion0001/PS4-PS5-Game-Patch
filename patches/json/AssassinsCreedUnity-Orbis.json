@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x03ffaadb",
-          "value": "0f85"
-        }
+        { "type": "bytes", "addr": "0x03ffaadb", "value": "0f85" }
       ]
     },
     {
@@ -31,11 +27,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x042f034e",
-          "value": "be00000000"
-        }
+        { "type": "bytes", "addr": "0x042f034e", "value": "be00000000" }
       ]
     },
     {
@@ -50,16 +42,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a19",
-          "value": "0x00000780"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a0b",
-          "value": "0x00000438"
-        }
+        { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000780" },
+        { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x00000438" }
       ]
     },
     {
@@ -74,16 +58,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a19",
-          "value": "0x00000640"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a0b",
-          "value": "0x00000384"
-        }
+        { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x00000384" }
       ]
     },
     {
@@ -98,16 +74,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a19",
-          "value": "0x00000500"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x042f3a0b",
-          "value": "0x000002d0"
-        }
+        { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x000002d0" }
       ]
     }
   ]

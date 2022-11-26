@@ -13,11 +13,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "byte",
-          "addr": "0x008507c4",
-          "value": "0x01"
-        }
+        { "type": "byte", "addr": "0x008507c4", "value": "0x01" }
       ]
     },
     {
@@ -33,21 +29,9 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "byte",
-          "addr": "0x0084cef5",
-          "value": "0x75"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x0084cefd",
-          "value": "0x00000640"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x0084cf07",
-          "value": "0x00000384"
-        }
+        { "type": "byte", "addr": "0x0084cef5", "value": "0x75" },
+        { "type": "bytes32", "addr": "0x0084cefd", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x0084cf07", "value": "0x00000384" }
       ]
     },
     {
@@ -63,21 +47,9 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "byte",
-          "addr": "0x0084cef5",
-          "value": "0x75"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x0084cefd",
-          "value": "0x00000500"
-        },
-        {
-          "type": "bytes32",
-          "addr": "0x0084cf07",
-          "value": "0x000002d0"
-        }
+        { "type": "byte", "addr": "0x0084cef5", "value": "0x75" },
+        { "type": "bytes32", "addr": "0x0084cefd", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x0084cf07", "value": "0x000002d0" }
       ]
     },
     {
@@ -93,11 +65,7 @@
       "author": "illusion",
       "note": "Native 1080p will cause visual issues, 900p or below must be used.",
       "patch_list": [
-        {
-          "type": "bytes32",
-          "addr": "0x0084ce8c",
-          "value": "0x3fe38e39"
-        }
+        { "type": "bytes32", "addr": "0x0084ce8c", "value": "0x3fe38e39" }
       ]
     }
   ]

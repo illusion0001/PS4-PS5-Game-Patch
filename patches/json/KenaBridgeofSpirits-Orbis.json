@@ -12,11 +12,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes16",
-          "addr": "0x05071c32",
-          "value": "0xe948"
-        }
+        { "type": "bytes16", "addr": "0x05071c32", "value": "0xe948" }
       ]
     },
     {
@@ -31,11 +27,7 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x0683dd60",
-          "value": "31c0c3"
-        }
+        { "type": "bytes", "addr": "0x0683dd60", "value": "31c0c3" }
       ]
     },
     {
@@ -50,26 +42,10 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x054a93b2",
-          "value": "48e859030000"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a9711",
-          "value": "41c7048f55558542"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a9719",
-          "value": "c4c17a10048f"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a971f",
-          "value": "c3"
-        }
+        { "type": "bytes", "addr": "0x054a93b2", "value": "48e859030000" },
+        { "type": "bytes", "addr": "0x054a9711", "value": "41c7048f55558542" },
+        { "type": "bytes", "addr": "0x054a9719", "value": "c4c17a10048f" },
+        { "type": "bytes", "addr": "0x054a971f", "value": "c3" }
       ]
     },
     {
@@ -84,26 +60,10 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x054a93b2",
-          "value": "48e859030000"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a9711",
-          "value": "41c7048fabaaa642"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a9719",
-          "value": "c4c17a10048f"
-        },
-        {
-          "type": "bytes",
-          "addr": "0x054a971f",
-          "value": "c3"
-        }
+        { "type": "bytes", "addr": "0x054a93b2", "value": "48e859030000" },
+        { "type": "bytes", "addr": "0x054a9711", "value": "41c7048fabaaa642" },
+        { "type": "bytes", "addr": "0x054a9719", "value": "c4c17a10048f" },
+        { "type": "bytes", "addr": "0x054a971f", "value": "c3" }
       ]
     }
   ]
