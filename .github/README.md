@@ -90,16 +90,8 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
       "author": "Example Author",
       "note": "Example Note",
       "patch_list": [
-        {
-          "type": "bytes",
-          "addr": "0x00000000",
-          "value": "0102030405060708"
-        },
-        {
-          "type": "utf8",
-          "addr": "0x00000000",
-          "value": "Hello World"
-        }
+        { "type": "bytes", "addr": "0x00000000", "value": "0102030405060708" },
+        { "type": "utf8", "addr": "0x00000000", "value": "Hello World" }
       ]
     }
   ]
