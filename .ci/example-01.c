@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_TOKENS 4096
+#define MAX_TOKENS 4096 // should be plenty
 #define debug_printf(a, args...) printf("[%s] (%s:%d) " a, __func__, __FILE__, __LINE__, ##args)
 
 int main(int argc, char *argv[]) {
@@ -21,8 +21,8 @@ int main(int argc, char *argv[]) {
             }
             fclose(f);
         }
-        json_t mem[MAX_TOKENS]; // should be plenty
-        json_t const *json = json_create(str, mem, sizeof mem / sizeof *mem);
+        json_t mem[MAX_TOKENS];
+        json_t const *json = json_create(str, mem, MAX_TOKENS);
         if (!json) {
             printf("Error json create\n");
             return 1;
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
                         char const *gameType = json_getPropertyValue(patch_lists, "type");
                         if (gameType)
                             debug_printf("  type: %s\n", gameType);
-                        char const *gameAddr = json_getPropertyValue(patch_lists, "address");
+                        char const *gameAddr = json_getPropertyValue(patch_lists, "addr");
                         if (gameAddr)
                             debug_printf("  addr: %s\n", gameAddr);
                         char const *gameValue = json_getPropertyValue(patch_lists, "value");
