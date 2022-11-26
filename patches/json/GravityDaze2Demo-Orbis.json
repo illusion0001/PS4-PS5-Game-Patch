@@ -1,0 +1,81 @@
+{
+  "patch": [
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2) Demo",
+      "app_titleid": [
+        "CUSA06596",
+        "CUSA06760",
+        "CUSA07241"
+      ],
+      "app_ver": "01.01",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Boot with loose files exclusively",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x0041046d",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004105e4",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004109f3",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00410c4e",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00410ec6",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x00410f8d",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x004113ea",
+          "value": "2f617070"
+        },
+        {
+          "type": "bytes",
+          "addr": "0x0131d79e",
+          "value": "2f617070"
+        }
+      ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2) Demo",
+      "app_titleid": [
+        "CUSA06596",
+        "CUSA06760",
+        "CUSA07241"
+      ],
+      "app_ver": "01.01",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Demo Timer Never Expires",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        {
+          "type": "bytes",
+          "addr": "0x00b10797",
+          "value": "4831c09090"
+        }
+      ]
+    }
+  ]
+}
