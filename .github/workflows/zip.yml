@@ -60,6 +60,18 @@ jobs:
           mv out/patches patch1_artifact/patches
           cp patch1.zip build.txt .github/README.md patch_built.md out/
 
+      - name: Normalize JSON files
+        if: |
+          github.ref_name == 'main' &&
+          github.event_name == 'push' &&
+          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Actions"
+          git add patches/json/*.json
+          git commit -m "Normalize JSON files" || true
+          git push origin || true
+
       - name: Deploy
         if: |
           github.ref_name == 'main' &&
