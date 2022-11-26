@@ -393,6 +393,23 @@
         { "type": "bytes", "addr": "0x013c157d", "value": "488d358c5c3cff" },
         { "type": "bytes", "addr": "0x017e25b1", "value": "488d35584cfafe" }
       ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2)",
+      "app_titleid": [
+        "CUSA03694",
+        "CUSA04943",
+        "CUSA00547"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Demo Timer Never Expires",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x0171ef33", "value": "b800000000" }
+      ]
     }
   ]
 }
