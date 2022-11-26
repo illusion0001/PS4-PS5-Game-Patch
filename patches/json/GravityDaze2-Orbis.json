@@ -332,12 +332,12 @@
       ],
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
-      "patch_ver": "1.0",
-      "name": "Most attacks does not hurt player",
+      "patch_ver": "2.0",
+      "name": "Invincible Player",
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes", "addr": "0x009091a6", "value": "9090909090" }
+        { "type": "bytes", "addr": "0x00907e20", "value": "c3" }
       ]
     },
     {
