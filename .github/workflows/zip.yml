@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  checks:
+  zip-patches:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -60,7 +60,19 @@ jobs:
           mv out/patches patch1_artifact/patches
           cp patch1.zip build.txt .github/README.md patch_built.md out/
 
-      - name: Normalize JSON files
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: patch1
+          path: patch1_artifact
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: patches
+          path: patches
+
+      - name: Commit Normalized JSON files
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
@@ -82,7 +94,7 @@ jobs:
           git init
           git add -A
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "GitHub Actions"
           git commit -m 'Deploy patch asset'
 
       - name: Force push to destination branch
