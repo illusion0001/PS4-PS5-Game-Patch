@@ -6,9 +6,32 @@ Patches for PlayStation 4 Games.
 
 ## Usage
 
-#### Manual Installation
-- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip)
-- Extract it to `/data/GoldHEN/`
+#### Manual Installation (Offline via HDD)
+- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip).
+- Copy `patch1.zip` to `/data/GoldHEN/` using an FTP client.
+- Open [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest) and click Update.
+- If the patches was installed correctly from Internal HDD, you should see the following message:
+
+<details>
+<summary>Screenshot (Click to Expand)</summary>
+
+![](https://user-images.githubusercontent.com/37698908/204118853-8b34d4d5-e213-44a3-95a4-9462d419f2d2.png)
+
+</details>
+
+#### Manual Installation (Offline via USB)
+
+- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip).
+- Copy `patch1.zip` to root of USB drive.
+- Open [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest) and click Update.
+- If the patches was installed correctly from USB, you should see the following message:
+
+<details>
+<summary>Screenshot (Click to Expand)</summary>
+
+![](https://user-images.githubusercontent.com/37698908/204118861-ae3fa9c1-a429-4bf9-a357-55a8e7e3df77.png)
+
+</details>
 
 #### Easy Installation
 - Patches can be configured, install/update via:
@@ -19,14 +42,14 @@ Patches for PlayStation 4 Games.
 ### Storage
 * Use `FTP` to upload patch files to:
   * `/user/data/GoldHEN/patches/json/`
-* Naming conversion for single or multiple games: `GameName.{format}` (English name only)
-  * e.g. `ExampleGame.json`
-  * e.g. `Example Game 2.json`
+* Naming conversion for app and patch engine to recognize: `(TitleID).{format}`
+  * e.g. `CUSA00001.json`
+  * e.g. `CUSA03694.json`
 
 ## Developing patches
 
-Plugin system and GoldHEN Cheat Manager looks for patches by `TitleID.json`. (this is automatically generated from a python script using `app_titleid` when downloading/updating)
-<br>You may edit the individual file for your Title ID or edit the base file and upload it to your PS4 as `TitleID.json`.
+Plugin system and GoldHEN Cheat Manager looks for patches by `(TitleID).{format}`. (this is automatically generated from a python script using `app_titleid` key when downloading/updating)
+<br>You may edit the individual file for your Title ID or edit the base file and upload it to your PS4 as `(TitleID).{format}`.
 
 ```bash
 export PS4_IP=192.168.1.138 # your PS4 ip address
@@ -36,6 +59,10 @@ curl -T ExampleGame.json ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/C
 # sending CUSA00000.json as CUSA00000.json
 curl -T CUSA00000.json ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.json
 ```
+
+* Repository naming conversion for single or multiple games: `GameName.{format}` (English names only)
+  * e.g. `ExampleGame.json`
+  * e.g. `Example Game 2.json`
 
 ### Creating a patch
 
