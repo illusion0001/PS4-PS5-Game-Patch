@@ -54,6 +54,7 @@ jobs:
           mkdir out
           mv patch1 out/patches
           cd out
+          chmod -R 0777 patches
           zip -r ../patch1.zip patches/*
           cd ..
           mkdir patch1_artifact 
