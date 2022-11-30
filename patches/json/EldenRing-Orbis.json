@@ -56,8 +56,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x04090d4c", "value": "0x00000500" },
-        { "type": "bytes32", "addr": "0x04090d50", "value": "0x000002d0" }
+        { "type": "bytes32", "addr": "0x04258d4c", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x04258d50", "value": "0x000002d0" }
       ]
     },
     {
@@ -74,8 +74,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x04090d4c", "value": "0x00000640" },
-        { "type": "bytes32", "addr": "0x04090d50", "value": "0x00000384" }
+        { "type": "bytes32", "addr": "0x04258d4c", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x04258d50", "value": "0x00000384" }
       ]
     },
     {
@@ -186,8 +186,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040d4e3c", "value": "0x00000500" },
-        { "type": "bytes32", "addr": "0x040d4e40", "value": "0x000002d0" }
+        { "type": "bytes32", "addr": "0x04258e3c", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x04258e40", "value": "0x000002d0" }
       ]
     },
     {
@@ -204,8 +204,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040d4e3c", "value": "0x00000640" },
-        { "type": "bytes32", "addr": "0x040d4e40", "value": "0x00000384" }
+        { "type": "bytes32", "addr": "0x04258e3c", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x04258e40", "value": "0x00000384" }
       ]
     },
     {
@@ -383,8 +383,8 @@
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040bce7c", "value": "0x00000500" },
-        { "type": "bytes32", "addr": "0x040bce80", "value": "0x000002d0" }
+        { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x04258e80", "value": "0x000002d0" }
       ]
     },
     {
@@ -401,8 +401,8 @@
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040bce7c", "value": "0x00000640" },
-        { "type": "bytes32", "addr": "0x040bce80", "value": "0x00000384" }
+        { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x04258e80", "value": "0x00000384" }
       ]
     },
     {
@@ -494,8 +494,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040c0e7c", "value": "0x00000500" },
-        { "type": "bytes32", "addr": "0x040c0e80", "value": "0x000002d0" }
+        { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x04258e80", "value": "0x000002d0" }
       ]
     },
     {
@@ -512,8 +512,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
-        { "type": "bytes32", "addr": "0x040c0e7c", "value": "0x00000640" },
-        { "type": "bytes32", "addr": "0x040c0e80", "value": "0x00000384" }
+        { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000640" },
+        { "type": "bytes32", "addr": "0x04258e80", "value": "0x00000384" }
       ]
     },
     {
