@@ -447,7 +447,7 @@
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
-      "name": "Print+DebugPrint to TTY",
+      "name": "Print+DebugPrint Fixes",
       "author": "illusion",
       "note": "",
       "patch_list": [
@@ -474,6 +474,42 @@
       "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0171ef33", "value": "b800000000" }
+      ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2)",
+      "app_titleid": [
+        "CUSA03694",
+        "CUSA04943",
+        "CUSA00547"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Load hidden Levels (ENABLE FIRST)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00845e5f", "value": "488d1d02222c01" },
+        { "type": "bytes", "addr": "0x00845e66", "value": "4889de" },
+        { "type": "utf8", "addr": "0x01b08068", "value": "-enter_world LaunchScript root" }
+      ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2)",
+      "app_titleid": [
+        "CUSA03694",
+        "CUSA04943",
+        "CUSA00547"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Load hidden Level test_hud_select",
+      "author": "illusion",
+      "note": "Needs 'Print+DebugPrint Fixes' patch for working menu",
+      "patch_list": [
+        { "type": "utf8", "addr": "0x001b08075", "value": "Test test_hud_select" }
       ]
     }
   ]
