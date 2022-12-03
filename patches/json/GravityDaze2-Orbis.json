@@ -332,6 +332,23 @@
       ],
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Infinite Special Attck",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x009009b6", "value": "c7c100000000" }
+      ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2)",
+      "app_titleid": [
+        "CUSA03694",
+        "CUSA04943",
+        "CUSA00547"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
       "patch_ver": "2.0",
       "name": "Invincible Player",
       "author": "illusion",
