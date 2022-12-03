@@ -407,6 +407,8 @@
       "author": "illusion",
       "note": "",
       "patch_list": [
+        { "type": "bytes32", "addr": "0x018c591c", "value": "0x3f000000" },
+        { "type": "bytes32", "addr": "0x018a12a4", "value": "0x3f000000" },
         { "type": "bytes", "addr": "0x0139d614", "value": "488d35d54b1700" },
         { "type": "bytes", "addr": "0x013c15c7", "value": "488d35220c1500" },
         { "type": "bytes", "addr": "0x013c157d", "value": "488d356c0c1500" },
