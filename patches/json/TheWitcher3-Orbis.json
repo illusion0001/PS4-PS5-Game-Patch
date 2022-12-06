@@ -1,0 +1,65 @@
+{
+  "patch": [
+    {
+      "title": "The Witcher 3",
+      "app_titleid": [
+        "CUSA05725",
+        "CUSA05574",
+        "CUSA05571",
+        "CUSA05644",
+        "CUSA05572",
+        "CUSA05573"
+      ],
+      "app_ver": "01.62",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS Unlock",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x0167361c", "value": "be00000000" }
+      ]
+    },
+    {
+      "title": "The Witcher 3",
+      "app_titleid": [
+        "CUSA05725",
+        "CUSA05574",
+        "CUSA05571",
+        "CUSA05644",
+        "CUSA05572",
+        "CUSA05573"
+      ],
+      "app_ver": "01.62",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Resolution Patch (720p) (Base Only)",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes32", "addr": "0x012883ae", "value": "0x00000500" },
+        { "type": "bytes32", "addr": "0x012883b4", "value": "0x000002d0" }
+      ]
+    },
+    {
+      "title": "The Witcher 3",
+      "app_titleid": [
+        "CUSA05725",
+        "CUSA05574",
+        "CUSA05571",
+        "CUSA05644",
+        "CUSA05572",
+        "CUSA05573"
+      ],
+      "app_ver": "01.62",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Display Framerate Stats",
+      "author": "illusion",
+      "note": "",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x0131aa56", "value": "0f85" }
+      ]
+    }
+  ]
+}
