@@ -447,6 +447,24 @@
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
+      "name": "Raise Stasis Field Limit to 15",
+      "author": "illusion",
+      "note": "WIP, need to find another check to go above 15 items",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x0092ae04", "value": "c7c164000000" },
+        { "type": "bytes", "addr": "0x0092ae18", "value": "9090" }
+      ]
+    },
+    {
+      "title": "Gravity Rush 2 (Gravity Daze 2)",
+      "app_titleid": [
+        "CUSA03694",
+        "CUSA04943",
+        "CUSA00547"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
       "name": "Print+DebugPrint Fixes",
       "author": "illusion",
       "note": "",
