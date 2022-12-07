@@ -7,11 +7,13 @@ def replace_all(text, dic):
         text = text.replace(i, j)
     return text
 
-rlist = { '{\n          \"type\"' : '{ \"type\"',
+rlist = { '\n          \"type\"' : ' \"type\"',
           ',\n          \"addr\"' : ', \"addr\"',
           ',\n          \"value\"' : ', \"value\"',
           '\"\n        },' : '\" },',
-          '\"\n        }' : '\" }' }
+          '\"\n        }' : '\" }',
+          '\n          \"comment\"' : ' \"comment\"',
+        }
 
 if __name__ == '__main__':
   file_in = sys.argv[1]
