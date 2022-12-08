@@ -74,7 +74,7 @@
       "patch_ver": "1.0",
       "name": "Disable Online Saving",
       "author": "Nenkai, illusion",
-      "note": "Originally discovered by Nenkai, ported to permanent executable patch by illusion.",
+      "note": "With debug menu patch enabled and internet connection, go into 'Arcade => Multiplayer Battle'.\nThis will unlock car dealers and other menus and connects to GT server.\n\nOriginally discovered by Nenkai, ported to permanent executable patch by illusion.",
       "patch_list": [
         { "type": "bytes", "addr": "0x021364c0", "value": "00" },
         { "type": "utf8", "addr": "0x021364d0", "value": "online_save=0" },
