@@ -1,0 +1,34 @@
+{
+  "patch": [
+    {
+      "title": "Prototype",
+      "app_titleid": [
+        "CUSA06545"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Debug Menu",
+      "author": "dron3, illusion",
+      "note": "DEV MENU (in Main Menu)\nDebug Menu (Press Touchpad in Pause Menu)",
+      "patch_list": [
+        { "type": "utf8", "addr": "0x010bdafc", "value": "RAD_RELEASE" }
+      ]
+    },
+    {
+      "title": "Prototype 2",
+      "app_titleid": [
+        "CUSA06545"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "prototype2_ps4f.elf",
+      "patch_ver": "1.0",
+      "name": "Debug Menu",
+      "author": "dron3, illusion",
+      "note": "Press thumbstick in Map Menu for Debug Menu",
+      "patch_list": [
+        { "type": "utf8", "addr": "0x013fcecd", "value": "RAD_RELEASE" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "patch": [
+    {
+      "title": "Prototype 2",
+      "app_titleid": [
+        "CUSA01765"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Debug Menu",
+      "author": "dron3, illusion",
+      "note": "Press thumbstick in Map Menu for Debug Menu",
+      "patch_list": [
+        { "type": "utf8", "addr": "0x013fcc9d", "value": "RAD_RELEASE" }
+      ]
+    }
+  ]
+}
