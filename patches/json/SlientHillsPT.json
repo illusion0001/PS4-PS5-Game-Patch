@@ -1,0 +1,84 @@
+{
+  "patch": [
+    {
+      "title": "P.T",
+      "app_titleid": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00d8a713", "value": "be00000000" }
+      ]
+    },
+    {
+      "title": "P.T",
+      "app_titleid": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Lens Flare",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x008f332b", "value": "4d31f690" }
+      ]
+    },
+    {
+      "title": "P.T",
+      "app_titleid": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Camera Blur",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00ddef0c", "value": "4831c9" }
+      ]
+    },
+    {
+      "title": "P.T",
+      "app_titleid": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Screen Space Reflections",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00ddfd60", "value": "c3" }
+      ]
+    },
+    {
+      "title": "P.T",
+      "app_titleid": [
+        "CUSA01127",
+        "CUSA01114",
+        "CUSA01098"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Disable Film Grain",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00909987", "value": "eb1f" }
+      ]
+    }
+  ]
+}
