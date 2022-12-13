@@ -199,6 +199,24 @@
         "CUSA00557",
         "CUSA00559"
       ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Load Unpacked Files Exclusively",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00a1ced0", "value": "b801000000c3" },
+        { "type": "bytes", "addr": "0x00a1cd00", "value": "b801000000c3" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
       "app_ver": "01.11",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
@@ -415,6 +433,24 @@
         { "type": "utf8", "addr": "0x01853cf0", "value": "binoculars                     " },
         { "type": "utf8", "addr": "0x01853d10", "value": "switchblade                    " },
         { "type": "utf8", "addr": "0x01853d30", "value": "rifle-improvised-fullauto      " }
+      ]
+    },
+    {
+      "title": "The Last of Us: Remastered",
+      "app_titleid": [
+        "CUSA00552",
+        "CUSA00556",
+        "CUSA00557",
+        "CUSA00559"
+      ],
+      "app_ver": "01.11",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Load Unpacked Files Exclusively",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00b91a40", "value": "b801000000c3" },
+        { "type": "bytes", "addr": "0x00b91c20", "value": "b801000000c3" }
       ]
     }
   ]
