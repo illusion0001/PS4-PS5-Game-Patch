@@ -13,6 +13,7 @@ rlist = { '\n          \"type\"' : ' \"type\"',
           '\"\n        },' : '\" },',
           '\"\n        }' : '\" }',
           '\n          \"comment\"' : ' \"comment\"',
+          '\n      \"note\": \"\",' : '',
         }
 
 if __name__ == '__main__':
