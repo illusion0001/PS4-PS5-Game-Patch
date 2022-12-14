@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdint.h>
 
 #define MAX_TOKENS 10240 // should be plenty
 #define debug_printf(a, args...) printf("[%s] (%s:%d) " a, __func__, __FILE__, __LINE__, ##args)
@@ -9,7 +10,7 @@
 int main(int argc, char *argv[]) {
     if (argc == 2) {
         char *str = 0;
-        long length;
+        uint64_t length;
         FILE *f = fopen(argv[1], "r");
         if (f) {
             fseek(f, 0, SEEK_END);
@@ -71,6 +72,7 @@ int main(int argc, char *argv[]) {
                 }
             }
         }
+        free(str);
         printf("json_create( str = %s); // check passed\n", argv[1]);
         return 0;
     }
