@@ -13,7 +13,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x008a0d42", "value": "41c686ba39000000" }
       ]
@@ -31,7 +30,6 @@
       "patch_ver": "1.0",
       "name": "Restore DevKit Menus",
       "author": "illusion, TheMagicalBlob",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x006d00ae", "value": "909090909090" },
         { "type": "bytes", "addr": "0x004de0db", "value": "b801000000" },
@@ -75,7 +73,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x00d5ca17", "value": "0x01" }
       ]
@@ -93,7 +90,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x009cf259", "value": "41c686ba39000000" }
       ]
@@ -111,7 +107,6 @@
       "patch_ver": "1.0",
       "name": "Restore DevKit Menus",
       "author": "illusion, TheMagicalBlob",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x006d069e", "value": "909090909090" },
         { "type": "bytes", "addr": "0x004de1cb", "value": "b801000000" },
@@ -153,7 +148,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01271464", "value": "0x01" }
       ]
@@ -171,7 +165,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00a373aa", "value": "41c686ba39000000" }
       ]
@@ -189,7 +182,6 @@
       "patch_ver": "1.0",
       "name": "Restore DevKit Menus",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x005c06bf", "value": "b801000000" },
         { "type": "bytes", "addr": "0x005c06ff", "value": "b801000000" },
@@ -266,7 +258,6 @@
       "patch_ver": "1.0",
       "name": "Bug Fix: Quit to Menu Crash",
       "author": "ZEROx, illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x004ade75", "value": "e887cc6100" },
         { "type": "bytes", "addr": "0x004ade7a", "value": "90" },
@@ -296,7 +287,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x0145de94", "value": "0x01" }
       ]
@@ -314,7 +304,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x010e22fe", "value": "41c686ba39000000" }
       ]
@@ -332,7 +321,6 @@
       "patch_ver": "1.0",
       "name": "Restore DevKit Menus",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00893d88", "value": "909090909090" },
         { "type": "bytes", "addr": "0x00893e97", "value": "48e91f000000" },
@@ -396,7 +384,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x009651d0", "value": "c685043a000000" }
       ]
@@ -414,7 +401,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x0097424b", "value": "0x01" }
       ]

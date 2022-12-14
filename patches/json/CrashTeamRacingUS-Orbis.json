@@ -25,7 +25,6 @@
       "patch_ver": "1.0",
       "name": "Disable Motion Blur",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00ef0f52", "value": "9090909090" }
       ]

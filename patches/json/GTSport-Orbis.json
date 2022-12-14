@@ -105,7 +105,6 @@
       "patch_ver": "1.0",
       "name": "Debug Menu",
       "author": "",
-      "note": "",
       "patch_list": [
         { "type": "utf8", "addr": "0x02f72b10", "value": "debug" }
       ]

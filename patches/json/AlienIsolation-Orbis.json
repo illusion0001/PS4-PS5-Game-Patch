@@ -25,7 +25,6 @@
       "patch_ver": "1.0",
       "name": "Custom FOV (100.0)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0055b8c6", "value": "e83a841d00" },
         { "type": "bytes", "addr": "0x00733d05", "value": "c78421380000000000c842c5fa104138c3" }

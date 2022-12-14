@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x00637ce3", "value": "0x00" }
       ]

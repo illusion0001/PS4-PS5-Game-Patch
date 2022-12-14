@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Bypass Update Reqiured Screen",
       "author": "DeathRGH",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00e3103b", "value": "4189d1" }
       ]

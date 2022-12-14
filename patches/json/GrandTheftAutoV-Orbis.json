@@ -29,7 +29,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion, GraFfiX_221211",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x01137b5e", "value": "0x00000001" }
       ]
@@ -46,7 +45,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0333a794", "value": "0x00000000" },
         { "type": "bytes32", "addr": "0x02c6afb8", "value": "0x00000000" }

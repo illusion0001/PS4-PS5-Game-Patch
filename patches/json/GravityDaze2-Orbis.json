@@ -362,7 +362,6 @@
       "patch_ver": "1.0",
       "name": "Infinite Gravity Energy",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00901c26", "value": "c5fa10058a68fb00" }
       ]
@@ -379,7 +378,6 @@
       "patch_ver": "1.0",
       "name": "Infinite Special Attck",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x009009b6", "value": "c7c100000000" }
       ]
@@ -396,7 +394,6 @@
       "patch_ver": "2.0",
       "name": "Invincible Player",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00907e20", "value": "c3" }
       ]
@@ -413,7 +410,6 @@
       "patch_ver": "1.0",
       "name": "Unlock All Costumes",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0124d1a2", "value": "48e9b1000000" },
         { "type": "bytes", "addr": "0x0124d664", "value": "c6402101" },
@@ -432,7 +428,6 @@
       "patch_ver": "1.0",
       "name": "Unlock All Gestures",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x017157c8", "value": "48b001" }
       ]
@@ -467,7 +462,6 @@
       "patch_ver": "1.0",
       "name": "Print+DebugPrint Fixes",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x018c591c", "value": "0x3f000000" },
         { "type": "bytes32", "addr": "0x018a12a4", "value": "0x3f000000" },
@@ -489,7 +483,6 @@
       "patch_ver": "1.0",
       "name": "Demo Timer Never Expires",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0171ef33", "value": "b800000000" }
       ]
@@ -506,7 +499,6 @@
       "patch_ver": "1.0",
       "name": "Load hidden Levels (ENABLE FIRST)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00845e5f", "value": "488d1d02222c01" },
         { "type": "bytes", "addr": "0x00845e66", "value": "4889de" },

@@ -14,7 +14,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04d99138", "value": "0x00000000" },
         { "type": "bytes32", "addr": "0x04d99154", "value": "0x00000000" },
@@ -55,7 +54,6 @@
       "patch_ver": "1.0",
       "name": "Disable Chromatic Aberration",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0269faa8", "value": "c783ac000000000000009090" }
       ]
@@ -74,7 +72,6 @@
       "patch_ver": "1.0",
       "name": "Disable Motion Blur",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x026a057b", "value": "eb16" }
       ]
@@ -93,7 +90,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS (With Deltatime)",
       "author": "Lance McDonald (manfightdragon)",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00fbc40f", "value": "eb1d" },
         { "type": "bytes", "addr": "0x013d2e16", "value": "eb19" },
@@ -240,7 +236,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p)",
       "author": "Lance McDonald (manfightdragon)",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x055289f8", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x055289fc", "value": "0x000002d0" },

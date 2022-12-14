@@ -11,7 +11,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x04547742", "value": "eb07" }
       ]
@@ -27,7 +26,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x03e0140c", "value": "48e8c1845d02" },
         { "type": "bytes", "addr": "0x063d98d2", "value": "0041c7048e00008642c4c17a10048ec3" }

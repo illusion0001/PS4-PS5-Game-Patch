@@ -12,7 +12,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x03394c96", "value": "7469" }
       ]
@@ -29,7 +28,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0313d546", "value": "c740000a578542" }
       ]
@@ -46,7 +44,6 @@
       "patch_ver": "1.0",
       "name": "Disable Motion Blur",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01fb0219", "value": "eb58" }
       ]

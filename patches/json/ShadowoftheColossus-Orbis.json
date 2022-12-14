@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Debug Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0042437f", "value": "0f1f440000" }
       ]

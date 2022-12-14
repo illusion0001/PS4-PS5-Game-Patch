@@ -11,7 +11,6 @@
       "patch_ver": "1.0",
       "name": "Disable Vsync",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02050e0b", "value": "4831f6" }
       ]

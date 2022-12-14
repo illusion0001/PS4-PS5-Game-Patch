@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x030cb321", "value": "48e82b040000" },
         { "type": "bytes", "addr": "0x030cb752", "value": "c6835007000000" },
@@ -28,7 +27,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02b5dc66", "value": "e82c000000" },
         { "type": "bytes", "addr": "0x02b5dc97", "value": "c7048b0000c842" },
@@ -47,7 +45,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for PS4/PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02b5dc66", "value": "e82c000000" },
         { "type": "bytes", "addr": "0x02b5dc97", "value": "c7048bf6a8a642" },
@@ -66,7 +63,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for PS4/PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02b5dc66", "value": "e82c000000" },
         { "type": "bytes", "addr": "0x02b5dc97", "value": "c7048b0a578542" },

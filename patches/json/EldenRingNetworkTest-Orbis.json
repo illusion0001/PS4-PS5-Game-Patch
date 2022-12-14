@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock (For Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01ff26b5", "value": "48b90900000009000000" },
         { "type": "bytes", "addr": "0x01ff26bf", "value": "b805000000" },
@@ -46,7 +45,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base, 1080p for Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258b8c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x04258b90", "value": "0x000002d0" },
@@ -64,7 +62,6 @@
       "patch_ver": "1.0",
       "name": "Bypass Network Check",
       "author": "Unknown, Whitehawkx, illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x018863c0", "value": "b001" },
         { "type": "bytes", "addr": "0x018863c2", "value": "c3" }
@@ -80,7 +77,6 @@
       "patch_ver": "1.0",
       "name": "Disable Fog Wall",
       "author": "Pav",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x017b7c33", "value": "90" },
         { "type": "bytes", "addr": "0x017b7c34", "value": "90" },

@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02204e3a", "value": "48e831146d00" },
         { "type": "bytes", "addr": "0x02204706", "value": "e8761b6d00" },

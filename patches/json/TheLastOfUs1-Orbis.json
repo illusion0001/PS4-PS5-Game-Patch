@@ -13,7 +13,6 @@
       "patch_ver": "1.0",
       "name": "Improved Loading Times",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x013302c8", "value": "48e8f4000000" },
         { "type": "bytes", "addr": "0x013302ce", "value": "90" },
@@ -35,7 +34,6 @@
       "patch_ver": "1.0",
       "name": "Infected's Severed Head Crash Bug Fix",
       "author": "illusion, ZEROx",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0095a067", "value": "e810465000" },
         { "type": "bytes", "addr": "0x0095a06c", "value": "90" },
@@ -64,7 +62,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x00401c79", "value": "0x01" },
         { "type": "bytes16", "addr": "0x00a92c41", "value": "0x2e85" },
@@ -149,7 +146,6 @@
       "patch_ver": "1.0",
       "name": "Restore Full Rendering Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0045f63c", "value": "e8ef246d00" },
         { "type": "bytes", "addr": "0x00b337b5", "value": "e992010000" }
@@ -168,7 +164,6 @@
       "patch_ver": "1.0",
       "name": "Light Theme for Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0040d326", "value": "b900000000" }
       ]
@@ -186,7 +181,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00401c22", "value": "c687a534000001" }
       ]
@@ -222,7 +216,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0040214a", "value": "c687e534000001" }
       ]
@@ -240,7 +233,6 @@
       "patch_ver": "1.0",
       "name": "Infected's Severed Head Crash Bug Fix",
       "author": "illusion, ZEROx",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00abc859", "value": "e872535600" },
         { "type": "bytes", "addr": "0x00abc85e", "value": "90" },
@@ -269,7 +261,6 @@
       "patch_ver": "1.0",
       "name": "University Nailbomb Softlock Fix",
       "author": "illusion, ZEROx",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00aa27a7", "value": "e9a4389dff" },
         { "type": "bytes", "addr": "0x00aa27ac", "value": "90" },
@@ -306,7 +297,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x004021a4", "value": "0x75" }
       ]
@@ -324,7 +314,6 @@
       "patch_ver": "1.0",
       "name": "Restore Full Rendering Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0046df6c", "value": "e84f6b8400" },
         { "type": "bytes", "addr": "0x00cb6e75", "value": "e993010000" }
@@ -343,7 +332,6 @@
       "patch_ver": "1.0",
       "name": "Give Player Weapon Fix",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00475db0", "value": "be01000000" },
         { "type": "bytes", "addr": "0x00475db5", "value": "48893d597d8501" },

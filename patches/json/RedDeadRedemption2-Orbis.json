@@ -12,7 +12,6 @@
       "patch_ver": "1.0",
       "name": "Unlock FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0578ab57", "value": "be00000000" }
       ]
@@ -29,7 +28,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x009b4f44", "value": "909090909090" }
       ]

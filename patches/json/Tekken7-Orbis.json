@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Disable Post Processing",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01efdedc", "value": "48e9" }
       ]

@@ -13,7 +13,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00a141dd", "value": "b000" },
         { "type": "float32", "addr": "0x00ba0ecf", "value": "1.0" },
@@ -325,7 +324,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02bbb5f0", "value": "31c0c3" }
       ]
@@ -343,7 +341,6 @@
       "patch_ver": "1.0",
       "name": "1080p for PS4 Pro",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x00a17631", "value": "0x00000000" }
       ]
@@ -361,7 +358,6 @@
       "patch_ver": "1.0",
       "name": "Enable Dev Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x005d26b8", "value": "0x75" },
         { "type": "float32", "addr": "0x0075f70f", "value": "1.0" }
@@ -380,7 +376,6 @@
       "patch_ver": "1.0",
       "name": "Improved Infinite Ammo Cheat",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x019df257", "value": "e83453e2ff" },
         { "type": "bytes", "addr": "0x019df25c", "value": "90" },

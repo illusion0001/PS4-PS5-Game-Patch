@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Movies",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes16", "addr": "0x05071c32", "value": "0xe948" }
       ]
@@ -25,7 +24,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0683dd60", "value": "31c0c3" }
       ]
@@ -40,7 +38,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (66.67% of 1440p/1080p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x054a93b2", "value": "48e859030000" },
         { "type": "bytes", "addr": "0x054a9711", "value": "41c7048f55558542" },
@@ -58,7 +55,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (83.33% of 1440p/1080p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x054a93b2", "value": "48e859030000" },
         { "type": "bytes", "addr": "0x054a9711", "value": "41c7048fabaaa642" },

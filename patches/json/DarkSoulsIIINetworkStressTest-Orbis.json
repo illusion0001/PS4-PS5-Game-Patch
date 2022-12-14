@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock (With Delta Time)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0278c407", "value": "c7430805000000eb07" },
         { "type": "bytes", "addr": "0x0278c50c", "value": "41b601" }
@@ -42,7 +41,6 @@
       "patch_ver": "1.0",
       "name": "720p Resolution",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x05d22d84", "value": "00050000d0020000" }
       ]
@@ -57,7 +55,6 @@
       "patch_ver": "1.0",
       "name": "900p Resolution",
       "author": "Whitehawkx",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x05d22d84", "value": "4006000084030000" }
       ]
@@ -72,7 +69,6 @@
       "patch_ver": "1.0",
       "name": "Bypass Network Check",
       "author": "Unknown",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02309e80", "value": "e91c02" }
       ]
@@ -87,7 +83,6 @@
       "patch_ver": "1.0",
       "name": "Developer Debug Menu",
       "author": "Whitehawkx",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02766352", "value": "01" }
       ]

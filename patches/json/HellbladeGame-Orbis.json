@@ -27,7 +27,6 @@
       "patch_ver": "1.0",
       "name": "Skip Startup Videos",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x022580c2", "value": "48e987060000" }
       ]
@@ -42,7 +41,6 @@
       "patch_ver": "1.0",
       "name": "Disable Motion Blur",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01b8ae71", "value": "eb40" }
       ]
@@ -57,7 +55,6 @@
       "patch_ver": "1.0",
       "name": "Disable Film Grain",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x0195c32f", "value": "0xeb" }
       ]
@@ -72,7 +69,6 @@
       "patch_ver": "1.0",
       "name": "Disable Post Processing",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0195c2b5", "value": "48e9" }
       ]

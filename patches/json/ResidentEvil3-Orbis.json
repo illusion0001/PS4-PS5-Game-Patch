@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base, 1080p for Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0349c9fc", "value": "0x3f2b851f" }
       ]

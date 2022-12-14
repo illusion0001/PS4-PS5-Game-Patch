@@ -15,7 +15,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0179f2a5", "value": "b80000803f" },
         { "type": "bytes", "addr": "0x0179f2aa", "value": "4189471c" },
@@ -39,7 +38,6 @@
       "patch_ver": "1.0",
       "name": "Debug Menu",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0189059a", "value": "48e871000000" },
         { "type": "bytes", "addr": "0x01890611", "value": "c6400d01" },

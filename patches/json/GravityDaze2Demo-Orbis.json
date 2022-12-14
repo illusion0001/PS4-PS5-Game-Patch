@@ -12,7 +12,6 @@
       "patch_ver": "1.0",
       "name": "Boot with loose files exclusively",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0041046d", "value": "2f617070" },
         { "type": "bytes", "addr": "0x004105e4", "value": "2f617070" },
@@ -36,7 +35,6 @@
       "patch_ver": "1.0",
       "name": "Demo Timer Never Expires",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00b10797", "value": "4831c09090" }
       ]
@@ -53,7 +51,6 @@
       "patch_ver": "1.0",
       "name": "Print+DebugPrint to TTY",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00e7ebe6", "value": "488d35a3673d00" },
         { "type": "bytes", "addr": "0x00ddc0c2", "value": "488d35c7924700" }

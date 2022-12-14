@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00ca8d8f", "value": "31f6" },
         { "type": "bytes", "addr": "0x00ca8e1a", "value": "31f6" }
@@ -26,7 +25,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x016e1eaf", "value": "be00000000" }
       ]

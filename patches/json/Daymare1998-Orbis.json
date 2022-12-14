@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x02988177", "value": "0x75" }
       ]
@@ -25,7 +24,6 @@
       "patch_ver": "1.0",
       "name": "30 FPS Fix",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x02988177", "value": "0x75" },
         { "type": "bytes", "addr": "0x01281d82", "value": "67e80ffb6e019090" },
@@ -42,7 +40,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x02291945", "value": "e830ff6d00" },
         { "type": "bytes", "addr": "0x0229207a", "value": "48e808f86d00" },

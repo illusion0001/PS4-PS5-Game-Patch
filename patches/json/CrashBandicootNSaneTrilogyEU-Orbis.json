@@ -10,7 +10,6 @@
       "patch_ver": "2.0",
       "name": "60 FPS",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00f52bd6", "value": "41899788040000" }
       ]
@@ -25,7 +24,6 @@
       "patch_ver": "2.0",
       "name": "Resolution Patch (1080p for PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "float32", "addr": "0x01c75680", "value": "1.0" }
       ]
@@ -40,7 +38,6 @@
       "patch_ver": "2.0",
       "name": "Resolution Patch (900p for PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "float32", "addr": "0x01c75680", "value": "0.83" }
       ]
@@ -55,7 +52,6 @@
       "patch_ver": "2.0",
       "name": "Resolution Patch (720p for PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "float32", "addr": "0x01c75680", "value": "0.67" }
       ]
@@ -70,7 +66,6 @@
       "patch_ver": "2.0",
       "name": "Resolution Patch (540p for PS4 Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "float32", "addr": "0x01c75680", "value": "0.5" }
       ]

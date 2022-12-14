@@ -25,7 +25,6 @@
       "patch_ver": "1.0",
       "name": "30 FPS Limit (Proper Frame-Pacing)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x0436e473", "value": "48e8db070000" },
         { "type": "bytes", "addr": "0x0436ec54", "value": "418b7f10be01000000c3" }

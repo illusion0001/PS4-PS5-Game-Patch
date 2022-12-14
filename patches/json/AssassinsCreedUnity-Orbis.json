@@ -10,7 +10,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x03ffaadb", "value": "0f85" }
       ]
@@ -25,7 +24,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS Unlock",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x042f034e", "value": "be00000000" }
       ]
@@ -40,7 +38,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x00000438" }
@@ -56,7 +53,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x00000384" }
@@ -72,7 +68,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x042f3a19", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x042f3a0b", "value": "0x000002d0" }

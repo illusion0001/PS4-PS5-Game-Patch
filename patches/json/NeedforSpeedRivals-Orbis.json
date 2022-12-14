@@ -27,7 +27,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x009cb1cd", "value": "0x3f2b851f" }
       ]

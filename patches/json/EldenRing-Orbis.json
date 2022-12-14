@@ -54,7 +54,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258d4c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x04258d50", "value": "0x000002d0" }
@@ -72,7 +71,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258d4c", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x04258d50", "value": "0x00000384" }
@@ -90,7 +88,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0201466f", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x02014679", "value": "0x00000438" }
@@ -125,7 +122,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Logos",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01c6cfaa", "value": "0x01" }
       ]
@@ -184,7 +180,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e3c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x04258e40", "value": "0x000002d0" }
@@ -202,7 +197,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e3c", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x04258e40", "value": "0x00000384" }
@@ -220,7 +214,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x020486cf", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x020486d9", "value": "0x00000438" }
@@ -255,7 +248,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Logos",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01ca0a7a", "value": "0x01" }
       ]
@@ -291,7 +283,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x040b4e7c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x040b4e80", "value": "0x000002d0" }
@@ -309,7 +300,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for Base)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x040b4e7c", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x040b4e80", "value": "0x00000384" }
@@ -327,7 +317,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for Pro)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0202172f", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x02021739", "value": "0x00000438" }
@@ -345,7 +334,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Logos",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01c7a9ea", "value": "0x01" }
       ]
@@ -381,7 +369,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x04258e80", "value": "0x000002d0" }
@@ -399,7 +386,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for Base)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x04258e80", "value": "0x00000384" }
@@ -417,7 +403,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for Pro)",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0202885f", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x02028869", "value": "0x00000438" }
@@ -435,7 +420,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Logos",
       "author": "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01c8032a", "value": "0x01" }
       ]
@@ -492,7 +476,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x04258e80", "value": "0x000002d0" }
@@ -510,7 +493,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (900p for Base)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x04258e7c", "value": "0x00000640" },
         { "type": "bytes32", "addr": "0x04258e80", "value": "0x00000384" }
@@ -528,7 +510,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (1080p for Pro)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x0202898f", "value": "0x00000780" },
         { "type": "bytes32", "addr": "0x02028999", "value": "0x00000438" }
@@ -546,7 +527,6 @@
       "patch_ver": "1.0",
       "name": "Skip Intro Logos",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x01c7f1da", "value": "0x01" }
       ]

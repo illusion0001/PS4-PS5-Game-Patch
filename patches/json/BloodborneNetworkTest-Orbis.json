@@ -26,7 +26,6 @@
       "patch_ver": "1.0",
       "name": "60 FPS (with Deltatime)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x00c346e5", "value": "40c6c002" },
         { "type": "utf16", "addr": "0x056b4040", "value": "withSkip" },
@@ -57,7 +56,6 @@
       "patch_ver": "1.0",
       "name": "Resolution Patch (720p)",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes32", "addr": "0x06297018", "value": "0x00000500" },
         { "type": "bytes32", "addr": "0x0629701c", "value": "0x000002d0" },
@@ -75,7 +73,6 @@
       "patch_ver": "1.0",
       "name": "Disable Chromatic Aberration",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01905491", "value": "48b100" }
       ]
@@ -90,7 +87,6 @@
       "patch_ver": "1.0",
       "name": "Disable Motion Blur",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "byte", "addr": "0x0198a0e7", "value": "0xeb" }
       ]

@@ -13,7 +13,6 @@
       "patch_ver": "1.0",
       "name": "Intro Skip",
       "author": "illusion",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x01677ec7", "value": "eb2c" }
       ]
@@ -31,7 +30,6 @@
       "patch_ver": "1.0",
       "name": "Dev Menu Restore for MP executable",
       "author": "illusion + TheMagicalBlob",
-      "note": "",
       "patch_list": [
         { "type": "bytes", "addr": "0x006238a7", "value": "4831c0" },
         { "type": "bytes", "addr": "0x006717ee", "value": "c60425285bd40201" },
