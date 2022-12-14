@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_TOKENS 4096 // should be plenty
+#define MAX_TOKENS 10240 // should be plenty
 #define debug_printf(a, args...) printf("[%s] (%s:%d) " a, __func__, __FILE__, __LINE__, ##args)
 
 int main(int argc, char *argv[]) {
