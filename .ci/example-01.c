@@ -10,8 +10,9 @@
 int main(int argc, char *argv[]) {
     if (argc == 2) {
         char *str = 0;
-        uint64_t length;
+        uint64_t length = 0;
         FILE *f = fopen(argv[1], "r");
+
         if (f) {
             fseek(f, 0, SEEK_END);
             length = ftell(f);
@@ -22,6 +23,7 @@ int main(int argc, char *argv[]) {
             }
             fclose(f);
         }
+
         json_t mem[MAX_TOKENS];
         json_t const *json = json_create(str, mem, MAX_TOKENS);
         if (!json) {
@@ -29,6 +31,7 @@ int main(int argc, char *argv[]) {
             return 1;
         }
 
+        debug_printf("read: %s size: %lu bytes\n", argv[1], length);
         json_t const *patchItems = json_getProperty(json, "patch");
         if (!patchItems || JSON_ARRAY != json_getType(patchItems)) {
             printf("Error, the patches list property is not found\n");
@@ -42,18 +45,28 @@ int main(int argc, char *argv[]) {
                 char const *gameTitle = json_getPropertyValue(patches, "title");
                 if (gameTitle)
                     debug_printf("title: %s\n", gameTitle);
+                else
+                    debug_printf("title: not found\n");
                 char const *gameAppver = json_getPropertyValue(patches, "app_ver");
                 if (gameAppver)
                     debug_printf("app_ver: %s\n", gameAppver);
+                else
+                    debug_printf("app_ver: not found\n");
                 char const *gameName = json_getPropertyValue(patches, "name");
                 if (gameName)
                     debug_printf("name: %s\n", gameName);
+                else
+                    debug_printf("name: not found\n");
                 char const *gameAuthor = json_getPropertyValue(patches, "author");
                 if (gameAuthor)
                     debug_printf("author: %s\n", gameAuthor);
+                else
+                    debug_printf("author: not found\n");
                 char const *gameNote = json_getPropertyValue(patches, "note");
                 if (gameNote)
                     debug_printf("note: %s\n", gameNote);
+                else
+                    debug_printf("note: not found\n");
                 json_t const *patch_List_Items = json_getProperty(patches, "patch_list");
                 json_t const *patch_lists;
                 for (patch_lists = json_getChild(patch_List_Items); patch_lists != 0;
@@ -68,12 +81,16 @@ int main(int argc, char *argv[]) {
                         char const *gameValue = json_getPropertyValue(patch_lists, "value");
                         if (gameValue)
                             debug_printf("  val: %s\n", gameValue);
+                        char const *gameComm = json_getPropertyValue(patch_lists, "comment");
+                        if (gameComm)
+                            debug_printf("  comment: %s\n", gameComm);
                     }
                 }
             }
         }
         free(str);
-        printf("json_create( str = %s); // check passed\n", argv[1]);
+        debug_printf("free: %lu bytes from memory\n", length);
+        printf("json_create(%s); // check passed\n", argv[1]);
         return 0;
     }
     printf("no file provided\n");
