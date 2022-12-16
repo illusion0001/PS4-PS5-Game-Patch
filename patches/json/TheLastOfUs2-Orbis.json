@@ -353,6 +353,23 @@
         "CUSA13986",
         "CUSA14006"
       ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Boot with raw files exclusively",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x00a9bf43", "value": "0f1f8000000000" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
       "app_ver": "01.07",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
