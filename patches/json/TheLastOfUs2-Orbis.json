@@ -370,6 +370,34 @@
         "CUSA13986",
         "CUSA14006"
       ],
+      "app_ver": "01.09",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "icemesh, illusion",
+      "note": "Special thanks to icemesh for DC disassembler.\n\nhttps://github.com/icemesh/t2-dc-disasm",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x01c85f20", "value": "c3" },
+        { "type": "bytes", "addr": "0x020b1952", "value": "48e8f85cb200" },
+        { "type": "bytes", "addr": "0x02bd7650", "value": "817a2000004040" },
+        { "type": "bytes", "addr": "0x02bd7657", "value": "7514" },
+        { "type": "bytes", "addr": "0x02bd7659", "value": "817a780000e040" },
+        { "type": "bytes", "addr": "0x02bd7660", "value": "750b" },
+        { "type": "bytes", "addr": "0x02bd7662", "value": "4531c9" },
+        { "type": "bytes", "addr": "0x02bd7665", "value": "44894a20" },
+        { "type": "bytes", "addr": "0x02bd7669", "value": "44894a78" },
+        { "type": "bytes", "addr": "0x02bd766d", "value": "440fb6448201" },
+        { "type": "bytes", "addr": "0x02bd7673", "value": "c3" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
       "app_ver": "01.07",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
