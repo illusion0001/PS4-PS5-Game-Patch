@@ -8,6 +8,83 @@
         "CUSA13986",
         "CUSA14006"
       ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "60 FPS",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x02a9e570", "value": "31c0c3" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "1080p for PS4 Pro",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes32", "addr": "0x005d57b1", "value": "0x00000000" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Enable Dev Menu",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x005d239c", "value": "b001" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
+      "app_ver": "01.00",
+      "app_elf": "eboot.bin",
+      "patch_ver": "1.0",
+      "name": "Skip Intro Logos",
+      "author": "illusion",
+      "patch_list": [
+        { "type": "bytes", "addr": "0x01c44b0b", "value": "48e8a2cbe500" },
+        { "type": "bytes", "addr": "0x02aa16b3", "value": "817b2000004040" },
+        { "type": "bytes", "addr": "0x02aa16ba", "value": "7514" },
+        { "type": "bytes", "addr": "0x02aa16bc", "value": "817b780000e040" },
+        { "type": "bytes", "addr": "0x02aa16c3", "value": "750b" },
+        { "type": "bytes", "addr": "0x02aa16c5", "value": "4531f6" },
+        { "type": "bytes", "addr": "0x02aa16c8", "value": "44897320" },
+        { "type": "bytes", "addr": "0x02aa16cc", "value": "44897378" },
+        { "type": "bytes", "addr": "0x02aa16d0", "value": "440fb6748301" },
+        { "type": "bytes", "addr": "0x02aa16d6", "value": "c3" }
+      ]
+    },
+    {
+      "title": "The Last of Us: Part II",
+      "app_titleid": [
+        "CUSA07820",
+        "CUSA10249",
+        "CUSA13986",
+        "CUSA14006"
+      ],
       "app_ver": "01.09",
       "app_elf": "eboot.bin",
       "patch_ver": "1.0",
