@@ -36,7 +36,7 @@ Patches for PlayStation 4 Games.
 #### Easy Installation
 - Patches can be configured, install/update via:
   - [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest)
-  - Itemzflow Game Manager
+  - [Itemzflow Game Manager](https://github.com/LightningMods/Itemzflow)
 - Run your game.
 
 ### Storage
