@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03220</ID>
+        <ID>CUSA03667</ID>
+        <ID>CUSA02168</ID>
+    </TitleID>
+    <Metadata Title="Gran Turismo Sport"
+              Name="Disable Online Saving"
+              Note="Originally discovered by Nenkai, ported to permanent executable patch by illusion."
+              Author="Nenkai, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01e02772" Value="00"/>
+            <Line Type="utf8" Address="0x01e02773" Value="online_save=0"/>
+            <Line Type="bytes" Address="0x01e02781" Value="00"/>
+            <Line Type="bytes" Address="0x0059fac7" Value="48e85a2c8601"/>
+            <Line Type="bytes" Address="0x01e02727" Value="488d3df218cf00"/>
+            <Line Type="bytes" Address="0x01e0272e" Value="488d353d000000"/>
+            <Line Type="bytes" Address="0x01e02735" Value="4989f6"/>
+            <Line Type="bytes" Address="0x01e02738" Value="4c8937"/>
+            <Line Type="bytes" Address="0x01e0273b" Value="4c8d7601"/>
+            <Line Type="bytes" Address="0x01e0273f" Value="4c897708"/>
+            <Line Type="bytes" Address="0x01e02743" Value="4d31f6"/>
+            <Line Type="bytes" Address="0x01e02746" Value="4889fe"/>
+            <Line Type="bytes" Address="0x01e02749" Value="bf02000000"/>
+            <Line Type="bytes" Address="0x01e0274e" Value="c3"/>
+            <Line Type="bytes" Address="0x01dffc00" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gran Turismo Sport"
+              Name="Disable Online Saving"
+              Note="Originally discovered by Nenkai, ported to permanent executable patch by illusion."
+              Author="Nenkai, illusion"
+              PatchVer="1.0"
+              AppVer="01.14"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01f46ff2" Value="00"/>
+            <Line Type="utf8" Address="0x01f46ff3" Value="online_save=0"/>
+            <Line Type="bytes" Address="0x01f47001" Value="00"/>
+            <Line Type="bytes" Address="0x0059fb1d" Value="48e884749a01"/>
+            <Line Type="bytes" Address="0x01f46fa7" Value="488d3d7290d600"/>
+            <Line Type="bytes" Address="0x01f46fae" Value="488d353d000000"/>
+            <Line Type="bytes" Address="0x01f46fb5" Value="4989f6"/>
+            <Line Type="bytes" Address="0x01f46fb8" Value="4c8937"/>
+            <Line Type="bytes" Address="0x01f46fbb" Value="4c8d7601"/>
+            <Line Type="bytes" Address="0x01f46fbf" Value="4c897708"/>
+            <Line Type="bytes" Address="0x01f46fc3" Value="4d31f6"/>
+            <Line Type="bytes" Address="0x01f46fc6" Value="4889fe"/>
+            <Line Type="bytes" Address="0x01f46fc9" Value="bf02000000"/>
+            <Line Type="bytes" Address="0x01f46fce" Value="c3"/>
+            <Line Type="bytes" Address="0x01f44460" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gran Turismo Sport"
+              Name="Disable Online Saving"
+              Note="With debug menu patch enabled and internet connection, go into 'Arcade => Multiplayer Battle'.\nThis will unlock car dealers and other menus and connects to GT server.\n\nOriginally discovered by Nenkai, ported to permanent executable patch by illusion."
+              Author="Nenkai, illusion"
+              PatchVer="1.0"
+              AppVer="01.68"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x021364c0" Value="00"/>
+            <Line Type="utf8" Address="0x021364d0" Value="online_save=0"/>
+            <Line Type="bytes" Address="0x021364de" Value="00"/>
+            <Line Type="bytes" Address="0x005e0254" Value="48e8e65eb501"/>
+            <Line Type="bytes" Address="0x02136140" Value="488d3dd99ecc00"/>
+            <Line Type="bytes" Address="0x02136147" Value="488d3572030000"/>
+            <Line Type="bytes" Address="0x0213614e" Value="4989f6"/>
+            <Line Type="bytes" Address="0x02136151" Value="4c8937"/>
+            <Line Type="bytes" Address="0x02136154" Value="4c8d7610"/>
+            <Line Type="bytes" Address="0x02136158" Value="4c897708"/>
+            <Line Type="bytes" Address="0x0213615c" Value="4d31f6"/>
+            <Line Type="bytes" Address="0x0213615f" Value="4889fe"/>
+            <Line Type="bytes" Address="0x02136162" Value="bf02000000"/>
+            <Line Type="bytes" Address="0x02136167" Value="c3"/>
+            <Line Type="bytes" Address="0x021200d0" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gran Turismo Sport"
+              Name="Debug Menu"
+              Author=""
+              PatchVer="1.0"
+              AppVer="01.68"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x02f72b10" Value="debug"/>
+        </PatchList>
+    </Metadata>
+</Patch>

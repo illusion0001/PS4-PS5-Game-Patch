@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA14168</ID>
+    </TitleID>
+    <Metadata Title="Resident Evil 3"
+              Name="Resolution Patch (720p for Base, 1080p for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0349c9fc" Value="0x3f2b851f"/>
+        </PatchList>
+    </Metadata>
+</Patch>

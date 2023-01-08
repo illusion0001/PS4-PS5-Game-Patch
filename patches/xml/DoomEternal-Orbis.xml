@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA13338</ID>
+        <ID>CUSA13275</ID>
+    </TitleID>
+    <Metadata Title="Doom Eternal"
+              Name="Disable Vsync"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.23"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02050e0b" Value="4831f6"/>
+        </PatchList>
+    </Metadata>
+</Patch>

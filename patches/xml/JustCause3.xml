@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01493</ID>
+        <ID>CUSA02747</ID>
+        <ID>CUSA02748</ID>
+    </TitleID>
+    <Metadata Title="Just Cause 3"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a1f817" Value="4831c9"/>
+            <Line Type="bytes" Address="0x01ddd118" Value="41c7c403000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

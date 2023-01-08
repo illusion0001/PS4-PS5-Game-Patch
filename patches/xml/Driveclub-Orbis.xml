@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00003</ID>
+        <ID>CUSA00064</ID>
+    </TitleID>
+    <Metadata Title="Driveclub"
+              Name="60 FPS"
+              Note="2.0 features deltatime."
+              Author="illusion, u/Charlie_Muggins"
+              PatchVer="2.0"
+              AppVer="01.28"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01184800" Value="b801000000"/>
+            <Line Type="bytes" Address="0x01184725" Value="48b001"/>
+            <Line Type="bytes16" Address="0x00a6306e" Value="0x9090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03293</ID>
+    </TitleID>
+    <Metadata Title="Vampyr"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x036bf726" Value="eb69"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Vampyr"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03525259" Value="48e8c61d1b009090"/>
+            <Line Type="bytes" Address="0x036d7020" Value="e989500500c70000008642c5f057c9c5fa1000c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

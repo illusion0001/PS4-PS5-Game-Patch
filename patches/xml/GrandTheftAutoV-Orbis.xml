@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00419</ID>
+        <ID>CUSA00411</ID>
+        <ID>CUSA00880</ID>
+    </TitleID>
+    <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Note="CPU Limited."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00e6bf3e" Value="0x00000001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Author="illusion, GraFfiX_221211"
+              PatchVer="1.0"
+              AppVer="01.38"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x01137b5e" Value="0x00000001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Grand Theft Auto V"
+              Name="Skip Intro"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.38"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0333a794" Value="0x00000000"/>
+            <Line Type="bytes32" Address="0x02c6afb8" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

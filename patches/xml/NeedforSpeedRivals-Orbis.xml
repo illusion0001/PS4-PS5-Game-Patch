@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00113</ID>
+    </TitleID>
+    <Metadata Title="Need for Speed: Rivals"
+              Name="60 FPS Unlock (Proof of Concept)"
+              Note="Game can now be run at any FPS without slow down or speedups, although logics are still borked."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00890b83" Value="48b201"/>
+            <Line Type="bytes" Address="0x009f2906" Value="48e8940d9101"/>
+            <Line Type="bytes" Address="0x023036a0" Value="41c7462800007042c4817a104628c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Need for Speed: Rivals"
+              Name="Resolution Patch"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x009cb1cd" Value="0x3f2b851f"/>
+        </PatchList>
+    </Metadata>
+</Patch>

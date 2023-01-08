@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA06545</ID>
+    </TitleID>
+    <Metadata Title="Prototype"
+              Name="Debug Menu"
+              Note="DEV MENU (in Main Menu)\nDebug Menu (Press Touchpad in Pause Menu)"
+              Author="dron3, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x010bdafc" Value="RAD_RELEASE"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Prototype 2"
+              Name="Debug Menu"
+              Note="Press thumbstick in Map Menu for Debug Menu"
+              Author="dron3, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="prototype2_ps4f.elf">
+        <PatchList>
+            <Line Type="utf8" Address="0x013fcecd" Value="RAD_RELEASE"/>
+        </PatchList>
+    </Metadata>
+</Patch>

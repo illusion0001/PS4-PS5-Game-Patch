@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA16990</ID>
+    </TitleID>
+    <Metadata Title="Mafia 2: Definitive Edition"
+              Name="60 FPS Unlock"
+              Note="CPU/GPU Limited. For use with 9th generation of game consoles."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00e13d16" Value="0x94"/>
+        </PatchList>
+    </Metadata>
+</Patch>

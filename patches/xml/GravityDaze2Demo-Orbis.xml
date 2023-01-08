@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA06596</ID>
+        <ID>CUSA06760</ID>
+        <ID>CUSA07241</ID>
+    </TitleID>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2) Demo"
+              Name="Boot with loose files exclusively"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0041046d" Value="2f617070"/>
+            <Line Type="bytes" Address="0x004105e4" Value="2f617070"/>
+            <Line Type="bytes" Address="0x004109f3" Value="2f617070"/>
+            <Line Type="bytes" Address="0x00410c4e" Value="2f617070"/>
+            <Line Type="bytes" Address="0x00410ec6" Value="2f617070"/>
+            <Line Type="bytes" Address="0x00410f8d" Value="2f617070"/>
+            <Line Type="bytes" Address="0x004113ea" Value="2f617070"/>
+            <Line Type="bytes" Address="0x0131d79e" Value="2f617070"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2) Demo"
+              Name="Demo Timer Never Expires"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00b10797" Value="4831c09090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2) Demo"
+              Name="Print+DebugPrint to TTY"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00e7ebe6" Value="488d35a3673d00"/>
+            <Line Type="bytes" Address="0x00ddc0c2" Value="488d35c7924700"/>
+        </PatchList>
+    </Metadata>
+</Patch>

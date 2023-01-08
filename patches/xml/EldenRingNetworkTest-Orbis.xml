@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA18880</ID>
+    </TitleID>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="60 FPS Unlock (For Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ff26b5" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x01ff26bf" Value="b805000000"/>
+            <Line Type="bytes" Address="0x01ff26c4" Value="eb06"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ff26b5" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x01ff26bf" Value="b805000000"/>
+            <Line Type="bytes" Address="0x01ff26c4" Value="eb06"/>
+            <Line Type="bytes" Address="0x0313efec" Value="4489f6"/>
+            <Line Type="bytes" Address="0x0313efef" Value="90"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="Resolution Patch (720p for Base, 1080p for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258b8c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04258b90" Value="0x000002d0"/>
+            <Line Type="bytes32" Address="0x01fe105f" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x01fe1069" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="Bypass Network Check"
+              Author="Unknown, Whitehawkx, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x018863c0" Value="b001"/>
+            <Line Type="bytes" Address="0x018863c2" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="Disable Fog Wall"
+              Author="Pav"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x017b7c33" Value="90"/>
+            <Line Type="bytes" Address="0x017b7c34" Value="90"/>
+            <Line Type="bytes" Address="0x017b7c35" Value="90"/>
+            <Line Type="bytes" Address="0x017b7c36" Value="90"/>
+            <Line Type="bytes" Address="0x017b7c37" Value="90"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring: Network Test"
+              Name="Enable Video Recording and Screenshots"
+              Note="Re-enables built-in video recording and screenshots (Share button)"
+              Author="Whitehawkx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ffb793" Value="c785b0fdffff00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

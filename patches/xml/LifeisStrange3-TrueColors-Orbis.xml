@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17941</ID>
+        <ID>CUSA24801</ID>
+    </TitleID>
+    <Metadata Title="Life is Strange: True Colors"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x04547742" Value="eb07"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Life is Strange: True Colors"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03e0140c" Value="48e8c1845d02"/>
+            <Line Type="bytes" Address="0x063d98d2" Value="0041c7048e00008642c4c17a10048ec3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

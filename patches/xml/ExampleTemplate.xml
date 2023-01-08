@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!--
+      This will not be used by the plugin parser.
+      It is only used for generating the files for distribution.
+    -->
+    <TitleID>
+        <ID>EXAMPLE01</ID>
+        <ID>EXAMPLE02</ID>
+    </TitleID>
+    <Metadata Title="Example Game Title"
+              Name="Example Name"
+              Note="Example Note"
+              Author="Example Author"
+              PatchVer="1.0"
+              AppVer="00.34"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- This is a code comment, improves code readability. -->
+            <!-- Code comment at end of line is also supported. -->
+            <Line Type="bytes" Address="0x00000000" Value="0102030405060708"/>
+            <Line Type="utf8" Address="0x00000000" Value="Hello World"/>
+        </PatchList>
+    </Metadata>
+</Patch>

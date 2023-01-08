@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA24853</ID>
+    </TitleID>
+    <Metadata Title="Kena: Bridge of Spirits"
+              Name="Skip Intro Movies"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="02.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes16" Address="0x05071c32" Value="0xe948"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Kena: Bridge of Spirits"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="02.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0683dd60" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Kena: Bridge of Spirits"
+              Name="Resolution Patch (66.67% of 1440p/1080p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="02.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x054a93b2" Value="48e859030000"/>
+            <Line Type="bytes" Address="0x054a9711" Value="41c7048f55558542"/>
+            <Line Type="bytes" Address="0x054a9719" Value="c4c17a10048f"/>
+            <Line Type="bytes" Address="0x054a971f" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Kena: Bridge of Spirits"
+              Name="Resolution Patch (83.33% of 1440p/1080p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="02.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x054a93b2" Value="48e859030000"/>
+            <Line Type="bytes" Address="0x054a9711" Value="41c7048fabaaa642"/>
+            <Line Type="bytes" Address="0x054a9719" Value="c4c17a10048f"/>
+            <Line Type="bytes" Address="0x054a971f" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

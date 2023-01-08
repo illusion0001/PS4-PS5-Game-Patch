@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03803</ID>
+        <ID>CUSA03824</ID>
+    </TitleID>
+    <Metadata Title="The Technomancer"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x007784be" Value="be0000000090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

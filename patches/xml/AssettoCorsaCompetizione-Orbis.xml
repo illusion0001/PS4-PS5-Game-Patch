@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17301</ID>
+    </TitleID>
+    <Metadata Title="Assetto Corsa Competizione"
+              Name="Resolution Patch (720p)"
+              Note="CPU Limited in Races."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x038b6740" Value="e9cbe338fe41c7048e00008642c4c17a10048ec3"/>
+            <Line Type="bytes" Address="0x0328ffa8" Value="48e9"/>
+            <Line Type="bytes" Address="0x03292e32" Value="48e80d396200"/>
+        </PatchList>
+    </Metadata>
+</Patch>

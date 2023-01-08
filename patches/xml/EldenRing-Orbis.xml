@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA28863</ID>
+        <ID>CUSA18723</ID>
+        <ID>CUSA28527</ID>
+    </TitleID>
+    <Metadata Title="Elden Ring"
+              Name="60 FPS (For Base Console)"
+              Note="Unlocks framerate on Base/Slim PS4"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02021e32" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x02021e3c" Value="b805000000"/>
+            <Line Type="bytes" Address="0x02021e41" Value="eb06"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Fixes framepacing issues at the cost of slightly increased input latency."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02021e32" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x02021e3c" Value="b805000000"/>
+            <Line Type="bytes" Address="0x02021e41" Value="eb06"/>
+            <Line Type="bytes" Address="0x031650c9" Value="4589b534040000"/>
+            <Line Type="bytes" Address="0x031650d0" Value="418bbd30040000"/>
+            <Line Type="bytes" Address="0x031650d7" Value="be01000000"/>
+            <Line Type="bytes" Address="0x031650dc" Value="90909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258d4c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04258d50" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (900p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258d4c" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x04258d50" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (1080p for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0201466f" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x02014679" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Enable MenuMan.EnableTopMenuDebug"
+              Note="Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0203064b" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Skip Intro Logos"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x01c6cfaa" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="60 FPS (For Base Console)"
+              Note="Unlocks framerate on Base/Slim PS4"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02106663" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x0210666d" Value="b805000000"/>
+            <Line Type="bytes" Address="0x02106672" Value="eb06"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Fixes framepacing issues at the cost of slightly increased input latency."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02106663" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x0210666d" Value="b805000000"/>
+            <Line Type="bytes" Address="0x02106672" Value="eb06"/>
+            <Line Type="bytes" Address="0x0319dcd9" Value="4589b534040000"/>
+            <Line Type="bytes" Address="0x0319dce0" Value="418bbd30040000"/>
+            <Line Type="bytes" Address="0x0319dce7" Value="be01000000"/>
+            <Line Type="bytes" Address="0x0319dcec" Value="90909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e3c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04258e40" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (900p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e3c" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x04258e40" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (1080p for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x020486cf" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x020486d9" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Enable MenuMan.EnableTopMenuDebug"
+              Note="Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02063aab" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Skip Intro Logos"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x01ca0a7a" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="60 FPS (For Base Console)"
+              Note="Unlocks framerate on Base/Slim PS4"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x020e0ab3" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x020e0abd" Value="b805000000"/>
+            <Line Type="bytes" Address="0x020e0ac2" Value="eb06"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x040b4e7c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x040b4e80" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (900p for Base)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x040b4e7c" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x040b4e80" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (1080p for Pro)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0202172f" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x02021739" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Skip Intro Logos"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x01c7a9ea" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="60 FPS (For Base Console)"
+              Note="Unlocks framerate on Base/Slim PS4"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x020e7f43" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x020e7f4d" Value="b805000000"/>
+            <Line Type="bytes" Address="0x020e7f52" Value="eb06"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e7c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04258e80" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (900p for Base)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e7c" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x04258e80" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (1080p for Pro)"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0202885f" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x02028869" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Skip Intro Logos"
+              Author="illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x01c8032a" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="60 FPS (For Base Console)"
+              Note="Unlocks framerate on Base/Slim PS4"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x020e8083" Value="b805000000"/>
+            <Line Type="bytes" Address="0x020e8088" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x020e8092" Value="0f1f840000000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="30 FPS Framepacing Fix"
+              Note="Fixes framepacing issues at the cost of slightly increased input latency."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x020e8083" Value="b805000000"/>
+            <Line Type="bytes" Address="0x020e8088" Value="48b90900000009000000"/>
+            <Line Type="bytes" Address="0x020e8092" Value="0f1f840000000000"/>
+            <Line Type="bytes" Address="0x032bd760" Value="be01000000"/>
+            <Line Type="bytes" Address="0x032bd765" Value="ff25a520e600"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e7c" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04258e80" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (900p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04258e7c" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x04258e80" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Resolution Patch (1080p for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0202898f" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x02028999" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+              Name="Skip Intro Logos"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x01c7f1da" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+</Patch>

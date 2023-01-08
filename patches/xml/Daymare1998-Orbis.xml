@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17157</ID>
+    </TitleID>
+    <Metadata Title="Daymare 1998"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x02988177" Value="0x75"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Daymare 1998"
+              Name="30 FPS Fix"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x02988177" Value="0x75"/>
+            <Line Type="bytes" Address="0x01281d82" Value="67e80ffb6e019090"/>
+            <Line Type="bytes" Address="0x02971897" Value="41c7048e02000000418b1c8ec5eb2ac3c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Daymare 1998"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02291945" Value="e830ff6d00"/>
+            <Line Type="bytes" Address="0x0229207a" Value="48e808f86d00"/>
+            <Line Type="bytes" Address="0x02971870" Value="48e9954422fe47ede370c7410455558541c5fa106104eb0e41c7048e00008642c4c17a10048ec3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

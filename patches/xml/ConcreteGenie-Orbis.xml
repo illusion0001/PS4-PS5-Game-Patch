@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11834</ID>
+        <ID>CUSA11875</ID>
+        <ID>CUSA11851</ID>
+    </TitleID>
+    <Metadata Title="Concrete Genie"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03394c96" Value="7469"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Concrete Genie"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0313d546" Value="c740000a578542"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Concrete Genie"
+              Name="Disable Motion Blur"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01fb0219" Value="eb58"/>
+        </PatchList>
+    </Metadata>
+</Patch>

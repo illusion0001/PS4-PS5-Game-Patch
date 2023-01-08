@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08034</ID>
+    </TitleID>
+    <Metadata Title="Shadow of the Colossus"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0042437f" Value="0f1f440000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

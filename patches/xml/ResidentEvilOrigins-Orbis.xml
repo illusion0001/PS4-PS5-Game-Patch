@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02882</ID>
+    </TitleID>
+    <Metadata Title="Resident Evil: Zero"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="bh0hd.elf">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0072564d" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Resident Evil: Zero"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="bh0hd.elf">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00725aed" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Resident Evil: HD"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="bh1hd.elf">
+        <PatchList>
+            <Line Type="bytes32" Address="0x004b577b" Value="0x42700000"/>
+            <Line Type="bytes32" Address="0x004b577f" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Resident Evil: HD"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="bh1hd.elf">
+        <PatchList>
+            <Line Type="bytes32" Address="0x004b5b1b" Value="0x42700000"/>
+            <Line Type="bytes32" Address="0x004b5b1f" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

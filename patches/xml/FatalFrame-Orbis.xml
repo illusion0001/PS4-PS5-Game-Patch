@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA28987</ID>
+    </TitleID>
+    <Metadata Title="FATAL FRAME: Maiden of Black Water"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x007b2f90" Value="48b83c00000001000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="FATAL FRAME: Maiden of Black Water"
+              Name="Always boot in English"
+              Note="Overrides display language selection with English."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00c41e5f" Value="b901000000"/>
+            <Line Type="bytes" Address="0x00c41e64" Value="eb1f"/>
+            <Line Type="bytes" Address="0x00c40bcb" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

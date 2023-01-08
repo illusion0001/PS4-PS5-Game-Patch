@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA09564</ID>
+        <ID>CUSA07875</ID>
+    </TitleID>
+    <Metadata Title="Uncharted: The Lost Legacy"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x017238b7" Value="eb4c"/>
+        </PatchList>
+    </Metadata>
+</Patch>

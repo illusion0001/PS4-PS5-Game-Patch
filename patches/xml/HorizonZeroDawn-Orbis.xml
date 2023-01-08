@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01021</ID>
+        <ID>CUSA07326</ID>
+        <ID>CUSA10237</ID>
+    </TitleID>
+    <Metadata Title="Horizon Zero Dawn"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.52"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00521afb" Value="0x84"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Horizon Zero Dawn"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.52"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x02070e20" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x02070e24" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+</Patch>

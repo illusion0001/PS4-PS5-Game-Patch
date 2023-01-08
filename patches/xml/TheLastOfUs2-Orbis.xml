@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA07820</ID>
+        <ID>CUSA10249</ID>
+        <ID>CUSA13986</ID>
+        <ID>CUSA14006</ID>
+    </TitleID>
+    <Metadata Title="The Last of Us: Part II"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02a9e570" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="1080p for PS4 Pro"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x005d57b1" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x005d239c" Value="b001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Skip Intro Logos"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c44b0b" Value="48e8a2cbe500"/>
+            <Line Type="bytes" Address="0x02aa16b3" Value="817b2000004040"/>
+            <Line Type="bytes" Address="0x02aa16ba" Value="7514"/>
+            <Line Type="bytes" Address="0x02aa16bc" Value="817b780000e040"/>
+            <Line Type="bytes" Address="0x02aa16c3" Value="750b"/>
+            <Line Type="bytes" Address="0x02aa16c5" Value="4531f6"/>
+            <Line Type="bytes" Address="0x02aa16c8" Value="44897320"/>
+            <Line Type="bytes" Address="0x02aa16cc" Value="44897378"/>
+            <Line Type="bytes" Address="0x02aa16d0" Value="440fb6748301"/>
+            <Line Type="bytes" Address="0x02aa16d6" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a141dd" Value="b000"/>
+            <Line Type="float32" Address="0x00ba0ecf" Value="1.0"/>
+            <Line Type="bytes" Address="0x0174ef88" Value="48e823c02b01"/>
+            <Line Type="bytes" Address="0x02a0afb1" Value="8b4f60"/>
+            <Line Type="bytes" Address="0x02a0afb4" Value="48891d75509f00"/>
+            <Line Type="bytes" Address="0x02a0afbb" Value="4889158e509f00"/>
+            <Line Type="bytes" Address="0x02a0afc2" Value="4c890d8f509f00"/>
+            <Line Type="bytes" Address="0x02a0afc9" Value="4c8d0d80010000"/>
+            <Line Type="bytes" Address="0x02a0afd0" Value="488d1d51509f00"/>
+            <Line Type="bytes" Address="0x02a0afd7" Value="b800eea388"/>
+            <Line Type="bytes" Address="0x02a0afdc" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0afde" Value="0f8488000000"/>
+            <Line Type="bytes" Address="0x02a0afe4" Value="b8210de0b2"/>
+            <Line Type="bytes" Address="0x02a0afe9" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0afeb" Value="0f8490000000"/>
+            <Line Type="bytes" Address="0x02a0aff1" Value="b88c0a3298"/>
+            <Line Type="bytes" Address="0x02a0aff6" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0aff8" Value="0f8498000000"/>
+            <Line Type="bytes" Address="0x02a0affe" Value="b8dd229b6a"/>
+            <Line Type="bytes" Address="0x02a0b003" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b005" Value="0f84a0000000"/>
+            <Line Type="bytes" Address="0x02a0b00b" Value="b8c60cdf31"/>
+            <Line Type="bytes" Address="0x02a0b010" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b012" Value="0f84a8000000"/>
+            <Line Type="bytes" Address="0x02a0b018" Value="b8d9951c4a"/>
+            <Line Type="bytes" Address="0x02a0b01d" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b01f" Value="0f84b0000000"/>
+            <Line Type="bytes" Address="0x02a0b025" Value="b80a656f99"/>
+            <Line Type="bytes" Address="0x02a0b02a" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b02c" Value="0f84b8000000"/>
+            <Line Type="bytes" Address="0x02a0b032" Value="90"/>
+            <Line Type="bytes" Address="0x02a0b033" Value="b8a20ff751"/>
+            <Line Type="bytes" Address="0x02a0b038" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b03a" Value="0f84bf000000"/>
+            <Line Type="bytes" Address="0x02a0b040" Value="b875f44c8e"/>
+            <Line Type="bytes" Address="0x02a0b045" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b047" Value="0f84c7000000"/>
+            <Line Type="bytes" Address="0x02a0b04d" Value="b8e2683441"/>
+            <Line Type="bytes" Address="0x02a0b052" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b054" Value="0f84cf000000"/>
+            <Line Type="bytes" Address="0x02a0b05a" Value="b8cdcb0831"/>
+            <Line Type="bytes" Address="0x02a0b05f" Value="39c1"/>
+            <Line Type="bytes" Address="0x02a0b061" Value="0f84d7000000"/>
+            <Line Type="bytes" Address="0x02a0b067" Value="e9e4000000"/>
+            <Line Type="bytes" Address="0x02a0b06c" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b06f" Value="488d152e120000"/>
+            <Line Type="bytes" Address="0x02a0b076" Value="c6031f"/>
+            <Line Type="bytes" Address="0x02a0b079" Value="e8ed000000"/>
+            <Line Type="bytes" Address="0x02a0b07e" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b081" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b084" Value="488d15b9010000"/>
+            <Line Type="bytes" Address="0x02a0b08b" Value="c60320"/>
+            <Line Type="bytes" Address="0x02a0b08e" Value="e8d8000000"/>
+            <Line Type="bytes" Address="0x02a0b093" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b096" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b099" Value="488d1584060000"/>
+            <Line Type="bytes" Address="0x02a0b0a0" Value="c60321"/>
+            <Line Type="bytes" Address="0x02a0b0a3" Value="e8c3000000"/>
+            <Line Type="bytes" Address="0x02a0b0a8" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b0ab" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b0ae" Value="488d15df070000"/>
+            <Line Type="bytes" Address="0x02a0b0b5" Value="c60322"/>
+            <Line Type="bytes" Address="0x02a0b0b8" Value="e8ae000000"/>
+            <Line Type="bytes" Address="0x02a0b0bd" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b0c0" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b0c3" Value="488d151a090000"/>
+            <Line Type="bytes" Address="0x02a0b0ca" Value="c60323"/>
+            <Line Type="bytes" Address="0x02a0b0cd" Value="e899000000"/>
+            <Line Type="bytes" Address="0x02a0b0d2" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b0d5" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b0d8" Value="488d15050c0000"/>
+            <Line Type="bytes" Address="0x02a0b0df" Value="c60324"/>
+            <Line Type="bytes" Address="0x02a0b0e2" Value="e884000000"/>
+            <Line Type="bytes" Address="0x02a0b0e7" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b0ea" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b0ed" Value="488d15900d0000"/>
+            <Line Type="bytes" Address="0x02a0b0f4" Value="c60325"/>
+            <Line Type="bytes" Address="0x02a0b0f7" Value="e86f000000"/>
+            <Line Type="bytes" Address="0x02a0b0fc" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b0ff" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b102" Value="488d154b0e0000"/>
+            <Line Type="bytes" Address="0x02a0b109" Value="c60326"/>
+            <Line Type="bytes" Address="0x02a0b10c" Value="e85a000000"/>
+            <Line Type="bytes" Address="0x02a0b111" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b114" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b117" Value="488d15360f0000"/>
+            <Line Type="bytes" Address="0x02a0b11e" Value="c60327"/>
+            <Line Type="bytes" Address="0x02a0b121" Value="e845000000"/>
+            <Line Type="bytes" Address="0x02a0b126" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b129" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b12c" Value="488d15f10f0000"/>
+            <Line Type="bytes" Address="0x02a0b133" Value="c60328"/>
+            <Line Type="bytes" Address="0x02a0b136" Value="e830000000"/>
+            <Line Type="bytes" Address="0x02a0b13b" Value="41ffe1"/>
+            <Line Type="bytes" Address="0x02a0b13e" Value="41b428"/>
+            <Line Type="bytes" Address="0x02a0b141" Value="488d15dc100000"/>
+            <Line Type="bytes" Address="0x02a0b148" Value="c60329"/>
+            <Line Type="bytes" Address="0x02a0b14b" Value="e81b000000"/>
+            <Line Type="bytes" Address="0x02a0b150" Value="e826000000"/>
+            <Line Type="bytes" Address="0x02a0b155" Value="488b1dd44e9f00"/>
+            <Line Type="bytes" Address="0x02a0b15c" Value="488b15ed4e9f00"/>
+            <Line Type="bytes" Address="0x02a0b163" Value="4c8b0dee4e9f00"/>
+            <Line Type="bytes" Address="0x02a0b16a" Value="c3"/>
+            <Line Type="bytes" Address="0x02a0b16b" Value="48c7435800000000"/>
+            <Line Type="bytes" Address="0x02a0b173" Value="48895350"/>
+            <Line Type="bytes" Address="0x02a0b177" Value="c3"/>
+            <Line Type="bytes" Address="0x02a0b17b" Value="48893dee4e9f00"/>
+            <Line Type="bytes" Address="0x02a0b182" Value="488b5350"/>
+            <Line Type="bytes" Address="0x02a0b186" Value="4883435828"/>
+            <Line Type="bytes" Address="0x02a0b18b" Value="48035358"/>
+            <Line Type="bytes" Address="0x02a0b18f" Value="803a30"/>
+            <Line Type="bytes" Address="0x02a0b192" Value="7410"/>
+            <Line Type="bytes" Address="0x02a0b194" Value="807f2f01"/>
+            <Line Type="bytes" Address="0x02a0b198" Value="7412"/>
+            <Line Type="bytes" Address="0x02a0b19a" Value="48895730"/>
+            <Line Type="bytes" Address="0x02a0b19e" Value="c6472f01"/>
+            <Line Type="bytes" Address="0x02a0b1a2" Value="eb08"/>
+            <Line Type="bytes" Address="0x02a0b1a4" Value="48c7435800000000"/>
+            <Line Type="bytes" Address="0x02a0b1ac" Value="48893dbd4e9f00"/>
+            <Line Type="bytes" Address="0x02a0b1b3" Value="41b401"/>
+            <Line Type="bytes" Address="0x02a0b1b6" Value="83fe05"/>
+            <Line Type="bytes" Address="0x02a0b1b9" Value="c3"/>
+            <Line Type="utf8" Address="0x02a0b26c" Value="hammer-modern                          "/>
+            <Line Type="utf8" Address="0x02a0b294" Value="hammer-scar                            "/>
+            <Line Type="utf8" Address="0x02a0b2bc" Value="crowbar-one-hand                       "/>
+            <Line Type="utf8" Address="0x02a0b2e4" Value="pipe-wrench                            "/>
+            <Line Type="utf8" Address="0x02a0b30c" Value="club-1h-scar                           "/>
+            <Line Type="utf8" Address="0x02a0b334" Value="club-1h-police                         "/>
+            <Line Type="utf8" Address="0x02a0b35c" Value="machete-black                          "/>
+            <Line Type="utf8" Address="0x02a0b384" Value="machete-wood                           "/>
+            <Line Type="utf8" Address="0x02a0b3ac" Value="machete-scar                           "/>
+            <Line Type="utf8" Address="0x02a0b3d4" Value="hatchet-modern                         "/>
+            <Line Type="utf8" Address="0x02a0b3fc" Value="hatchet-black                          "/>
+            <Line Type="utf8" Address="0x02a0b424" Value="hatchet-scar                           "/>
+            <Line Type="utf8" Address="0x02a0b44c" Value="scythe-scar                            "/>
+            <Line Type="utf8" Address="0x02a0b474" Value="hatchet-tomahawk                       "/>
+            <Line Type="utf8" Address="0x02a0b49c" Value="baseball-bat                           "/>
+            <Line Type="utf8" Address="0x02a0b4c4" Value="baseball-bat-metal                     "/>
+            <Line Type="utf8" Address="0x02a0b4ec" Value="two-by-four                            "/>
+            <Line Type="utf8" Address="0x02a0b514" Value="lead-pipe                              "/>
+            <Line Type="utf8" Address="0x02a0b53c" Value="club-2h-scar                           "/>
+            <Line Type="utf8" Address="0x02a0b564" Value="two-hand-axe                           "/>
+            <Line Type="utf8" Address="0x02a0b58c" Value="two-hand-axe-scar                      "/>
+            <Line Type="utf8" Address="0x02a0b5b4" Value="fireman-axe                            "/>
+            <Line Type="utf8" Address="0x02a0b5dc" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0b604" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0b62c" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0b654" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0b67c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0b6a4" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0b6cc" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0b6f4" Value="pickaxe-scar                           "/>
+            <Line Type="utf8" Address="0x02a0b71c" Value="pickaxe-scar-player                    "/>
+            <Line Type="utf8" Address="0x02a0b744" Value="0"/>
+            <Line Type="utf8" Address="0x02a0b74c" Value="pistol-beretta                         "/>
+            <Line Type="utf8" Address="0x02a0b774" Value="pistol-revolver-taurus                 "/>
+            <Line Type="utf8" Address="0x02a0b79c" Value="bow-ellie                              "/>
+            <Line Type="utf8" Address="0x02a0b7c4" Value="shotgun-remington-pump                 "/>
+            <Line Type="utf8" Address="0x02a0b7ec" Value="rifle-remington-bolt                   "/>
+            <Line Type="utf8" Address="0x02a0b814" Value="rifle-galil                            "/>
+            <Line Type="utf8" Address="0x02a0b83c" Value="rifle-mpx5                             "/>
+            <Line Type="utf8" Address="0x02a0b864" Value="rifle-remington-81                     "/>
+            <Line Type="utf8" Address="0x02a0b88c" Value="0"/>
+            <Line Type="utf8" Address="0x02a0b8bc" Value="pistol-glock                           "/>
+            <Line Type="utf8" Address="0x02a0b8e4" Value="shotgun-baserri-over-under             "/>
+            <Line Type="utf8" Address="0x02a0b90c" Value="shotgun-dbl-barrel-abby                "/>
+            <Line Type="utf8" Address="0x02a0b934" Value="crossbow                               "/>
+            <Line Type="utf8" Address="0x02a0b95c" Value="rifle-vepr                             "/>
+            <Line Type="utf8" Address="0x02a0b984" Value="pistol-xcaliber                        "/>
+            <Line Type="utf8" Address="0x02a0b9ac" Value="flamethrower                           "/>
+            <Line Type="utf8" Address="0x02a0b9d4" Value="pistol-revolver-taurus-owen            "/>
+            <Line Type="utf8" Address="0x02a0b9fc" Value="0"/>
+            <Line Type="utf8" Address="0x02a0ba0c" Value="                                       "/>
+            <Line Type="utf8" Address="0x02a0ba34" Value="pistol-ruger                           "/>
+            <Line Type="utf8" Address="0x02a0ba5c" Value="pistol-ruger                           "/>
+            <Line Type="utf8" Address="0x02a0ba84" Value="pistol-browning-jesse                  "/>
+            <Line Type="utf8" Address="0x02a0baac" Value="pistol-browning                        "/>
+            <Line Type="utf8" Address="0x02a0bad4" Value="pistol-colt-1911-silver                "/>
+            <Line Type="utf8" Address="0x02a0bafc" Value="pistol-beretta-black                   "/>
+            <Line Type="utf8" Address="0x02a0bb24" Value="pistol-revolver-taurus                 "/>
+            <Line Type="utf8" Address="0x02a0bb4c" Value="pistol-revolver-taurus-owen            "/>
+            <Line Type="utf8" Address="0x02a0bb74" Value="shotgun-remington-pump-sawedoff        "/>
+            <Line Type="utf8" Address="0x02a0bb9c" Value="shotgun-pump-stock                     "/>
+            <Line Type="utf8" Address="0x02a0bbc4" Value="rifle-marlin-lever                     "/>
+            <Line Type="utf8" Address="0x02a0bbec" Value="rifle-winchester-lever                 "/>
+            <Line Type="utf8" Address="0x02a0bc14" Value="rifle-remington-81                     "/>
+            <Line Type="utf8" Address="0x02a0bc3c" Value="rifle-mini-14-manny                    "/>
+            <Line Type="utf8" Address="0x02a0bc64" Value="rifle-mini-14-wood                     "/>
+            <Line Type="utf8" Address="0x02a0bc8c" Value="rifle-m14-sniper                       "/>
+            <Line Type="utf8" Address="0x02a0bcb4" Value="bow-lev                                "/>
+            <Line Type="utf8" Address="0x02a0bcdc" Value="bow-joel                               "/>
+            <Line Type="utf8" Address="0x02a0bd04" Value="0"/>
+            <Line Type="utf8" Address="0x02a0bd0c" Value="molotov                                "/>
+            <Line Type="utf8" Address="0x02a0bd34" Value="pipe-bomb                              "/>
+            <Line Type="utf8" Address="0x02a0bd5c" Value="beer-bottle                            "/>
+            <Line Type="utf8" Address="0x02a0bd84" Value="throw-brick                            "/>
+            <Line Type="utf8" Address="0x02a0bdac" Value="stun-bomb                              "/>
+            <Line Type="utf8" Address="0x02a0bdd4" Value="smoke-bomb                             "/>
+            <Line Type="utf8" Address="0x02a0bdfc" Value="pat-snowball                           "/>
+            <Line Type="utf8" Address="0x02a0be24" Value="trap-mine                              "/>
+            <Line Type="utf8" Address="0x02a0be4c" Value="molotov                                "/>
+            <Line Type="utf8" Address="0x02a0be74" Value="ski-aquarium-dog-toy                   "/>
+            <Line Type="utf8" Address="0x02a0be9c" Value="0"/>
+            <Line Type="utf8" Address="0x02a0beac" Value="bandage-apply                          "/>
+            <Line Type="utf8" Address="0x02a0bed4" Value="bandage-apply                          "/>
+            <Line Type="utf8" Address="0x02a0befc" Value="syringe                                "/>
+            <Line Type="utf8" Address="0x02a0bf24" Value="                                       "/>
+            <Line Type="utf8" Address="0x02a0bf4c" Value="                                       "/>
+            <Line Type="utf8" Address="0x02a0bf74" Value="0"/>
+            <Line Type="utf8" Address="0x02a0bf7c" Value="pistol-ruger                           "/>
+            <Line Type="utf8" Address="0x02a0bfa4" Value="pistol-revolver-militia                "/>
+            <Line Type="utf8" Address="0x02a0bfcc" Value="rifle-mini-14                          "/>
+            <Line Type="utf8" Address="0x02a0bff4" Value="rifle-bolt-m24                         "/>
+            <Line Type="utf8" Address="0x02a0c01c" Value="shotgun-remington-pump-black           "/>
+            <Line Type="utf8" Address="0x02a0c044" Value="                                       "/>
+            <Line Type="utf8" Address="0x02a0c06c" Value="0"/>
+            <Line Type="utf8" Address="0x02a0c07c" Value="shotgun-dbl-barrel-scar                "/>
+            <Line Type="utf8" Address="0x02a0c0a4" Value="pistol-browning-scar                   "/>
+            <Line Type="utf8" Address="0x02a0c0cc" Value="pistol-revolver-scar                   "/>
+            <Line Type="utf8" Address="0x02a0c0f4" Value="bow-scar                               "/>
+            <Line Type="utf8" Address="0x02a0c11c" Value="rifle-bolt-scar                        "/>
+            <Line Type="utf8" Address="0x02a0c144" Value="0"/>
+            <Line Type="utf8" Address="0x02a0c14c" Value="pistol-cz75-black                      "/>
+            <Line Type="utf8" Address="0x02a0c174" Value="pistol-revolver-357                    "/>
+            <Line Type="utf8" Address="0x02a0c19c" Value="rifle-m14-dark                         "/>
+            <Line Type="utf8" Address="0x02a0c1c4" Value="rifle-bolt-m24-dark                    "/>
+            <Line Type="utf8" Address="0x02a0c1ec" Value="shotgun-pump-stock-black               "/>
+            <Line Type="utf8" Address="0x02a0c214" Value="rifle-mpx5-tilt                        "/>
+            <Line Type="utf8" Address="0x02a0c23c" Value="0"/>
+            <Line Type="utf8" Address="0x02a0c24c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c274" Value="                                       "/>
+            <Line Type="utf8" Address="0x02a0c29c" Value="bandage-apply                          "/>
+            <Line Type="utf8" Address="0x02a0c2c4" Value="0"/>
+            <Line Type="utf8" Address="0x02a0c2cc" Value="knife-survival-mel                     "/>
+            <Line Type="utf8" Address="0x02a0c2f4" Value="bloater-pustule                        "/>
+            <Line Type="utf8" Address="0x02a0c31c" Value="pistol-colt-1911-dark                  "/>
+            <Line Type="utf8" Address="0x02a0c344" Value="knife-hunting                          "/>
+            <Line Type="utf8" Address="0x02a0c36c" Value="shiv-d                                 "/>
+            <Line Type="utf8" Address="0x02a0c394" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c3bc" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c3e4" Value="rifle-m14-sniper                       "/>
+            <Line Type="utf8" Address="0x02a0c40c" Value="bow-workbench                          "/>
+            <Line Type="utf8" Address="0x02a0c434" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c45c" Value="bow-ellie                              "/>
+            <Line Type="utf8" Address="0x02a0c484" Value="rifle-m14-sniper                       "/>
+            <Line Type="utf8" Address="0x02a0c4ac" Value="bow-scar                               "/>
+            <Line Type="utf8" Address="0x02a0c4d4" Value="molotov                                "/>
+            <Line Type="utf8" Address="0x02a0c4fc" Value="pipe-bomb                              "/>
+            <Line Type="utf8" Address="0x02a0c524" Value="gas-mask-lev                           "/>
+            <Line Type="utf8" Address="0x02a0c54c" Value="rifle-m14-sniper                       "/>
+            <Line Type="utf8" Address="0x02a0c574" Value="shotgun-pump-stock                     "/>
+            <Line Type="utf8" Address="0x02a0c59c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c5c4" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c5ec" Value="shiv-b                                 "/>
+            <Line Type="utf8" Address="0x02a0c614" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c63c" Value="hatchet-tomahawk                       "/>
+            <Line Type="utf8" Address="0x02a0c664" Value="short-pipe                             "/>
+            <Line Type="utf8" Address="0x02a0c68c" Value="switchblade                            "/>
+            <Line Type="utf8" Address="0x02a0c6b4" Value="rifle-m14-sniper                       "/>
+            <Line Type="utf8" Address="0x02a0c6dc" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c704" Value="torch-game                             "/>
+            <Line Type="utf8" Address="0x02a0c72c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c754" Value="molotov                                "/>
+            <Line Type="utf8" Address="0x02a0c77c" Value="machete-wood-joel                      "/>
+            <Line Type="utf8" Address="0x02a0c7a4" Value="knife-hunting                          "/>
+            <Line Type="utf8" Address="0x02a0c7cc" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c7f4" Value="shiv-f                                 "/>
+            <Line Type="utf8" Address="0x02a0c81c" Value="shiv-a                                 "/>
+            <Line Type="utf8" Address="0x02a0c844" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c86c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c894" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c8bc" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0c8e4" Value="fob-basketball                         "/>
+            <Line Type="utf8" Address="0x02a0c90c" Value="bloater-pustule                        "/>
+            <Line Type="utf8" Address="0x02a0c934" Value="rifle-ruger-scar                       "/>
+            <Line Type="utf8" Address="0x02a0c95c" Value="shotgun-remington-pump-sawedoff        "/>
+            <Line Type="utf8" Address="0x02a0c984" Value="amp-gift-shop-toy-orca                 "/>
+            <Line Type="utf8" Address="0x02a0c9ac" Value="machete-black                          "/>
+            <Line Type="utf8" Address="0x02a0c9d4" Value="bloater-pustule                        "/>
+            <Line Type="utf8" Address="0x02a0c9fc" Value="bloater-pustule                        "/>
+            <Line Type="utf8" Address="0x02a0ca24" Value="bow-toy                                "/>
+            <Line Type="utf8" Address="0x02a0ca4c" Value="shiv-e                                 "/>
+            <Line Type="utf8" Address="0x02a0ca74" Value="dagger-scar-lev                        "/>
+            <Line Type="utf8" Address="0x02a0ca9c" Value="invisible-cube                         "/>
+            <Line Type="utf8" Address="0x02a0cac4" Value="firecracker                            "/>
+            <Line Type="utf8" Address="0x02a0caec" Value="shotgun-remington-pump                 "/>
+            <Line Type="utf8" Address="0x02a0cb14" Value="short-pipe                             "/>
+            <Line Type="utf8" Address="0x02a0cb3c" Value="dagger-scar                            "/>
+            <Line Type="utf8" Address="0x02a0cb64" Value="NO_ART_GROUP                           "/>
+            <Line Type="utf8" Address="0x02a0cb8c" Value="rifle-bolt-m24                         "/>
+            <Line Type="utf8" Address="0x02a0cbb4" Value="sledgehammer                           "/>
+            <Line Type="utf8" Address="0x02a0cbdc" Value="shiv-c                                 "/>
+            <Line Type="utf8" Address="0x02a0cc04" Value="pistol-cz75-dina                       "/>
+            <Line Type="utf8" Address="0x02a0cc2c" Value="tennis-ball-throw                      "/>
+            <Line Type="utf8" Address="0x02a0cc54" Value="0"/>
+            <Line Type="bytes" Address="0x026c492a" Value="c5fa10152667d700"/>
+            <Line Type="bytes" Address="0x00a6dad3" Value="488d3c2580014003"/>
+            <Line Type="bytes" Address="0x00a79897" Value="e904db1802"/>
+            <Line Type="bytes" Address="0x02c073a0" Value="e84bd5abff"/>
+            <Line Type="bytes" Address="0x02c073a5" Value="e814000000"/>
+            <Line Type="bytes" Address="0x02c073aa" Value="e8b3000000"/>
+            <Line Type="bytes" Address="0x02c073af" Value="e8fd000000"/>
+            <Line Type="bytes" Address="0x02c073b4" Value="e834010000"/>
+            <Line Type="bytes" Address="0x02c073b9" Value="e9de24e7fd"/>
+            <Line Type="bytes" Address="0x02c073be" Value="803d23c6db0000"/>
+            <Line Type="bytes" Address="0x02c073c5" Value="0f8496000000"/>
+            <Line Type="bytes" Address="0x02c073cb" Value="55"/>
+            <Line Type="bytes" Address="0x02c073cc" Value="4889e5"/>
+            <Line Type="bytes" Address="0x02c073cf" Value="50"/>
+            <Line Type="bytes" Address="0x02c073d0" Value="488d05a98c7f00"/>
+            <Line Type="bytes" Address="0x02c073d7" Value="c5fa104004"/>
+            <Line Type="bytes" Address="0x02c073dc" Value="c5fa1008"/>
+            <Line Type="bytes" Address="0x02c073e0" Value="c5fa10500c"/>
+            <Line Type="bytes" Address="0x02c073e5" Value="c5fa105824"/>
+            <Line Type="bytes" Address="0x02c073ea" Value="0fb6481f"/>
+            <Line Type="bytes" Address="0x02c073ee" Value="be28010000"/>
+            <Line Type="bytes" Address="0x02c073f3" Value="488d3dc68c7f00"/>
+            <Line Type="bytes" Address="0x02c073fa" Value="488d150143ffff"/>
+            <Line Type="bytes" Address="0x02c07401" Value="c5fa5ac0"/>
+            <Line Type="bytes" Address="0x02c07405" Value="c5f25ac9"/>
+            <Line Type="bytes" Address="0x02c07409" Value="c5ea5ad2"/>
+            <Line Type="bytes" Address="0x02c0740d" Value="c5e25adb"/>
+            <Line Type="bytes" Address="0x02c07411" Value="58"/>
+            <Line Type="bytes" Address="0x02c07412" Value="e8b93efbff"/>
+            <Line Type="bytes" Address="0x02c07417" Value="c5fa1015393c8300"/>
+            <Line Type="bytes" Address="0x02c0741f" Value="c5fa1005e5b31b00"/>
+            <Line Type="bytes" Address="0x02c07427" Value="c5fa100de1b31b00"/>
+            <Line Type="bytes" Address="0x02c0742f" Value="488d154d04fdff"/>
+            <Line Type="bytes" Address="0x02c07436" Value="488d0d838c7f00"/>
+            <Line Type="bytes" Address="0x02c0743d" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x02c07442" Value="b004"/>
+            <Line Type="bytes" Address="0x02c07444" Value="c5f828da"/>
+            <Line Type="bytes" Address="0x02c07448" Value="e8c3c777ff"/>
+            <Line Type="bytes" Address="0x02c0744d" Value="488d3d6c8c7f00"/>
+            <Line Type="bytes" Address="0x02c07454" Value="ba28010000"/>
+            <Line Type="bytes" Address="0x02c07459" Value="31f6"/>
+            <Line Type="bytes" Address="0x02c0745b" Value="e8a062fbff"/>
+            <Line Type="bytes" Address="0x02c07460" Value="5d"/>
+            <Line Type="bytes" Address="0x02c07461" Value="c3"/>
+            <Line Type="bytes" Address="0x02c07462" Value="55"/>
+            <Line Type="bytes" Address="0x02c07463" Value="4889e5"/>
+            <Line Type="bytes" Address="0x02c07466" Value="c5fa1015ea3b8300"/>
+            <Line Type="bytes" Address="0x02c0746e" Value="c5fa100596b31b00"/>
+            <Line Type="bytes" Address="0x02c07476" Value="c5fa100d92b31b00"/>
+            <Line Type="bytes" Address="0x02c0747e" Value="488d1566682900"/>
+            <Line Type="bytes" Address="0x02c07485" Value="488d0d2e0b5c01"/>
+            <Line Type="bytes" Address="0x02c0748c" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x02c07491" Value="b004"/>
+            <Line Type="bytes" Address="0x02c07493" Value="c5f828da"/>
+            <Line Type="bytes" Address="0x02c07497" Value="e874c777ff"/>
+            <Line Type="bytes" Address="0x02c0749c" Value="488d3d170b5c01"/>
+            <Line Type="bytes" Address="0x02c074a3" Value="ba00100000"/>
+            <Line Type="bytes" Address="0x02c074a8" Value="31f6"/>
+            <Line Type="bytes" Address="0x02c074aa" Value="e85162fbff"/>
+            <Line Type="bytes" Address="0x02c074af" Value="5d"/>
+            <Line Type="bytes" Address="0x02c074b0" Value="c3"/>
+            <Line Type="bytes" Address="0x02c074b1" Value="55"/>
+            <Line Type="bytes" Address="0x02c074b2" Value="4889e5"/>
+            <Line Type="bytes" Address="0x02c074b5" Value="c5fa101557b31b00"/>
+            <Line Type="bytes" Address="0x02c074bd" Value="c5fa100547b31b00"/>
+            <Line Type="bytes" Address="0x02c074c5" Value="c5fa100d43b31b00"/>
+            <Line Type="bytes" Address="0x02c074cd" Value="488d15c8feffff"/>
+            <Line Type="bytes" Address="0x02c074d4" Value="488d0dbd8c7f00"/>
+            <Line Type="bytes" Address="0x02c074db" Value="bee0e0e0c0"/>
+            <Line Type="bytes" Address="0x02c074e0" Value="b004"/>
+            <Line Type="bytes" Address="0x02c074e2" Value="c5f828da"/>
+            <Line Type="bytes" Address="0x02c074e6" Value="e825c777ff"/>
+            <Line Type="bytes" Address="0x02c074eb" Value="5d"/>
+            <Line Type="bytes" Address="0x02c074ec" Value="c3"/>
+            <Line Type="bytes" Address="0x02c074ed" Value="c3"/>
+            <Line Type="utf8" Address="0x02bfb702" Value="Current Charge Time: %.2f
+Max Charge Time: %.2f
+Current Sway Multiplier: %.2f
+Cooldown Timer: %.2f
+Using Bow?: %i
+"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02bbb5f0" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="1080p for PS4 Pro"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00a17631" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Boot with raw files exclusively"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a9bf43" Value="0f1f8000000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Skip Intro Logos"
+              Note="Special thanks to icemesh for DC disassembler.\n\nhttps://github.com/icemesh/t2-dc-disasm"
+              Author="icemesh, illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c85f20" Value="c3"/>
+            <Line Type="bytes" Address="0x020b1952" Value="48e8f85cb200"/>
+            <Line Type="bytes" Address="0x02bd7650" Value="817a2000004040"/>
+            <Line Type="bytes" Address="0x02bd7657" Value="7514"/>
+            <Line Type="bytes" Address="0x02bd7659" Value="817a780000e040"/>
+            <Line Type="bytes" Address="0x02bd7660" Value="750b"/>
+            <Line Type="bytes" Address="0x02bd7662" Value="4531c9"/>
+            <Line Type="bytes" Address="0x02bd7665" Value="44894a20"/>
+            <Line Type="bytes" Address="0x02bd7669" Value="44894a78"/>
+            <Line Type="bytes" Address="0x02bd766d" Value="440fb6448201"/>
+            <Line Type="bytes" Address="0x02bd7673" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Bug Fix: Broken Aim After Using The Bow"
+              Note="Fixed a bug where camera becomes shaky after using the bow."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Save data for bug fix function -->
+            <Line Type="bytes" Address="0x01555a7c" Value="e9575b6a01"/>
+            <Line Type="bytes" Address="0x02bfb5d8" Value="c5fa104d90"/>
+            <Line Type="bytes" Address="0x02bfb5dd" Value="c5fa11059b4a8000"/>
+            <Line Type="bytes" Address="0x02bfb5e5" Value="c5fa110d974a8000"/>
+            <Line Type="bytes" Address="0x02bfb5ed" Value="e98fa495fe"/>
+            <!-- (charge) -->
+            <Line Type="bytes" Address="0x015c9040" Value="e9ad256301"/>
+            <Line Type="bytes" Address="0x02bfb5f2" Value="c5fa111d924a8000"/>
+            <Line Type="bytes" Address="0x02bfb5fa" Value="c4e1fa2cc0"/>
+            <Line Type="bytes" Address="0x02bfb5ff" Value="e941da9cfe"/>
+            <!-- (saving code) -->
+            <Line Type="bytes" Address="0x02e1dd70" Value="41c6860004000000"/>
+            <Line Type="bytes" Address="0x02e1dd78" Value="eb07"/>
+            <Line Type="bytes" Address="0x02e1dd7a" Value="c6830004000000"/>
+            <Line Type="bytes" Address="0x02e1dd81" Value="c60517235e0000"/>
+            <Line Type="bytes" Address="0x02e1dd88" Value="c3"/>
+            <Line Type="bytes" Address="0x02e1dd89" Value="c6050f235e0001"/>
+            <Line Type="bytes" Address="0x02e1dd90" Value="41c6860004000000"/>
+            <Line Type="bytes" Address="0x02e1dd98" Value="c3"/>
+            <!-- (hooks) -->
+            <Line Type="bytes" Address="0x015566ee" Value="e87d768c01909090"/>
+            <Line Type="bytes" Address="0x015567d3" Value="e8b1758c01909090"/>
+            <Line Type="bytes" Address="0x01553ac9" Value="e8aca28c019090"/>
+            <Line Type="bytes" Address="0x0155445f" Value="e816998c019090"/>
+            <!-- (aim) -->
+            <Line Type="bytes" Address="0x01555d28" Value="e92c808c01"/>
+            <Line Type="bytes" Address="0x02e1dd59" Value="c5f8284d90"/>
+            <Line Type="bytes" Address="0x02e1dd5e" Value="c6053a235e0001"/>
+            <Line Type="bytes" Address="0x02e1dd65" Value="e9c37f73fe"/>
+            <!-- bow_charge_fix_func() -->
+            <Line Type="bytes" Address="0x015c8f4d" Value="e9b44e8501"/>
+            <Line Type="bytes" Address="0x02e1de06" Value="50"/>
+            <Line Type="bytes" Address="0x02e1de07" Value="53"/>
+            <Line Type="bytes" Address="0x02e1de08" Value="51"/>
+            <Line Type="bytes" Address="0x02e1de09" Value="57"/>
+            <Line Type="bytes" Address="0x02e1de0a" Value="c5fa1145b8"/>
+            <Line Type="bytes" Address="0x02e1de0f" Value="498b8424d0000000"/>
+            <Line Type="bytes" Address="0x02e1de17" Value="498bbc24382f0000"/>
+            <Line Type="bytes" Address="0x02e1de1f" Value="488b07"/>
+            <Line Type="bytes" Address="0x02e1de22" Value="ff90c8000000"/>
+            <Line Type="bytes" Address="0x02e1de28" Value="4889c3"/>
+            <Line Type="bytes" Address="0x02e1de2b" Value="488d055e225e00"/>
+            <Line Type="bytes" Address="0x02e1de32" Value="488d8ba0040000"/>
+            <Line Type="bytes" Address="0x02e1de39" Value="48894820"/>
+            <Line Type="bytes" Address="0x02e1de3d" Value="81bba00400000000803f"/>
+            <Line Type="bytes" Address="0x02e1de47" Value="7449"/>
+            <Line Type="bytes" Address="0x02e1de49" Value="c5fa1100"/>
+            <Line Type="bytes" Address="0x02e1de4d" Value="c5fa114804"/>
+            <Line Type="bytes" Address="0x02e1de52" Value="c5fa104014"/>
+            <Line Type="bytes" Address="0x02e1de57" Value="c7400800007041"/>
+            <Line Type="bytes" Address="0x02e1de5e" Value="80780f01"/>
+            <Line Type="bytes" Address="0x02e1de62" Value="742e"/>
+            <Line Type="bytes" Address="0x02e1de64" Value="c5f82e4008"/>
+            <Line Type="bytes" Address="0x02e1de69" Value="7213"/>
+            <Line Type="bytes" Address="0x02e1de6b" Value="c7401400000000"/>
+            <Line Type="bytes" Address="0x02e1de72" Value="c783a00400000000803f"/>
+            <Line Type="bytes" Address="0x02e1de7c" Value="eb1b"/>
+            <Line Type="bytes" Address="0x02e1de7e" Value="c5fa1000"/>
+            <Line Type="bytes" Address="0x02e1de82" Value="c5fa104814"/>
+            <Line Type="bytes" Address="0x02e1de87" Value="c5fa58c1"/>
+            <Line Type="bytes" Address="0x02e1de8b" Value="c5fa114014"/>
+            <Line Type="bytes" Address="0x02e1de90" Value="eb07"/>
+            <Line Type="bytes" Address="0x02e1de92" Value="c7401400000000"/>
+            <Line Type="bytes" Address="0x02e1de99" Value="c5fa1000"/>
+            <Line Type="bytes" Address="0x02e1de9d" Value="c5fa104804"/>
+            <Line Type="bytes" Address="0x02e1dea2" Value="5f"/>
+            <Line Type="bytes" Address="0x02e1dea3" Value="59"/>
+            <Line Type="bytes" Address="0x02e1dea4" Value="5b"/>
+            <Line Type="bytes" Address="0x02e1dea5" Value="58"/>
+            <Line Type="bytes" Address="0x02e1dea6" Value="e9e5b07afe"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Reduce Bow Sway Threshold Timer (15 to 6 seconds)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x020d5eec" Value="e9811cb000"/>
+            <Line Type="bytes" Address="0x02bd7b72" Value="50"/>
+            <Line Type="bytes" Address="0x02bd7b73" Value="48b898a1550f11000000"/>
+            <Line Type="bytes" Address="0x02bd7b7d" Value="4839f8"/>
+            <Line Type="bytes" Address="0x02bd7b80" Value="7507"/>
+            <Line Type="bytes" Address="0x02bd7b82" Value="c747140000c040"/>
+            <Line Type="bytes" Address="0x02bd7b89" Value="58"/>
+            <Line Type="bytes" Address="0x02bd7b8a" Value="c5f82e0487"/>
+            <Line Type="bytes" Address="0x02bd7b8f" Value="e95de34fff"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x005d26b8" Value="0x75"/>
+            <Line Type="float32" Address="0x0075f70f" Value="1.0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
+              Name="Improved Infinite Ammo Cheat"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x019df257" Value="e83453e2ff"/>
+            <Line Type="bytes" Address="0x019df25c" Value="90"/>
+            <Line Type="bytes" Address="0x019df25d" Value="90"/>
+            <Line Type="bytes" Address="0x01804590" Value="488b0519303602"/>
+            <Line Type="bytes" Address="0x01804597" Value="803de3a61a0200"/>
+            <Line Type="bytes" Address="0x0180459e" Value="80b8ac43000000"/>
+            <Line Type="bytes" Address="0x018045a5" Value="7507"/>
+            <Line Type="bytes" Address="0x018045a7" Value="41ff8e14080000"/>
+            <Line Type="bytes" Address="0x018045ae" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

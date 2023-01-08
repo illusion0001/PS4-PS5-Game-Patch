@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17416</ID>
+        <ID>CUSA17419</ID>
+        <ID>CUSA08644</ID>
+    </TitleID>
+    <Metadata Title="Persona 5: Royal"
+              Name="60 FPS"
+              Note="Patch may accelerate some game effects by 2x.\nGame will softlock at centain places with 60FPS Patch enabled. Be sure to frequently save and switch to 30FPS with X + DPad Down to progress further."
+              Author="illusion, ZEROx"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0049add2" Value="c6058fad4f023c"/>
+            <Line Type="bytes" Address="0x0049add9" Value="eb56"/>
+            <Line Type="bytes" Address="0x0049ae2b" Value="eba5"/>
+            <Line Type="bytes" Address="0x0049d7bc" Value="e8cf810500"/>
+            <Line Type="bytes" Address="0x0049d7c1" Value="9090909090"/>
+            <Line Type="bytes" Address="0x004f5990" Value="488d0d49ff4902"/>
+            <Line Type="bytes" Address="0x004f5997" Value="eb08"/>
+            <Line Type="bytes" Address="0x004f59a0" Value="c3"/>
+            <Line Type="bytes" Address="0x004f59a1" Value="813dddd81c0240400000"/>
+            <Line Type="bytes" Address="0x004f59ab" Value="7533"/>
+            <Line Type="bytes" Address="0x004f59ad" Value="813da9014a0240400000"/>
+            <Line Type="bytes" Address="0x004f59b7" Value="7435"/>
+            <Line Type="bytes" Address="0x004f59b9" Value="803d4cff49023c"/>
+            <Line Type="bytes" Address="0x004f59c0" Value="7505"/>
+            <Line Type="bytes" Address="0x004f59c2" Value="41b01e"/>
+            <Line Type="bytes" Address="0x004f59c5" Value="eb03"/>
+            <Line Type="bytes" Address="0x004f59c7" Value="41b03c"/>
+            <Line Type="bytes" Address="0x004f59ca" Value="4488053bff4902"/>
+            <Line Type="bytes" Address="0x004f59d1" Value="44880590014a02"/>
+            <Line Type="bytes" Address="0x004f59d8" Value="41b840400000"/>
+            <Line Type="bytes" Address="0x004f59de" Value="eb07"/>
+            <Line Type="bytes" Address="0x004f59e0" Value="448b05a1d81c02"/>
+            <Line Type="bytes" Address="0x004f59e7" Value="44890572014a02"/>
+            <Line Type="bytes" Address="0x004f59ee" Value="448a0573014a02"/>
+            <Line Type="bytes" Address="0x004f59f5" Value="44880510ff4902"/>
+            <Line Type="bytes" Address="0x004f59fc" Value="8b712c"/>
+            <Line Type="bytes" Address="0x004f59ff" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00203</ID>
+    </TitleID>
+    <Metadata Title="The Evil Within"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00637ce3" Value="0x00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

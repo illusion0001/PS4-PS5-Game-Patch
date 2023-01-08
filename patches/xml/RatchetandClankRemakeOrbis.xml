@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01073</ID>
+        <ID>CUSA01928</ID>
+    </TitleID>
+    <Metadata Title="Ratchet and Clank"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01b23444" Value="4d69fc48010000"/>
+            <Line Type="bytes" Address="0x01b2344b" Value="6641c7461e803f"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Ratchet and Clank"
+              Name="Debug Menu"
+              Author="Lance McDonald (manfightdragon)"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x006e2ae5" Value="803534a8740401"/>
+            <Line Type="bytes" Address="0x006e2aec" Value="9090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
