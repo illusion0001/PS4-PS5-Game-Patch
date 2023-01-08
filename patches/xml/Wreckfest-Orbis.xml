@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08548</ID>
+        <ID>CUSA08652</ID>
+        <ID>CUSA17033</ID>
+    </TitleID>
+    <Metadata Title="Wreckfest"
+              Name="60 FPS Unlock"
+              Note="Uses adapative sync."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.31"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0054060b" Value="95"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Wreckfest"
+              Name="60 FPS"
+              Note="Uses adapative sync."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="02.17"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00e92380" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

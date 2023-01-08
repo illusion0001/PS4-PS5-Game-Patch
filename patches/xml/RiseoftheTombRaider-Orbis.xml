@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05794</ID>
+    </TitleID>
+    <Metadata Title="Rise of the Tomb Raider"
+              Name="60 FPS Unlock"
+              Note="CPU Limited in some areas."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0088e26c" Value="31f6"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Rise of the Tomb Raider"
+              Name="Resolution Patch"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x008a8076" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x008a8082" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+</Patch>

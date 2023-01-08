@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11227</ID>
+        <ID>CUSA12982</ID>
+    </TitleID>
+    <Metadata Title="MediEvil"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x025af801" Value="e82c000000"/>
+            <Line Type="bytes" Address="0x025af832" Value="c7048b00008642c5fa10048bc3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="MediEvil"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02b58719" Value="e8c790feff"/>
+            <Line Type="bytes" Address="0x02b58746" Value="1b"/>
+            <Line Type="bytes" Address="0x02b417e0" Value="e996f40101c5f82e0c8b4c8d148b813c8b0000f041740d41c78204d6000000000000eb0b41c78204d6000002000000c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

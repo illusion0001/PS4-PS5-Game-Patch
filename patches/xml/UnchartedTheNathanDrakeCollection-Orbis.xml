@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02343</ID>
+        <ID>CUSA02344</ID>
+        <ID>CUSA02826</ID>
+        <ID>CUSA02320</ID>
+    </TitleID>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x008a0d42" Value="41c686ba39000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Restore DevKit Menus"
+              Author="illusion, TheMagicalBlob"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x006d00ae" Value="909090909090"/>
+            <Line Type="bytes" Address="0x004de0db" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004de11c" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004de19b" Value="e9f80c0000"/>
+            <Line Type="bytes" Address="0x004dee98" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df5b1" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0066df04" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0066e158" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df732" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df793" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df7f4" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df855" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df956" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df9b7" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfa50" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfa96" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfaa8" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfaba" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfb1b" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfb7c" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfbb5" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfe10" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfe73" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004e002a" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004fe7b4" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00500b3e" Value="b801000000"/>
+            <Line Type="bytes" Address="0x006a3dff" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00d5ca17" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x009cf259" Value="41c686ba39000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Restore DevKit Menus"
+              Author="illusion, TheMagicalBlob"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x006d069e" Value="909090909090"/>
+            <Line Type="bytes" Address="0x004de1cb" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004de20c" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004de28b" Value="e9f80c0000"/>
+            <Line Type="bytes" Address="0x004def88" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df6a1" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0066e474" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0066e6c8" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df822" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df883" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df8e4" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004fe8e4" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004df945" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfa46" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfb40" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfb86" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfb98" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfbaa" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfc0b" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfc6c" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dfca5" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dff00" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004dff63" Value="b801000000"/>
+            <Line Type="bytes" Address="0x004e011a" Value="b801000000"/>
+            <Line Type="bytes" Address="0x006a43ef" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="byte" Address="0x01271464" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a373aa" Value="41c686ba39000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Restore DevKit Menus"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x005c06bf" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c06ff" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00941c93" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0723" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0c60" Value="9090909090"/>
+            <Line Type="bytes" Address="0x007760d2" Value="b801000000"/>
+            <Line Type="bytes" Address="0x007760f6" Value="9090909090"/>
+            <Line Type="bytes" Address="0x007762a6" Value="9090909090"/>
+            <Line Type="bytes" Address="0x007762e3" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00776317" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00777699" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0d3d" Value="e92d000000"/>
+            <Line Type="bytes" Address="0x005c0dc6" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0dcb" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00638db2" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00638dd6" Value="9090909090"/>
+            <Line Type="bytes" Address="0x0063bf08" Value="9090909090"/>
+            <Line Type="bytes" Address="0x0063c1e8" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0063c20c" Value="9090909090"/>
+            <Line Type="bytes" Address="0x0063c4bd" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00824d3a" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00825840" Value="c3"/>
+            <Line Type="bytes" Address="0x00825840" Value="c3"/>
+            <Line Type="bytes" Address="0x0082580a" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0e2b" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c0e4b" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c0ea7" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005be650" Value="c3"/>
+            <Line Type="bytes" Address="0x005c0eac" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c0ed0" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1250" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1255" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1279" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c132c" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1331" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1351" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c13ad" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c13b2" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1441" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1461" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c146e" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1473" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1493" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c14a0" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c14a5" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c14dd" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1931" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c1955" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1ca4" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c1ca9" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c373d" Value="b801000000"/>
+            <Line Type="bytes" Address="0x005c3761" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c3a44" Value="9090909090"/>
+            <Line Type="bytes" Address="0x005c3a49" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00402c93" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00402cb7" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00402d5e" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00402d90" Value="31c0c3"/>
+            <Line Type="bytes" Address="0x0054c0a3" Value="b801000000"/>
+            <Line Type="bytes" Address="0x008f56d0" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Bug Fix: Quit to Menu Crash"
+              Author="ZEROx, illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x004ade75" Value="e887cc6100"/>
+            <Line Type="bytes" Address="0x004ade7a" Value="90"/>
+            <Line Type="bytes" Address="0x004ade7b" Value="90"/>
+            <Line Type="bytes" Address="0x004ade7c" Value="90"/>
+            <Line Type="bytes" Address="0x004ade7d" Value="90"/>
+            <Line Type="bytes" Address="0x00acab00" Value="c3"/>
+            <Line Type="bytes" Address="0x00acab01" Value="4983ff00"/>
+            <Line Type="bytes" Address="0x00acab05" Value="0f8509000000"/>
+            <Line Type="bytes" Address="0x00acab0b" Value="48c7c701000000"/>
+            <Line Type="bytes" Address="0x00acab12" Value="eb07"/>
+            <Line Type="bytes" Address="0x00acab14" Value="498dbf20060000"/>
+            <Line Type="bytes" Address="0x00acab1b" Value="4883ff00"/>
+            <Line Type="bytes" Address="0x00acab1f" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="byte" Address="0x0145de94" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x010e22fe" Value="41c686ba39000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Restore DevKit Menus"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x00893d88" Value="909090909090"/>
+            <Line Type="bytes" Address="0x00893e97" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x00895910" Value="e9c9000000"/>
+            <Line Type="bytes" Address="0x00c9c49c" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x00c9ec64" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x00c9ee37" Value="909090909090"/>
+            <Line Type="bytes" Address="0x00c9f245" Value="48e918000000"/>
+            <Line Type="bytes" Address="0x00ca8845" Value="e90f010000"/>
+            <Line Type="bytes" Address="0x00895e57" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x00896020" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x00896102" Value="909090909090"/>
+            <Line Type="bytes" Address="0x00939f7b" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x00946d94" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x00e38862" Value="e91a000000"/>
+            <Line Type="bytes" Address="0x00e389f9" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00e3aaa6" Value="9090909090"/>
+            <Line Type="bytes" Address="0x00e3b158" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x00e3c2c0" Value="b001c3"/>
+            <Line Type="bytes" Address="0x00e3c710" Value="b001c3"/>
+            <Line Type="bytes" Address="0x008962c9" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x0089cd70" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x00896659" Value="9090909090"/>
+            <Line Type="bytes" Address="0x008a9d70" Value="b001c3"/>
+            <Line Type="bytes" Address="0x0089ce53" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x0089dd20" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x0089de03" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x0089e160" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x0089e243" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x0089e400" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x0089e4e3" Value="909090909090"/>
+            <Line Type="bytes" Address="0x0089e788" Value="48e91c000000"/>
+            <Line Type="bytes" Address="0x0089e7b2" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x0089e894" Value="48e91c000000"/>
+            <Line Type="bytes" Address="0x0089e8be" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x0089e9a0" Value="909090909090"/>
+            <Line Type="bytes" Address="0x0089ea98" Value="909090909090"/>
+            <Line Type="bytes" Address="0x0089fcb8" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x008a0ac0" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x008a0ba2" Value="909090909090"/>
+            <Line Type="bytes" Address="0x008a81b9" Value="48e926000000"/>
+            <Line Type="bytes" Address="0x008a82c0" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x008a83a3" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x008a8b20" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x008a8c03" Value="909090909090"/>
+            <Line Type="bytes" Address="0x005faaac" Value="48e91f000000"/>
+            <Line Type="bytes" Address="0x005fae95" Value="e9c5000000"/>
+            <Line Type="bytes" Address="0x005fb370" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 3: Drake's Deception Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big3-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x009651d0" Value="c685043a000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 3: Drake's Deception Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big3-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="byte" Address="0x0097424b" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11560</ID>
+    </TitleID>
+    <Metadata Title="Assassin's Creed III Remastered"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="ac3_engine_orbis_fn.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x00ca8d8f" Value="31f6"/>
+            <Line Type="bytes" Address="0x00ca8e1a" Value="31f6"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed Liberation Remastered"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="acl_engine_orbis_fn.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x016e1eaf" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05972</ID>
+    </TitleID>
+    <Metadata Title="Tekken 7"
+              Name="Disable Post Processing"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="04.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01efdedc" Value="48e9"/>
+        </PatchList>
+    </Metadata>
+</Patch>

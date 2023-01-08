@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11100</ID>
+    </TitleID>
+    <Metadata Title="Call of Duty: Black Ops 4 (IIII)"
+              Name="Bypass Update Reqiured Screen"
+              Author="DeathRGH"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00e3103b" Value="4189d1"/>
+        </PatchList>
+    </Metadata>
+</Patch>

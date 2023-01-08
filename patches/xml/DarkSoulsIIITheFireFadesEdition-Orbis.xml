@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08155</ID>
+        <ID>CUSA07439</ID>
+    </TitleID>
+    <Metadata Title="Dark Souls III: The Fire Fades Edition"
+              Name="60 FPS Unlock"
+              Note="Only useful for base console."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c0405d" Value="eb0e"/>
+            <Line Type="bytes" Address="0x01c041d6" Value="eb0e"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: The Fire Fades Edition"
+              Name="30 FPS Fix (Proper Frame-Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c041d6" Value="eb0e"/>
+            <Line Type="bytes" Address="0x025140c3" Value="be01000000eb03"/>
+        </PatchList>
+    </Metadata>
+</Patch>

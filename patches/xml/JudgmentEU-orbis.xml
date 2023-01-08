@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA13197</ID>
+    </TitleID>
+    <Metadata Title="Judgment"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01b42ed4" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Judgment"
+              Name="Virtua Fighter 5 Unlocker"
+              Note="Turns 'Virtua Fighter 5: Final Showdown' in Club SEGA into full game!\nMore details: https://cookieplmonster.github.io/2021/04/19/virtua-fighter-5-final-showdown-unlocker/"
+              Author="Silent, illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes16" Address="0x008a11fd" Value="0x0000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

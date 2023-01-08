@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00663</ID>
+    </TitleID>
+    <Metadata Title="Assassin's Creed: Unity"
+              Name="Skip Intro"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03ffaadb" Value="0f85"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed: Unity"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x042f034e" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed: Unity"
+              Name="Resolution Patch (1080p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x042f3a19" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x042f3a0b" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed: Unity"
+              Name="Resolution Patch (900p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x042f3a19" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x042f3a0b" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed: Unity"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x042f3a19" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x042f3a0b" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+</Patch>

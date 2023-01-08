@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02299</ID>
+        <ID>CUSA11993</ID>
+        <ID>CUSA11994</ID>
+        <ID>CUSA11995</ID>
+        <ID>CUSA09751</ID>
+        <ID>CUSA09893</ID>
+    </TitleID>
+    <Metadata Title="Marvel's Spider-Man"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.19"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0179f2a5" Value="b80000803f"/>
+            <Line Type="bytes" Address="0x0179f2aa" Value="4189471c"/>
+            <Line Type="bytes" Address="0x0179f2ae" Value="c3"/>
+            <Line Type="bytes" Address="0x0179f30f" Value="e891ffffff"/>
+            <Line Type="bytes" Address="0x0179f314" Value="9090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Marvel's Spider-Man"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.19"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0189059a" Value="48e871000000"/>
+            <Line Type="bytes" Address="0x01890611" Value="c6400d01"/>
+            <Line Type="bytes" Address="0x01890615" Value="c7809812000001000100"/>
+            <Line Type="bytes" Address="0x0189061f" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

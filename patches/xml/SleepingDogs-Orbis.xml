@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01111</ID>
+    </TitleID>
+    <Metadata Title="Sleeping Dogs: Definitive Edition"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00b0788b" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Sleeping Dogs: Definitive Edition"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00b07a2b" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

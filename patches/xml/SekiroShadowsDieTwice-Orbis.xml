@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12047</ID>
+    </TitleID>
+    <Metadata Title="Sekiro: Shadows Die Twice"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02366f27" Value="95"/>
+            <Line Type="bytes" Address="0x034cdc27" Value="bf0001114ebe01000000eb12"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Sekiro: Shadows Die Twice"
+              Name="60 FPS Unlock"
+              Note="Only needed for Base console, enhanced consoles already have framerate unlocked."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02366f27" Value="95"/>
+            <Line Type="bytes" Address="0x023670c3" Value="48e96b000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Sekiro: Shadows Die Twice"
+              Name="Resolution Patch (720p Base, 1080p Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x04229d44" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x04229d44" Value="0x000002d0"/>
+            <Line Type="bytes32" Address="0x023603ff" Value="0x00000780"/>
+            <Line Type="bytes32" Address="0x02360409" Value="0x00000438"/>
+        </PatchList>
+    </Metadata>
+</Patch>

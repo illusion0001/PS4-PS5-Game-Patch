@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05725</ID>
+        <ID>CUSA05574</ID>
+        <ID>CUSA05571</ID>
+        <ID>CUSA05644</ID>
+        <ID>CUSA05572</ID>
+        <ID>CUSA05573</ID>
+    </TitleID>
+    <Metadata Title="The Witcher 3"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.62"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0167361c" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Witcher 3"
+              Name="Resolution Patch (720p) (Base Only)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.62"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x012883ae" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x012883b4" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Witcher 3"
+              Name="Display Framerate Stats"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.62"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0131aa56" Value="0f85"/>
+        </PatchList>
+    </Metadata>
+</Patch>

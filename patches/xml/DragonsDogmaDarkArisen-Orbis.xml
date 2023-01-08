@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA07316</ID>
+        <ID>CUSA09431</ID>
+    </TitleID>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x018e1cb4" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

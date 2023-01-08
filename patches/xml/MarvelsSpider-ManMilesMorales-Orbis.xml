@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17722</ID>
+        <ID>CUSA17776</ID>
+        <ID>CUSA20177</ID>
+        <ID>CUSA17839</ID>
+        <ID>CUSA18748</ID>
+    </TitleID>
+    <Metadata Title="Marvel's Spider-Man Miles Morales"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x039b6804" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Marvel's Spider-Man Miles Morales"
+              Name="Debug Menu"
+              Note="DOES NOT WORK!! NEEDS MORE REVERSE ENGINEERING"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01cb671d" Value="48e8abd83602"/>
+            <Line Type="bytes" Address="0x04023fce" Value="c6401c01"/>
+            <Line Type="bytes" Address="0x04023fd2" Value="c7801015000001000100"/>
+            <Line Type="bytes" Address="0x04023fdc" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

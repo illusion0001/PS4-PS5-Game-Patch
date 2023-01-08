@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA10123</ID>
+    </TitleID>
+    <Metadata Title="Assassin's Creed Rogue Remastered"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00dba4ca" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

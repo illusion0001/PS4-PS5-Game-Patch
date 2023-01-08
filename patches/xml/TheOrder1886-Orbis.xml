@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00035</ID>
+        <ID>CUSA00670</ID>
+    </TitleID>
+    <Metadata Title="The Order 1886"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x008507c4" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Order 1886"
+              Name="Resolution Patch (900p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x0084cef5" Value="0x75"/>
+            <Line Type="bytes32" Address="0x0084cefd" Value="0x00000640"/>
+            <Line Type="bytes32" Address="0x0084cf07" Value="0x00000384"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Order 1886"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x0084cef5" Value="0x75"/>
+            <Line Type="bytes32" Address="0x0084cefd" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x0084cf07" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Order 1886"
+              Name="16:9 Aspect Ratio (Full Screen)"
+              Note="Native 1080p will cause visual issues, 900p or below must be used."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x0084ce8c" Value="0x3fe38e39"/>
+        </PatchList>
+    </Metadata>
+</Patch>

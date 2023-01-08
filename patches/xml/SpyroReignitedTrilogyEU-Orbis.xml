@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12085</ID>
+    </TitleID>
+    <Metadata Title="Spyro Reignited Trilogy"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x030cb321" Value="48e82b040000"/>
+            <Line Type="bytes" Address="0x030cb752" Value="c6835007000000"/>
+            <Line Type="bytes" Address="0x030cb759" Value="8a8350070000"/>
+            <Line Type="bytes" Address="0x030cb75f" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Spyro Reignited Trilogy"
+              Name="Resolution Patch (1080p for PS4 Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02b5dc66" Value="e82c000000"/>
+            <Line Type="bytes" Address="0x02b5dc97" Value="c7048b0000c842"/>
+            <Line Type="bytes" Address="0x02b5dc9e" Value="eb06"/>
+            <Line Type="bytes" Address="0x02b5dca6" Value="c5fa10048b"/>
+            <Line Type="bytes" Address="0x02b5dcab" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Spyro Reignited Trilogy"
+              Name="Resolution Patch (900p for PS4/PS4 Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02b5dc66" Value="e82c000000"/>
+            <Line Type="bytes" Address="0x02b5dc97" Value="c7048bf6a8a642"/>
+            <Line Type="bytes" Address="0x02b5dc9e" Value="eb06"/>
+            <Line Type="bytes" Address="0x02b5dca6" Value="c5fa10048b"/>
+            <Line Type="bytes" Address="0x02b5dcab" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Spyro Reignited Trilogy"
+              Name="Resolution Patch (720p for PS4/PS4 Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02b5dc66" Value="e82c000000"/>
+            <Line Type="bytes" Address="0x02b5dc97" Value="c7048b0a578542"/>
+            <Line Type="bytes" Address="0x02b5dc9e" Value="eb06"/>
+            <Line Type="bytes" Address="0x02b5dca6" Value="c5fa10048b"/>
+            <Line Type="bytes" Address="0x02b5dcab" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

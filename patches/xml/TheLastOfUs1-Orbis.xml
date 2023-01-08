@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00552</ID>
+        <ID>CUSA00556</ID>
+        <ID>CUSA00557</ID>
+        <ID>CUSA00559</ID>
+    </TitleID>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Improved Loading Times"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x013302c8" Value="48e8f4000000"/>
+            <Line Type="bytes" Address="0x013302ce" Value="90"/>
+            <Line Type="bytes" Address="0x013303c2" Value="c680d506000000"/>
+            <Line Type="bytes" Address="0x013303c9" Value="c6403001"/>
+            <Line Type="bytes" Address="0x013303cd" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Infected's Severed Head Crash Bug Fix"
+              Author="illusion, ZEROx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0095a067" Value="e810465000"/>
+            <Line Type="bytes" Address="0x0095a06c" Value="90"/>
+            <Line Type="bytes" Address="0x0095a06d" Value="90"/>
+            <Line Type="bytes" Address="0x0095a06e" Value="90"/>
+            <Line Type="bytes" Address="0x0095a06f" Value="90"/>
+            <Line Type="bytes" Address="0x0095a070" Value="90"/>
+            <Line Type="bytes" Address="0x0095a071" Value="90"/>
+            <Line Type="bytes" Address="0x00e5e67c" Value="488985d0f3ffff"/>
+            <Line Type="bytes" Address="0x00e5e683" Value="4883fb00"/>
+            <Line Type="bytes" Address="0x00e5e687" Value="0f8404000000"/>
+            <Line Type="bytes" Address="0x00e5e68d" Value="488b4340"/>
+            <Line Type="bytes" Address="0x00e5e691" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00401c79" Value="0x01"/>
+            <Line Type="bytes16" Address="0x00a92c41" Value="0x2e85"/>
+            <Line Type="bytes" Address="0x00404649" Value="4831c0"/>
+            <Line Type="bytes" Address="0x0082dec6" Value="488b3553854601"/>
+            <Line Type="bytes" Address="0x0082de79" Value="e8f85dca00"/>
+            <Line Type="bytes" Address="0x0082df5f" Value="488b3dba844601"/>
+            <Line Type="bytes" Address="0x014d3c76" Value="be0100000048893d9e277c00c6059f277c0001c3"/>
+            <Line Type="bytes" Address="0x0082dd39" Value="48e84b5fca0090"/>
+            <Line Type="bytes" Address="0x014d3c8a" Value="48830596277c0020488d35bf4b3d0048033588277c00c3"/>
+            <Line Type="utf8" Address="0x018a8878" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x018a8898" Value="pistol-uber-t1                 "/>
+            <Line Type="utf8" Address="0x018a88b8" Value="rifle-improvised-fullauto      "/>
+            <Line Type="utf8" Address="0x018a88d8" Value="super-soaker                   "/>
+            <Line Type="utf8" Address="0x018a88f8" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x018a8918" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x018a8938" Value="two-by-four                    "/>
+            <Line Type="utf8" Address="0x018a8958" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x018a8978" Value="turret-sniper                  "/>
+            <Line Type="utf8" Address="0x018a8998" Value="pistol-uber-t1                 "/>
+            <Line Type="utf8" Address="0x018a89b8" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x018a89d8" Value="radio                          "/>
+            <Line Type="utf8" Address="0x018a89f8" Value="molotov                        "/>
+            <Line Type="utf8" Address="0x018a8a18" Value="bandage-apply                  "/>
+            <Line Type="utf8" Address="0x018a8a38" Value="mp-parcel                      "/>
+            <Line Type="utf8" Address="0x018a8a58" Value="gren-launcher-improvised       "/>
+            <Line Type="utf8" Address="0x018a8a78" Value="shotgun-dbl-barrel             "/>
+            <Line Type="utf8" Address="0x018a8a98" Value="machete-blade                  "/>
+            <Line Type="utf8" Address="0x018a8ab8" Value="bow-dark                       "/>
+            <Line Type="utf8" Address="0x018a8ad8" Value="rifle-variable                 "/>
+            <Line Type="utf8" Address="0x018a8af8" Value="mini-14-rifle                  "/>
+            <Line Type="utf8" Address="0x018a8b18" Value="two-by-four                    "/>
+            <Line Type="utf8" Address="0x018a8b38" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x018a8b58" Value="pistol-shotgun                 "/>
+            <Line Type="utf8" Address="0x018a8b78" Value="flamethrower                   "/>
+            <Line Type="utf8" Address="0x018a8b98" Value="desert-eagle-t1                "/>
+            <Line Type="utf8" Address="0x018a8bb8" Value="beer-bottle                    "/>
+            <Line Type="utf8" Address="0x018a8bd8" Value="lead-pipe                      "/>
+            <Line Type="utf8" Address="0x018a8bf8" Value="lead-pipe                      "/>
+            <Line Type="utf8" Address="0x018a8c18" Value="flashlight                     "/>
+            <Line Type="utf8" Address="0x018a8c38" Value="rifle-sniper                   "/>
+            <Line Type="utf8" Address="0x018a8c58" Value="m4-rifle-t1                    "/>
+            <Line Type="utf8" Address="0x018a8c78" Value="smoke-bomb                     "/>
+            <Line Type="utf8" Address="0x018a8c98" Value="throw-brick                    "/>
+            <Line Type="utf8" Address="0x018a8cb8" Value="shotgun-pump-stock             "/>
+            <Line Type="utf8" Address="0x018a8cd8" Value="silenced-galil-rifle           "/>
+            <Line Type="utf8" Address="0x018a8cf8" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x018a8d18" Value="bloater-pustule                "/>
+            <Line Type="utf8" Address="0x018a8d38" Value="taurus-66b4-revolver           "/>
+            <Line Type="utf8" Address="0x018a8d58" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x018a8d78" Value="rifle-improvised-assault       "/>
+            <Line Type="utf8" Address="0x018a8d98" Value="throwing-knife                 "/>
+            <Line Type="utf8" Address="0x018a8db8" Value="rifle-bolt                     "/>
+            <Line Type="utf8" Address="0x018a8dd8" Value="beretta-jaguar-pistol          "/>
+            <Line Type="utf8" Address="0x018a8df8" Value="bow                            "/>
+            <Line Type="utf8" Address="0x018a8e18" Value="molotov                        "/>
+            <Line Type="utf8" Address="0x018a8e38" Value="bill-knife                     "/>
+            <Line Type="utf8" Address="0x018a8e58" Value="baseball-bat                   "/>
+            <Line Type="utf8" Address="0x018a8e78" Value="mini-14-rifle                  "/>
+            <Line Type="utf8" Address="0x018a8e98" Value="pistol-9mm                     "/>
+            <Line Type="utf8" Address="0x018a8eb8" Value="mal-gas-can                    "/>
+            <Line Type="utf8" Address="0x018a8ed8" Value="machete-blade                  "/>
+            <Line Type="utf8" Address="0x018a8ef8" Value="none                           "/>
+            <Line Type="utf8" Address="0x018a8f18" Value="rifle-improvised-assault       "/>
+            <Line Type="utf8" Address="0x018a8f38" Value="binoculars                     "/>
+            <Line Type="utf8" Address="0x018a8f58" Value="switchblade                    "/>
+            <Line Type="utf8" Address="0x018a8f78" Value="rifle-improvised-fullauto      "/>
+            <Line Type="utf8" Address="0x018a8f98" Value="baseball-bat                   "/>
+            <Line Type="utf8" Address="0x018a8fb8" Value="hatchet                        "/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Restore Full Rendering Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0045f63c" Value="e8ef246d00"/>
+            <Line Type="bytes" Address="0x00b337b5" Value="e992010000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Light Theme for Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0040d326" Value="b900000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00401c22" Value="c687a534000001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Load Unpacked Files Exclusively"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a1ced0" Value="b801000000c3"/>
+            <Line Type="bytes" Address="0x00a1cd00" Value="b801000000c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Intro Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0040214a" Value="c687e534000001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Infected's Severed Head Crash Bug Fix"
+              Author="illusion, ZEROx"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00abc859" Value="e872535600"/>
+            <Line Type="bytes" Address="0x00abc85e" Value="90"/>
+            <Line Type="bytes" Address="0x00abc85f" Value="90"/>
+            <Line Type="bytes" Address="0x00abc860" Value="90"/>
+            <Line Type="bytes" Address="0x00abc861" Value="90"/>
+            <Line Type="bytes" Address="0x00abc862" Value="90"/>
+            <Line Type="bytes" Address="0x00abc863" Value="90"/>
+            <Line Type="bytes" Address="0x01021bd0" Value="488985e0f3ffff"/>
+            <Line Type="bytes" Address="0x01021bd7" Value="4883fb00"/>
+            <Line Type="bytes" Address="0x01021bdb" Value="7404"/>
+            <Line Type="bytes" Address="0x01021bdd" Value="488b4340"/>
+            <Line Type="bytes" Address="0x01021be1" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="University Nailbomb Softlock Fix"
+              Author="illusion, ZEROx"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00aa27a7" Value="e9a4389dff"/>
+            <Line Type="bytes" Address="0x00aa27ac" Value="90"/>
+            <Line Type="bytes" Address="0x00aa27ad" Value="90"/>
+            <Line Type="bytes" Address="0x00aa27ae" Value="90"/>
+            <Line Type="bytes" Address="0x00aa27af" Value="90"/>
+            <Line Type="bytes" Address="0x00aa27b0" Value="90"/>
+            <Line Type="bytes" Address="0x00476050" Value="448905994c7a01"/>
+            <Line Type="bytes" Address="0x00476057" Value="4c8d052acf5c01"/>
+            <Line Type="bytes" Address="0x0047605e" Value="418138f08ebc40"/>
+            <Line Type="bytes" Address="0x00476065" Value="7422"/>
+            <Line Type="bytes" Address="0x00476067" Value="418138cff066a4"/>
+            <Line Type="bytes" Address="0x0047606e" Value="7419"/>
+            <Line Type="bytes" Address="0x00476070" Value="4181386a06b69a"/>
+            <Line Type="bytes" Address="0x00476077" Value="7410"/>
+            <Line Type="bytes" Address="0x00476079" Value="4181385c5d8111"/>
+            <Line Type="bytes" Address="0x00476080" Value="7407"/>
+            <Line Type="bytes" Address="0x00476082" Value="418138c85fd34a"/>
+            <Line Type="bytes" Address="0x00476089" Value="448b05604c7a01"/>
+            <Line Type="bytes" Address="0x00476090" Value="0f851bc76200"/>
+            <Line Type="bytes" Address="0x00476096" Value="e91cc96200"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Enable Dev Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x004021a4" Value="0x75"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Restore Full Rendering Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0046df6c" Value="e84f6b8400"/>
+            <Line Type="bytes" Address="0x00cb6e75" Value="e993010000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Give Player Weapon Fix"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00475db0" Value="be01000000"/>
+            <Line Type="bytes" Address="0x00475db5" Value="48893d597d8501"/>
+            <Line Type="bytes" Address="0x00475dbc" Value="c3"/>
+            <Line Type="bytes" Address="0x00475dbd" Value="488b07"/>
+            <Line Type="bytes" Address="0x00475dc0" Value="488905597d8501"/>
+            <Line Type="bytes" Address="0x00475dc7" Value="4831c0"/>
+            <Line Type="bytes" Address="0x00475dca" Value="be01000000"/>
+            <Line Type="bytes" Address="0x00475dcf" Value="c3"/>
+            <Line Type="bytes" Address="0x00475dd0" Value="488305917d850120"/>
+            <Line Type="bytes" Address="0x00475dd8" Value="488d3571d73d01"/>
+            <Line Type="bytes" Address="0x00475ddf" Value="480335837d8501"/>
+            <Line Type="bytes" Address="0x00475de6" Value="c3"/>
+            <Line Type="bytes" Address="0x00919311" Value="488b35fd473b01"/>
+            <Line Type="bytes" Address="0x00919392" Value="488b3d7c473b01"/>
+            <Line Type="bytes" Address="0x00919189" Value="48e841ccb5ff"/>
+            <Line Type="bytes" Address="0x0091918f" Value="90"/>
+            <Line Type="bytes" Address="0x00919399" Value="e81fcab5ff"/>
+            <Line Type="bytes" Address="0x009192c9" Value="e8e2cab5ff"/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853570" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x01853590" Value="pistol-uber-t1                 "/>
+            <Line Type="utf8" Address="0x018535b0" Value="baseball-bat                   "/>
+            <Line Type="utf8" Address="0x018535d0" Value="hatchet                        "/>
+            <Line Type="utf8" Address="0x018535f0" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x01853610" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x01853630" Value="two-by-four                    "/>
+            <Line Type="utf8" Address="0x01853650" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x01853670" Value="turret-sniper                  "/>
+            <Line Type="utf8" Address="0x01853690" Value="rifle-lever-action             "/>
+            <Line Type="utf8" Address="0x018536b0" Value="pistol-uber-t1                 "/>
+            <Line Type="utf8" Address="0x018536d0" Value="shiv                           "/>
+            <Line Type="utf8" Address="0x018536f0" Value="radio                          "/>
+            <Line Type="utf8" Address="0x01853710" Value="molotov                        "/>
+            <Line Type="utf8" Address="0x01853730" Value="bandage-apply                  "/>
+            <Line Type="utf8" Address="0x01853750" Value="mp-parcel                      "/>
+            <Line Type="utf8" Address="0x01853770" Value="gren-launcher-improvised       "/>
+            <Line Type="utf8" Address="0x01853790" Value="shotgun-dbl-barrel             "/>
+            <Line Type="utf8" Address="0x018537b0" Value="machete-blade                  "/>
+            <Line Type="utf8" Address="0x018537d0" Value="bow-dark                       "/>
+            <Line Type="utf8" Address="0x018537f0" Value="rifle-variable                 "/>
+            <Line Type="utf8" Address="0x01853810" Value="mini-14-rifle                  "/>
+            <Line Type="utf8" Address="0x01853830" Value="two-by-four                    "/>
+            <Line Type="utf8" Address="0x01853850" Value="pistol-shotgun                 "/>
+            <Line Type="utf8" Address="0x01853870" Value="rifle-improvised-fullauto      "/>
+            <Line Type="utf8" Address="0x01853890" Value="super-soaker                   "/>
+            <Line Type="utf8" Address="0x018538b0" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x018538d0" Value="beer-bottle                    "/>
+            <Line Type="utf8" Address="0x018538f0" Value="crossbow-dlc                   "/>
+            <Line Type="utf8" Address="0x01853910" Value="lead-pipe                      "/>
+            <Line Type="utf8" Address="0x01853930" Value="lead-pipe                      "/>
+            <Line Type="utf8" Address="0x01853950" Value="flamethrower                   "/>
+            <Line Type="utf8" Address="0x01853970" Value="desert-eagle-t1                "/>
+            <Line Type="utf8" Address="0x01853990" Value="flashlight                     "/>
+            <Line Type="utf8" Address="0x018539b0" Value="rifle-sniper                   "/>
+            <Line Type="utf8" Address="0x018539d0" Value="m4-rifle-t1                    "/>
+            <Line Type="utf8" Address="0x018539f0" Value="smoke-bomb                     "/>
+            <Line Type="utf8" Address="0x01853a10" Value="throw-brick                    "/>
+            <Line Type="utf8" Address="0x01853a30" Value="shotgun-pump-stock             "/>
+            <Line Type="utf8" Address="0x01853a50" Value="silenced-galil-rifle           "/>
+            <Line Type="utf8" Address="0x01853a70" Value="NO_ART_GROUP                   "/>
+            <Line Type="utf8" Address="0x01853a90" Value="bloater-pustule                "/>
+            <Line Type="utf8" Address="0x01853ab0" Value="taurus-66b4-revolver           "/>
+            <Line Type="utf8" Address="0x01853ad0" Value="nail-bomb                      "/>
+            <Line Type="utf8" Address="0x01853af0" Value="rifle-improvised-assault       "/>
+            <Line Type="utf8" Address="0x01853b10" Value="throwing-knife                 "/>
+            <Line Type="utf8" Address="0x01853b30" Value="rifle-bolt                     "/>
+            <Line Type="utf8" Address="0x01853b50" Value="beretta-jaguar-pistol          "/>
+            <Line Type="utf8" Address="0x01853b70" Value="bow                            "/>
+            <Line Type="utf8" Address="0x01853b90" Value="molotov                        "/>
+            <Line Type="utf8" Address="0x01853bb0" Value="bill-knife                     "/>
+            <Line Type="utf8" Address="0x01853bd0" Value="baseball-bat                   "/>
+            <Line Type="utf8" Address="0x01853bf0" Value="mini-14-rifle                  "/>
+            <Line Type="utf8" Address="0x01853c10" Value="pistol-glock-burst             "/>
+            <Line Type="utf8" Address="0x01853c30" Value="pistol-9mm                     "/>
+            <Line Type="utf8" Address="0x01853c50" Value="shotgun-tactical               "/>
+            <Line Type="utf8" Address="0x01853c70" Value="mal-gas-can                    "/>
+            <Line Type="utf8" Address="0x01853c90" Value="machete-blade                  "/>
+            <Line Type="utf8" Address="0x01853cb0" Value="none                           "/>
+            <Line Type="utf8" Address="0x01853cd0" Value="rifle-improvised-assault       "/>
+            <Line Type="utf8" Address="0x01853cf0" Value="binoculars                     "/>
+            <Line Type="utf8" Address="0x01853d10" Value="switchblade                    "/>
+            <Line Type="utf8" Address="0x01853d30" Value="rifle-improvised-fullauto      "/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Remastered"
+              Name="Load Unpacked Files Exclusively"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00b91a40" Value="b801000000c3"/>
+            <Line Type="bytes" Address="0x00b91c20" Value="b801000000c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

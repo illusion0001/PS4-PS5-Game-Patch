@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03528</ID>
+        <ID>CUSA03245</ID>
+    </TitleID>
+    <Metadata Title="Deadpool"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00b41aa1" Value="0x00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

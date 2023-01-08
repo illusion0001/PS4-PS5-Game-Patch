@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA13152</ID>
+    </TitleID>
+    <Metadata Title="The Sinking City"
+              Name="Resolution Patch"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02204e3a" Value="48e831146d00"/>
+            <Line Type="bytes" Address="0x02204706" Value="e8761b6d00"/>
+            <Line Type="bytes" Address="0x028d6270" Value="cc41c7048e00008642c4c17a10048eeb0dc744210455558541c5fa106104c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

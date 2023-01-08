@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA18097</ID>
+    </TitleID>
+    <Metadata Title="Mafia: Definitive Edition"
+              Name="60 FPS Unlock"
+              Note="CPU/GPU Limited."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0312a2a1" Value="eb0590"/>
+        </PatchList>
+    </Metadata>
+</Patch>

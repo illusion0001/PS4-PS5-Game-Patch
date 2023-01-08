@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03500</ID>
+    </TitleID>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="60 FPS Unlock (With Delta Time)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0278c407" Value="c7430805000000eb07"/>
+            <Line Type="bytes" Address="0x0278c50c" Value="41b601"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0278c407" Value="c7430805000000eb07"/>
+            <Line Type="bytes" Address="0x02dbdb44" Value="488b1ded10f102be01000000eb03"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="720p Resolution"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x05d22d84" Value="00050000d0020000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="900p Resolution"
+              Author="Whitehawkx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x05d22d84" Value="4006000084030000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="Bypass Network Check"
+              Author="Unknown"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02309e80" Value="e91c02"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="Developer Debug Menu"
+              Author="Whitehawkx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02766352" Value="01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="Top Menu Debug"
+              Note="Hidden Pause Menu"
+              Author="Whitehawkx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01defd96" Value="b201"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="All Menu Options"
+              Note="Enables equipment, item and status menus"
+              Author="Whitehawkx, Lance McDonald"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x022a29a9" Value="90"/>
+            <Line Type="bytes" Address="0x022a29aa" Value="90"/>
+            <Line Type="bytes" Address="0x022a29ab" Value="90"/>
+            <Line Type="bytes" Address="0x022a29ac" Value="90"/>
+            <Line Type="bytes" Address="0x022a29ad" Value="90"/>
+            <Line Type="bytes" Address="0x022a29ae" Value="90"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III: Network Stress Test"
+              Name="Enable Video Recording"
+              Note="Re-enables built-in video recording (share button)"
+              Author="Whitehawkx"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0276375c" Value="c745ec00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

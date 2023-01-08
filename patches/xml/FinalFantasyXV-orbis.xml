@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01633</ID>
+        <ID>CUSA01615</ID>
+        <ID>CUSA01706</ID>
+        <ID>CUSA01570</ID>
+    </TitleID>
+    <Metadata Title="Final Fantasy XV (Final Fantasy 15)"
+              Name="Frame Pacing Fix For 30FPS Modes"
+              Note="60FPS will run as is. Only 30FPS Modes are affected."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.30"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0108d17f" Value="9090909090"/>
+            <Line Type="bytes" Address="0x0109db20" Value="b878000000"/>
+            <Line Type="bytes" Address="0x0109db25" Value="c3"/>
+            <Line Type="bytes" Address="0x0109db30" Value="e954beca03"/>
+            <Line Type="bytes" Address="0x04d49989" Value="e8b6000000"/>
+            <Line Type="bytes" Address="0x04d4998e" Value="bf0001114e"/>
+            <Line Type="bytes" Address="0x04d49993" Value="4883fe3c"/>
+            <Line Type="bytes" Address="0x04d49997" Value="740f"/>
+            <Line Type="bytes" Address="0x04d49999" Value="4883fe1e"/>
+            <Line Type="bytes" Address="0x04d4999d" Value="7402"/>
+            <Line Type="bytes" Address="0x04d4999f" Value="eb0e"/>
+            <Line Type="bytes" Address="0x04d499a1" Value="be01000000"/>
+            <Line Type="bytes" Address="0x04d499a6" Value="eb02"/>
+            <Line Type="bytes" Address="0x04d499a8" Value="31f6"/>
+            <Line Type="bytes" Address="0x04d499aa" Value="e801d3b8ff"/>
+            <Line Type="bytes" Address="0x04d499af" Value="e89f000000"/>
+            <Line Type="bytes" Address="0x04d499b4" Value="c3"/>
+            <Line Type="bytes" Address="0x04d49a44" Value="488905d5e5ad00"/>
+            <Line Type="bytes" Address="0x04d49a4b" Value="48893dd6e5ad00"/>
+            <Line Type="bytes" Address="0x04d49a52" Value="c3"/>
+            <Line Type="bytes" Address="0x04d49a53" Value="488b05c6e5ad00"/>
+            <Line Type="bytes" Address="0x04d49a5a" Value="488b3dc7e5ad00"/>
+            <Line Type="bytes" Address="0x04d49a61" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

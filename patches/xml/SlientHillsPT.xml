@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01127</ID>
+        <ID>CUSA01114</ID>
+        <ID>CUSA01098</ID>
+    </TitleID>
+    <Metadata Title="P.T"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00d8a713" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="P.T"
+              Name="Disable Lens Flare"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x008f332b" Value="4d31f690"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="P.T"
+              Name="Disable Camera Blur"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00ddef0c" Value="4831c9"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="P.T"
+              Name="Disable Screen Space Reflections"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00ddfd60" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="P.T"
+              Name="Disable Film Grain"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00909987" Value="eb1f"/>
+        </PatchList>
+    </Metadata>
+</Patch>

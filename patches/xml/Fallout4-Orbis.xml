@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02557</ID>
+        <ID>CUSA02962</ID>
+        <ID>CUSA03450</ID>
+    </TitleID>
+    <Metadata Title="Fallout 4"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.34"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x014b4fb7" Value="0x00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Fallout 4"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.34"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x014b4a98" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x014b4a9c" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+</Patch>

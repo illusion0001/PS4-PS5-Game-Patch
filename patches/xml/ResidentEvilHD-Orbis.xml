@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01067</ID>
+    </TitleID>
+    <Metadata Title="Resident Evil: HD"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x004b494b" Value="0x42700000"/>
+            <Line Type="bytes32" Address="0x004b494f" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

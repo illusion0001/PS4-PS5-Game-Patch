@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA16285</ID>
+        <ID>CUSA13689</ID>
+    </TitleID>
+    <Metadata Title="The Outer Worlds"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0291c976" Value="48e829fbffff"/>
+            <Line Type="bytes" Address="0x0291c4a5" Value="b801000000"/>
+            <Line Type="bytes" Address="0x0291c4aa" Value="83f803"/>
+            <Line Type="bytes" Address="0x0291c4ad" Value="c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Outer Worlds"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x046e3cf6" Value="e8c7000000"/>
+            <Line Type="bytes" Address="0x046e3dc2" Value="c7048b00008642"/>
+            <Line Type="bytes" Address="0x046e3dc9" Value="c5fa10048b"/>
+            <Line Type="bytes" Address="0x046e3dce" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

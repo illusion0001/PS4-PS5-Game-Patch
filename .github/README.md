@@ -1,8 +1,8 @@
 # GoldHEN Patch Repository
-Patches for PlayStation 4 Games.
+Custom Game Patches for PlayStation 4 Games.
 
 ## Features
-* `.json` support
+* `.xml` support
 
 ## Usage
 
@@ -41,10 +41,10 @@ Patches for PlayStation 4 Games.
 
 ### Storage
 * Use `FTP` to upload patch files to:
-  * `/user/data/GoldHEN/patches/json/`
+  * `/user/data/GoldHEN/patches/xml/`
 * Naming conversion for app and patch engine to recognize: `(TitleID).{format}`
-  * e.g. `CUSA00001.json`
-  * e.g. `CUSA03694.json`
+  * e.g. `CUSA00001.xml`
+  * e.g. `CUSA03694.xml`
 
 ## Developing patches
 
@@ -54,15 +54,14 @@ Plugin system and GoldHEN Cheat Manager looks for patches by `(TitleID).{format}
 ```bash
 export PS4_IP=192.168.1.138 # your PS4 ip address
 export PS4_FTP_PORT=2121 # your PS4 ftp port (2121 via GoldHEN payload)
-# sending base file as CUSA00000.json
-curl -T ExampleGame.json ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.json
-# sending CUSA00000.json as CUSA00000.json
-curl -T CUSA00000.json ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.json
+# sending base file as CUSA00000.xml
+curl -T ExampleGame.xml ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.xml
+# sending CUSA00000.xml as CUSA00000.xml
+curl -T CUSA00000.xml ftp://$PS4_IP:$PS4_FTP_PORT/data/GoldHEN/patches/json/CUSA00000.xml
 ```
 
 * Repository naming conversion for single or multiple games: `GameName.{format}` (English names only)
-  * e.g. `ExampleGame.json`
-  * e.g. `Example Game 2.json`
+  * e.g. `ExampleGame.xml`
 
 ### Creating a patch
 
@@ -97,31 +96,34 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
 | `utf8`    | String, UTF-8*            | `"string"`             |
 | `utf16`   | String, UTF-16*           | `"string"`             |
 
-* Note: Strings are automatically null terminated.
+* Note: Strings must be manually null terminated.
 
 #### Example patch
 
-```json
-{
-  "patch": [
-    {
-      "title": "Example Game Title",
-      "app_titleid": [
-        "EXAMPLE01",
-        "EXAMPLE02"
-      ],
-      "app_ver": "00.34",
-      "app_elf": "eboot.bin",
-      "patch_ver": "1.0",
-      "name": "Example Name",
-      "author": "Example Author",
-      "note": "Example Note",
-      "patch_list": [
-        { "comment": "This is a code comment, improves code readability." },
-        { "type": "bytes", "addr": "0x00000000", "value": "0102030405060708", "comment": "Code comment at end of line is also supported." },
-        { "type": "utf8", "addr": "0x00000000", "value": "Hello World" }
-      ]
-    }
-  ]
-}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!--
+      This will not be used by the plugin parser.
+      It is only used for generating the files for distribution.
+    -->
+    <TitleID>
+        <ID>EXAMPLE01</ID>
+        <ID>EXAMPLE02</ID>
+    </TitleID>
+    <Metadata Title="Example Game Title"
+              Name="Example Name"
+              Note="Example Note"
+              Author="Example Author"
+              PatchVer="1.0"
+              AppVer="00.34"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- This is a code comment, improves code readability. -->
+            <!-- Code comment at end of line is also supported. -->
+            <Line Type="bytes" Address="0x00000000" Value="0102030405060708"/>
+            <Line Type="utf8" Address="0x00000000" Value="Hello World\x00"/>
+        </PatchList>
+    </Metadata>
+</Patch>
 ```

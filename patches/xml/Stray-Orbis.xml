@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA24899</ID>
+    </TitleID>
+    <Metadata Title="Stray"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01a10c60" Value="c7048b01000000"/>
+            <Line Type="bytes" Address="0x01a10c67" Value="8b048b"/>
+            <Line Type="bytes" Address="0x01a10c6a" Value="89c1"/>
+            <Line Type="bytes" Address="0x01a10c6c" Value="c1f91f"/>
+            <Line Type="bytes" Address="0x01a10c6f" Value="c4e270f2c0"/>
+            <Line Type="bytes" Address="0x01a10c74" Value="4883c408"/>
+            <Line Type="bytes" Address="0x01a10c78" Value="5b"/>
+            <Line Type="bytes" Address="0x01a10c79" Value="5d"/>
+            <Line Type="bytes" Address="0x01a10c7a" Value="c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

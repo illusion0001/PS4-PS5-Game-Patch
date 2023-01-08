@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00363</ID>
+    </TitleID>
+    <Metadata Title="Alien: Isolation"
+              Name="Skip Save Confirm Screen"
+              Note="A port of ThirteenAG patch. https://github.com/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog"
+              Author="ThirteenAG, illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00597e0a" Value="0xeb"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Alien: Isolation"
+              Name="Custom FOV (100.0)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0055b8c6" Value="e83a841d00"/>
+            <Line Type="bytes" Address="0x00733d05" Value="c78421380000000000c842c5fa104138c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>

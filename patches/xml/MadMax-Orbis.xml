@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00103</ID>
+        <ID>CUSA00054</ID>
+    </TitleID>
+    <Metadata Title="Mad Max"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0132b900" Value="be00000000909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mad Max"
+              Name="Resolution Patch (720p)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x00e8ef48" Value="0x00000500"/>
+            <Line Type="bytes32" Address="0x00e8ef4c" Value="0x000002d0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mad Max"
+              Name="Disable Motion Blur"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00ea3f5a" Value="0x00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

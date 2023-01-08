@@ -20,34 +20,60 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Verify files
-        run: |
-          cd .ci && make && cd ..
-          mkdir -p output/json
-          mkdir -p output/misc
-          i=0
-          FILES="patches/json/*.json"
-          for f in $FILES
-          do
-            python .ci/json_check.py $f
-            .ci/example-01.exe $f
-            ((i=i+1))
-          done
-          echo "$i file(s) verified"
+      - name: Checkout mxml
+        uses: actions/checkout@v3
+        with:
+          repository: michaelrsweet/mxml
+          path: mxml
 
-      - name: Process files
+      - name: Configure mxml
+        working-directory: mxml
+        env:
+          CC: /usr/bin/gcc
+        run: ./configure --enable-debug --enable-maintainer
+
+      - name: Build mxml
+        working-directory: mxml
         run: |
-          python .ci/file-autogen.py
-          python .ci/remove-ids.py
+          sudo make
+          sudo make install
+          echo LD_LIBRARY_PATH=$(pwd) >> $GITHUB_ENV
+
+      - name: Generate TitleID files
+        run: |
+          mkdir -p output/xml
+          mkdir -p output/misc
+          python .ci/file-autogen.py "$(pwd)/patches/xml/*.xml"
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
-          echo $msg > output/json/build.txt
+          echo $msg > output/xml/build.txt
           echo $msg > output/misc/patch_ver.txt
           echo $msg > build.txt
           echo $msg_md > patch_built.md
           echo $msg
           mv output patch1
+
+      - name: Verify XML files
+        working-directory: mxml
+        run: |
+          clang ../.ci/test.c -lmxml -D__PC__
+          FILES="../patches/xml/*.xml"
+          for f in $FILES
+          do
+            ./a.out $f
+            ((i=i+1))
+          done
+
+      - name: Verify Generated XML files
+        working-directory: mxml
+        run: |
+          FILES="../patch1/xml/*.xml"
+          for f in $FILES
+          do
+            ./a.out $f
+            ((i=i+1))
+          done
 
       - name: Pack zip
         run: |
@@ -72,18 +98,6 @@ jobs:
         with:
           name: patches
           path: patches
-
-      - name: Commit Normalized JSON files
-        if: |
-          github.ref_name == 'main' &&
-          github.event_name == 'push' &&
-          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions"
-          git add patches/json/*.json
-          git commit -m "Normalize JSON files" || true
-          git push origin || true
 
       - name: Deploy
         if: |

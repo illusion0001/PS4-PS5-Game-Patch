@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA07511</ID>
+    </TitleID>
+    <Metadata Title="Hellblade: Senua's Sacrifice"
+              Name="Resolution Patch"
+              Note="This game already runs with uncapped framerate.\nOnly useful for Base Console."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02928934" Value="740d"/>
+            <Line Type="bytes" Address="0x02afec8d" Value="6767e87d0a2200"/>
+            <Line Type="bytes" Address="0x02d1f710" Value="c3488b05c872e102c70000008642c389"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hellblade: Senua's Sacrifice"
+              Name="Skip Startup Videos"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x022580c2" Value="48e987060000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hellblade: Senua's Sacrifice"
+              Name="Disable Motion Blur"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01b8ae71" Value="eb40"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hellblade: Senua's Sacrifice"
+              Name="Disable Film Grain"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x0195c32f" Value="0xeb"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hellblade: Senua's Sacrifice"
+              Name="Disable Post Processing"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0195c2b5" Value="48e9"/>
+        </PatchList>
+    </Metadata>
+</Patch>
