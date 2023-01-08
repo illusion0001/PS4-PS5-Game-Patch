@@ -1,0 +1,14 @@
+- patch:
+  title: "Assetto Corsa Competizione"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA17301" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  note: "CPU Limited in Races."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0038b6740, "e9cbe338fe41c7048e00008642c4c17a10048ec3" ]
+        - [ bytes, 0x00328ffa8, "48e9" ]
+        - [ bytes, 0x003292e32, "48e80d396200" ]

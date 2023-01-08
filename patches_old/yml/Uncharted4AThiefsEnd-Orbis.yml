@@ -1,0 +1,270 @@
+- patch:
+  # define achors in first entry
+  5xnop: &5xnop "9090909090"
+  6xnop: &6xnop "909090909090"
+  ret0: &ret0 "31c0c3"
+  title: "Uncharted 4: A Thief's End"
+  app_ver: "01.33"
+  app_titleid: [ "CUSA00341", "CUSA00917", "CUSA00918", "CUSA04529" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Intro Skip"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01677ec7, "eb2c" ]
+
+- patch:
+  title: "Uncharted 4: A Thief's End"
+  app_ver: "01.33"
+  app_titleid: [ "CUSA00341", "CUSA00917", "CUSA00918", "CUSA04529" ]
+  app_elf: "big4-mp.elf"
+  patch_ver: "1.0"
+  name: "Dev Menu Restore for MP executable"
+  author: "illusion + TheMagicalBlob"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x006238a7, "4831c0" ] # boot in 1080p mode
+        - [ bytes, 0x006717ee, "c60425285bd40201" ]
+        - [ bytes, 0x0050bef0, "31c0" ]
+        - [ bytes, 0x0050bef2, "8905309c8302" ]
+        - [ bytes, 0x0050bef8, "c3" ]
+        - [ bytes, 0x00674b61, "48e959ffffff" ] # no boot card
+        - [ bytes, 0x0064a5c9, "48b300" ]
+        - [ bytes, 0x0064a711, "e935010000" ] # No SP-DLC1 tasks, save memory
+        - [ bytes, 0x005c8e8f, "31c9" ]
+        # Begin Dev Menu for Retail
+        # draw mode
+        - [ bytes, 0x01c728c5, *6xnop ]
+        - [ bytes, 0x01c728e9, *5xnop ]
+        - [ bytes, 0x01c78132, *5xnop ]
+        - [ bytes, 0x01c771f4, "e98d060000" ]
+        - [ bytes, 0x01c797b5, "e998000000" ] # dont init line separator twice
+        ##
+        # vis # Rendering Menu P1
+        - [ bytes, 0x01c796de, *6xnop ]
+        - [ bytes, 0x01c79702, *5xnop ]
+        - [ bytes, 0x01c7b8d0, *5xnop ]
+        # post
+        - [ bytes, 0x01f46bb6, *6xnop ]
+        - [ bytes, 0x01f46be1, *5xnop ]
+        - [ bytes, 0x01f4e09a, *5xnop ]
+        - [ bytes, 0x01f4e534, *6xnop ]
+        - [ bytes, 0x01f4e558, *5xnop ]
+        - [ bytes, 0x01f51062, *5xnop ]
+        # lighting upper half
+        - [ bytes, 0x01c90770, *6xnop ]
+        - [ bytes, 0x01c9079b, *5xnop ]
+        - [ bytes, 0x01c97921, *5xnop ]
+        # lighting lower half
+        - [ bytes, 0x01c9b094, *6xnop ]
+        - [ bytes, 0x01c9b0b8, *5xnop ]
+        - [ bytes, 0x01c9c6e7, *5xnop ]
+        # wind
+        - [ bytes, 0x01c7b973, *6xnop ]
+        - [ bytes, 0x01c7b997, *5xnop ]
+        - [ bytes, 0x01c89b53, *5xnop ]
+        # Optimization
+        - [ bytes, 0x01c6f7bd, *6xnop ]
+        # Spawn Character
+        - [ bytes, 0x00800831, *6xnop ]
+        - [ bytes, 0x0080085b, *5xnop ]
+        - [ bytes, 0x0080097f, *5xnop ]
+        - [ bytes, 0x0081f560, *ret0 ]
+        - [ bytes, 0x00800ab4, *5xnop ]
+        - [ bytes, 0x008205b0, *ret0 ]
+        - [ bytes, 0x00801057, *5xnop ]
+        # Spawn Vehicle
+        - [ bytes, 0x00801063, *6xnop ]
+        - [ bytes, 0x0080108d, *5xnop ]
+        - [ bytes, 0x00801311, *5xnop ]
+        # Game Objects
+        - [ bytes, 0x0080327d, *6xnop ]
+        - [ bytes, 0x008032a7, *5xnop ]
+        - [ bytes, 0x008033c2, *5xnop ]
+        # Levels
+        - [ bytes, 0x008033ce, *6xnop ]
+        - [ bytes, 0x008033f8, *5xnop ]
+        - [ bytes, 0x00804cf3, *5xnop ]
+        # Collision (Havok)
+        - [ bytes, 0x00803014, *6xnop ]
+        - [ bytes, 0x0080303e, *5xnop ]
+        - [ bytes, 0x008030d4, *5xnop ] # dont init because we are in low memory environment
+                                        # most of these options are stripped in `final` anyways
+        - [ bytes, 0x0080315a, *5xnop ]
+        # Gameplay
+        - [ bytes, 0x007d3d4e, *6xnop ]
+        - [ bytes, 0x007d3d79, *5xnop ]
+        - [ bytes, 0x007d3d9c, *5xnop ]
+        - [ bytes, 0x007d3ec0, *5xnop ] # state scripts
+        - [ bytes, 0x01a16c50, *ret0 ] # select igc
+        - [ bytes, 0x01a146d0, *ret0 ] # select state script
+        - [ bytes, 0x007d5e17, *5xnop ] # igc
+        - [ bytes, 0x007d6486, *5xnop ] # manually select state scripts
+        - [ bytes, 0x007d6a50, *5xnop ] # gestures
+        # Demo Mode
+        - [ bytes, 0x007ace80, *ret0 ]
+        # end of Demo Mode
+        - [ bytes, 0x007e3720, *5xnop ] # Select Region By Name...
+        - [ bytes, 0x01b136a0, *ret0 ]
+        - [ bytes, 0x00b2ae40, *ret0 ]
+        - [ bytes, 0x007d663d, *5xnop ]
+        - [ bytes, 0x007d69ba, *5xnop ]
+        - [ bytes, 0x007e406c, *5xnop ]
+        - [ bytes, 0x007e5506, *5xnop ]
+        # end of gameplay
+        # Navigation
+        - [ bytes, 0x0080512b, *6xnop ]
+        - [ bytes, 0x00805155, *5xnop ]
+        - [ bytes, 0x008bada8, *5xnop ]
+        - [ bytes, 0x00dd1de0, *ret0 ]
+        - [ bytes, 0x008b90ed, *6xnop ]
+        - [ bytes, 0x008b911d, *5xnop ]
+        - [ bytes, 0x008b914f, *5xnop ]
+        - [ bytes, 0x0080bf02, *5xnop ]
+        - [ bytes, 0x00805271, *5xnop ]
+        # Interactive Background
+        - [ bytes, 0x0080527d, *6xnop ]
+        - [ bytes, 0x008052a7, *5xnop ]
+        - [ bytes, 0x0080bf02, *5xnop ]
+        - [ bytes, 0x0080554b, *5xnop ]
+        # Actors
+        - [ bytes, 0x00805557, *6xnop ]
+        - [ bytes, 0x00805581, *5xnop ]
+        - [ bytes, 0x00805e35, *5xnop ]
+        - [ bytes, 0x01a686f0, *ret0 ]
+        # Process...
+        - [ bytes, 0x0080877c, *5xnop ]
+        # Animation...
+        - [ bytes, 0x00808788, *6xnop ]
+        - [ bytes, 0x008087b2, *5xnop ]
+        - [ bytes, 0x00809785, "e9f9000000" ] # double line
+        - [ bytes, 0x0080bf02, *5xnop ]
+        # Weapons
+        - [ bytes, 0x0187ae71, "e90b000000" ] # save on memory by not initializing it twice, use Quick Menu instead
+        # Camera
+        - [ bytes, 0x0063d156, *6xnop ]
+        - [ bytes, 0x0063d182, *5xnop ]
+        - [ bytes, 0x0063d2d3, *5xnop ]
+        - [ bytes, 0x0063d2fe, *5xnop ]
+        - [ bytes, 0x0063d329, *5xnop ]
+        - [ bytes, 0x0063d351, *5xnop ]
+        - [ bytes, 0x0063d356, *5xnop ]
+        - [ bytes, 0x0063d35b, *5xnop ]
+        - [ bytes, 0x00bdc74f, *5xnop ]
+        # Camera Shake
+        - [ bytes, 0x00be22a9, "488903" ]
+        - [ bytes, 0x00be22ac, "c7839000000000000000" ]
+        - [ bytes, 0x00be22b6, "c7839400000000000000" ]
+        - [ bytes, 0x00be22c0, "c6839800000001" ]
+        - [ bytes, 0x00be22c7, "c7839c00000000000000" ]
+        - [ bytes, 0x00be22d1, "c783a000000000000000" ]
+        - [ bytes, 0x00be22db, "c683a400000000" ]
+        - [ bytes, 0x00be22e2, "c5f81183b4000000" ]
+        - [ bytes, 0x00be22ea, "c5f81183a8000000" ]
+        - [ bytes, 0x00be22f2, "e8f9c5df00" ]
+        - [ bytes, 0x00be22f7, "9090909090909090909090" ]
+        - [ bytes, 0x019de926, *5xnop ]
+        - [ bytes, 0x019ded33, *5xnop ]
+        - [ bytes, 0x019deab3, "e97b020000" ]
+        # Menu
+        - [ bytes, 0x0080bf84, *6xnop ]
+        - [ bytes, 0x0080bfb5, *5xnop ]
+        - [ bytes, 0x0080d5bf, *5xnop ]
+        # # # # # Audio
+        # # # # - [ bytes, 0x019633a3, *6xnop ]
+        # # # # - [ bytes, 0x019633d2, *5xnop ]
+        # # # # - [ bytes, 0x0196a314, *5xnop ]
+        # # # # - [ bytes, 0x0196a3b8, *6xnop ]
+        # # # # - [ bytes, 0x0196a3dc, *5xnop ]
+        # # # # - [ bytes, 0x0196aec6, *5xnop ]
+        # # # # #- [ bytes, 0x0196b364, *6xnop ]
+        # # # # - [ bytes, 0x0196b388, *5xnop ]
+        # # # # - [ bytes, 0x0196ca85, *5xnop ]
+        # # # # - [ bytes, 0x0196cb23, *6xnop ]
+        # # # # - [ bytes, 0x0196cb47, *5xnop ]
+        # # # # - [ bytes, 0x0196ce96, *5xnop ]
+        # Music
+        - [ bytes, 0x0080f0d4, *6xnop ]
+        - [ bytes, 0x0080f10e, *5xnop ]
+        - [ bytes, 0x0080f3c8, *5xnop ]
+        # Vox
+        - [ bytes, 0x0080f473, *6xnop ]
+        - [ bytes, 0x0080f49d, *5xnop ]
+        - [ bytes, 0x00810f6b, *5xnop ]
+        # Scripts
+        - [ bytes, 0x01b2e368, *6xnop ]
+        - [ bytes, 0x01b2e38c, *5xnop ]
+        - [ bytes, 0x01b2f078, *5xnop ]
+        - [ bytes, 0x01b2df00, *ret0 ] # no script listing
+        # Particle
+        - [ bytes, 0x00811008, *6xnop ]
+        - [ bytes, 0x00811032, *5xnop ]
+        - [ bytes, 0x008110bf, *5xnop ]
+        - [ bytes, 0x01cab7df, *5xnop ]
+        - [ bytes, 0x01cab884, "e90d3e0000" ]
+        # Level BugFix...
+        - [ bytes, 0x00811270, *6xnop ]
+        - [ bytes, 0x0081129a, *5xnop ]
+        - [ bytes, 0x00811a38, *5xnop ]
+        # Designer
+        - [ bytes, 0x0064a339, *5xnop ]
+        - [ bytes, 0x0064a345, *6xnop ]
+        - [ bytes, 0x0064a371, *5xnop ]
+        - [ bytes, 0x0064a3a8, *5xnop ]
+        - [ bytes, 0x00797360, *ret0 ]
+        - [ bytes, 0x0064a43f, *5xnop ]
+        - [ bytes, 0x0064a444, *5xnop ]
+        - [ bytes, 0x0064a4df, *5xnop ]
+        # Cinematics
+        # # # # - [ bytes, 0x00647e56, *6xnop ]
+        # # # # - [ bytes, 0x00647e82, *5xnop ]
+        # # # # - [ bytes, 0x006485db, *5xnop ]
+        # # # # - [ bytes, 0x00648b22, *6xnop ]
+        # # # # - [ bytes, 0x00648b4e, *5xnop ]
+        # # # # - [ bytes, 0x019e5340, *ret0 ]
+        # # # # - [ bytes, 0x019e4ae0, *ret0 ]
+        # # # # - [ bytes, 0x0064a28d, *5xnop ]
+        # Volumetric Flare
+        - [ bytes, 0x01f4fa72, "e8e5ec3600" ]
+        - [ bytes, 0x022be75c, "4c8d25651d1c00" ]
+        - [ bytes, 0x022be763, "bfb0000000" ]
+        - [ bytes, 0x022be768, "be10000000" ]
+        - [ bytes, 0x022be76d, "31c9" ]
+        - [ bytes, 0x022be76f, "4c89e2" ]
+        - [ bytes, 0x022be772, "4d89e0" ]
+        - [ bytes, 0x022be775, "e86611e3ff" ]
+        - [ bytes, 0x022be77a, "4889c3" ]
+        - [ bytes, 0x022be77d, "488d3578000000" ]
+        - [ bytes, 0x022be784, "31d2" ]
+        - [ bytes, 0x022be786, "4889df" ]
+        - [ bytes, 0x022be789, "e8c2c3b7ff" ]
+        - [ bytes, 0x022be78e, "488d0523204500" ]
+        - [ bytes, 0x022be795, "c7839400000000000000" ]
+        - [ bytes, 0x022be79f, "c7839800000000000000" ]
+        - [ bytes, 0x022be7a9, "48c7435800000000" ]
+        - [ bytes, 0x022be7b1, "4d85f6" ]
+        - [ bytes, 0x022be7b4, "488903" ]
+        - [ bytes, 0x022be7b7, "48c783a000000000000000" ]
+        - [ bytes, 0x022be7c2, "4c89b3a8000000" ]
+        - [ bytes, 0x022be7c9, "c7839000000001000000" ]
+        - [ bytes, 0x022be7d3, "740b" ]
+        - [ bytes, 0x022be7d5, "49895e38" ]
+        - [ bytes, 0x022be7d9, "41ff86c0000000" ]
+        - [ bytes, 0x022be7e0, "488bbd68feffff" ]
+        - [ bytes, 0x022be7e7, "4889de" ]
+        - [ bytes, 0x022be7ea, "e80133b8ff" ]
+        - [ bytes, 0x022be7ef, "4c8d25d21c1c00" ]
+        - [ bytes, 0x022be7f6, "bfc8000000" ]
+        - [ bytes, 0x022be7fb, "c3" ]
+        - [ utf8, 0x022be7fc, "Volumetric Flare...\x00"]
+        # Quick Menu
+        - [ bytes, 0x0063c9eb, *6xnop ] # Relaunch
+        - [ bytes, 0x0063cbd2, "488d0507125401" ] # Task
+        - [ bytes, 0x0063cc04, "48c7435800000000" ]
+        - [ bytes, 0x007f473b, "488d3d15000000" ]
+        # (path, 0)
+        - [ bytes, 0x007f4742, "31f6" ]
+        - [ bytes, 0x007f4744, "e8d7455d01" ]
+        - [ bytes, 0x007f4749, "eb2b" ]
+        - [ utf8,  0x007f4757, "big4-mp.elf\x00" ]

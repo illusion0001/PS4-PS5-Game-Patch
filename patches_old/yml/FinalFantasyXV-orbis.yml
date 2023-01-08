@@ -1,0 +1,35 @@
+- patch:
+  title: "Final Fantasy XV (Final Fantasy 15)"
+  app_ver: "01.30"
+  app_titleid: [ "CUSA01633", "CUSA01615", "CUSA01706", "CUSA01570" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Frame Pacing Fix For 30FPS Modes"
+  author: "illusion"
+  note: "60FPS will run as is. Only 30FPS Modes are affected."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0108d17f, "9090909090" ] # // sceVideoOutSetFlipRate(handle,0); // comment init call
+        - [ bytes, 0x0109db20, "b878000000" ] # return 120;
+        - [ bytes, 0x0109db25, "c3" ]
+        - [ bytes, 0x0109db30, "e954beca03" ]
+        - [ bytes, 0x04d49989, "e8b6000000" ] # save registers
+        - [ bytes, 0x04d4998e, "bf0001114e" ]
+        - [ bytes, 0x04d49993, "4883fe3c" ]
+        - [ bytes, 0x04d49997, "740f" ]
+        - [ bytes, 0x04d49999, "4883fe1e" ]
+        - [ bytes, 0x04d4999d, "7402" ]
+        - [ bytes, 0x04d4999f, "eb0e" ]
+        - [ bytes, 0x04d499a1, "be01000000" ]
+        - [ bytes, 0x04d499a6, "eb02" ]
+        - [ bytes, 0x04d499a8, "31f6" ]
+        - [ bytes, 0x04d499aa, "e801d3b8ff" ]
+        - [ bytes, 0x04d499af, "e89f000000" ] # restore them
+        - [ bytes, 0x04d499b4, "c3" ]
+        # Shared save/restore
+        - [ bytes, 0x04d49a44, "488905d5e5ad00" ]
+        - [ bytes, 0x04d49a4b, "48893dd6e5ad00" ]
+        - [ bytes, 0x04d49a52, "c3" ]
+        - [ bytes, 0x04d49a53, "488b05c6e5ad00" ]
+        - [ bytes, 0x04d49a5a, "488b3dc7e5ad00" ]
+        - [ bytes, 0x04d49a61, "c3" ]

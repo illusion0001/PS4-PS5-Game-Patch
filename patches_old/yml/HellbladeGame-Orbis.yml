@@ -1,0 +1,61 @@
+- patch:
+  title: "Hellblade: Senua's Sacrifice"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA07511" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch"
+  author: "illusion"
+  note: "This game already runs with uncapped framerate.\nOnly useful for Base Console."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02928934, "740d" ]
+        - [ bytes, 0x02afec8d, "6767e87d0a2200" ]
+        - [ bytes, 0x02d1f710, "c3488b05c872e102c70000008642c389" ]
+
+- patch:
+  title: "Hellblade: Senua's Sacrifice"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA07511" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Startup Videos"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x022580c2, "48e987060000" ]
+
+- patch:
+  title: "Hellblade: Senua's Sacrifice"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA07511" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Motion Blur"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01b8ae71, "eb40" ] 
+- patch:
+  title: "Hellblade: Senua's Sacrifice"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA07511" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Film Grain"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x0195c32f, 0xeb ]
+
+- patch:
+  title: "Hellblade: Senua's Sacrifice"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA07511" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Post Processing"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0195c2b5, "48e9" ]

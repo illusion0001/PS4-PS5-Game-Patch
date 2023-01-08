@@ -1,0 +1,11 @@
+- patch:
+  title: "Assassin's Creed Rogue Remastered"
+  app_ver: "01.01"
+  app_titleid: [ "CUSA10123" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00dba4ca, "be00000000" ]

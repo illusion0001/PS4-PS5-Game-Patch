@@ -1,0 +1,12 @@
+- patch:
+  title: "The Last Gurdian"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA03627", "CUSA03745" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "CPU Limited, for use with 9th generation of consoles."
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x01051467, "e9b3000000" ]

@@ -1,0 +1,12 @@
+- patch:
+  title: "Just Cause 3"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA01493", "CUSA02747", "CUSA02748" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00a1f817, "4831c9" ]         # 60FPS
+        - [ bytes, 0x01ddd118, "41c7c403000000" ] # Vsync

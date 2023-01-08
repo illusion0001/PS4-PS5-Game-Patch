@@ -1,0 +1,24 @@
+- patch:
+  title: "Judgment"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA13197" ]
+  app_elf: "eboot.bin" # executable is unchanged from disc version
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01b42ed4, "be00000000" ]
+
+- patch:
+  title: "Judgment"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA13197" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Virtua Fighter 5 Unlocker"
+  author: "Silent, illusion"
+  note: "Turns \"Virtua Fighter 5: Final Showdown\" in Club SEGA into full game!\nMore details: https://cookieplmonster.github.io/2021/04/19/virtua-fighter-5-final-showdown-unlocker/"
+  arch: orbis
+  patch_list:
+        - [ bytes16, 0x008a11fd, 0x0000 ] # 0x0001 for default

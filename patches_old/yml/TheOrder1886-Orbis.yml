@@ -1,0 +1,63 @@
+- patch:
+  title: "The Order 1886"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA00035", "CUSA00670" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x008507c4, 0x1 ]
+        # screen flip mode
+        # 0xC781F7 # dword valid are 1-6
+                   # see notes below
+        # notes
+        # https://github.com/Inori/GPCS4/blob/2cb81156a1a1fd914a46fbd99cecddd6f93e7dfd/GPCS4/SceModules/SceVideoOut/sce_videoout_types.h#L115-L123
+        # mode 2 is pretty much flip as soon as possible, or vsync off with eye sore screen tearing
+        # default is 3 which i guess is double buffered vsync
+        # it would be good if triple buffering worked here
+        # as it allows for 40-60 fps and not hard locking to 30-40 all the time
+        # on base hw.
+        # r13d loads into edx, which i think is param for SubmitFlip.
+
+- patch:
+  title: "The Order 1886"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA00035", "CUSA00670" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x0084cef5, 0x75 ]
+        - [ bytes32, 0x0084cefd, 1600 ]
+        - [ bytes32, 0x0084cf07, 900  ]
+
+- patch:
+  title: "The Order 1886"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA00035", "CUSA00670" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x0084cef5, 0x75 ]
+        - [ bytes32, 0x0084cefd, 1280 ]
+        - [ bytes32, 0x0084cf07, 720  ]
+
+- patch:
+  title: "The Order 1886"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA00035", "CUSA00670" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "16:9 Aspect Ratio (Full Screen)"
+  author: "illusion"
+  note: "Native 1080p will cause visual issues, 900p or below must be used."
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x0084ce8c, 0x3fe38e39 ]

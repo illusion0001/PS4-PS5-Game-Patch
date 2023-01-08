@@ -1,0 +1,12 @@
+- patch:
+  title: "Mafia: Definitive Edition"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA18097" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "CPU/GPU Limited."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0312a2a1, "eb0590" ]

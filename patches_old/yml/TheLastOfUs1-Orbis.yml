@@ -1,0 +1,350 @@
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Improved Loading Times"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x013302c8, "48e8f4000000" ] # CALL 0x013303c2
+        - [ bytes, 0x013302ce, "90" ]           # NOP
+        - [ bytes, 0x013303c2, "c680d506000000" ] # MOV byte ptr [RAX + 0x6d5],0x0
+        - [ bytes, 0x013303c9, "c6403001" ]       # MOV byte ptr [RAX + 0x30],0x1
+        - [ bytes, 0x013303cd, "c3" ]             # RET
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Infected's Severed Head Crash Bug Fix"
+  author: "illusion, ZEROx"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0095a067, "e810465000" ]     # CALL 0x00e5e67c
+        - [ bytes, 0x0095a06c, "90" ]             # NOP
+        - [ bytes, 0x0095a06d, "90" ]             # NOP
+        - [ bytes, 0x0095a06e, "90" ]             # NOP
+        - [ bytes, 0x0095a06f, "90" ]             # NOP
+        - [ bytes, 0x0095a070, "90" ]             # NOP
+        - [ bytes, 0x0095a071, "90" ]             # NOP
+        - [ bytes, 0x00e5e67c, "488985d0f3ffff" ] # MOV qword ptr [RBP + -0xc30],RAX
+        - [ bytes, 0x00e5e683, "4883fb00" ]       # CMP RBX,0x0
+        - [ bytes, 0x00e5e687, "0f8404000000" ]   # JZ 0x00e5e691
+        - [ bytes, 0x00e5e68d, "488b4340" ]       # MOV RAX,qword ptr [RBX + 0x40]
+        - [ bytes, 0x00e5e691, "c3" ]             # RET
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable Dev Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00401c79, 0x01 ] # enable
+        - [ bytes16, 0x00a92c41, 0x2e85 ] # save data to dbg render
+        - [ bytes, 0x00404649, "4831c0" ] # hide "D: %d"
+        # weapon fixes
+        - [ bytes, 0x0082dec6, "488b3553854601" ] # actor ptr
+        - [ bytes, 0x0082de79, "e8f85dca00" ]     # call
+        - [ bytes, 0x0082df5f, "488b3dba844601" ] # actor ptr
+        - [ bytes, 0x014d3c76, "be0100000048893d9e277c00c6059f277c0001c3" ] # write actor for arg
+        - [ bytes, 0x0082dd39, "48e84b5fca0090" ] # str write
+        - [ bytes, 0x014d3c8a, "48830596277c0020488d35bf4b3d0048033588277c00c3" ] # str inc
+        # str list
+        - [ utf8, 0x018a8878, "shiv                           " ]
+        - [ utf8, 0x018a8898, "pistol-uber-t1                 " ]
+        - [ utf8, 0x018a88b8, "rifle-improvised-fullauto      " ]
+        - [ utf8, 0x018a88d8, "super-soaker                   " ]
+        - [ utf8, 0x018a88f8, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x018a8918, "nail-bomb                      " ]
+        - [ utf8, 0x018a8938, "two-by-four                    " ]
+        - [ utf8, 0x018a8958, "nail-bomb                      " ]
+        - [ utf8, 0x018a8978, "turret-sniper                  " ]
+        - [ utf8, 0x018a8998, "pistol-uber-t1                 " ]
+        - [ utf8, 0x018a89b8, "shiv                           " ]
+        - [ utf8, 0x018a89d8, "radio                          " ]
+        - [ utf8, 0x018a89f8, "molotov                        " ]
+        - [ utf8, 0x018a8a18, "bandage-apply                  " ]
+        - [ utf8, 0x018a8a38, "mp-parcel                      " ]
+        - [ utf8, 0x018a8a58, "gren-launcher-improvised       " ]
+        - [ utf8, 0x018a8a78, "shotgun-dbl-barrel             " ]
+        - [ utf8, 0x018a8a98, "machete-blade                  " ]
+        - [ utf8, 0x018a8ab8, "bow-dark                       " ]
+        - [ utf8, 0x018a8ad8, "rifle-variable                 " ]
+        - [ utf8, 0x018a8af8, "mini-14-rifle                  " ]
+        - [ utf8, 0x018a8b18, "two-by-four                    " ]
+        - [ utf8, 0x018a8b38, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x018a8b58, "pistol-shotgun                 " ]
+        - [ utf8, 0x018a8b78, "flamethrower                   " ]
+        - [ utf8, 0x018a8b98, "desert-eagle-t1                " ]
+        - [ utf8, 0x018a8bb8, "beer-bottle                    " ]
+        - [ utf8, 0x018a8bd8, "lead-pipe                      " ]
+        - [ utf8, 0x018a8bf8, "lead-pipe                      " ]
+        - [ utf8, 0x018a8c18, "flashlight                     " ]
+        - [ utf8, 0x018a8c38, "rifle-sniper                   " ]
+        - [ utf8, 0x018a8c58, "m4-rifle-t1                    " ]
+        - [ utf8, 0x018a8c78, "smoke-bomb                     " ]
+        - [ utf8, 0x018a8c98, "throw-brick                    " ]
+        - [ utf8, 0x018a8cb8, "shotgun-pump-stock             " ]
+        - [ utf8, 0x018a8cd8, "silenced-galil-rifle           " ]
+        - [ utf8, 0x018a8cf8, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x018a8d18, "bloater-pustule                " ]
+        - [ utf8, 0x018a8d38, "taurus-66b4-revolver           " ]
+        - [ utf8, 0x018a8d58, "nail-bomb                      " ]
+        - [ utf8, 0x018a8d78, "rifle-improvised-assault       " ]
+        - [ utf8, 0x018a8d98, "throwing-knife                 " ]
+        - [ utf8, 0x018a8db8, "rifle-bolt                     " ]
+        - [ utf8, 0x018a8dd8, "beretta-jaguar-pistol          " ]
+        - [ utf8, 0x018a8df8, "bow                            " ]
+        - [ utf8, 0x018a8e18, "molotov                        " ]
+        - [ utf8, 0x018a8e38, "bill-knife                     " ]
+        - [ utf8, 0x018a8e58, "baseball-bat                   " ]
+        - [ utf8, 0x018a8e78, "mini-14-rifle                  " ]
+        - [ utf8, 0x018a8e98, "pistol-9mm                     " ]
+        - [ utf8, 0x018a8eb8, "mal-gas-can                    " ]
+        - [ utf8, 0x018a8ed8, "machete-blade                  " ]
+        - [ utf8, 0x018a8ef8, "none                           " ]
+        - [ utf8, 0x018a8f18, "rifle-improvised-assault       " ]
+        - [ utf8, 0x018a8f38, "binoculars                     " ]
+        - [ utf8, 0x018a8f58, "switchblade                    " ]
+        - [ utf8, 0x018a8f78, "rifle-improvised-fullauto      " ]
+        - [ utf8, 0x018a8f98, "baseball-bat                   " ]
+        - [ utf8, 0x018a8fb8, "hatchet                        " ]
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Restore Full Rendering Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0045f63c, "e8ef246d00" ] # call
+        - [ bytes, 0x00b337b5, "e992010000" ] # crash fix
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Light Theme for Dev Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0040d326, "b900000000" ]
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Intro Skip"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00401c22, "c687a534000001" ]
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Intro Skip"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0040214a, "c687e534000001" ] # MOV byte ptr [RDI + 0x34e5],0x1
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Infected's Severed Head Crash Bug Fix"
+  author: "illusion, ZEROx"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00abc859, "e872535600" ]     # CALL 0x01021bd0
+        - [ bytes, 0x00abc85e, "90" ]             # NOP
+        - [ bytes, 0x00abc85f, "90" ]             # NOP
+        - [ bytes, 0x00abc860, "90" ]             # NOP
+        - [ bytes, 0x00abc861, "90" ]             # NOP
+        - [ bytes, 0x00abc862, "90" ]             # NOP
+        - [ bytes, 0x00abc863, "90" ]             # NOP
+        - [ bytes, 0x01021bd0, "488985e0f3ffff" ] # MOV qword ptr [RBP + -0xc20],RAX
+        - [ bytes, 0x01021bd7, "4883fb00" ]       # CMP RBX,0x0
+        - [ bytes, 0x01021bdb, "7404" ]           # JZ 0x01021be1
+        - [ bytes, 0x01021bdd, "488b4340" ]       # MOV RAX,qword ptr [RBX + 0x40]
+        - [ bytes, 0x01021be1, "c3" ]             # RET
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "University Nailbomb Softlock Fix"
+  author: "illusion, ZEROx"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00aa27a7, "e9a4389dff" ]     # JMP 0x00476050
+        - [ bytes, 0x00aa27ac, "90" ]             # NOP
+        - [ bytes, 0x00aa27ad, "90" ]             # NOP
+        - [ bytes, 0x00aa27ae, "90" ]             # NOP
+        - [ bytes, 0x00aa27af, "90" ]             # NOP
+        - [ bytes, 0x00aa27b0, "90" ]             # NOP
+        - [ bytes, 0x00476050, "448905994c7a01" ] # MOV dword ptr [0x01c1acf0],R8D
+        - [ bytes, 0x00476057, "4c8d052acf5c01" ] # LEA R8,[0x1a42f88]
+        - [ bytes, 0x0047605e, "418138f08ebc40" ] # CMP dword ptr [R8],0x40bc8ef0
+        - [ bytes, 0x00476065, "7422" ]           # JZ 0x00476089
+        - [ bytes, 0x00476067, "418138cff066a4" ] # CMP dword ptr [R8],0xa466f0cf
+        - [ bytes, 0x0047606e, "7419" ]           # JZ 0x00476089
+        - [ bytes, 0x00476070, "4181386a06b69a" ] # CMP dword ptr [R8],0x9ab6066a
+        - [ bytes, 0x00476077, "7410" ]           # JZ 0x00476089
+        - [ bytes, 0x00476079, "4181385c5d8111" ] # CMP dword ptr [R8],0x11815d5c
+        - [ bytes, 0x00476080, "7407" ]           # JZ 0x00476089
+        - [ bytes, 0x00476082, "418138c85fd34a" ] # CMP dword ptr [R8],0x4ad35fc8
+        - [ bytes, 0x00476089, "448b05604c7a01" ] # MOV R8D,dword ptr [0x01c1acf0]
+        - [ bytes, 0x00476090, "0f851bc76200" ]   # JNZ 0x00aa27b1
+        - [ bytes, 0x00476096, "e91cc96200" ]     # JMP 0x00aa29b7
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable Dev Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x004021a4, 0x75 ]
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Restore Full Rendering Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0046df6c, "e84f6b8400" ] # call
+        - [ bytes, 0x00cb6e75, "e993010000" ] # crash fix
+
+- patch:
+  title: "The Last of Us: Remastered"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA00552", "CUSA00556", "CUSA00557", "CUSA00559" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Give Player Weapon Fix"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # code
+        - [ bytes, 0x00475db0, "be01000000" ]       # MOV ESI,0x1
+        - [ bytes, 0x00475db5, "48893d597d8501" ]   # MOV qword ptr [0x01ccdb15],RDI
+        - [ bytes, 0x00475dbc, "c3" ]               # RET
+        - [ bytes, 0x00475dbd, "488b07" ]           # MOV RAX,qword ptr [RDI]
+        - [ bytes, 0x00475dc0, "488905597d8501" ]   # MOV qword ptr [0x01ccdb20],RAX
+        - [ bytes, 0x00475dc7, "4831c0" ]           # XOR RAX,RAX
+        - [ bytes, 0x00475dca, "be01000000" ]       # MOV ESI,0x1
+        - [ bytes, 0x00475dcf, "c3" ]               # RET
+        - [ bytes, 0x00475dd0, "488305917d850120" ] # ADD qword ptr [0x01ccdb69],0x20
+        - [ bytes, 0x00475dd8, "488d3571d73d01" ]   # LEA RSI,[0x1853550]
+        - [ bytes, 0x00475ddf, "480335837d8501" ]   # ADD RSI,qword ptr [0x01ccdb69]
+        - [ bytes, 0x00475de6, "c3" ]               # RET
+        # ptrs
+        - [ bytes, 0x00919311, "488b35fd473b01" ] # MOV RSI,qword ptr [0x01ccdb15]
+        - [ bytes, 0x00919392, "488b3d7c473b01" ] # MOV RDI,qword ptr [0x01ccdb15]
+        # Calls
+        - [ bytes, 0x00919189, "48e841ccb5ff" ] # CALL 0x00475dd0
+        - [ bytes, 0x0091918f, "90" ]           # NOP
+        - [ bytes, 0x00919399, "e81fcab5ff" ]   # CALL 0x00475dbd
+        - [ bytes, 0x009192c9, "e8e2cab5ff" ]   # CALL 0x00475db0
+        # str lookup
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853570, "shiv                           " ]
+        - [ utf8, 0x01853590, "pistol-uber-t1                 " ]
+        - [ utf8, 0x018535b0, "baseball-bat                   " ]
+        - [ utf8, 0x018535d0, "hatchet                        " ]
+        - [ utf8, 0x018535f0, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x01853610, "nail-bomb                      " ]
+        - [ utf8, 0x01853630, "two-by-four                    " ]
+        - [ utf8, 0x01853650, "nail-bomb                      " ]
+        - [ utf8, 0x01853670, "turret-sniper                  " ]
+        - [ utf8, 0x01853690, "rifle-lever-action             " ]
+        - [ utf8, 0x018536b0, "pistol-uber-t1                 " ]
+        - [ utf8, 0x018536d0, "shiv                           " ]
+        - [ utf8, 0x018536f0, "radio                          " ]
+        - [ utf8, 0x01853710, "molotov                        " ]
+        - [ utf8, 0x01853730, "bandage-apply                  " ]
+        - [ utf8, 0x01853750, "mp-parcel                      " ]
+        - [ utf8, 0x01853770, "gren-launcher-improvised       " ]
+        - [ utf8, 0x01853790, "shotgun-dbl-barrel             " ]
+        - [ utf8, 0x018537b0, "machete-blade                  " ]
+        - [ utf8, 0x018537d0, "bow-dark                       " ]
+        - [ utf8, 0x018537f0, "rifle-variable                 " ]
+        - [ utf8, 0x01853810, "mini-14-rifle                  " ]
+        - [ utf8, 0x01853830, "two-by-four                    " ]
+        - [ utf8, 0x01853850, "pistol-shotgun                 " ]
+        - [ utf8, 0x01853870, "rifle-improvised-fullauto      " ]
+        - [ utf8, 0x01853890, "super-soaker                   " ]
+        - [ utf8, 0x018538b0, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x018538d0, "beer-bottle                    " ]
+        - [ utf8, 0x018538f0, "crossbow-dlc                   " ]
+        - [ utf8, 0x01853910, "lead-pipe                      " ]
+        - [ utf8, 0x01853930, "lead-pipe                      " ]
+        - [ utf8, 0x01853950, "flamethrower                   " ]
+        - [ utf8, 0x01853970, "desert-eagle-t1                " ]
+        - [ utf8, 0x01853990, "flashlight                     " ]
+        - [ utf8, 0x018539b0, "rifle-sniper                   " ]
+        - [ utf8, 0x018539d0, "m4-rifle-t1                    " ]
+        - [ utf8, 0x018539f0, "smoke-bomb                     " ]
+        - [ utf8, 0x01853a10, "throw-brick                    " ]
+        - [ utf8, 0x01853a30, "shotgun-pump-stock             " ]
+        - [ utf8, 0x01853a50, "silenced-galil-rifle           " ]
+        - [ utf8, 0x01853a70, "NO_ART_GROUP                   " ]
+        - [ utf8, 0x01853a90, "bloater-pustule                " ]
+        - [ utf8, 0x01853ab0, "taurus-66b4-revolver           " ]
+        - [ utf8, 0x01853ad0, "nail-bomb                      " ]
+        - [ utf8, 0x01853af0, "rifle-improvised-assault       " ]
+        - [ utf8, 0x01853b10, "throwing-knife                 " ]
+        - [ utf8, 0x01853b30, "rifle-bolt                     " ]
+        - [ utf8, 0x01853b50, "beretta-jaguar-pistol          " ]
+        - [ utf8, 0x01853b70, "bow                            " ]
+        - [ utf8, 0x01853b90, "molotov                        " ]
+        - [ utf8, 0x01853bb0, "bill-knife                     " ]
+        - [ utf8, 0x01853bd0, "baseball-bat                   " ]
+        - [ utf8, 0x01853bf0, "mini-14-rifle                  " ]
+        - [ utf8, 0x01853c10, "pistol-glock-burst             " ]
+        - [ utf8, 0x01853c30, "pistol-9mm                     " ]
+        - [ utf8, 0x01853c50, "shotgun-tactical               " ]
+        - [ utf8, 0x01853c70, "mal-gas-can                    " ]
+        - [ utf8, 0x01853c90, "machete-blade                  " ]
+        - [ utf8, 0x01853cb0, "none                           " ]
+        - [ utf8, 0x01853cd0, "rifle-improvised-assault       " ]
+        - [ utf8, 0x01853cf0, "binoculars                     " ]
+        - [ utf8, 0x01853d10, "switchblade                    " ]
+        - [ utf8, 0x01853d30, "rifle-improvised-fullauto      " ]

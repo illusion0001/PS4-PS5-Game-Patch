@@ -1,0 +1,58 @@
+- patch:
+  title: "Persona 5: Royal"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA17416", "CUSA17419", "CUSA08644" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion, ZEROx"
+  note: "Patch may accelerate some game effects by 2x.\nGame will softlock at centain places with 60FPS Patch enabled. Be sure to frequently save and switch to 30FPS with X + DPad Down to progress further."
+  arch: orbis
+  patch_list:
+        # write to flag // hack
+        - [ bytes, 0x0049add2, "c6058fad4f023c" ]
+        - [ bytes, 0x0049add9, "eb56" ]
+        - [ bytes, 0x0049ae2b, "eba5" ]
+        # Call
+        - [ bytes, 0x0049d7bc, "e8cf810500" ]
+        - [ bytes, 0x0049d7c1, "9090909090" ]
+
+        ###########################################
+        # Buttons id (missing dpad):
+        # int | button
+        # 2 L3 
+        # 4 R3
+        # 2048 R1
+        # 512 R2
+        # 1024 L1 
+        # 256 L2
+        # 16384 X
+        # 32768 Square
+        # 4096 Triangle
+        # 8192 Circle
+        # 1048576 Touchpad
+        ###########################################
+
+        # switch framerate mode with X + DPad Down
+        - [ bytes, 0x004f5990, "488d0d49ff4902" ]
+        - [ bytes, 0x004f5997, "eb08" ]
+        - [ bytes, 0x004f59a0, "c3" ]
+        - [ bytes, 0x004f59a1, "813dddd81c0240400000" ]
+        - [ bytes, 0x004f59ab, "7533" ]
+        - [ bytes, 0x004f59ad, "813da9014a0240400000" ]
+        - [ bytes, 0x004f59b7, "7435" ]
+        - [ bytes, 0x004f59b9, "803d4cff49023c" ]
+        - [ bytes, 0x004f59c0, "7505" ]
+        - [ bytes, 0x004f59c2, "41b01e" ]
+        - [ bytes, 0x004f59c5, "eb03" ]
+        - [ bytes, 0x004f59c7, "41b03c" ]
+        - [ bytes, 0x004f59ca, "4488053bff4902" ]
+        - [ bytes, 0x004f59d1, "44880590014a02" ]
+        - [ bytes, 0x004f59d8, "41b840400000" ]
+        - [ bytes, 0x004f59de, "eb07" ]
+        - [ bytes, 0x004f59e0, "448b05a1d81c02" ]
+        - [ bytes, 0x004f59e7, "44890572014a02" ]
+        - [ bytes, 0x004f59ee, "448a0573014a02" ]
+        - [ bytes, 0x004f59f5, "44880510ff4902" ]
+        - [ bytes, 0x004f59fc, "8b712c" ]
+        - [ bytes, 0x004f59ff, "c3" ]

@@ -1,0 +1,11 @@
+- patch:
+  title: "Tekken 7"
+  app_ver: "04.00"
+  app_titleid: [ "CUSA05972" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Post Processing"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01efdedc, "48e9" ]

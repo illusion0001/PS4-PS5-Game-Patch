@@ -1,0 +1,11 @@
+- patch:
+  title: "Call of Duty: Black Ops 4 (IIII)"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA11100" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Bypass Update Reqiured Screen"
+  author: "DeathRGH"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00e3103b, "4189d1" ]

@@ -1,0 +1,24 @@
+- patch:
+  title: "Skyrim"
+  app_ver: "01.17"
+  app_titleid: [ "CUSA05333" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x013a3a55, 0x00000001 ]
+
+- patch:
+  title: "Skyrim"
+  app_ver: "01.17"
+  app_titleid: [ "CUSA05333" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x016695ab, 1280 ]
+        - [ bytes32, 0x016695af, 720  ]

@@ -1,0 +1,86 @@
+- patch:
+  title: "Bloodborne: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01322" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion, manfightdragon"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00c346e5, "40c6c002" ] # MOV AL,0x2
+        # SceVideoOutFliprate(handle, 1);
+        # return;
+        - [ bytes, 0x02908da2, "be0100000089c79090909090" ]
+
+- patch:
+  title: "Bloodborne: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01322" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (with Deltatime)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00c346e5, "40c6c002" ]         # MOV AL,0x2 // 60FPS_Noskip
+        - [ utf16, 0x056b4040, "withSkip\x00" ]     # str
+          # write deltatime to ram // Todo optimize this
+        - [ bytes, 0x00c34ea5, "e850d9ea01      " ] # CALL 0x02ae27fa
+        - [ bytes, 0x00c34eaa, "90              " ] # NOP
+        - [ bytes, 0x00c34eab, "90              " ] # NOP
+        - [ bytes, 0x00c34eac, "90              " ] # NOP
+        - [ bytes, 0x02ae27fa, "c5e258c9        " ] # VADDSS XMM1,XMM3,XMM1 // original instructions
+        - [ bytes, 0x02ae27fe, "c5f258ca        " ] # VADDSS XMM1,XMM1,XMM2
+        - [ bytes, 0x02ae2802, "c5fa1125366fd003" ] # VMOVSS dword ptr [0x067e9740],XMM4 // write
+        - [ bytes, 0x02ae280a, "c3              " ] # RET
+          # read written deltatime
+        - [ bytes, 0x00c27178, "48e802b4eb01    " ] # CALL 0x02ae2580
+        - [ bytes, 0x00c2717e, "90              " ] # NOP
+        - [ bytes, 0x02ae2580, "4c8915c171d003  " ] # MOV qword ptr [0x067e9748],R10 // save
+        - [ bytes, 0x02ae2587, "448b15b271d003  " ] # MOV R10D,dword ptr [0x067e9740]
+        - [ bytes, 0x02ae258e, "448955c8        " ] # MOV dword ptr [RBP + -0x38],R10D // read
+        - [ bytes, 0x02ae2592, "4c8b15af71d003  " ] # MOV R10,qword ptr [0x067e9748] // restore
+        - [ bytes, 0x02ae2599, "c3              " ] # RET
+
+- patch:
+  title: "Bloodborne: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01322" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # set rt size
+        - [ bytes32, 0x06297018, 1280 ]
+        - [ bytes32, 0x0629701c, 720  ]
+        # ignore values from system.properties
+        - [ byte, 0x056b1410, 0x0 ]
+        - [ byte, 0x056b1440, 0x0 ]
+
+- patch:
+  title: "Bloodborne: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01322" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Chromatic Aberration"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01905491, "48b100" ] # MOV CL,0x0
+
+- patch:
+  title: "Bloodborne: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01322" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Motion Blur"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x0198a0e7, 0xeb ] # JMP 0x0198a104

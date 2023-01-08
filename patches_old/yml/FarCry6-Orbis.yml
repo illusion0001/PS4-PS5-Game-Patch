@@ -1,0 +1,12 @@
+- patch:
+  title: "Far Cry 6"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA15778" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00df3471, "eb0e" ]
+        - [ bytes, 0x00df3481, "31f6" ]

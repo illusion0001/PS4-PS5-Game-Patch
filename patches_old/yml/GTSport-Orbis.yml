@@ -1,0 +1,91 @@
+- patch:
+  title: "Gran Turismo Sport"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03220", "CUSA03667", "CUSA02168" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Online Saving"
+  author: "Nenkai, illusion"
+  note: "Originally discovered by Nenkai, ported to permanent executable patch by illusion."
+  arch: orbis
+  patch_list:
+      - [ bytes, 0x01e02772, "00" ] # unused
+      - [ utf8, 0x01e02773, "online_save=0\x00" ]
+      - [ bytes, 0x01e02781, "00" ] # unused
+      - [ bytes, 0x0059fac7, "48e85a2c8601" ]
+      - [ bytes, 0x01e02727, "488d3df218cf00" ]
+      - [ bytes, 0x01e0272e, "488d353d000000" ]
+      - [ bytes, 0x01e02735, "4989f6" ]
+      - [ bytes, 0x01e02738, "4c8937" ]
+      - [ bytes, 0x01e0273b, "4c8d7601" ]
+      - [ bytes, 0x01e0273f, "4c897708" ]
+      - [ bytes, 0x01e02743, "4d31f6" ]
+      - [ bytes, 0x01e02746, "4889fe" ]
+      - [ bytes, 0x01e02749, "bf02000000" ]
+      - [ bytes, 0x01e0274e, "c3" ]
+      - [ bytes, 0x01dffc00, "31c0c3" ] # no PSN sign-in screen after SCE screen
+
+- patch:
+  title: "Gran Turismo Sport"
+  app_ver: "01.14"
+  app_titleid: [ "CUSA03220", "CUSA03667", "CUSA02168" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Online Saving"
+  author: "Nenkai, illusion"
+  note: "Originally discovered by Nenkai, ported to permanent executable patch by illusion."
+  arch: orbis
+  patch_list:
+      - [ bytes, 0x01f46ff2, "00" ] # unused
+      - [ utf8, 0x01f46ff3, "online_save=0\x00" ]
+      - [ bytes, 0x01f47001, "00" ] # unused
+      - [ bytes, 0x0059fb1d, "48e884749a01" ]
+      - [ bytes, 0x01f46fa7, "488d3d7290d600" ]
+      - [ bytes, 0x01f46fae, "488d353d000000" ]
+      - [ bytes, 0x01f46fb5, "4989f6" ]
+      - [ bytes, 0x01f46fb8, "4c8937" ]
+      - [ bytes, 0x01f46fbb, "4c8d7601" ]
+      - [ bytes, 0x01f46fbf, "4c897708" ]
+      - [ bytes, 0x01f46fc3, "4d31f6" ]
+      - [ bytes, 0x01f46fc6, "4889fe" ]
+      - [ bytes, 0x01f46fc9, "bf02000000" ]
+      - [ bytes, 0x01f46fce, "c3" ]
+      - [ bytes, 0x01f44460, "31c0c3" ] # no PSN sign-in screen after SCE screen
+
+- patch:
+  title: "Gran Turismo Sport"
+  app_ver: "01.68"
+  app_titleid: [ "CUSA03220", "CUSA03667", "CUSA02168" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Online Saving"
+  author: "Nenkai, illusion"
+  note: "Originally discovered by Nenkai, ported to permanent executable patch by illusion."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x021364c0, "00" ] # unused
+        - [ utf8, 0x021364d0, "online_save=0\x00" ]
+        - [ bytes, 0x021364de, "00" ] # unused
+        - [ bytes, 0x005e0254, "48e8e65eb501" ]
+        - [ bytes, 0x02136140, "488d3dd99ecc00" ]
+        - [ bytes, 0x02136147, "488d3572030000" ]
+        - [ bytes, 0x0213614e, "4989f6" ]
+        - [ bytes, 0x02136151, "4c8937" ]
+        - [ bytes, 0x02136154, "4c8d7610" ]
+        - [ bytes, 0x02136158, "4c897708" ]
+        - [ bytes, 0x0213615c, "4d31f6" ]
+        - [ bytes, 0x0213615f, "4889fe" ]
+        - [ bytes, 0x02136162, "bf02000000" ]
+        - [ bytes, 0x02136167, "c3" ]
+        - [ bytes, 0x021200d0, "31c0c3" ] # no PSN sign-in screen after SCE screen
+
+- patch:
+  title: "Gran Turismo Sport"
+  app_ver: "01.68"
+  app_titleid: [ "CUSA03220", "CUSA03667", "CUSA02168" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Debug Menu"
+  arch: orbis
+  patch_list:
+        - [ utf8, 0x02f72b10, "debug\x00" ] # debug branch

@@ -1,0 +1,39 @@
+- patch:
+  title: "Horizon Forbidden West"
+  app_ver: "01.18"
+  app_titleid: [ "CUSA28561", "CUSA24705", "CUSA28563" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02b7ac40, "31c0c3" ]
+
+- patch:
+  title: "Horizon Forbidden West"
+  app_ver: "01.17"
+  app_titleid: [ "CUSA28561", "CUSA24705", "CUSA28563" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00566f83, "be00000000" ]
+
+- patch:
+  title: "Horizon Forbidden West"
+  app_ver: "01.17"
+  app_titleid: [ "CUSA28561", "CUSA24705", "CUSA28563" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Inital Boot on First Startup"
+  author: "illusion"
+  note: "Skips long intro video and first time language selection screen."
+  arch: orbis
+  patch_list:
+        # PlayerProfile::IsInitialBootDone
+        - [ bytes, 0x019e1bb7, "c6801801000001" ]
+        - [ bytes, 0x019e1bbe, "b001" ]
+        - [ bytes, 0x019e1bc0, "c3" ]

@@ -1,0 +1,62 @@
+- patch:
+  title: "Assassin's Creed: Unity"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA00663" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x03ffaadb, "0f85" ] # JNZ 0x03ffabf5
+
+- patch:
+  title: "Assassin's Creed: Unity"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA00663" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x042f034e, "be00000000" ] # MOV ESI,0x0
+
+- patch:
+  title: "Assassin's Creed: Unity"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA00663" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x042f3a19, 1920 ]
+        - [ bytes32, 0x042f3a0b, 1080 ]
+
+- patch:
+  title: "Assassin's Creed: Unity"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA00663" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x042f3a19, 1600 ]
+        - [ bytes32, 0x042f3a0b, 900  ]
+
+- patch:
+  title: "Assassin's Creed: Unity"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA00663" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x042f3a19, 1280 ]
+        - [ bytes32, 0x042f3a0b, 720  ]

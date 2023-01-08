@@ -1,0 +1,14 @@
+- patch:
+  title: Driveclub
+  app_ver: "01.28"
+  app_titleid: [ "CUSA00003", "CUSA00064" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "60 FPS"
+  author: "illusion, u/Charlie_Muggins"
+  note: "2.0 features deltatime."
+  arch: orbis
+  patch_list:
+        - [ bytes,   0x01184800, "b801000000" ] # MOV EAX,0x1 // fps
+        - [ bytes,   0x01184725, "48b001" ]     # MOV AL,0x1  // use default of fixedFramesPerSecond = 60.0f
+        - [ bytes16, 0x00a6306e, 0x9090 ]       # NOP x2      // deltatime

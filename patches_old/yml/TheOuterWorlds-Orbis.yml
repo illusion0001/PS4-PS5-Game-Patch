@@ -1,0 +1,29 @@
+- patch:
+  title: "The Outer Worlds"
+  app_ver: "01.08"
+  app_titleid: [ "CUSA16285", "CUSA13689" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0291c976, "48e829fbffff" ]
+        - [ bytes, 0x0291c4a5, "b801000000" ]
+        - [ bytes, 0x0291c4aa, "83f803" ]
+        - [ bytes, 0x0291c4ad, "c3" ]
+
+- patch:
+  title: "The Outer Worlds"
+  app_ver: "01.08"
+  app_titleid: [ "CUSA16285", "CUSA13689" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x046e3cf6, "e8c7000000" ]
+        - [ bytes, 0x046e3dc2, "c7048b00008642" ]
+        - [ bytes, 0x046e3dc9, "c5fa10048b" ]
+        - [ bytes, 0x046e3dce, "c3" ]

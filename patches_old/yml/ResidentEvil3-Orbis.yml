@@ -1,0 +1,11 @@
+- patch:
+  title: "Resident Evil 3"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA14168" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base, 1080p for Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x0349c9fc, 0x3f2b851f ]

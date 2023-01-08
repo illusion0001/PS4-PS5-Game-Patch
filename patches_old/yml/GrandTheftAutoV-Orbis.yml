@@ -1,0 +1,38 @@
+- patch:
+  title: "Grand Theft Auto V"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA00419", "CUSA00411", "CUSA00880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "CPU Limited."
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x00e6bf3e, 0x00000001 ]
+
+- patch:
+  title: "Grand Theft Auto V"
+  app_ver: "01.38"
+  app_titleid: [ "CUSA00419", "CUSA00411", "CUSA00880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion, GraFfiX_221211"
+  note: "CPU Limited."
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x01137b5e, 0x00000001 ]
+
+- patch:
+  title: "Grand Theft Auto V"
+  app_ver: "01.38"
+  app_titleid: [ "CUSA00419", "CUSA00411", "CUSA00880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x0333a794, 0x00000000 ]
+        - [ bytes32, 0x02c6afb8, 0x00000000 ]

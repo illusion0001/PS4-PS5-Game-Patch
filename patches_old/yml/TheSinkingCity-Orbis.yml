@@ -1,0 +1,13 @@
+- patch:
+  title: "The Sinking City"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA13152" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02204e3a, "48e831146d00" ]
+        - [ bytes, 0x02204706, "e8761b6d00" ]
+        - [ bytes, 0x028d6270, "cc41c7048e00008642c4c17a10048eeb0dc744210455558541c5fa106104c3" ]
