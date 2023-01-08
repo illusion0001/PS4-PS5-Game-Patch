@@ -1,0 +1,32 @@
+- patch:
+  title: "FATAL FRAME: Maiden of Black Water"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA28987" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x007b2f90, "48b83c00000001000000" ] # MOV RAX,0x10000003c # sleep RenderThread for 16.67ms
+
+- patch:
+  title: "FATAL FRAME: Maiden of Black Water"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA28987" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Always boot in English"
+  author: "illusion"
+  note: "Overrides display language selection with English."
+  arch: orbis
+  patch_list:
+        # Valid options
+        # English             = 1
+        # Traditional Chinese = 4
+        # Simplified Chinese  = 5
+        # first boot
+        - [ bytes, 0x00c41e5f, "b901000000" ] # MOV ECX,0x1
+        - [ bytes, 0x00c41e64, "eb1f" ]       # JMP 0x00c41e85
+        # sub boot
+        - [ bytes, 0x00c40bcb, "b801000000" ] # MOV EAX,0x1

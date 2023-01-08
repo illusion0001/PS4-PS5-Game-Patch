@@ -1,0 +1,24 @@
+- patch:
+  title: "Crash Team Racing Nitro-Fueled"
+  app_ver: "01.21"
+  app_titleid: [ "CUSA13795" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "Version 2.0 now removes double buffer vsync."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x017a9d90, "41899688040000" ]
+
+- patch:
+  title: "Crash Team Racing Nitro-Fueled"
+  app_ver: "01.21"
+  app_titleid: [ "CUSA13795" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Motion Blur"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00ef0f52, "9090909090" ]

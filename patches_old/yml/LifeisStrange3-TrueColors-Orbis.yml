@@ -1,0 +1,24 @@
+- patch:
+  title: "Life is Strange: True Colors"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA17941", "CUSA24801" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x04547742, "eb07" ]
+
+- patch:
+  title: "Life is Strange: True Colors"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA17941", "CUSA24801" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x03e0140c, "48e8c1845d02" ]
+        - [ bytes, 0x063d98d2, "0041c7048e00008642c4c17a10048ec3" ]

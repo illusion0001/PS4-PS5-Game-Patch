@@ -1,0 +1,26 @@
+- patch:
+  title: "Resident Evil 2"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA09193" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch"
+  author: "illusion"
+  note: "720p for Base, 1080p for Pro."
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x043c62d7, 0x3f2b851f ]
+
+- patch:
+  title: "Resident Evil 2"
+  app_ver: "01.05"
+  app_titleid: [ "CUSA09193" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Limit (Proper Frame-Pacing)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0436e473, "48e8db070000" ]
+        - [ bytes, 0x0436ec54, "418b7f10be01000000c3" ]
+

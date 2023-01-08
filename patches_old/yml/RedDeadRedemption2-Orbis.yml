@@ -1,0 +1,25 @@
+- patch:
+  rdr3_title: &rdr3_title "Red Dead Redemption 2"
+  site_game_title: *rdr3_title
+  title: *rdr3_title
+  app_ver: "01.29"
+  app_titleid: [ "CUSA03041", "CUSA08519", "CUSA08568" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Unlock FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0578ab57, "be00000000" ]
+
+- patch:
+  title: *rdr3_title
+  app_ver: "01.29"
+  app_titleid: [ "CUSA03041", "CUSA08519", "CUSA08568" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x009b4f44, "909090909090" ]

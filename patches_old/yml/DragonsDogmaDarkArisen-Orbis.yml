@@ -1,0 +1,13 @@
+- patch:
+  DDDAtitle: &DDDAtitle "Dragon's Dogma: Dark Arisen"
+  site_game_title: *DDDAtitle
+  title: *DDDAtitle
+  app_ver: "01.01"
+  app_titleid: [ "CUSA07316", "CUSA09431" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x018e1cb4, 0x42700000 ] # MaxFPS

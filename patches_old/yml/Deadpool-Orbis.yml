@@ -1,0 +1,11 @@
+- patch:
+  title: "Deadpool"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03528", "CUSA03245" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00b41aa1, 0x0 ]

@@ -1,0 +1,429 @@
+- patch:
+  edrtitle: &edrtitle "Elden Ring"
+  edrtitleid: &edrtitleid [ "CUSA28863", "CUSA18723", "CUSA28527" ]
+  site_game_title: *edrtitle
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "illusion"
+  note: "Unlocks framerate on Base/Slim PS4"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02021e32, "48b90900000009000000" ]
+        - [ bytes, 0x02021e3c, "b805000000" ]
+        - [ bytes, 0x02021e41, "eb06" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion"
+  note: "Fixes framepacing issues at the cost of slightly increased input latency."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02021e32, "48b90900000009000000" ]
+        - [ bytes, 0x02021e3c, "b805000000" ]
+        - [ bytes, 0x02021e41, "eb06" ]
+        - [ bytes, 0x031650c9, "4589b534040000" ]
+        - [ bytes, 0x031650d0, "418bbd30040000" ]
+        - [ bytes, 0x031650d7, "be01000000" ]
+        - [ bytes, 0x031650dc, "90909090" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # .data is not the same as .text, +0x1c8000 to get no-aslr addr
+        # - [ bytes32, 0x04258d4c, 1280 ]
+        # - [ bytes32, 0x04258d50, 720  ]
+        - [ bytes32, 0x04090d4c, 1280 ]
+        - [ bytes32, 0x04090d50, 720  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # - [ bytes32, 0x04258d4c, 1600 ]
+        # - [ bytes32, 0x04258d50, 900  ]
+        - [ bytes32, 0x04090d4c, 1600 ]
+        - [ bytes32, 0x04090d50, 900  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x0201466f, 1920 ]
+        - [ bytes32, 0x02014679, 1080 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable MenuMan.EnableTopMenuDebug"
+  author: "illusion"
+  note: "Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0203064b, "b801000000" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.00"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x01c6cfaa, 0x1 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "illusion"
+  note: "Unlocks framerate on Base/Slim PS4"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02106663, "48b90900000009000000" ]
+        - [ bytes, 0x0210666d, "b805000000" ]
+        - [ bytes, 0x02106672, "eb06" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion"
+  note: "Fixes framepacing issues at the cost of slightly increased input latency."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02106663, "48b90900000009000000" ]
+        - [ bytes, 0x0210666d, "b805000000" ]
+        - [ bytes, 0x02106672, "eb06" ]
+        - [ bytes, 0x0319dcd9, "4589b534040000" ]
+        - [ bytes, 0x0319dce0, "418bbd30040000" ]
+        - [ bytes, 0x0319dce7, "be01000000" ]
+        - [ bytes, 0x0319dcec, "90909090" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # .data is not the same as .text, +0x184000 to get no-aslr addr
+        # - [ bytes32, 0x04258e3c, 1280 ]
+        # - [ bytes32, 0x04258e40, 720  ]
+        - [ bytes32, 0x040d4e3c, 1280 ]
+        - [ bytes32, 0x040d4e40, 720  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # - [ bytes32, 0x04258e3c, 1600 ]
+        # - [ bytes32, 0x04258e40, 900  ]
+        - [ bytes32, 0x040d4e3c, 1600 ]
+        - [ bytes32, 0x040d4e40, 900  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x020486cf, 1920 ]
+        - [ bytes32, 0x020486d9, 1080 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable MenuMan.EnableTopMenuDebug"
+  author: "illusion"
+  note: "Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02063aab, "b801000000" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.05"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x01ca0a7a, 0x1 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.08"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  note: "Unlocks framerate on Base/Slim PS4"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x20e0ab3, "48b90900000009000000" ]
+        - [ bytes, 0x20e0abd, "b805000000" ]
+        - [ bytes, 0x20e0ac2, "eb06" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.08"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x40b4e7c, 1280 ]
+        - [ bytes32, 0x40b4e80, 720  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.08"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x40b4e7c, 1600 ]
+        - [ bytes32, 0x40b4e80, 900  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.08"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x202172f, 1920 ]
+        - [ bytes32, 0x2021739, 1080 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.08"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x1c7a9ea, 0x1 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.09"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  note: "Unlocks framerate on Base/Slim PS4"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x20e7f43, "48b90900000009000000" ]
+        - [ bytes, 0x20e7f4d, "b805000000" ]
+        - [ bytes, 0x20e7f52, "eb06" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.09"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis #+0x19C000 to get no-aslr addr (0x4258E7C)
+  patch_list:
+        - [ bytes32, 0x40bce7c, 1280 ]
+        - [ bytes32, 0x40bce80, 720  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.09"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis #+0x19C000 to get no-aslr addr (0x4258E7C)
+  patch_list:
+        - [ bytes32, 0x40bce7c, 1600 ]
+        - [ bytes32, 0x40bce80, 900  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.09"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis 
+  patch_list:
+        - [ bytes32, 0x202885f, 1920 ]
+        - [ bytes32, 0x2028869, 1080 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.09"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion, Ported by XiangBuChuMingZiNiMei BaiDuTieBa"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x1C8032A, 0x1 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "illusion"
+  note: "Unlocks framerate on Base/Slim PS4"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x020e8083, "b805000000" ]
+        - [ bytes, 0x020e8088, "48b90900000009000000" ]
+        - [ bytes, 0x020e8092, "0f1f840000000000" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Framepacing Fix"
+  author: "illusion"
+  note: "Fixes framepacing issues at the cost of slightly increased input latency."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x020e8083, "b805000000" ]
+        - [ bytes, 0x020e8088, "48b90900000009000000" ]
+        - [ bytes, 0x020e8092, "0f1f840000000000" ]
+        - [ bytes, 0x032bd760, "be01000000" ]
+        - [ bytes, 0x032bd765, "ff25a520e600" ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # no aslr addr
+        # - [ bytes32, 0x04258e7c, 1280 ]
+        # - [ bytes32, 0x04258e80, 720  ]
+        - [ bytes32, 0x040c0e7c, 1280 ]
+        - [ bytes32, 0x040c0e80, 720  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # no aslr addr
+        # - [ bytes32, 0x04258e7c, 1600 ]
+        # - [ bytes32, 0x04258e80, 900  ]
+        - [ bytes32, 0x040c0e7c, 1600 ]
+        - [ bytes32, 0x040c0e80, 900  ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "illusion"
+  arch: orbis 
+  patch_list:
+        - [ bytes32, 0x0202898f, 1920 ]
+        - [ bytes32, 0x02028999, 1080 ]
+
+- patch:
+  title: *edrtitle
+  app_ver: "01.10"
+  app_titleid: *edrtitleid
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x01c7f1da, 0x1 ]

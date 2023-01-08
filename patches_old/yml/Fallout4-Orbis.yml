@@ -1,0 +1,30 @@
+- patch:
+  title: "Fallout 4"
+  app_ver: "01.34"
+  app_titleid: [ "CUSA02557", "CUSA02962", "CUSA03450" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x014B4FB7, 0x00000000 ]
+
+- patch:
+  title: "Fallout 4"
+  app_ver: "01.34"
+  app_titleid: [ "CUSA02557", "CUSA02962", "CUSA03450" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # Base
+        # 1920x1080 -> 1280x720
+        - [ bytes32, 0x014b4a98, 1280 ]
+        - [ bytes32, 0x014b4a9c, 720  ]
+        # Neo // untested!
+        # 2560x1440
+        # 0xD9CAFB
+        # 0xD9CB21

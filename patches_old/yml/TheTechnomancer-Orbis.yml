@@ -1,0 +1,11 @@
+- patch:
+  title: "The Technomancer"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA03803", "CUSA03824" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x007784be, "be0000000090" ]

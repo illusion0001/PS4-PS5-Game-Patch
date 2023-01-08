@@ -1,0 +1,29 @@
+- patch:
+  title: "Dark Souls III: The Fire Fades Edition"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA08155", "CUSA07439" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "Only useful for base console."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01c0405d, "eb0e" ]
+        - [ bytes, 0x01c041d6, "eb0e" ]
+
+- patch:
+  title: "Dark Souls III: The Fire Fades Edition"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA08155", "CUSA07439" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame-Pacing)"
+  author: "illusion"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        # Fliprate
+        - [ bytes, 0x01c041d6, "eb0e" ]
+        # sceVideoOutSetFlipRate 0x1
+        - [ bytes, 0x025140c3, "be01000000eb03" ]

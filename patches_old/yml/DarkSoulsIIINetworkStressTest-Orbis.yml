@@ -1,0 +1,121 @@
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock (With Delta Time)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0278c407, "c7430805000000eb07" ] # flipmode
+        - [ bytes, 0x0278c50c, "41b601" ]             # delta time
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0278c407, "c7430805000000eb07" ]           # flipmode
+        # SceVideoOutFliprate(handle, 1);
+        # return;
+        - [ bytes, 0x02dbdb44, "488b1ded10f102be01000000eb03" ] # fliprate
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "720p Resolution"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # todo: convert these to int patches
+        - [ bytes, 0x05d22d84, "00050000d0020000" ]
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "900p Resolution"
+  author: "Whitehawkx"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x05d22d84, "4006000084030000" ]
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Bypass Network Check"
+  author: "Unknown"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x2309e80, "e91c02" ] # JMP 0x01F0E0A1
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Developer Debug Menu"
+  author: "Whitehawkx"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02766352, "01" ] # MOV ECX,0x1
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Top Menu Debug"
+  author: "Whitehawkx"
+  note: "Hidden Pause Menu"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01defd96, "b201" ] # MOV DL,0x1
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "All Menu Options"
+  author: "Whitehawkx, Lance McDonald"
+  note: "Enables equipment, item and status menus"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x022a29a9, "90" ] # NOP
+        - [ bytes, 0x022a29aa, "90" ] # NOP
+        - [ bytes, 0x022a29ab, "90" ] # NOP
+        - [ bytes, 0x022a29ac, "90" ] # NOP
+        - [ bytes, 0x022a29ad, "90" ] # NOP
+        - [ bytes, 0x022a29ae, "90" ] # NOP
+
+- patch:
+  title: "Dark Souls III: Network Stress Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA03500" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable Video Recording"
+  author: "Whitehawkx"
+  note: "Re-enables built-in video recording (share button)"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0276375c, "c745ec00000000" ] # MOV (RBP + -0x14),0x0

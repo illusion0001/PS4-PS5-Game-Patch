@@ -1,0 +1,251 @@
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x04d99138, 0x00000000 ]
+        - [ bytes32, 0x04d99154, 0x00000000 ]
+        - [ bytes32, 0x04d9916e, 0x00000000 ]
+
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion, Lance McDonald (manfightdragon)"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        - [ float32, 0x02434883, 0.016666667 ]
+        # SceVideoOutFliprate(handle, 1);
+        # return;
+        - [ bytes, 0x02ad61df, "be010000004989dc9090909090" ]
+
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Chromatic Aberration"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0269faa8, "c783ac000000000000009090" ]
+
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Motion Blur"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x026a057b, "eb16" ]
+
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS (With Deltatime)"
+  author: "Lance McDonald (manfightdragon)"
+  arch: orbis
+  patch_list:
+        # Diff generated from: https://www.patreon.com/posts/47314774
+        # Todo: figure out what all these do
+        # Every blank line is beginning diff'd areas
+
+        # assertion skip
+        - [ bytes, 0x00fbc40f, "eb1d" ]                 # JMP 0x00fbc42e
+        # free up code space for next section 
+        - [ bytes, 0x013d2e16, "eb19" ]                 # JMP 0x013d2e31
+        # multiply something by 2x
+        - [ bytes, 0x013d2e18, "4156" ]                 # PUSH R14
+        - [ bytes, 0x013d2e1a, "41c746080000003f" ]     # MOV dword ptr [R14 + 0x8],0x3f000000
+        - [ bytes, 0x013d2e22, "c4c17a5e4608" ]         # VDIVSS XMM0,XMM0,dword ptr [R14 + 0x8]
+        - [ bytes, 0x013d2e28, "415e" ]                 # POP R14
+        - [ bytes, 0x013d2e2a, "e933070000" ]           # JMP 0x013d3562
+        - [ bytes, 0x013d2e2f, "90" ]                   # NOP
+        - [ bytes, 0x013d2e30, "90" ]                   # NOP
+        # 0.5 to xmm0
+        - [ bytes, 0x013d3557, "c4c17a104608" ]         # VMOVSS XMM0,dword ptr [R14 + 0x8]
+        - [ bytes, 0x013d355d, "e9b6f8ffff" ]           # JMP 0x013d2e18
+        # deltatime code cave
+        - [ bytes, 0x01bf9b71, "e933010000" ]           # JMP 0x01bf9ca9
+        - [ bytes, 0x01bf9b76, "90" ]                   # NOP
+        - [ bytes, 0x01bf9b77, "90" ]                   # NOP
+        # get and write physics deltatime to game logic
+        - [ bytes, 0x01bf9ca9, "488d054868d403" ]       # LEA RAX,[0x59404f8]
+        - [ bytes, 0x01bf9cb0, "488b00" ]               # MOV RAX,qword ptr [RAX]
+        - [ bytes, 0x01bf9cb3, "8b8064020000" ]         # MOV EAX,dword ptr [RAX + 0x264]
+        - [ bytes, 0x01bf9cb9, "8945b8" ]               # MOV dword ptr [RBP + -0x48],EAX
+        - [ bytes, 0x01bf9cbc, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cbd, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cbe, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cbf, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc0, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc1, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc2, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc3, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc4, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc5, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc6, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc7, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc8, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cc9, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cca, "90" ]                   # NOP
+        - [ bytes, 0x01bf9ccb, "90" ]                   # NOP
+        - [ bytes, 0x01bf9ccc, "90" ]                   # NOP
+        - [ bytes, 0x01bf9ccd, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cce, "90" ]                   # NOP
+        - [ bytes, 0x01bf9ccf, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cd0, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cd1, "90" ]                   # NOP
+        - [ bytes, 0x01bf9cd2, "e9a1feffff" ]           # JMP 0x01bf9b78
+        # string redirect
+        - [ bytes, 0x020367c7, "488d351cd2c702" ]       # LEA RSI,[0x4cb39ea]
+        - [ bytes, 0x020369e8, "488d35b5cfc702" ]       # LEA RSI,[0x4cb39a4]
+        # write deltatime to something
+        - [ bytes, 0x021bc181, "488d3d70437803" ]       # LEA RDI,[0x59404f8]
+        - [ bytes, 0x021bc188, "488b3f" ]               # MOV RDI,qword ptr [RDI]
+        - [ bytes, 0x021bc18b, "c5fa598764020000" ]     # VMULSS XMM0,XMM0,dword ptr [RDI + 0x264]
+        - [ bytes, 0x021bc193, "90" ]                   # NOP
+        - [ bytes, 0x021bc194, "90" ]                   # NOP
+        - [ bytes, 0x021bc195, "90" ]                   # NOP
+        - [ bytes, 0x021bc196, "90" ]                   # NOP
+        - [ bytes, 0x021bc197, "90" ]                   # NOP
+        - [ bytes, 0x021bc198, "90" ]                   # NOP
+        - [ bytes, 0x021bc199, "90" ]                   # NOP
+        - [ bytes, 0x021bc19a, "90" ]                   # NOP
+        - [ bytes, 0x021bc19b, "90" ]                   # NOP
+        - [ bytes, 0x021bc19c, "90" ]                   # NOP
+        - [ bytes, 0x021bc19d, "e96e010000" ]           # JMP 0x021bc310
+        # deltatime code cave
+        - [ bytes, 0x021bc308, "e974feffff" ]           # JMP 0x021bc181
+        - [ bytes, 0x021bc30d, "90" ]                   # NOP
+        - [ bytes, 0x021bc30e, "90" ]                   # NOP
+        - [ bytes, 0x021bc30f, "90" ]                   # NOP
+        # write deltatime to something
+        - [ bytes, 0x02377cea, "eb24" ]                 # JMP 0x02377d10
+        - [ bytes, 0x02377cec, "488d1d05885c03" ]       # LEA RBX,[0x59404f8]
+        - [ bytes, 0x02377cf3, "488b1b" ]               # MOV RBX,qword ptr [RBX]
+        - [ bytes, 0x02377cf6, "c5fa108364020000" ]     # VMOVSS XMM0,dword ptr [RBX + 0x264]
+        - [ bytes, 0x02377cfe, "90" ]                   # NOP
+        - [ bytes, 0x02377cff, "90" ]                   # NOP
+        - [ bytes, 0x02377d00, "90" ]                   # NOP
+        - [ bytes, 0x02377d01, "90" ]                   # NOP
+        - [ bytes, 0x02377d02, "90" ]                   # NOP
+        - [ bytes, 0x02377d03, "90" ]                   # NOP
+        - [ bytes, 0x02377d04, "90" ]                   # NOP
+        - [ bytes, 0x02377d05, "90" ]                   # NOP
+        - [ bytes, 0x02377d06, "90" ]                   # NOP
+        - [ bytes, 0x02377d07, "90" ]                   # NOP
+        - [ bytes, 0x02377d08, "90" ]                   # NOP
+        - [ bytes, 0x02377d09, "90" ]                   # NOP
+        - [ bytes, 0x02377d0a, "90" ]                   # NOP
+        - [ bytes, 0x02377d0b, "90" ]                   # NOP
+        - [ bytes, 0x02377d0c, "90" ]                   # NOP
+        - [ bytes, 0x02377d0d, "90" ]                   # NOP
+        - [ bytes, 0x02377d0e, "eb42" ]                 # JMP 0x02377d52
+        - [ bytes, 0x02377d48, "eba2" ]                 # JMP 0x02377cec
+        # write deltatime to something
+        - [ bytes, 0x02418e3d, "8b8364020000" ]         # MOV EAX,dword ptr [RBX + 0x264]
+        - [ bytes, 0x02418e43, "8945c8" ]               # MOV dword ptr [RBP + -0x38],EAX
+        - [ bytes, 0x02418e46, "90" ]                   # NOP
+        - [ bytes, 0x02418e47, "90" ]                   # NOP
+        - [ bytes, 0x02418e48, "90" ]                   # NOP
+        - [ bytes, 0x02418e49, "90" ]                   # NOP
+        - [ bytes, 0x02418e4a, "90" ]                   # NOP
+        - [ bytes, 0x02418e4b, "90" ]                   # NOP
+        - [ bytes, 0x02418e4c, "90" ]                   # NOP
+        - [ bytes, 0x02418e4d, "90" ]                   # NOP
+        - [ bytes, 0x02418e4e, "90" ]                   # NOP
+        - [ bytes, 0x02418e4f, "90" ]                   # NOP
+        - [ bytes, 0x02418e50, "90" ]                   # NOP
+        - [ bytes, 0x02418e51, "90" ]                   # NOP
+        - [ bytes, 0x02418e52, "90" ]                   # NOP
+        - [ bytes, 0x02418e53, "90" ]                   # NOP
+        - [ bytes, 0x02418e54, "90" ]                   # NOP
+        - [ bytes, 0x02418e55, "90" ]                   # NOP
+        - [ bytes, 0x02418e56, "90" ]                   # NOP
+        - [ bytes, 0x02418e57, "90" ]                   # NOP
+        - [ bytes, 0x02418e58, "90" ]                   # NOP
+        - [ bytes, 0x02418e59, "90" ]                   # NOP
+        - [ bytes, 0x02418e5a, "90" ]                   # NOP
+        - [ bytes, 0x02418e5b, "90" ]                   # NOP
+        - [ bytes, 0x02418e5c, "90" ]                   # NOP
+        - [ bytes, 0x02418e5d, "90" ]                   # NOP
+        - [ bytes, 0x02418e5e, "90" ]                   # NOP
+        - [ bytes, 0x02418e5f, "90" ]                   # NOP
+        - [ bytes, 0x02418e60, "90" ]                   # NOP
+        - [ bytes, 0x02418e61, "90" ]                   # NOP
+        - [ bytes, 0x02418e62, "90" ]                   # NOP
+        - [ bytes, 0x02418e63, "90" ]                   # NOP
+        - [ bytes, 0x02418e64, "488d05a5765203" ]       # LEA RAX,[0x5940510]
+        # frame update to 16.67ms
+        - [ bytes, 0x0243487e, "41c74424188988883c" ]   # MOV dword ptr [R12 + 0x18],0x3c888889
+        - [ bytes, 0x02434887, "48b90000000001000000" ] # MOV RCX,0x100000000
+
+        - [ bytes, 0x02483ec1, "c3" ]                   # RET
+        - [ bytes, 0x02483ec2, "90" ]                   # NOP
+        - [ bytes, 0x02483ec3, "90" ]                   # NOP
+        - [ bytes, 0x02483ec4, "90" ]                   # NOP
+        - [ bytes, 0x02483ec5, "90" ]                   # NOP
+
+        - [ bytes, 0x02715d71, "e881090000" ]           # CALL 0x027166f7
+        - [ bytes, 0x02715d76, "90" ]                   # NOP
+        - [ bytes, 0x02715d77, "90" ]                   # NOP
+        - [ bytes, 0x02715d78, "90" ]                   # NOP
+
+        # Text
+        - [ utf16, 0x04cb39ea, "This 60fps patch was\x00\x00" ]
+        - [ utf16, 0x04cb39a4, "Made with love, by Lance McDonald\x00\x00" ]
+
+- patch:
+  title: "Bloodborne"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA00900", "CUSA00207", "CUSA03173", "CUSA00208", "CUSA01363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "Lance McDonald (manfightdragon)"
+  arch: orbis
+  patch_list:
+        # Render Target
+        - [ bytes32, 0x055289f8, 1280 ]
+        - [ bytes32, 0x055289fc, 720  ]
+        # Reticle Fix
+        - [ bytes, 0x01a44c55, "b880070000" ]           # MOV EAX,0x780
+        - [ bytes, 0x01a44c5a, "90" ]                   # NOP
+        - [ bytes, 0x01a44c5b, "90" ]                   # NOP
+        - [ bytes, 0x01a44c5c, "90" ]                   # NOP
+        - [ bytes, 0x01a44c5d, "90" ]                   # NOP
+        - [ bytes, 0x01a44c5e, "c4e1fa2ac8" ]           # VCVTSI2SS XMM1,XMM0,RAX
+        - [ bytes, 0x01a44c63, "b838040000" ]           # MOV EAX,0x438
+        - [ bytes, 0x01a44c68, "90" ]                   # NOP
+        - [ bytes, 0x01a44c69, "90" ]                   # NOP
+        - [ bytes, 0x01a44c6a, "90" ]                   # NOP
+        - [ bytes, 0x01a44c6b, "90" ]                   # NOP
+        # Reticle Fix
+        - [ bytes, 0x01a452c7, "b880070000" ]           # MOV EAX,0x780
+        - [ bytes, 0x01a452cc, "90" ]                   # NOP
+        - [ bytes, 0x01a452cd, "90" ]                   # NOP
+        - [ bytes, 0x01a452ce, "90" ]                   # NOP
+        - [ bytes, 0x01a452cf, "90" ]                   # NOP
+        - [ bytes, 0x01a452d0, "c4e1fa2ac8" ]           # VCVTSI2SS XMM1,XMM0,RAX
+        - [ bytes, 0x01a452d5, "b838040000" ]           # MOV EAX,0x438
+        - [ bytes, 0x01a452da, "90" ]                   # NOP
+        - [ bytes, 0x01a452db, "90" ]                   # NOP
+        - [ bytes, 0x01a452dc, "90" ]                   # NOP
+        - [ bytes, 0x01a452dd, "90" ]                   # NOP

@@ -1,0 +1,19 @@
+- patch:
+  title: "Stray"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA24899" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01a10c60, "c7048b01000000" ]
+        - [ bytes, 0x01a10c67, "8b048b" ]
+        - [ bytes, 0x01a10c6a, "89c1" ]
+        - [ bytes, 0x01a10c6c, "c1f91f" ]
+        - [ bytes, 0x01a10c6f, "c4e270f2c0" ]
+        - [ bytes, 0x01a10c74, "4883c408" ]
+        - [ bytes, 0x01a10c78, "5b" ]
+        - [ bytes, 0x01a10c79, "5d" ]
+        - [ bytes, 0x01a10c7a, "c3" ]

@@ -1,0 +1,30 @@
+- patch:
+  title: "Marvel's Spider-Man"
+  app_ver: "01.19"
+  app_titleid: [ "CUSA02299", "CUSA11993", "CUSA11994", "CUSA11995", "CUSA09751", "CUSA09893" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0179f2a5, "b80000803f" ]
+        - [ bytes, 0x0179f2aa, "4189471c" ]
+        - [ bytes, 0x0179f2ae, "c3" ]
+        - [ bytes, 0x0179f30f, "e891ffffff" ]
+        - [ bytes, 0x0179f314, "9090" ]
+
+- patch:
+  title: "Marvel's Spider-Man"
+  app_ver: "01.19"
+  app_titleid: [ "CUSA02299", "CUSA11993", "CUSA11994", "CUSA11995", "CUSA09751", "CUSA09893" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Debug Menu"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0189059a, "48e871000000" ]
+        - [ bytes, 0x01890611, "c6400d01" ]             # EngineDebug.DebugMenuEnable
+        - [ bytes, 0x01890615, "c7809812000001000100" ] # # GUI.UseDebugMenuInput + GUI.EasyDebug
+        - [ bytes, 0x0189061f, "c3" ]

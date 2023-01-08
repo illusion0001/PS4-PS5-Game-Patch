@@ -1,0 +1,26 @@
+- patch:
+  title: "MediEvil"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA11227", "CUSA12982" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x025af801, "e82c000000" ]
+        - [ bytes, 0x025af832, "c7048b00008642c5fa10048bc3" ]
+
+- patch:
+  title: "MediEvil"
+  app_ver: "01.02"
+  app_titleid: [ "CUSA11227", "CUSA12982" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02b58719, "e8c790feff" ]
+        - [ bytes, 0x02b58746, "1b" ]
+        - [ bytes, 0x02b417e0, "e996f40101c5f82e0c8b4c8d148b813c8b0000f041740d41c78204d6000000000000eb0b41c78204d6000002000000c3" ]

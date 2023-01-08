@@ -1,0 +1,62 @@
+- patch:
+  title: "Spyro Reignited Trilogy"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA12085" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x030cb321, "48e82b040000" ]
+        - [ bytes, 0x030cb752, "c6835007000000" ]
+        - [ bytes, 0x030cb759, "8a8350070000" ]
+        - [ bytes, 0x030cb75f, "c3" ]
+
+- patch:
+  title: "Spyro Reignited Trilogy"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA12085" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02b5dc66, "e82c000000" ]
+        - [ bytes, 0x02b5dc97, "c7048b0000c842" ]
+        - [ bytes, 0x02b5dc9e, "eb06" ]
+        - [ bytes, 0x02b5dca6, "c5fa10048b" ]
+        - [ bytes, 0x02b5dcab, "c3" ]
+
+- patch:
+  title: "Spyro Reignited Trilogy"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA12085" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for PS4/PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02b5dc66, "e82c000000" ]
+        - [ bytes, 0x02b5dc97, "c7048bf6a8a642" ]
+        - [ bytes, 0x02b5dc9e, "eb06" ]
+        - [ bytes, 0x02b5dca6, "c5fa10048b" ]
+        - [ bytes, 0x02b5dcab, "c3" ]
+
+- patch:
+  title: "Spyro Reignited Trilogy"
+  app_ver: "01.03"
+  app_titleid: [ "CUSA12085" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for PS4/PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02b5dc66, "e82c000000" ]
+        - [ bytes, 0x02b5dc97, "c7048b0a578542" ]
+        - [ bytes, 0x02b5dc9e, "eb06" ]
+        - [ bytes, 0x02b5dca6, "c5fa10048b" ]
+        - [ bytes, 0x02b5dcab, "c3" ]

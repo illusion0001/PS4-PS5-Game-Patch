@@ -1,0 +1,36 @@
+- patch:
+  title: "Mad Max"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA00103", "CUSA00054" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0132b900, "be00000000909090" ]
+
+- patch:
+  title: "Mad Max"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA00103", "CUSA00054" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x00e8ef48, 1280 ]
+        - [ bytes32, 0x00e8ef4c, 720  ]
+
+- patch:
+  title: "Mad Max"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA00103", "CUSA00054" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Motion Blur"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00ea3f5a, 0x0 ]

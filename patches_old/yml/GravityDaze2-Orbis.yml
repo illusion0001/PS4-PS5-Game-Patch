@@ -1,0 +1,386 @@
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x01378a40, 0xc3 ]
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Remove save copy protection"
+  author: "illusion"
+  note: "Removes CE-33678-7 error message when loading save from other accounts."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0095de96, "909090909090" ]
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "3.0"
+  name: "60 FPS"
+  author: "illusion"
+  note: "Implemented button combos:\nL3 + Cross (X): Cycle through framerate modes.\nR3 + Square: Toggle Replace All Text with Level Names (Debug)"
+  arch: orbis
+  patch_list:
+        # todo: implement igc detection for igc failures
+        # forbidden level names
+        - [ utf8, 0x01802d10, "ep01_com\x00" ]
+        # level names to run at 30fps
+        # kit
+        - [ utf8, 0x01803125, "ep00_c\x00\x00" ]    # igc failure
+        - [ utf8, 0x0180312d, "ep01_d\x00\x00" ]    # script failure
+        - [ utf8, 0x01803135, "ep02_a\x00\x00" ]    # igc failure
+        - [ utf8, 0x0180313d, "sm08\x00" ]          # double speed timer
+        - [ utf8, 0x01803142, "sm09\x00" ]          # script failure
+        - [ utf8, 0x01803147, "ep03_p\x00\x00"]     # script fialure
+        - [ utf8, 0x0180314f, "ep07_f\x00\x00"]     # igc failure
+        - [ utf8, 0x01803157, "ep07_h\x00\x00"]     # igc failure
+        - [ utf8, 0x0180315f, "ep08_b\x00\x00"]     # igc failure
+        - [ utf8, 0x01803167, "ep08_d\x00\x00"]     # igc failure
+        - [ utf8, 0x0180316f, "ep09_i\x00\x00"]     # igc failure
+        - [ utf8, 0x01803177, "ep12_f\x00\x00"]     # igc failure
+        - [ utf8, 0x0180317f, "ep13_co\x00"]        # igc failure
+        - [ utf8, 0x01803187, "eps15\x00\x00\x00" ] # igc failure
+        - [ utf8, 0x0180318f, "ep15_e\x00\x00" ]    # igc failure
+        - [ utf8, 0x01803197, "ep16_a\x00\x00" ]    # igc failure
+        - [ utf8, 0x0180319f, "ep22_c\x00\x00" ]    # script failure
+        - [ utf8, 0x018031bd, "sm10\x00"]           # igc failure
+        - [ utf8, 0x018031c2, "sm12_b\x00\x00"]     # igc failure
+        - [ utf8, 0x018031ca, "sm13\x00"]           # igc failure
+        - [ utf8, 0x018031d4, "ep27_co\x00" ]       # igc failure
+        # crow
+        - [ utf8, 0x018031ad, "dm06_c\x00\x00" ] # igc failure
+        - [ utf8, 0x018031b5, "dm06_d\x00\x00" ] # script failure
+        # watermark
+        - [ utf8, 0x018038e9, "This patch was created by illusion\nWith love to Gravity Rush Developers and Fans."]
+        # Framerate init
+        - [ bytes, 0x00846980, "be00000000" ] # MOV ESI,0x0
+        # Sleep draw thread for constant 4.166ms
+        - [ bytes, 0x0084dda4, "bf46100000" ] # MOV EDI,0x1046
+        - [ bytes, 0x0084dda9, "eb08" ]       # JMP 0x0084ddb3
+        - [ bytes, 0x0084ddab, "90" ]         # NOP
+        # deltatime for game logic
+        - [ bytes, 0x0085e9cc, "e8cd43fa00" ]       # CALL 0x01802d9e
+        - [ bytes32, 0x01802d90, 0x49742400 ]       # 1000000.0f # to be used for division
+        - [ bytes64, 0x01802d94, 66667 ]            # Min FPS of 1/15 in int
+        - [ bytes, 0x01802d9e, "4889150b533000" ]   # MOV qword ptr [0x01b080b0],RDX
+        - [ bytes, 0x01802da5, "48893d0c533000" ]   # MOV qword ptr [0x01b080b8],RDI
+        - [ bytes, 0x01802dac, "488b3de1ffffff" ]   # MOV RDI,qword ptr [0x01802d94]
+        - [ bytes, 0x01802db3, "488d15b6523000" ]   # LEA RDX,[0x1b08070]
+        # small optimiaztion
+        # using int before converting and dviding to float should be faster
+        - [ bytes, 0x01802dba, "48393d07587500" ]   # CMP qword ptr [0x01f585c8],RDI
+        - [ bytes, 0x01802dc1, "771c" ]             # JA 0x01802ddf
+        - [ bytes, 0x01802dc3, "803a01" ]           # CMP byte ptr [RDX],0x1
+        - [ bytes, 0x01802dc6, "7417" ]             # JZ 0x01802ddf
+        - [ bytes, 0x01802dc8, "803a03" ]           # CMP byte ptr [RDX],0x3
+        - [ bytes, 0x01802dcb, "7412" ]             # JZ 0x01802ddf
+        # only do floating points opreation here
+        - [ bytes, 0x01802dcd, "c5222a1df3577500" ] # VCVTSI2SS XMM11,XMM11,dword ptr [0x01f585c8]
+        - [ bytes, 0x01802dd5, "c5a25e0db3ffffff" ] # VDIVSS XMM1,XMM11,dword ptr [0x01802d90]
+        - [ bytes, 0x01802ddd, "eb08" ]             # JMP 0x01802de7
+        - [ bytes, 0x01802ddf, "c5fa100d3d836f00" ] # VMOVSS XMM1,dword ptr [0x01efb124]
+        - [ bytes, 0x01802de7, "488b15c2523000" ]   # MOV RDX,qword ptr [0x01b080b0]
+        - [ bytes, 0x01802dee, "488b3dc3523000" ]   # MOV RDI,qword ptr [0x01b080b8]
+        - [ bytes, 0x01802df5, "c3" ]               # RET
+        # UI timesteps
+        # Todo: find menu, map and marker timestep
+        - [ bytes32, 0x018c4934, 0x3c888889 ] # Main Menu
+        - [ bytes32, 0x013e46e8, 0x3c888889 ] # Comics
+        - [ bytes32, 0x018c491c, 0x3c888889 ] # Main Menu Navigation
+        # level is loading (mode 3 for faster loading)
+        - [ bytes, 0x013c8f2f, "e8479e4300" ]     # CALL 0x01802d7b
+        - [ bytes, 0x013c8f34, "eb1b" ]           # JMP 0x013c8f51
+        - [ bytes, 0x01802d7b, "c605ee52300003" ] # MOV byte ptr [0x01b08070],0x3
+        - [ bytes, 0x01802d82, "c3" ]             # RET
+        # level is done loading
+        - [ bytes, 0x013c8f8e, "ebca" ]           # JMP 0x013c8f5a
+        - [ bytes, 0x013c8f5a, "e9249e4300" ]     # JMP 0x01802d83
+        - [ bytes, 0x01802d83, "c605e652300002" ] # MOV byte ptr [0x01b08070],0x2
+        - [ bytes, 0x01802d8a, "c3" ]             # RET
+        # level save
+        - [ bytes, 0x01627921, "e81cb41d00" ]       # CALL 0x01802d42
+        - [ bytes, 0x01802d42, "43c6043c00" ]       # MOV byte ptr [R12 + R15*0x1],0x0
+        - [ bytes, 0x01802d47, "e929020000" ]       # JMP 0x01802f75
+        - [ bytes, 0x01802d54, "488b0db5ffffff" ]   # MOV RCX,qword ptr [0x01802d10]
+        - [ bytes, 0x01802d5b, "493b0c24" ]         # CMP RCX,qword ptr [R12]
+        - [ bytes, 0x01802d5f, "740b" ]             # JZ 0x01802d6c
+        - [ bytes, 0x01802d61, "498b0c24" ]         # MOV RCX,qword ptr [R12]
+        - [ bytes, 0x01802d65, "48890d08533000" ]   # MOV qword ptr [0x01b08074],RCX
+        - [ bytes, 0x01802d6c, "c3" ]               # RET
+        - [ bytes, 0x01802f75, "488d0d4f000000" ]   # LEA RCX,[0x1802fcb]
+        # filter
+        # only save "ep", "sm", "mine", "ft" # free roam # ,"dm" # crow #, "cm" # challenge missions #
+        - [ bytes, 0x01802f7c, "6641813c24736d" ]   # CMP word ptr [R12],0x6d73
+        - [ bytes, 0x01802f83, "7446" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802f85, "6641817c24006674" ] # CMP word ptr [R12 + 0x0],0x7466
+        - [ bytes, 0x01802f8d, "743c" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802f8f, "41813c246d696e65" ] # CMP dword ptr [R12],0x656e696d
+        - [ bytes, 0x01802f97, "7432" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802f99, "6641817c24006570" ] # CMP word ptr [R12 + 0x0],0x7065
+        - [ bytes, 0x01802fa1, "7428" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802fa3, "6641817c2400646d" ] # CMP word ptr [R12 + 0x0],0x6d64
+        - [ bytes, 0x01802fab, "741e" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802fad, "6641817c2400636d" ] # CMP word ptr [R12 + 0x0],0x6d63
+        - [ bytes, 0x01802fb5, "7414" ]             # JZ 0x01802fcb
+        - [ bytes, 0x01802fb7, "eb0a" ]             # JMP 0x01802fc3
+        - [ bytes, 0x01802fc3, "c3" ]               # RET
+        - [ bytes, 0x01802fcb, "e984fdffff" ]       # JMP 0x01802d54
+        # level check
+        - [ bytes, 0x01464e4a, "48e8e4e13900" ]   # CALL 0x01803034
+        - [ bytes, 0x01803034, "ebb6" ]           # JMP 0x01802fec
+        - [ bytes, 0x01802fec, "4889059d503000" ] # MOV qword ptr [0x01b08090],RAX
+        - [ bytes, 0x01802ff3, "48891d9e503000" ] # MOV qword ptr [0x01b08098],RBX
+        - [ bytes, 0x01802ffa, "48893d9f503000" ] # MOV qword ptr [0x01b080a0],RDI
+        - [ bytes, 0x01803001, "488915a0503000" ] # MOV qword ptr [0x01b080a8],RDX
+        - [ bytes, 0x01803008, "eb2c" ]           # JMP 0x01803036
+        - [ bytes, 0x01803036, "488d0533503000" ] # LEA RAX,[0x1b08070]
+        - [ bytes, 0x0180303d, "488d1de1000000" ] # LEA RBX,[0x1803125]
+        - [ bytes, 0x01803044, "c6400b00" ]       # MOV byte ptr [RAX + 0xb],0x0
+        - [ bytes, 0x01803048, "eb06" ]           # JMP 0x01803050
+        - [ bytes, 0x01803050, "48894814" ]       # MOV qword ptr [RAX + 0x14],RCX
+        - [ bytes, 0x01803054, "488b4804" ]       # MOV RCX,qword ptr [RAX + 0x4]
+        - [ bytes, 0x01803058, "e8eb8e0000" ]     # CALL 0x0180bf48 # level check
+        - [ bytes, 0x0180305d, "e8b1fd0200" ]     # CALL 0x01832e13 # button check
+        # button check
+        # L3+X = cycle flip modes # flipmode 1                                     = 30FPS + No Deltatime
+        #                         # flipmode 2                                     = 60FPS + Deltatime
+        #                         # flipmode 3 (cannot be flip to in release mode) = 60FPS + No Deltatime
+        # Buttons    (values are int32)
+        # Cross (X)  4
+        # Square     8
+        # Circle     2
+        # Triangle   1
+        # Dpad Up    1024
+        # Dpad Down  8192
+        # Dpad Left  2048
+        # Dpad Right 4096
+        # L1         64
+        # L2         16
+        # L3         256
+        # R1         128
+        # R2         32
+        # R3         512
+        # Touchpad   32768
+        - [ bytes, 0x01832e13, "e8720c0000" ]     # CALL 0x01833a8a
+        - [ bytes, 0x01832e18, "4c8d0d59a76e00" ] # LEA R9,[0x1f1d578]
+        - [ bytes, 0x01832e1f, "4c8d154a522d00" ] # LEA R10,[0x1b08070]
+        - [ bytes, 0x01832e26, "41bb04010000" ]   # MOV R11D,0x104
+        - [ bytes, 0x01832e2c, "45391c21" ]       # CMP dword ptr [R9],R11D
+        - [ bytes, 0x01832e30, "7536" ]           # JNZ 0x01832e68
+        - [ bytes, 0x01832e32, "45395c2254" ]     # CMP dword ptr [R10 + 0x54],R11D
+        - [ bytes, 0x01832e37, "743e" ]           # JZ 0x01832e77
+        - [ bytes, 0x01832e39, "41807a5a01" ]     # CMP byte ptr [R10 + 0x5a],0x1
+        - [ bytes, 0x01832e3e, "7413" ]           # JZ 0x01832e53
+        - [ bytes, 0x01832e40, "41807a5a02" ]     # CMP byte ptr [R10 + 0x5a],0x2
+        - [ bytes, 0x01832e45, "7411" ]           # JZ 0x01832e58
+        - [ bytes, 0x01832e47, "41807a5a03" ]     # CMP byte ptr [R10 + 0x5a],0x3
+        - [ bytes, 0x01832e4c, "750d" ]           # JNZ 0x01832e5b
+        - [ bytes, 0x01832e4e, "41b001" ]         # MOV R8B,0x1
+        - [ bytes, 0x01832e51, "eb08" ]           # JMP 0x01832e5b
+        - [ bytes, 0x01832e53, "41b002" ]         # MOV R8B,0x2
+        - [ bytes, 0x01832e56, "eb03" ]           # JMP 0x01832e5b
+        - [ bytes, 0x01832e58, "41b001" ]         # MOV R8B,0x1 # debug only
+        - [ bytes, 0x01832e5b, "4588425a" ]       # MOV byte ptr [R10 + 0x5a],R8B
+        - [ bytes, 0x01832e5f, "45884200" ]       # MOV byte ptr [R10],R8B
+        - [ bytes, 0x01832e63, "4589d8" ]         # MOV R8D,R11D
+        - [ bytes, 0x01832e66, "eb03" ]           # JMP 0x01832e6b
+        - [ bytes, 0x01832e68, "458b01" ]         # MOV R8D,dword ptr [R9]
+        - [ bytes, 0x01832e6b, "45894254" ]       # MOV dword ptr [R10 + 0x54],R8D
+        - [ bytes, 0x01832e6f, "458a4200" ]       # MOV R8B,byte ptr [R10]
+        - [ bytes, 0x01832e73, "4588425a" ]       # MOV byte ptr [R10 + 0x5a],R8B
+        - [ bytes, 0x01832e77, "e82b0c0000" ]     # CALL 0x01833aa7
+        - [ bytes, 0x01832e7c, "c3" ]             # RET
+        # shared save and restore
+        - [ bytes, 0x01833a8a, "4c89056f462d00" ] # MOV qword ptr [0x01b08100],R8
+        - [ bytes, 0x01833a91, "4c890d70462d00" ] # MOV qword ptr [0x01b08108],R9
+        - [ bytes, 0x01833a98, "4c891571462d00" ] # MOV qword ptr [0x01b08110],R10
+        - [ bytes, 0x01833a9f, "4c891d72462d00" ] # MOV qword ptr [0x01b08118],R11
+        - [ bytes, 0x01833aa6, "c3" ]             # RET
+        - [ bytes, 0x01833aa7, "4c8b0552462d00" ] # MOV R8,qword ptr [0x01b08100]
+        - [ bytes, 0x01833aae, "4c8b0d53462d00" ] # MOV R9,qword ptr [0x01b08108]
+        - [ bytes, 0x01833ab5, "4c8b1554462d00" ] # MOV R10,qword ptr [0x01b08110]
+        - [ bytes, 0x01833abc, "4c8b1d55462d00" ] # MOV R11,qword ptr [0x01b08118]
+        - [ bytes, 0x01833ac3, "c3" ]             # RET
+        # level check
+        # optimization plans:
+        # create small function that tests these level names (maybe use strcmp?)
+        # should be able to test full level names (8 bytes max)
+        # structure should be something like
+        # if (CurrentMissionName == SoftlockTable) flip = 30FPS_NoTimestep; // 1
+        # SoftlockTable will RDI
+        # CurrentMissionName will use RAX? (I forgot which is for strcmp params)
+        # if return 0 (it matches) setup our pointer and store it there
+        - [ bytes, 0x0180bf48, "48390b" ]         # CMP qword ptr [RBX],RCX
+        - [ bytes, 0x0180bf4b, "0f843a120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf51, "48394b08" ]       # CMP qword ptr [RBX + 0x8],RCX
+        - [ bytes, 0x0180bf55, "0f8430120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf5b, "48394b10" ]       # CMP qword ptr [RBX + 0x10],RCX
+        - [ bytes, 0x0180bf5f, "0f8426120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf65, "394b18" ]         # CMP dword ptr [RBX + 0x18],ECX
+        - [ bytes, 0x0180bf68, "0f841d120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf6e, "394b1d" ]         # CMP dword ptr [RBX + 0x1d],ECX
+        - [ bytes, 0x0180bf71, "0f8414120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf77, "48394b22" ]       # CMP qword ptr [RBX + 0x22],RCX
+        - [ bytes, 0x0180bf7b, "0f840a120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf81, "48394b2a" ]       # CMP qword ptr [RBX + 0x2a],RCX
+        - [ bytes, 0x0180bf85, "0f8400120000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf8b, "48394b32" ]       # CMP qword ptr [RBX + 0x32],RCX
+        - [ bytes, 0x0180bf8f, "0f84f6110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf95, "48394b3a" ]       # CMP qword ptr [RBX + 0x3a],RCX
+        - [ bytes, 0x0180bf99, "0f84ec110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bf9f, "48394b42" ]       # CMP qword ptr [RBX + 0x42],RCX
+        - [ bytes, 0x0180bfa3, "0f84e2110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfa9, "48394b4a" ]       # CMP qword ptr [RBX + 0x4a],RCX
+        - [ bytes, 0x0180bfad, "0f84d8110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfb3, "48394b52" ]       # CMP qword ptr [RBX + 0x52],RCX
+        - [ bytes, 0x0180bfb7, "0f84ce110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfbd, "48394b5a" ]       # CMP qword ptr [RBX + 0x5a],RCX
+        - [ bytes, 0x0180bfc1, "0f84c4110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfc7, "48394b62" ]       # CMP qword ptr [RBX + 0x62],RCX
+        - [ bytes, 0x0180bfcb, "0f84ba110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfd1, "48394b6a" ]       # CMP qword ptr [RBX + 0x6a],RCX
+        - [ bytes, 0x0180bfd5, "0f84b0110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfdb, "48394b72" ]       # CMP qword ptr [RBX + 0x72],RCX
+        - [ bytes, 0x0180bfdf, "0f84a6110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfe5, "48398b88000000" ] # CMP qword ptr [RBX + 0x88],RCX
+        - [ bytes, 0x0180bfec, "0f8499110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bff2, "48398b90000000" ] # CMP qword ptr [RBX + 0x90],RCX
+        - [ bytes, 0x0180bff9, "0f848c110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180bfff, "398b98000000" ]   # CMP dword ptr [RBX + 0x98],ECX
+        - [ bytes, 0x0180c005, "0f8480110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180c00b, "48398b9d000000" ] # CMP qword ptr [RBX + 0x9d],RCX
+        - [ bytes, 0x0180c012, "0f8473110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180c018, "398c23a5000000" ] # CMP dword ptr [RBX + 0xa5],ECX
+        - [ bytes, 0x0180c01f, "0f8466110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180c025, "48398baf000000" ] # CMP qword ptr [RBX + 0xaf],RCX
+        - [ bytes, 0x0180c02c, "0f8459110000" ]   # JZ 0x0180d18b
+        - [ bytes, 0x0180c032, "e957110000" ]     # JMP 0x0180d18e
+        - [ bytes, 0x0180d18b, "c60001" ]         # MOV byte ptr [RAX],0x1
+        - [ bytes, 0x0180d18e, "c3" ]             # RET
+        - [ bytes, 0x01803067, "e984000000" ]     # JMP 0x018030f0
+        - [ bytes, 0x018030f0, "bf0001114e" ]     # MOV EDI,0x4e110100
+        # flipmode
+        - [ bytes, 0x018030f5, "803801" ]         # CMP byte ptr [RAX],0x1
+        - [ bytes, 0x018030f8, "740c" ]           # JZ 0x01803106
+        - [ bytes, 0x018030fa, "be00000000" ]     # MOV ESI,0x0
+        - [ bytes, 0x018030ff, "e80c49ffff" ]     # CALL 0x017f7a10
+        - [ bytes, 0x01803104, "eb0a" ]           # JMP 0x01803110
+        - [ bytes, 0x01803106, "be01000000" ]     # MOV ESI,0x1
+        - [ bytes, 0x0180310b, "e80049ffff" ]     # CALL 0x017f7a10
+        - [ bytes, 0x01803110, "e8f5feffff" ]     # CALL 0x0180300a
+        - [ bytes, 0x01803115, "4889fb" ]         # MOV RBX,RDI
+        - [ bytes, 0x01803118, "488b03" ]         # MOV RAX,qword ptr [RBX]
+        - [ bytes, 0x0180311b, "c3" ]             # RET
+        - [ bytes, 0x0180300a, "488b057f503000" ] # MOV RAX,qword ptr [0x01b08090]
+        - [ bytes, 0x01803011, "488b1d80503000" ] # MOV RBX,qword ptr [0x01b08098]
+        - [ bytes, 0x01803018, "488b3d81503000" ] # MOV RDI,qword ptr [0x01b080a0]
+        - [ bytes, 0x0180301f, "488b1582503000" ] # MOV RDX,qword ptr [0x01b080a8]
+        - [ bytes, 0x01803026, "c3" ]             # RET
+        # text replace
+        - [ bytes, 0x015111cf, "e8d0a02e00" ]     # CALL 0x017fb2a4
+        - [ bytes, 0x015111d4, "90" ]             # NOP
+        - [ bytes, 0x015111d5, "90" ]             # NOP
+        - [ bytes, 0x015111d6, "90" ]             # NOP
+        - [ bytes, 0x015111d7, "90" ]             # NOP
+        - [ bytes, 0x015111d8, "90" ]             # NOP
+        - [ bytes, 0x015111d9, "90" ]             # NOP
+        - [ bytes, 0x015111da, "90" ]             # NOP
+        - [ bytes, 0x015111db, "90" ]             # NOP
+        - [ bytes, 0x015111dc, "90" ]             # NOP
+        - [ bytes, 0x017fb2a4, "803d31ce300001" ] # CMP byte ptr [0x01b080dc],0x1
+        - [ bytes, 0x017fb2ab, "7410" ]           # JZ 0x017fb2bd
+        - [ bytes, 0x017fb2ad, "41803c2400" ]     # CMP byte ptr [R12],0x0
+        - [ bytes, 0x017fb2b2, "7510" ]           # JNZ 0x017fb2c4
+        - [ bytes, 0x017fb2b4, "4c8d25ab000000" ] # LEA R12,[0x17fb366]
+        - [ bytes, 0x017fb2bb, "eb07" ]           # JMP 0x017fb2c4
+        - [ bytes, 0x017fb2bd, "4c8d25b0cd3000" ] # LEA R12,[0x1b08074]
+        - [ bytes, 0x017fb2c4, "c3" ]             # RET
+        # button check for text replace
+        # R3+Square: toggles on and off
+        - [ bytes, 0x01803062, "e862fe0200" ]     # CALL 0x01832ec9
+        - [ bytes, 0x01832ec9, "e8bc0b0000" ]     # CALL 0x01833a8a
+        - [ bytes, 0x01832ece, "4c8d0da3a66e00" ] # LEA R9,[0x1f1d578]
+        - [ bytes, 0x01832ed5, "4989c2" ]         # MOV R10,RAX
+        - [ bytes, 0x01832ed8, "41bb08020000" ]   # MOV R11D,0x208
+        - [ bytes, 0x01832ede, "45391c21" ]       # CMP dword ptr [R9],R11D
+        - [ bytes, 0x01832ee2, "7523" ]           # JNZ 0x01832f07
+        - [ bytes, 0x01832ee4, "45395c2260" ]     # CMP dword ptr [R10 + 0x60],R11D
+        - [ bytes, 0x01832ee9, "742b" ]           # JZ 0x01832f16
+        - [ bytes, 0x01832eeb, "41807a6400" ]     # CMP byte ptr [R10 + 0x64],0x0
+        - [ bytes, 0x01832ef0, "7505" ]           # JNZ 0x01832ef7
+        - [ bytes, 0x01832ef2, "41b001" ]         # MOV R8B,0x1
+        - [ bytes, 0x01832ef5, "eb03" ]           # JMP 0x01832efa
+        - [ bytes, 0x01832ef7, "41b000" ]         # MOV R8B,0x0
+        - [ bytes, 0x01832efa, "45884264" ]       # MOV byte ptr [R10 + 0x64],R8B
+        - [ bytes, 0x01832efe, "4588426c" ]       # MOV byte ptr [R10 + 0x6c],R8B
+        - [ bytes, 0x01832f02, "4589d8" ]         # MOV R8D,R11D
+        - [ bytes, 0x01832f05, "eb03" ]           # JMP 0x01832f0a
+        - [ bytes, 0x01832f07, "458b01" ]         # MOV R8D,dword ptr [R9]
+        - [ bytes, 0x01832f0a, "45894260" ]       # MOV dword ptr [R10 + 0x60],R8D
+        - [ bytes, 0x01832f0e, "458a426c" ]       # MOV R8B,byte ptr [R10 + 0x6c]
+        - [ bytes, 0x01832f12, "45884264" ]       # MOV byte ptr [R10 + 0x64],R8B
+        - [ bytes, 0x01832f16, "e88c0b0000" ]     # CALL 0x01833aa7
+        - [ bytes, 0x01832f1b, "c3" ]             # RET
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Infinite Gravity Energy"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00901c26, "c5fa10058a68fb00" ] # VMOVSS XMM0,dword ptr [0x018b84b8]
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Most attacks does not hurt player"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x009091a6, "9090909090" ] # NOP x5
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Unlock All Costumes"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0124d1a2, "48e9b1000000" ]
+        - [ bytes, 0x0124d664, "c6402101" ]
+        - [ bytes, 0x0124d668, "48e922ffffff" ]
+
+- patch:
+  title: "Gravity Rush 2 (Gravity Daze 2)"
+  app_ver: "01.11"
+  app_titleid: [ "CUSA03694", "CUSA04943", "CUSA00547" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Unlock All Gestures"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x017157c8, "48b001" ]

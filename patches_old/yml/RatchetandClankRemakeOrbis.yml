@@ -1,0 +1,29 @@
+- patch:
+  title: "Ratchet and Clank"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA01073", "CUSA01928" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01b23444, "4d69fc48010000" ]
+        - [ bytes, 0x01b2344b, "6641c7461e803f" ]
+
+- patch:
+  title: "Ratchet and Clank"
+  app_ver: "01.09"
+  app_titleid: [ "CUSA01073", "CUSA01928" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Debug Menu"
+  author: "Lance McDonald (manfightdragon)"
+  # not sure who the original author is, ported from demo version
+  arch: orbis
+  patch_list:
+  # 01bda450 routine to open menu is stubbed?
+  # it always return -1 to not open
+  # you may return with 0 and it does partially function as expected
+        - [ bytes, 0x006e2ae5, "803534a8740401" ]
+        - [ bytes, 0x006e2aec, "9090" ]

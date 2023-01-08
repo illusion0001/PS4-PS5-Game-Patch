@@ -1,0 +1,89 @@
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock (For Base)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01ff26b5, "48b90900000009000000" ]
+        - [ bytes, 0x01ff26bf, "b805000000" ]
+        - [ bytes, 0x01ff26c4, "eb06" ]
+
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01ff26b5, "48b90900000009000000" ]
+        - [ bytes, 0x01ff26bf, "b805000000" ]
+        - [ bytes, 0x01ff26c4, "eb06" ]
+        - [ bytes, 0x0313efec, "4489f6" ]
+        - [ bytes, 0x0313efef, "90" ]
+
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base, 1080p for Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # Base
+        - [ bytes32, 0x04258b8c, 1280 ]
+        - [ bytes32, 0x04258b90, 720  ]
+        # Neo 1920x1080 CB
+        - [ bytes32, 0x01fe105f, 1920 ]
+        - [ bytes32, 0x01fe1069, 1080 ]
+
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Bypass Network Check"
+  author: "Unknown, Whitehawkx, illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x018863c0, "b001" ] # MOV AL,0x1
+        - [ bytes, 0x018863c2, "c3" ]   # RET
+
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Fog Wall"
+  author: "Pav"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x017b7c33, "90" ] # NOP
+        - [ bytes, 0x017b7c34, "90" ] # NOP
+        - [ bytes, 0x017b7c35, "90" ] # NOP
+        - [ bytes, 0x017b7c36, "90" ] # NOP
+        - [ bytes, 0x017b7c37, "90" ] # NOP
+
+- patch:
+  title: "Elden Ring: Network Test"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA18880" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Enable Video Recording and Screenshots"
+  author: "Whitehawkx"
+  note: "Re-enables built-in video recording and screenshots (Share button)"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x01ffb793, "c785b0fdffff00000000" ] # MOV dword ptr [RBP + -0x250],0x0

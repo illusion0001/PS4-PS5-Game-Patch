@@ -1,0 +1,59 @@
+- patch:
+  title: "Crash Bandicoot N. Sane Trilogy"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA07399" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00f52bd6, "41899788040000" ]
+
+- patch:
+  title: "Crash Bandicoot N. Sane Trilogy"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA07399" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "Resolution Patch (1080p for PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ float32, 0x01c75680, 1.00 ]
+
+- patch:
+  title: "Crash Bandicoot N. Sane Trilogy"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA07399" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "Resolution Patch (900p for PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ float32, 0x01c75680, 0.83 ]
+
+- patch:
+  title: "Crash Bandicoot N. Sane Trilogy"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA07399" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "Resolution Patch (720p for PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ float32, 0x01c75680, 0.67 ]
+
+- patch:
+  title: "Crash Bandicoot N. Sane Trilogy"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA07399" ]
+  app_elf: "eboot.bin"
+  patch_ver: "2.0"
+  name: "Resolution Patch (540p for PS4 Pro)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ float32, 0x01c75680, 0.50 ]

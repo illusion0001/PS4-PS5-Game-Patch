@@ -1,0 +1,39 @@
+- patch:
+  title: "Daymare 1998"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA17157" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x02988177, 0x75 ]
+
+- patch:
+  title: "Daymare 1998"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA17157" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x02988177, 0x75 ]
+        - [ bytes, 0x01281D82, "67e80ffb6e019090" ]
+        - [ bytes, 0x02971897, "41c7048e02000000418b1c8ec5eb2ac3c3" ]
+
+- patch:
+  title: "Daymare 1998"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA17157" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x02291945, "e830ff6d00" ]
+        - [ bytes, 0x0229207a, "48e808f86d00" ]
+        - [ bytes, 0x02971870, "48e9954422fe47ede370c7410455558541c5fa106104eb0e41c7048e00008642c4c17a10048ec3" ]

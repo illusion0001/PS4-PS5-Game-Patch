@@ -1,0 +1,53 @@
+- patch:
+  title: "Kena: Bridge of Spirits"
+  app_ver: "02.03"
+  app_titleid: [ "CUSA24853" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Intro Movies"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes16, 0x05071c32, 0xe948 ]
+
+- patch:
+  title: "Kena: Bridge of Spirits"
+  app_ver: "02.03"
+  app_titleid: [ "CUSA24853" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0683dd60, "31c0c3" ] # rhi.SyncInterval is callback to Fliprate/SyncInterval (D3D12)
+
+- patch:
+  title: "Kena: Bridge of Spirits"
+  app_ver: "02.03"
+  app_titleid: [ "CUSA24853" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (66.67% of 1440p/1080p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x054a93b2, "48e859030000" ]
+        - [ bytes, 0x054a9711, "41c7048f55558542" ]
+        - [ bytes, 0x054a9719, "c4c17a10048f" ]
+        - [ bytes, 0x054a971f, "c3" ]
+
+- patch:
+  title: "Kena: Bridge of Spirits"
+  app_ver: "02.03"
+  app_titleid: [ "CUSA24853" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (83.33% of 1440p/1080p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x054a93b2, "48e859030000" ]
+        - [ bytes, 0x054a9711, "41c7048fabaaa642" ]
+        - [ bytes, 0x054a9719, "c4c17a10048f" ]
+        - [ bytes, 0x054a971f, "c3" ]

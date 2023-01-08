@@ -1,0 +1,24 @@
+- patch:
+  title: "Vampyr"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA03293" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x036BF726, "eb69" ]
+
+- patch:
+  title: "Vampyr"
+  app_ver: "01.07"
+  app_titleid: [ "CUSA03293" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x3525259, "48e8c61d1b009090" ]
+        - [ bytes, 0x36d7020, "e989500500c70000008642c5f057c9c5fa1000c3" ]

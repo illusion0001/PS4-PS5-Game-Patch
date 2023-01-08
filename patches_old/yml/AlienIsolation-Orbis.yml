@@ -1,0 +1,25 @@
+- patch:
+  title: "Alien: Isolation"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA00363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Skip Save Confirm Screen"
+  author: "ThirteenAG, illusion"
+  note: "A port of ThirteenAG patch. https://github.com/ThirteenAG/AlienIsolation.SkipSaveConfirmationDialog"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00597e0a, 0xeb ]
+
+- patch:
+  title: "Alien: Isolation"
+  app_ver: "01.04"
+  app_titleid: [ "CUSA00363" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Custom FOV (100.0)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0055b8c6, "e83a841d00" ]
+        - [ bytes, 0x00733d05, "c78421380000000000c842c5fa104138c3" ]

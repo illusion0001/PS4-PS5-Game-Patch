@@ -1,0 +1,39 @@
+- patch:
+  title: "Ghost of Tsushima: Director's Cut"
+  app_ver: "02.13"
+  app_titleid: [ "CUSA11456", "CUSA13323" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "Enable \"Better Framerate Mode\" in the game options menu on Neo. Not very useful for Base Console due to hardware limits."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x00b03b1a, "eb12" ]
+
+- patch:
+  title: "Ghost of Tsushima: Director's Cut"
+  app_ver: "02.13"
+  app_titleid: [ "CUSA11456", "CUSA13323" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "900p for Pro"
+  author: "illusion"
+  note: "Enable \"Better Framerate Mode\" in the game options menu on Neo."
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x00b02bd1, 1600 ]
+        - [ bytes32, 0x00b02bd5, 900  ]
+
+- patch:
+  title: "Ghost of Tsushima: Director's Cut"
+  app_ver: "02.13"
+  app_titleid: [ "CUSA11456", "CUSA13323" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Disable Checkerboarding"
+  author: "illusion"
+  note: "Enable \"Better Framerate Mode\" in the game options menu on Neo."
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00b02bea, 0x0 ]

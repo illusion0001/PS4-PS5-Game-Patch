@@ -1,0 +1,12 @@
+- patch:
+  title: "Wreckfest"
+  app_ver: "01.31"
+  app_titleid: [ "CUSA08548" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "60FPS 99% of the time. No need for resolution patch.\nUses adapative sync."
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x0054060b, "95" ]

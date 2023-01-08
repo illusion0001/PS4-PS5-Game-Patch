@@ -1,0 +1,11 @@
+- patch:
+  title: "The Evil Within"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA00203" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ byte, 0x00637ce3, 0x0 ]

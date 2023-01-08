@@ -1,0 +1,32 @@
+- patch:
+  title: "Batman: Arkham Knight"
+  app_ver: "01.15"
+  app_titleid: [ "CUSA00133" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes, 0x009fa57e, "be00000000" ]   # 60fps
+        - [ bytes, 0x009fb766, "41bc04000000" ] # tripe buffer
+        - [ bytes, 0x009fb9e1, "0f85a9000000" ] # no fixed timestep
+        # sync modes
+        # 00 no output
+        # 01 untested
+        # 02 full adaptive sync
+        # 03 double buffer adaptive sync // default
+        # 04 triple buffering
+
+- patch:
+  title: "Batman: Arkham Knight"
+  app_ver: "01.15"
+  app_titleid: [ "CUSA00133" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p)"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x02b04014, 1280 ]
+        - [ bytes32, 0x02b04018, 720  ]

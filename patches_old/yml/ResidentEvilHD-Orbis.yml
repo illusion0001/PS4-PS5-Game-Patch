@@ -1,0 +1,12 @@
+- patch:
+  title: "Resident Evil: HD"
+  app_ver: "01.00"
+  app_titleid: [ "CUSA01067" ]
+  app_elf: "bh1hd.elf"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        - [ bytes32, 0x004b494b, 0x42700000 ]
+        - [ bytes32, 0x004b494f, 0x42700000 ]

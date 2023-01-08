@@ -1,0 +1,52 @@
+- patch:
+  title: "Sekiro: Shadows Die Twice"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA12047" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "30 FPS Fix (Proper Frame Pacing)"
+  author: "illusion"
+  note: "Caps framerate to 30 with proper frame pacing."
+  arch: orbis
+  patch_list:
+        # FlipMode
+        # Comment this if platform is neo to not enable poor framerate cap
+        - [ bytes, 0x02366f27, "95" ]
+        # SceVideoOutFliprate(handle, 1);
+        # return;
+        - [ bytes, 0x034cdc27, "bf0001114ebe01000000eb12" ]
+
+- patch:
+  title: "Sekiro: Shadows Die Twice"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA12047" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "Only needed for Base console, enhanced consoles already have framerate unlocked."
+  arch: orbis
+  patch_list:
+        # FlipMode
+        - [ bytes, 0x02366f27, "95" ]
+        # VFR
+        - [ bytes, 0x023670c3, "48e96b000000" ]
+
+- patch:
+  title: "Sekiro: Shadows Die Twice"
+  app_ver: "01.06"
+  app_titleid: [ "CUSA12047" ]
+  app_elf: "eboot.bin"
+  patch_ver: "1.0"
+  name: Resolution Patch (720p Base, 1080p Pro)
+  author: "illusion"
+  arch: orbis
+  patch_list:
+        # Base
+        # 1920x1080 -> 1280x720
+        - [ bytes32, 0x04229d44, 1280 ]
+        - [ bytes32, 0x04229d44, 720  ]
+        # Neo
+        # 3200x1800 -> 1920x1080
+        - [ bytes32, 0x023603ff, 1920 ]
+        - [ bytes32, 0x02360409, 1080 ]
