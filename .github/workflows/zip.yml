@@ -50,8 +50,8 @@ jobs:
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
-          echo $msg > output/json/build.txt
           echo $msg > output/xml/build.txt
+          echo $msg > output/json/build.txt
           echo $msg > output/misc/patch_ver.txt
           echo $msg > build.txt
           echo $msg_md > patch_built.md
