@@ -42,11 +42,15 @@ jobs:
       - name: Generate TitleID files
         run: |
           mkdir -p output/xml
+          mkdir -p output/json
           mkdir -p output/misc
-          python .ci/file-autogen.py "$(pwd)/patches/xml/*.xml"
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml"
+          python .ci/file-autogen-json.py
+          python .ci/remove-ids-json.py
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
+          echo $msg > output/json/build.txt
           echo $msg > output/xml/build.txt
           echo $msg > output/misc/patch_ver.txt
           echo $msg > build.txt
