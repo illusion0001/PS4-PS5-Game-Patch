@@ -210,4 +210,37 @@
             <Line Type="utf8" Address="0x007f4757" Value="big4-mp.elf"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Uncharted 4: A Thief's End"
+              Name="Replace SP DLC-1 with Test Tasks"
+              Author="illusion, icemesh"
+              PatchVer="1.0"
+              AppVer="01.33"
+              AppElf="big4-mp.elf">
+        <PatchList>
+            <!-- Thanks to icemesh for StringID Utils -->
+            <!-- Replace dlc1 task with test-tasks -->
+            <Line Type="bytes" Address="0x0203b7b0" Value="48e934a94200"/>
+            <!-- Start!! -->
+            <Line Type="bytes" Address="0x024660ea" Value="4d8b3e"/>
+            <Line Type="bytes" Address="0x024660ed" Value="418b1f"/>
+            <Line Type="bytes" Address="0x024660f0" Value="458bbf80360000"/>
+            <Line Type="bytes" Address="0x024660f7" Value="81fbb469e2ff"/>
+            <Line Type="bytes" Address="0x024660fd" Value="7519"/>
+            <Line Type="bytes" Address="0x024660ff" Value="4181ffd700d83e"/>
+            <Line Type="bytes" Address="0x02466106" Value="7510"/>
+            <Line Type="bytes" Address="0x02466108" Value="4d8b3e"/>
+            <Line Type="bytes" Address="0x0246610b" Value="41c787803600008cc90322"/>
+            <Line Type="bytes" Address="0x02466116" Value="eb03"/>
+            <Line Type="bytes" Address="0x02466118" Value="4d8b3e"/>
+            <Line Type="bytes" Address="0x0246611b" Value="e99656bdff"/>
+            <Line Type="bytes" Address="0x0064a761" Value="488d15f82d5301"/>
+            <!-- Remove main tasks because oom -->
+            <Line Type="bytes" Address="0x01b7acf0" Value="31c0c3"/>
+            <Line Type="bytes" Address="0x0064a5c9" Value="0f95c3"/>
+            <Line Type="bytes" Address="0x0064a711" Value="4588e6"/>
+            <Line Type="bytes" Address="0x0064a714" Value="448aa424e0000000"/>
+            <Line Type="bytes" Address="0x0064a745" Value="488d35f0aadc01"/>
+            <Line Type="bytes" Address="0x0064a7d6" Value="488d356eaadc01"/>
+        </PatchList>
+    </Metadata>
 </Patch>
