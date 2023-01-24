@@ -126,7 +126,30 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes" Address="0x0045f63c" Value="e8ef246d00"/>
-            <Line Type="bytes" Address="0x00b337b5" Value="e992010000"/>
+            <Line Type="bytes" Address="0x00d49d30" Value="bfb0000000"/>
+            <Line Type="bytes" Address="0x00d49d35" Value="eb2f"/>
+            <Line Type="bytes" Address="0x00d49f87" Value="bfb0000000"/>
+            <Line Type="bytes" Address="0x00d49f8c" Value="e88fb81500"/>
+            <Line Type="bytes" Address="0x00d49f91" Value="4989c6"/>
+            <Line Type="bytes" Address="0x00d49f94" Value="488d359b097e00"/>
+            <Line Type="bytes" Address="0x00d49f9b" Value="4c89f7"/>
+            <Line Type="bytes" Address="0x00d49f9e" Value="31d2"/>
+            <Line Type="bytes" Address="0x00d49fa0" Value="31c9"/>
+            <Line Type="bytes" Address="0x00d49fa2" Value="e86976f4ff"/>
+            <Line Type="bytes" Address="0x00d49fa7" Value="bfa0000000"/>
+            <Line Type="bytes" Address="0x00d49fac" Value="e86fb81500"/>
+            <Line Type="bytes" Address="0x00d49fb1" Value="4889c3"/>
+            <Line Type="bytes" Address="0x00d49fb4" Value="488d358c097e00"/>
+            <Line Type="bytes" Address="0x00d49fbb" Value="4889df"/>
+            <Line Type="bytes" Address="0x00d49fbe" Value="4c89f2"/>
+            <Line Type="bytes" Address="0x00d49fc1" Value="31c9"/>
+            <Line Type="bytes" Address="0x00d49fc3" Value="4531c0"/>
+            <Line Type="bytes" Address="0x00d49fc6" Value="e8256bf4ff"/>
+            <Line Type="bytes" Address="0x00d49fcb" Value="4c89e7"/>
+            <Line Type="bytes" Address="0x00d49fce" Value="4889de"/>
+            <Line Type="bytes" Address="0x00d49fd1" Value="e8ea79f4ff"/>
+            <Line Type="bytes" Address="0x00d49fd6" Value="eb2a"/>
+            <Line Type="bytes" Address="0x00d49800" Value="c3"/>
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Remastered"
@@ -238,7 +261,31 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes" Address="0x0046df6c" Value="e84f6b8400"/>
-            <Line Type="bytes" Address="0x00cb6e75" Value="e993010000"/>
+            <Line Type="bytes" Address="0x00eeea79" Value="bfb0000000"/>
+            <Line Type="bytes" Address="0x00eeea7e" Value="eb36"/>
+            <Line Type="bytes" Address="0x00eeecd2" Value="bfb0000000"/>
+            <Line Type="bytes" Address="0x00eeecd7" Value="e834231900"/>
+            <Line Type="bytes" Address="0x00eeecdc" Value="4989c7"/>
+            <Line Type="bytes" Address="0x00eeecdf" Value="488d35d42c6800"/>
+            <Line Type="bytes" Address="0x00eeece6" Value="31d2"/>
+            <Line Type="bytes" Address="0x00eeece8" Value="31c9"/>
+            <Line Type="bytes" Address="0x00eeecea" Value="4c89ff"/>
+            <Line Type="bytes" Address="0x00eeeced" Value="e80eecf3ff"/>
+            <Line Type="bytes" Address="0x00eeecf2" Value="bfa0000000"/>
+            <Line Type="bytes" Address="0x00eeecf7" Value="e814231900"/>
+            <Line Type="bytes" Address="0x00eeecfc" Value="4989c4"/>
+            <Line Type="bytes" Address="0x00eeecff" Value="488d35c52c6800"/>
+            <Line Type="bytes" Address="0x00eeed06" Value="31c9"/>
+            <Line Type="bytes" Address="0x00eeed08" Value="4531c0"/>
+            <Line Type="bytes" Address="0x00eeed0b" Value="4c89fa"/>
+            <Line Type="bytes" Address="0x00eeed0e" Value="4c89e7"/>
+            <Line Type="bytes" Address="0x00eeed11" Value="e8aae0f3ff"/>
+            <Line Type="bytes" Address="0x00eeed16" Value="4c89f3"/>
+            <Line Type="bytes" Address="0x00eeed19" Value="4c89e6"/>
+            <Line Type="bytes" Address="0x00eeed1c" Value="4889df"/>
+            <Line Type="bytes" Address="0x00eeed1f" Value="e89ceff3ff"/>
+            <Line Type="bytes" Address="0x00eeed24" Value="eb27"/>
+            <Line Type="bytes" Address="0x00eee530" Value="c3"/>
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Remastered"
