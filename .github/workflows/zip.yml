@@ -127,3 +127,21 @@ jobs:
           branch: gh-pages
           force: true
           directory: out
+
+      - name: Checkout website
+        if: |
+          github.ref_name == 'main' &&
+          github.event_name == 'push' &&
+          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+        uses: actions/checkout@v3
+        with:
+          repository: illusion0001/illusion0001.github.io
+
+      - name: Run Website Workflow dispatch
+        if: |
+          github.ref_name == 'main' &&
+          github.event_name == 'push' &&
+          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+        env:
+          GITHUB_TOKEN: ${{ secrets.WORKFLOW_RUNNER }}
+        run: gh workflow run jekyll.yml
