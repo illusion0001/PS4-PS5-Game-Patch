@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: maybe port some of the ini patches to asm? https://github.com/illusion0001/console-game-patches/blob/main/_patch_old/FinalFantasyVIIRemake-Orbis.md -->
+<Patch>
+    <TitleID>
+        <ID>CUSA07211</ID>
+        <ID>CUSA07187</ID>
+        <ID>CUSA07052</ID>
+        <ID>CUSA16170</ID>
+    </TitleID>
+    <Metadata Title="Final Fantasy VII Remake"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x05392190" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Final Fantasy VII Remake"
+              Name="Resolution Patch (Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x032216f4" Value="e9dfc04702"/>
+            <Line Type="bytes" Address="0x0569d7d8" Value="c740040000c842"/>
+            <Line Type="bytes" Address="0x0569d7df" Value="c5fa104004"/>
+            <Line Type="bytes" Address="0x0569d7e4" Value="e9103fb8fd"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Final Fantasy VII Remake"
+              Name="Resolution Patch (1080p for PS4 Pro 4K mode) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0569d7d8" Value="c7400400003442"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Final Fantasy VII Remake"
+              Name="Resolution Patch (720p for Base PS4) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0569d7d8" Value="c7400481558542"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Final Fantasy VII Remake"
+              Name="Resolution Patch (900p for PS4 Pro 1080p mode) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0569d7d8" Value="c74004f6a8a642"/>
+        </PatchList>
+    </Metadata>
+</Patch>
