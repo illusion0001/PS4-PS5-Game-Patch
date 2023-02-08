@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA27729</ID>
+        <ID>CUSA27730</ID>
+    </TitleID>
+    <Metadata Title="Soul Hackers 2"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ab48f0" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Soul Hackers 2"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ab48f0" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>
