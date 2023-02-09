@@ -38,7 +38,8 @@
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x04ea81c8" Value="c785bcfeffff00004842"/>
+            <Line Type="bytes" Address="0x00d2d693" Value="418bc0"/>
+            <Line Type="bytes" Address="0x00d2d696" Value="9090"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
