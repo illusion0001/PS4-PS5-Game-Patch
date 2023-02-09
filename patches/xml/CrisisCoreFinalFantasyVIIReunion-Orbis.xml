@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA31348</ID>
+        <ID>CUSA31349</ID>
+        <ID>CUSA31350</ID>
+        <ID>CUSA31351</ID>
+    </TitleID>
+    <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x04c51c60" Value="31c0c3"/>
+            <Line Type="bytes" Address="0x03a2765f" Value="c4a17857c0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
+              Name="Resolution Patch (Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00d2de83" Value="e940a31704"/>
+            <Line Type="bytes" Address="0x04ea81c8" Value="c785bcfeffff0000c842"/>
+            <Line Type="bytes" Address="0x04ea81d2" Value="c5fa1085bcfeffff"/>
+            <Line Type="bytes" Address="0x04ea81da" Value="c5fa118dbcfeffff"/>
+            <Line Type="bytes" Address="0x04ea81e2" Value="e9a85ce8fb"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
+              Name="Resolution Patch (1080p for PS4 Pro) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00d2d693" Value="418bc0"/>
+            <Line Type="bytes" Address="0x00d2d696" Value="9090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
+              Name="Resolution Patch (900p for Base PS4) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x04ea81c8" Value="c785bcfeffffabaaa642"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crisis Core: Final Fantasy VII Reunion"
+              Name="Resolution Patch (720p for Base PS4) (Needs Master Code)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x04ea81c8" Value="c785bcfeffff55558542"/>
+        </PatchList>
+    </Metadata>
+</Patch>
