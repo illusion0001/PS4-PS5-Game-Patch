@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA28193</ID>
+        <ID>CUSA28194</ID>
+        <ID>CUSA32054</ID>
+    </TitleID>
+    <Metadata Title="Sonic Frontiers"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01ad0145" Value="e9eac77900"/>
+            <Line Type="bytes" Address="0x0226c934" Value="c7431400007042"/>
+            <Line Type="bytes" Address="0x0226c93b" Value="c5fa104b14"/>
+            <Line Type="bytes" Address="0x0226c940" Value="e9053886ff"/>
+        </PatchList>
+    </Metadata>
+</Patch>
