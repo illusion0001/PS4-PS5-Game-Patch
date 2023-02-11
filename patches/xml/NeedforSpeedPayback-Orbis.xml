@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05986</ID>
+        <ID>CUSA05999</ID>
+    </TitleID>
+    <Metadata Title="Need for Speed: Payback"
+              Name="60 FPS"
+              Author="illusion"
+              Note="UI is double speed and some game simulation loop is still cap at 30FPS."
+              PatchVer="1.0"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00d2fb84" Value="c745c800000000"/>
+            <Line Type="bytes" Address="0x03737ad0" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+</Patch>
