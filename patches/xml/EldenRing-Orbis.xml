@@ -381,7 +381,7 @@
             <Line Type="bytes" Address="0x02159018" Value="48b90900000009000000"/>
             <Line Type="bytes" Address="0x02159022" Value="0f1f840000000000"/>
             <Line Type="bytes" Address="0x0332f080" Value="be01000000"/>
-            <Line Type="bytes" Address="0x032bd765" Value="ff25d535df00"/>
+            <Line Type="bytes" Address="0x0332f085" Value="ff25d535df00"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Elden Ring"
