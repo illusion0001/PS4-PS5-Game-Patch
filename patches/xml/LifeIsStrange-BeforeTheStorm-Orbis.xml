@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00363</ID>
+    </TitleID>
+    <Metadata Title="Life is Strange: Before the Storm"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01253daa" Value="31f69090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
