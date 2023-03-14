@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
-        <ID>CUSA00363</ID>
+        <ID>CUSA08479</ID>
+        <ID>CUSA08487</ID>
     </TitleID>
     <Metadata Title="Life is Strange: Before the Storm"
               Name="60 FPS"
