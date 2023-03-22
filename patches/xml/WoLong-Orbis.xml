@@ -18,4 +18,14 @@
             <!-- <Line Type="bytes" Address="0x019e3af7" Value="e9a6f9ffff"/> -->
         </PatchList>
     </Metadata>
+    <Metadata Title="Wo Long: Fallen Dynasty"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00a8ac5a" Value="bf00000000"/> <!-- 60 FPS Gameplay -->
+        </PatchList>
+    </Metadata>
 </Patch>
