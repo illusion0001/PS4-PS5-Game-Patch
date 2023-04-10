@@ -8,6 +8,7 @@
     <Metadata Title="Resident Evil 4 Remake"
               Name="30 FPS"
               Author="illusion"
+              Note="Forces the game to run at 30FPS.\nLeave patch disabled if unlocked framerate is desired."
               PatchVer="1.0"
               AppVer="01.04"
               AppElf="eboot.bin">
