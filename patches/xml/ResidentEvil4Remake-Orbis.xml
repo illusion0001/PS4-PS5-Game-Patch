@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA33387</ID>
+        <ID>CUSA33388</ID>
+        <ID>CUSA35714</ID>
+    </TitleID>
+    <Metadata Title="Resident Evil 4 Remake"
+              Name="30 FPS"
+              Author="illusion"
+              Note="Forces the game to run at 30FPS.\nLeave patch disabled if unlocked framerate is desired."
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x078ac9a8" Value="be01000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
