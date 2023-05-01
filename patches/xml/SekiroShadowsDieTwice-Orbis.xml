@@ -2,6 +2,8 @@
 <Patch>
     <TitleID>
         <ID>CUSA12047</ID>
+        <ID>CUSA13801</ID>
+        <ID>CUSA13910</ID>
     </TitleID>
     <Metadata Title="Sekiro: Shadows Die Twice"
               Name="30 FPS Fix (Proper Frame Pacing)"
@@ -35,7 +37,7 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes32" Address="0x04229d44" Value="0x00000500"/>
-            <Line Type="bytes32" Address="0x04229d44" Value="0x000002d0"/>
+            <Line Type="bytes32" Address="0x04229d48" Value="0x000002d0"/>
             <Line Type="bytes32" Address="0x023603ff" Value="0x00000780"/>
             <Line Type="bytes32" Address="0x02360409" Value="0x00000438"/>
         </PatchList>
