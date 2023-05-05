@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01014</ID>
+        <ID>CUSA27043</ID>
+    </TitleID>
+    <Metadata Title="Dead Island 2"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03e8602f" Value="31f6"/>
+            <Line Type="bytes" Address="0x066b2948" Value="ebb0"/>
+        </PatchList>
+    </Metadata>
+</Patch>
