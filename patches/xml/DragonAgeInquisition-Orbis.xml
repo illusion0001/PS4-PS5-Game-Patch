@@ -17,4 +17,34 @@
             <Line Type="bytes" Address="0x012517d9" Value="c644205201"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Dragon Age: Inquisition"
+              Name="83% Resolution Scale"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01306896" Value="0.83"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon Age: Inquisition"
+              Name="67% Resolution Scale"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01306896" Value="0.67"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon Age: Inquisition"
+              Name="50% Resolution Scale"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01306896" Value="0.50"/>
+        </PatchList>
+    </Metadata>
 </Patch>
