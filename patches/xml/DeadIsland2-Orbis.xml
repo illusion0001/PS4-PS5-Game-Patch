@@ -15,4 +15,60 @@
             <Line Type="bytes" Address="0x066b2948" Value="ebb0"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Force PS4 Pro to output at 1080p on 4K TV"
+              Note="Enable this for extra performance."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03ec2479" Value="eb11"/>
+            <Line Type="bytes" Address="0x0274c7a7" Value="eb21"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Resolution Scale Modifier (ENABLE FIRST)"
+              Note="This patch must be enabled first for the other modifiers to work."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01a3b196" Value="c7048b0000c842"/>
+            <Line Type="bytes" Address="0x01a3b19d" Value="c5fa10048b"/>
+            <Line Type="bytes" Address="0x01a3b1a2" Value="e9693f5a04"/>
+            <Line Type="bytes" Address="0x05fdf10b" Value="e986c0a5fb"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Resolution Scale Modifier (83%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01a3b199" Value="83.3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Resolution Scale Modifier (66.7%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01a3b199" Value="66.7"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Resolution Scale Modifier (50%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x01a3b199" Value="50.0"/>
+        </PatchList>
+    </Metadata>
 </Patch>
