@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01499</ID>
+        <ID>CUSA01542</ID>
+        <ID>CUSA01566</ID>
+    </TitleID>
+    <Metadata Title="Mirror's Edge Catalyst"
+              Name="Allow FOV to be set up to 120 in Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0165688c" Value="e9e4e41301"/>
+            <Line Type="bytes" Address="0x02794d75" Value="41817e2400007042"/>
+            <Line Type="bytes" Address="0x02794d7d" Value="7530"/>
+            <Line Type="bytes" Address="0x02794d7f" Value="41817e280000b442"/>
+            <Line Type="bytes" Address="0x02794d87" Value="7526"/>
+            <Line Type="bytes" Address="0x02794d89" Value="41817e2c00007042"/>
+            <Line Type="bytes" Address="0x02794d91" Value="751c"/>
+            <Line Type="bytes" Address="0x02794d93" Value="41817e300000803f"/>
+            <Line Type="bytes" Address="0x02794d9b" Value="7512"/>
+            <Line Type="bytes" Address="0x02794d9d" Value="41817e70466f7600"/>
+            <Line Type="bytes" Address="0x02794da5" Value="7508"/>
+            <Line Type="bytes" Address="0x02794da7" Value="41c746280000f042"/>
+            <Line Type="bytes" Address="0x02794daf" Value="c4817a104628"/>
+            <Line Type="bytes" Address="0x02794db5" Value="e9d81aecfe"/>
+            <Line Type="bytes" Address="0x01385420" Value="cc"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mirror's Edge Catalyst"
+              Name="Render 3D at 1920x1080"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01f746fa" Value="e9e76d8300"/>
+            <Line Type="bytes" Address="0x027ab4e6" Value="c4817a1106"/>
+            <Line Type="bytes" Address="0x027ab4eb" Value="41813e5555553f"/>
+            <Line Type="bytes" Address="0x027ab4f2" Value="7507"/>
+            <Line Type="bytes" Address="0x027ab4f4" Value="41c7060000803f"/>
+            <Line Type="bytes" Address="0x027ab4fb" Value="e9ff917cff"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mirror's Edge Catalyst"
+              Name="Disable TAA"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00488ba2" Value="e9fd283202"/>
+            <Line Type="bytes" Address="0x027ab4a4" Value="488b4da8"/>
+            <Line Type="bytes" Address="0x027ab4a8" Value="8901"/>
+            <Line Type="bytes" Address="0x027ab4aa" Value="83f808"/>
+            <Line Type="bytes" Address="0x027ab4ad" Value="7518"/>
+            <Line Type="bytes" Address="0x027ab4af" Value="81790485010000"/>
+            <Line Type="bytes" Address="0x027ab4b6" Value="750f"/>
+            <Line Type="bytes" Address="0x027ab4b8" Value="8179080000803f"/>
+            <Line Type="bytes" Address="0x027ab4bf" Value="7506"/>
+            <Line Type="bytes" Address="0x027ab4c1" Value="c70100000000"/>
+            <Line Type="bytes" Address="0x027ab4c7" Value="b001"/>
+            <Line Type="bytes" Address="0x027ab4c9" Value="e9dcd6cdfd"/>
+        </PatchList>
+    </Metadata>
+</Patch>
