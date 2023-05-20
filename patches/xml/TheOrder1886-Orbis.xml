@@ -2,7 +2,11 @@
 <Patch>
     <TitleID>
         <ID>CUSA00035</ID>
+        <ID>CUSA00070</ID>
+        <ID>CUSA00076</ID>
+        <ID>CUSA00100</ID>
         <ID>CUSA00670</ID>
+        <ID>CUSA00785</ID>
     </TitleID>
     <Metadata Title="The Order 1886"
               Name="60 FPS Unlock"
