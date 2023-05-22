@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12771</ID>
+        <ID>CUSA12824</ID>
+    </TitleID>
+    <Metadata Title="Hogwarts Legacy"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 f8 03 bb 03 00 00 00 41 8b 7e ?? 0f 42 d8 ff cb 85 c0 0f 44 d8 89 de" Value="b800000000" Offset="+24"/>
+            <Line Type="mask" Address="83 f9 03 ba 03 00 00 00 0f 42 d1 31 db ff ca 85 c0 0f 4f da 41 39 5f 60 74 ?? 41 8b 7f 2c 89 de" Value="b800000000" Offset="+32"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Force PS4 Pro to output at 1080p on 4K display"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="0f 85 ?? ?? ?? ?? 81 7d ac 39 04 00 00 72 ?? 48 8d 05 ?? ?? ?? ?? 48 39 05 ?? ?? ?? ??" Value="48e9" Offset="0"/>
+            <Line Type="mask" Address="75 ?? 81 7d bc 39 04 00 00 72 ?? 48 b8 00 0f 00 00 70 08 00 00" Value="eb" Offset="0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Resolution Patch (MASTER CODE) (ENABLE FIRST)"
+              Note="This patch will break uncap framerate option ingame, use 60 FPS Patch or Restart game after saving to fix."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b c5 fa 5e 05 ?? ?? ?? ?? c5 f8 28 4d ?? c5 f8 28 55 ?? c5 f2 5d c0 c5 f2 c2 ca 01 c4 e3 79 4a c2 10 c4 c1 78 2e 46 20" Value="833ccb00750ec7048b0000c842c704cb01000000c5fa10048b" Offset="0" Size="5" Target="4d 61 6c 6c 6f 63 42 69 6e 6e 65 64 32 20"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Resolution Patch 83.3%"
+              Note="This patch will break uncap framerate option ingame, use 60 FPS Patch or Restart game after saving to fix."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 3c cb 00 75 0e c7 04 8b" Value="9a99a642" Offset="+9"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Resolution Patch 66.7%"
+              Note="This patch will break uncap framerate option ingame, use 60 FPS Patch or Restart game after saving to fix."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 3c cb 00 75 0e c7 04 8b" Value="66668542" Offset="+9"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Resolution Patch 50.0%"
+              Note="This patch will break uncap framerate option ingame, use 60 FPS Patch or Restart game after saving to fix."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 3c cb 00 75 0e c7 04 8b" Value="00004842" Offset="+9"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Hogwarts Legacy"
+              Name="Resolution Patch 25.0%"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 3c cb 00 75 0e c7 04 8b" Value="0000c841" Offset="+9"/>
+        </PatchList>
+    </Metadata>
+</Patch>
