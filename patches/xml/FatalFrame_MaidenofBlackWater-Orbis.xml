@@ -4,7 +4,8 @@
         <ID>CUSA28987</ID>
     </TitleID>
     <Metadata Title="FATAL FRAME: Maiden of Black Water"
-              Name="60 FPS"
+              Name="60 FPS (See Notes)"
+              Note="Chapter 8/Eighth Drop the game stops progression when you go check on Yuri. Disable Patch to continue and re enable after you save."
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.04"
