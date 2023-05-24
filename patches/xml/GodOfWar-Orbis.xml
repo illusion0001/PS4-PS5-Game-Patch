@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA07408</ID>
+        <ID>CUSA07410</ID>
+        <ID>CUSA07411</ID>
+        <ID>CUSA07412</ID>
+        <ID>CUSA07435</ID>
+    </TitleID>
+    <Metadata Title="God of War"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 3d ?? ?? ?? ?? 0f b6 f0 88 05 ?? ?? ?? ??" Value="b800000000" Offset="+15"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War"
+              Name="Resolution Patch (1080p Checkerboarded PS4 Pro) (See Notes)"
+              Note="Set graphics mode in game 'Video' options to 'Favor Resolution'"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="80 07 00 00 70 08 00 00 00 0f 00 00 70 08 00 00" Value="c0030000380400008007000038040000"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 80 07 00 00" Value="c0030000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 70 08 00 00" Value="38040000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 00 0f 00 00" Value="80070000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 70 08 00 00" Value="38040000" Offset="+6"/>
+            <Line Type="mask" Address="be 70 08 00 00 ba 00 0f 00 00" Value="be38040000ba80070000"/>
+            <Line Type="mask" Address="bf 80 07 00 00 89 f1" Value="bfc0030000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War"
+              Name="Resolution Patch (720p Base PS4)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="80 07 00 00 38 04 00 00 80 07 00 00 38 04 00 00" Value="00050000d002000000050000d0020000"/>
+            <Line Type="mask" Address="be 38 04 00 00 ba 80 07 00 00" Value="bed0020000ba00050000"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 80 07 00 00" Value="00050000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 38 04 00 00" Value="d0020000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 80 07 00 00" Value="00050000" Offset="+6"/>
+            <Line Type="mask" Address="c7 05 ?? ?? ?? ?? 38 04 00 00" Value="d0020000" Offset="+6"/>
+            <Line Type="mask" Address="bf 80 07 00 00 89 f1" Value="bf00050000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War"
+              Name="Disable TAA"
+              Author="TL431, illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c6 83 90 03 00 00 01" Value="c6839003000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War"
+              Name="Disable Sharpness"
+              Author="TL431, illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 05 ?? ?? ?? ?? 41 89 84 24 74 05 00 00" Value="b80000803f90"/>
+        </PatchList>
+    </Metadata>
+</Patch>
