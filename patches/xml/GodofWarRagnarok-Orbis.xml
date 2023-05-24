@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+    <!-- List may not be accurate -->
+    <!-- https://serialstation.com/titles/?name=God%20of%20War%20Ragnarok -->
+        <ID>CUSA25468</ID>
+        <ID>CUSA25469</ID>
+        <ID>CUSA25470</ID>
+        <ID>CUSA25471</ID>
+        <ID>CUSA31678</ID>
+        <ID>CUSA31679</ID>
+        <ID>CUSA31680</ID>
+        <ID>CUSA31681</ID>
+        <ID>CUSA34256</ID>
+        <ID>CUSA34257</ID>
+        <ID>CUSA34258</ID>
+        <ID>CUSA34259</ID>
+        <ID>CUSA34357</ID>
+        <ID>CUSA34384</ID>
+        <ID>CUSA34385</ID>
+        <ID>CUSA34386</ID>
+        <ID>CUSA34387</ID>
+        <ID>CUSA34388</ID>
+        <ID>CUSA34389</ID>
+        <ID>CUSA34390</ID>
+        <ID>CUSA34391</ID>
+        <ID>CUSA34392</ID>
+        <ID>CUSA34393</ID>
+        <ID>CUSA34394</ID>
+        <ID>CUSA34395</ID>
+    </TitleID>
+    <Metadata Title="God of War Ragnarok"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="e8 ?? ?? ?? ?? 8b 1d ?? ?? ?? ?? 48 8d bd 60 ff ff ff" Value="b800000000"/>
+            <Line Type="mask" Address="e8 ?? ?? ?? ?? 4c 8b 64 24 20 c5 f8 10 05 ?? ?? ?? ??" Value="b800000000"/>
+            <Line Type="mask" Address="e8 ?? ?? ?? ?? 8b 05 ?? ?? ?? ?? 89 c1 ff c1 c1 e9 1f 8d 4c 08 01 83 e1 fe f7 d9 8d 44 08 01" Value="b800000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War Ragnarok"
+              Name="Resolution Patch (See Notes)"
+              Note="Base PS4 ????x????\nPS4 Pro 1664x936"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Backbuffer -->
+            <Line Type="mask" Address="b8 00 0f 00 00 41 bc 80 07 00 00 bb 38 04 00 00 c5 fa 11 65 d4 4c 0f 45 e0 b8 70 08 00 00" Value="b88408000041bc00050000bbd0020000c5fa1165d44c0f45e0b8ca040000"/>
+            <!-- Frontbuffer always 1920x1080 -->
+            <Line Type="mask_jump32" Address="8d 04 c0 48 c1 e0 20 48 09 c1" Value="8d04c048c1e0204809c148bb8007000038040000" Target="2e 2e 5c 2e 2e 5c 2e 2e 5c 43 6f 6d 6d 6f 6e 5c 41 6b 4d 69 73 6d 61 74 63 68 42 75 66 66 65 72 69 6e 67 2e 68 00" Size="10"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War Ragnarok"
+              Name="Disable TAA"
+              Author="TL431, illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="41 c6 84 24 3c 03 00 00 01" Value="41c684243c03000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War Ragnarok"
+              Name="Disable Sharpness"
+              Author="TL431, illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="00 00 c0 3f 00 00 7a 44" Value="0000803f"/>
+        </PatchList>
+    </Metadata>
+</Patch>
