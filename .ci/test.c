@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 #endif
-
+    printf("Build Time: %s\n", __TIME__);
 #ifdef __PC__
     char *input_file = argv[1];
     puts(input_file);
@@ -100,16 +100,29 @@ int main(int argc, char *argv[]) {
                 const char *gameType = GetXMLAttr(Line_node, "Type");
                 const char *gameAddr = GetXMLAttr(Line_node, "Address");
                 const char *gameValue = GetXMLAttr(Line_node, "Value");
+                const char *gameOffset = GetXMLAttr(Line_node, "Offset");
+                const char *gameJumpTarget = GetXMLAttr(Line_node, "Target");
+                const char *gameJumpSize = GetXMLAttr(Line_node, "Size");
                 printf("Type: \"%s\" ", gameType);
-                addr_real = strtoull(gameAddr, NULL, 16);
-                printf("Address: \"%s\" (hex 0x%lx) ", gameAddr, addr_real);
-                printf("Value: \"%s\"\n", gameValue);
+                if (!strcmp("mask_jump32", gameType) || !strcmp("mask", gameType))
+                {
+                    printf("Mask: \"%s\" ", gameAddr);
+                    printf("Value: \"%s\" ", gameValue);
+                    printf("Offset: \"%s\" ", gameOffset);
+                    printf("Target: \"%s\" ", gameJumpTarget);
+                    printf("Size: \"%s\"\n", gameJumpSize);
+                }
+                else
+                {
+                    addr_real = strtoull(gameAddr, NULL, 16);
+                    printf("Address: \"%s\" (hex 0x%lx) ", gameAddr, addr_real);
+                    printf("Value: \"%s\"\n", gameValue);
+                }
             }
         }
         mxmlDelete(node);
         mxmlDelete(tree);
         free(buffer);
-        printf("Build Time: %s\n", __TIME__);
         return 0;
     }
     printf("File %s empty\n", input_file);
