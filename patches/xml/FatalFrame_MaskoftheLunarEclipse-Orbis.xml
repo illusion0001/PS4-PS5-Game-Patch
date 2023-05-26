@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA36876</ID>
+    </TitleID>
+    <Metadata Title="FATAL FRAME: Mask of the Lunar Eclipse"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="48 b8 1e 00 00 00 01 00 00 00" Value="48b83c00000001000000"/>
+            <Line Type="mask" Address="8d 73 ff 83 fb 02 0f 4c f0 e8 ?? ?? ?? ??" Value="b800000000" Offset="+9"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="FATAL FRAME: Mask of the Lunar Eclipse"
+              Name="No Film Grain"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c7 87 e0 0d 00 00 ff ff ff ff" Value="c787e00d000000000000"/>
+            <Line Type="mask" Address="c7 87 00 0e 00 00 ff ff ff ff" Value="c787000e000000000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
