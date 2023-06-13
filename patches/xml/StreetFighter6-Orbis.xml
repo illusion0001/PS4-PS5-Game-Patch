@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA31497</ID>
+        <ID>CUSA31498</ID>
+        <ID>CUSA31499</ID>
+        <ID>CUSA31500</ID>
+    </TitleID>
+    <Metadata Title="Street Fighter 6"
+              Name="Remove 30FPS Cap"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask_jump32" Address="88 88 79 02 00 00 49 8b 4e 50" Value="c6807902000000" Target="90 90 90 90 90 90 90 90 90 90 90 90" Size="6"/>
+            <Line Type="mask_jump32" Address="c5 fa 11 80 6c 02 00 00 49 8b 46 50" Value="c7806c02000000007042" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="8"/>
+        </PatchList>
+    </Metadata>
+</Patch>
