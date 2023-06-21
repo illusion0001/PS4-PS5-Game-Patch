@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08161</ID>
+        <ID>CUSA08216</ID>
+        <ID>CUSA08222</ID>
+    </TitleID>
+    <Metadata Title="Devil May Cry 5"
+                Name="Boss Rush Bloody Palace"
+                Note=""
+                Author="Scirvir"
+                PatchVer="1.0"
+                AppVer="01.10"
+                AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x009dead6" Value="e93cd3ea02"/>
+            <Line Type="bytes" Address="0x0388BE17" Value="41837c246800"/>
+            <Line Type="bytes" Address="0x0388BE1d" Value="7432"/>
+            <Line Type="bytes" Address="0x0388BE1f" Value="41837c246814"/>
+            <Line Type="bytes" Address="0x0388BE25" Value="7438"/>
+            <Line Type="bytes" Address="0x0388BE27" Value="41837c246828"/>
+            <Line Type="bytes" Address="0x0388BE2d" Value="743e"/>
+            <Line Type="bytes" Address="0x0388BE2f" Value="41837c24683c"/>
+            <Line Type="bytes" Address="0x0388BE35" Value="7444"/>
+            <Line Type="bytes" Address="0x0388be37" Value="41837c246850"/>
+            <Line Type="bytes" Address="0x0388be3d" Value="744a"/>
+            <Line Type="bytes" Address="0x0388be3f" Value="41837c24685a"/>
+            <Line Type="bytes" Address="0x0388BE45" Value="7450"/>
+            <Line Type="bytes" Address="0x0388BE47" Value="41ff442468"/>
+            <Line Type="bytes" Address="0x0388BE4c" Value="e98a2c15fd"/>
+            <Line Type="bytes" Address="0x0388be51" Value="41c744246814000000"/>
+            <Line Type="bytes" Address="0x0388be5a" Value="e97c2c15fd"/>
+            <Line Type="bytes" Address="0x0388be5f" Value="41c744246828000000"/>
+            <Line Type="bytes" Address="0x0388be68" Value="e96e2c15fd"/>
+            <Line Type="bytes" Address="0x0388be6d" Value="41c74424683c000000"/>
+            <Line Type="bytes" Address="0x0388be76" Value="e9602c15fd"/>
+            <Line Type="bytes" Address="0x0388be7b" Value="41c744246850000000"/>
+            <Line Type="bytes" Address="0x0388be84" Value="e9522c15fd"/>
+            <Line Type="bytes" Address="0x0388be89" Value="41c74424685a000000"/>
+            <Line Type="bytes" Address="0x0388be92" Value="e9442c15fd"/>
+            <Line Type="bytes" Address="0x0388be97" Value="41c744246862000000"/>
+            <Line Type="bytes" Address="0x0388bea0" Value="e9362c15fd"/>
+        </PatchList>
+    </Metadata>
+</Patch>
