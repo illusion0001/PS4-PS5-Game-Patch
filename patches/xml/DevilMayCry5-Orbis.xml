@@ -14,20 +14,20 @@
                 AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes" Address="0x009dead6" Value="e93cd3ea02"/>
-            <Line Type="bytes" Address="0x0388BE17" Value="41837c246800"/>
-            <Line Type="bytes" Address="0x0388BE1d" Value="7432"/>
-            <Line Type="bytes" Address="0x0388BE1f" Value="41837c246814"/>
-            <Line Type="bytes" Address="0x0388BE25" Value="7438"/>
-            <Line Type="bytes" Address="0x0388BE27" Value="41837c246828"/>
-            <Line Type="bytes" Address="0x0388BE2d" Value="743e"/>
-            <Line Type="bytes" Address="0x0388BE2f" Value="41837c24683c"/>
-            <Line Type="bytes" Address="0x0388BE35" Value="7444"/>
+            <Line Type="bytes" Address="0x0388be17" Value="41837c246800"/>
+            <Line Type="bytes" Address="0x0388be1d" Value="7432"/>
+            <Line Type="bytes" Address="0x0388be1f" Value="41837c246814"/>
+            <Line Type="bytes" Address="0x0388be25" Value="7438"/>
+            <Line Type="bytes" Address="0x0388be27" Value="41837c246828"/>
+            <Line Type="bytes" Address="0x0388be2d" Value="743e"/>
+            <Line Type="bytes" Address="0x0388be2f" Value="41837c24683c"/>
+            <Line Type="bytes" Address="0x0388be35" Value="7444"/>
             <Line Type="bytes" Address="0x0388be37" Value="41837c246850"/>
             <Line Type="bytes" Address="0x0388be3d" Value="744a"/>
             <Line Type="bytes" Address="0x0388be3f" Value="41837c24685a"/>
-            <Line Type="bytes" Address="0x0388BE45" Value="7450"/>
-            <Line Type="bytes" Address="0x0388BE47" Value="41ff442468"/>
-            <Line Type="bytes" Address="0x0388BE4c" Value="e98a2c15fd"/>
+            <Line Type="bytes" Address="0x0388be45" Value="7450"/>
+            <Line Type="bytes" Address="0x0388be47" Value="41ff442468"/>
+            <Line Type="bytes" Address="0x0388be4c" Value="e98a2c15fd"/>
             <Line Type="bytes" Address="0x0388be51" Value="41c744246814000000"/>
             <Line Type="bytes" Address="0x0388be5a" Value="e97c2c15fd"/>
             <Line Type="bytes" Address="0x0388be5f" Value="41c744246828000000"/>
