@@ -44,7 +44,7 @@
               AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="mask" Address="bf 02 00 00 00 31 f6 e8 ?? ?? ?? ?? 48 8b 3b 48 8b 07 ff 50 10 e8 ?? ?? ?? ??" Value="bf01000000"/>
+            <Line Type="mask" Address="bf 02 00 00 00 31 f6 e8 ?? ?? ?? ?? 48 8b 3b 48 8b 07 ff 50 ?? e8 ?? ?? ?? ??" Value="bf01000000"/>
         </PatchList>
     </Metadata>
 </Patch>
