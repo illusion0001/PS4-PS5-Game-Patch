@@ -42,4 +42,15 @@
             <Line Type="bytes" Address="0x0388bea0" Value="e9362c15fd"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Devil May Cry 5"
+                Name="Allow Cavaliere R in Bloody Palace"
+                Note=""
+                Author="Scirvir"
+                PatchVer="1.0"
+                AppVer="01.10"
+                AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03054ff4" Value="9090909090"/>
+        </PatchList>
+    </Metadata>
 </Patch>
