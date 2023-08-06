@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
+        <ID>CUSA08809</ID>
         <ID>CUSA08034</ID>
     </TitleID>
     <Metadata Title="Shadow of the Colossus"
@@ -18,6 +19,26 @@
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01390090" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Shadow of the Colossus"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0042437f" Value="0f1f440000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Shadow of the Colossus"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes" Address="0x01390090" Value="31c0c3"/>
