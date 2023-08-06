@@ -13,4 +13,14 @@
             <Line Type="bytes" Address="0x0042437f" Value="0f1f440000"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Shadow of the Colossus"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01390090" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
 </Patch>
