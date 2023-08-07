@@ -222,4 +222,15 @@
             <Line Type="bytes" Address="0x01a452dd" Value="90"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Bloodborne"
+              Name="Force Enable Old Hunters DLC"
+              Note="Also bypass save data requirement from users that don't have DLC on their console but using save from user that does."
+              Author="Lance McDonald (manfightdragon)"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x023b6d20" Value="b801000000"/>
+        </PatchList>
+    </Metadata>
 </Patch>
