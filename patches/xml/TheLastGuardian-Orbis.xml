@@ -3,16 +3,29 @@
     <TitleID>
         <ID>CUSA03627</ID>
         <ID>CUSA03745</ID>
+        <ID>CUSA04936</ID>
     </TitleID>
     <Metadata Title="The Last Gurdian"
               Name="60 FPS Unlock"
-              Note="CPU Limited, for use with 9th generation of consoles."
+              Note="CPU Limited, for use with PS5."
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="bytes" Address="0x01051467" Value="e9b3000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last Gurdian"
+              Name="Resolution Patch: Native 3840x2160"
+              Note="GPU Limited, for use with PS5."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes64" Address="0x01aec3e8" Value="0x08700f0008700f00"/> <!-- Render Res/Output Res -->
+            <Line Type="bytes64" Address="0x01aec3f0" Value="0x0000000000000000"/> <!-- Checkerboard Use Bool -->
         </PatchList>
     </Metadata>
 </Patch>
