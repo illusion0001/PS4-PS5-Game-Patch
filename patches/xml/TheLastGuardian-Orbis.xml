@@ -24,8 +24,8 @@
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes64" Address="0x01aec3e8" Value="0x8700f0008700f00"/>
-            <Line Type="bytes64" Address="0x01aec3f0" Value="0x000000000000000"/>
+            <Line Type="bytes64" Address="0x01aec3e8" Value="0x8700f0008700f00"/> <!-- Render Res/Output Res -->
+            <Line Type="bytes64" Address="0x01aec3f0" Value="0x000000000000000"/> <!-- Checkerboard Use Bool -->
         </PatchList>
     </Metadata>
 </Patch>
