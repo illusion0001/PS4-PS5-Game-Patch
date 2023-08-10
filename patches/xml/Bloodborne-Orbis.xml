@@ -187,6 +187,7 @@
             <Line Type="bytes" Address="0x02715d78" Value="90"/>
             <Line Type="utf16" Address="0x04cb39ea" Value="This 60fps patch was"/>
             <Line Type="utf16" Address="0x04cb39a4" Value="Made with love, by Lance McDonald"/>
+            <!-- yoink `assert()` -->
             <Line Type="bytes" Address="0x02fbf178" Value="4831c0c3"/>
         </PatchList>
     </Metadata>
