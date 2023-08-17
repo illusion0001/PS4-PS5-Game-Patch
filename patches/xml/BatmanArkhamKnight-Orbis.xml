@@ -2,6 +2,8 @@
 <Patch>
     <TitleID>
         <ID>CUSA00133</ID>
+        <ID>CUSA00135</ID>
+        <ID>CUSA01009</ID>
     </TitleID>
     <Metadata Title="Batman: Arkham Knight"
               Name="60 FPS Unlock"
