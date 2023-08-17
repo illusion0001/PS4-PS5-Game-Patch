@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA09254</ID>
+        <ID>CUSA09264</ID>
+        <ID>CUSA12635</ID>
+        <ID>CUSA13217</ID>
+        <ID>CUSA13318</ID>
+    </TitleID>
+    <Metadata Title="Just Cause 4"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.32"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0264c85d" Value="41be00000000"/>
+            <Line Type="bytes" Address="0x005b6bcd" Value="41be01000000"/>
+            <Line Type="bytes" Address="0x005b6bd3" Value="eb1a"/>
+        </PatchList>
+    </Metadata>
+</Patch>
