@@ -21,8 +21,11 @@
               AppVer="01.00"
               AppElf="eboot.bin">
         <PatchList>
+            <!-- No TGS -->
             <Line Type="bytes" Address="0x007f58a4" Value="b800000000"/>
+            <!-- No Gamescom -->
             <Line Type="bytes" Address="0x007f5824" Value="b800000000"/>
+            <!-- ? -->
             <Line Type="bytes" Address="0x0074df61" Value="c60000"/>
             <!-- SPRJ.DebugMenu.DoesUseNewDebugMenu = false -->
             <Line Type="bytes" Address="0x00bf0188" Value="b800000000"/>
