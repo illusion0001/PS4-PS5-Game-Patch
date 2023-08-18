@@ -4,6 +4,31 @@
         <ID>CUSA01322</ID>
     </TitleID>
     <Metadata Title="Bloodborne: Network Test"
+              Name="Boot into TGS Mode"
+              Author="manfightdragon"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x007f58a4" Value="b801000000"/>
+            <Line Type="bytes" Address="0x00c29ad0" Value="b800000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Bloodborne: Network Test"
+              Name="Debug Menu"
+              Author="manfightdragon"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x007f58a4" Value="b800000000"/>
+            <Line Type="bytes" Address="0x007f5824" Value="b800000000"/>
+            <Line Type="bytes" Address="0x0074df61" Value="c60000"/>
+            <!-- SPRJ.DebugMenu.DoesUseNewDebugMenu = false -->
+            <Line Type="bytes" Address="0x00bf0188" Value="b800000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Bloodborne: Network Test"
               Name="30 FPS Fix (Proper Frame Pacing)"
               Note="Caps framerate to 30 with proper frame pacing."
               Author="illusion, manfightdragon"
