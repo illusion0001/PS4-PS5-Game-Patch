@@ -37,7 +37,8 @@
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Part II"
-              Name="Skip Intro Logos"
+              Name="Skip Startup Logos"
+              Note="Special thanks to icemesh for DC disassembler.\n\nhttps://github.com/icemesh/t2-dc-disasm"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.00"
@@ -441,6 +442,166 @@ Using Bow?: %i
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Part II"
+              Name="Draw Color Boarder"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!--
+            _start:
+            # Start addr 0204118c
+            LEA RCX, [0x0436bca4] # Show Foreground Stats
+            CMP byte ptr [RCX], 0
+            JZ exit_func
+            MOV R13,RAX
+            LEA RDI,[RSP + 0x118]
+            MOV ESI,0x3
+            XOR EDX,EDX
+            CALL 0x021aebe0 # Get window context
+            vxorps XMM0,XMM0,XMM0
+            vxorps XMM1,XMM1,XMM1
+            vxorps XMM2,XMM2,XMM2
+            vxorps XMM3,XMM3,XMM3
+            # x1
+            MOV EAX, 0x0
+            VCVTSI2SS XMM0,XMM0,EAX
+            # y1
+            MOV EAX, 0x0
+            VCVTSI2SS XMM1,XMM1,EAX
+            # x2
+            MOV EAX, 0x20
+            VCVTSI2SS XMM2,XMM2,EAX
+            # y2
+            MOV EAX, 0x2d0
+            VCVTSI2SS XMM3,XMM3,EAX
+            LEA RAX,[RSP + 0x118]
+            MOV ESI,0xbe141414
+            MOV EDX,0xb
+            MOV RDI,RAX
+            LEA RAX, [0x03400064]
+            CMP dword ptr [RAX],0x7 # above 16 index, reset
+            JA color_default
+            CMP dword ptr [RAX],0x0 # check color index
+            JZ color_0
+            CMP dword ptr [RAX],0x1
+            JZ color_1
+            CMP dword ptr [RAX],0x2
+            JZ color_2
+            CMP dword ptr [RAX],0x3
+            JZ color_3
+            CMP dword ptr [RAX],0x4
+            JZ color_4
+            CMP dword ptr [RAX],0x5
+            JZ color_5
+            CMP dword ptr [RAX],0x6
+            JZ color_6
+            CMP dword ptr [RAX],0x7
+            JZ color_7
+            color_default:
+            MOV ESI, 0xFFFFFFFF # first index color
+            MOV dword ptr [RAX],1 # next frame, use second index
+            JMP draw_bar_only_no_add
+            color_0:
+            MOV ESI, 0xFFFFFFFF # White good
+            JMP draw_bar
+            color_1:
+            MOV ESI, 0xFFFF0000 # Lime good
+            JMP draw_bar
+            color_2:
+            MOV ESI, 0xFF808000 # Blue bad 000,170,255,255
+            JMP draw_bar
+            color_3:
+            MOV ESI, 0xFF008000 # Red good
+            JMP draw_bar
+            color_4:
+            MOV ESI, 0xFF000080 # Teal?? bad 255,124,231,255
+            JMP draw_bar
+            color_5:
+            MOV ESI, 0xFF800080 # Navy bad 231,124,124,255
+            JMP draw_bar
+            color_6:
+            MOV ESI, 0xFF808080 # Green 000,216,000,255
+            JMP draw_bar
+            color_7:
+            MOV ESI, 0xFF00FFFF # Aqua good
+            # JMP draw_bar
+            draw_bar:
+            ADD dword ptr [RAX],1
+            draw_bar_only_no_add:
+            CALL 0x021af640
+            exit_func:
+            # MOV R13,RAX
+            JMP 0x20413df
+            -->
+            <Line Type="utf8" Address="0x02eb1970" Value="Draw Color Boarder"/>
+            <Line Type="bytes" Address="0x0204118c" Value="488d0d11ab3202"/>
+            <Line Type="bytes" Address="0x02041193" Value="803900"/>
+            <Line Type="bytes" Address="0x02041196" Value="0f84df000000"/>
+            <Line Type="bytes" Address="0x0204119c" Value="4989c5"/>
+            <Line Type="bytes" Address="0x0204119f" Value="488dbc2418010000"/>
+            <Line Type="bytes" Address="0x020411a7" Value="be03000000"/>
+            <Line Type="bytes" Address="0x020411ac" Value="31d2"/>
+            <Line Type="bytes" Address="0x020411ae" Value="e82dda1600"/>
+            <Line Type="bytes" Address="0x020411b3" Value="c5f857c0"/>
+            <Line Type="bytes" Address="0x020411b7" Value="c5f057c9"/>
+            <Line Type="bytes" Address="0x020411bb" Value="c5e857d2"/>
+            <Line Type="bytes" Address="0x020411bf" Value="c5e057db"/>
+            <Line Type="bytes" Address="0x020411c3" Value="b800000000"/>
+            <Line Type="bytes" Address="0x020411c8" Value="c5fa2ac0"/>
+            <Line Type="bytes" Address="0x020411cc" Value="b800000000"/>
+            <Line Type="bytes" Address="0x020411d1" Value="c5f22ac8"/>
+            <Line Type="bytes" Address="0x020411d5" Value="b820000000"/>
+            <Line Type="bytes" Address="0x020411da" Value="c5ea2ad0"/>
+            <Line Type="bytes" Address="0x020411de" Value="b8d0020000"/>
+            <Line Type="bytes" Address="0x020411e3" Value="c5e22ad8"/>
+            <Line Type="bytes" Address="0x020411e7" Value="488d842418010000"/>
+            <Line Type="bytes" Address="0x020411ef" Value="be141414be"/>
+            <Line Type="bytes" Address="0x020411f4" Value="ba0b000000"/>
+            <Line Type="bytes" Address="0x020411f9" Value="4889c7"/>
+            <Line Type="bytes" Address="0x020411fc" Value="488d0561ee3b01"/>
+            <Line Type="bytes" Address="0x02041203" Value="833807"/>
+            <Line Type="bytes" Address="0x02041206" Value="7728"/>
+            <Line Type="bytes" Address="0x02041208" Value="833800"/>
+            <Line Type="bytes" Address="0x0204120b" Value="7430"/>
+            <Line Type="bytes" Address="0x0204120d" Value="833801"/>
+            <Line Type="bytes" Address="0x02041210" Value="7432"/>
+            <Line Type="bytes" Address="0x02041212" Value="833802"/>
+            <Line Type="bytes" Address="0x02041215" Value="7434"/>
+            <Line Type="bytes" Address="0x02041217" Value="833803"/>
+            <Line Type="bytes" Address="0x0204121a" Value="7436"/>
+            <Line Type="bytes" Address="0x0204121c" Value="833804"/>
+            <Line Type="bytes" Address="0x0204121f" Value="7438"/>
+            <Line Type="bytes" Address="0x02041221" Value="833805"/>
+            <Line Type="bytes" Address="0x02041224" Value="743a"/>
+            <Line Type="bytes" Address="0x02041226" Value="833806"/>
+            <Line Type="bytes" Address="0x02041229" Value="743c"/>
+            <Line Type="bytes" Address="0x0204122b" Value="833807"/>
+            <Line Type="bytes" Address="0x0204122e" Value="743e"/>
+            <Line Type="bytes" Address="0x02041230" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x02041235" Value="c70001000000"/>
+            <Line Type="bytes" Address="0x0204123b" Value="eb39"/>
+            <Line Type="bytes" Address="0x0204123d" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x02041242" Value="eb2f"/>
+            <Line Type="bytes" Address="0x02041244" Value="be0000ffff"/>
+            <Line Type="bytes" Address="0x02041249" Value="eb28"/>
+            <Line Type="bytes" Address="0x0204124b" Value="be008080ff"/>
+            <Line Type="bytes" Address="0x02041250" Value="eb21"/>
+            <Line Type="bytes" Address="0x02041252" Value="be008000ff"/>
+            <Line Type="bytes" Address="0x02041257" Value="eb1a"/>
+            <Line Type="bytes" Address="0x02041259" Value="be800000ff"/>
+            <Line Type="bytes" Address="0x0204125e" Value="eb13"/>
+            <Line Type="bytes" Address="0x02041260" Value="be800080ff"/>
+            <Line Type="bytes" Address="0x02041265" Value="eb0c"/>
+            <Line Type="bytes" Address="0x02041267" Value="be808080ff"/>
+            <Line Type="bytes" Address="0x0204126c" Value="eb05"/>
+            <Line Type="bytes" Address="0x0204126e" Value="beffff00ff"/>
+            <Line Type="bytes" Address="0x02041273" Value="830001"/>
+            <Line Type="bytes" Address="0x02041276" Value="e8c5e31600"/>
+            <Line Type="bytes" Address="0x0204127b" Value="e95f010000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="The Last of Us: Part II"
               Name="60 FPS"
               Author="illusion"
               PatchVer="1.0"
@@ -471,7 +632,7 @@ Using Bow?: %i
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Part II"
-              Name="Skip Intro Logos"
+              Name="Skip Startup Logos"
               Note="Special thanks to icemesh for DC disassembler.\n\nhttps://github.com/icemesh/t2-dc-disasm"
               Author="icemesh, illusion"
               PatchVer="1.0"
