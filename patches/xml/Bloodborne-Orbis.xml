@@ -814,4 +814,194 @@
             <Line Type="bytes" Address="0x01de368b" Value="c3"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Bloodborne"
+              Name="Disable vsync"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x025b3271" Value="4831f6"/>
+            <Line Type="bytes" Address="0x0243487e" Value="41c74424186f12833a"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Bloodborne"
+              Name="Draw Color Boarder (FLASHING COLORS WARNING)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.09"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Menu not focused -->
+            <Line Type="bytes" Address="0x01401136" Value="eb"/>
+            <!-- No font drawing -->
+            <Line Type="bytes" Address="0x01401168" Value="909090"/>
+            <Line Type="bytes" Address="0x01402a90" Value="c3"/>
+            <Line Type="bytes" Address="0x0140be00" Value="e98c6cffff"/>
+            <!-- Source -->
+            <!--
+                push rax
+                push rsi
+                mov qword ptr [rdi+0x28], 0
+                mov dword ptr [rdi+0x30], 0x42000000
+                lea rsi, [0x055289f8]
+                mov eax, [rsi+0x4]         # vertical res
+                vcvtsi2ss xmm0, xmm0, eax
+                vmovss dword ptr [rdi+0x34], xmm0
+                lea rax, [0x54dc040]
+                # 255,255,255,255
+                MOV dword ptr [RDI+0x50], 0x3f800000
+                MOV dword ptr [RDI+0x54], 0x3f800000
+                MOV dword ptr [RDI+0x58], 0x3f800000
+                MOV dword ptr [RDI+0x5c], 0x3f800000
+                CMP dword ptr [RAX], 0x7   # above 8 index, reset
+                JA color_default
+                CMP dword ptr [RAX], 0x0   # check color index
+                JZ color_0
+                CMP dword ptr [RAX], 0x1
+                JZ color_1
+                CMP dword ptr [RAX], 0x2
+                JZ color_2
+                CMP dword ptr [RAX], 0x3
+                JZ color_3
+                CMP dword ptr [RAX], 0x4
+                JZ color_4
+                CMP dword ptr [RAX], 0x5
+                JZ color_5
+                CMP dword ptr [RAX], 0x6
+                JZ color_6
+                CMP dword ptr [RAX], 0x7
+                JZ color_7
+                color_default:
+                MOV dword ptr [RAX], 1       # next frame, use second index
+                JMP draw_bar_only_no_add
+            color_0:
+                # 255,255,255,255
+                MOV dword ptr [RDI+0x50], 0x3f800000
+                MOV dword ptr [RDI+0x54], 0x3f800000
+                MOV dword ptr [RDI+0x58], 0x3f800000
+                JMP draw_bar
+            color_1:
+                # 0,0,255,255
+                MOV dword ptr [RDI+0x50], 0x00000000
+                MOV dword ptr [RDI+0x54], 0x00000000
+                MOV dword ptr [RDI+0x58], 0x3f800000
+                JMP draw_bar
+            color_2:
+                # 0,128,128,255
+                MOV dword ptr [RDI+0x50], 0x00000000
+                MOV dword ptr [RDI+0x54], 0x3f000000
+                MOV dword ptr [RDI+0x58], 0x3f000000
+                JMP draw_bar
+            color_3:
+                # 0,128,0,255
+                MOV dword ptr [RDI+0x50], 0x00000000
+                MOV dword ptr [RDI+0x54], 0x3f000000
+                MOV dword ptr [RDI+0x58], 0x00000000
+                JMP draw_bar
+            color_4:
+                # 128,0,0,255
+                MOV dword ptr [RDI+0x50], 0x3f000000
+                MOV dword ptr [RDI+0x54], 0x00000000
+                MOV dword ptr [RDI+0x58], 0x00000000
+                JMP draw_bar
+            color_5:
+                # 128,0,128,255
+                MOV dword ptr [RDI+0x50], 0x3f000000
+                MOV dword ptr [RDI+0x54], 0x00000000
+                MOV dword ptr [RDI+0x58], 0x3f000000
+                JMP draw_bar
+            color_6:
+                # 128,128,128,255
+                MOV dword ptr [RDI+0x50], 0x3f000000
+                MOV dword ptr [RDI+0x54], 0x3f000000
+                MOV dword ptr [RDI+0x58], 0x3f000000
+                JMP draw_bar
+            color_7:
+                # 255,255,0,255
+                MOV dword ptr [RDI+0x50], 0x3f800000
+                MOV dword ptr [RDI+0x54], 0x3f800000
+                MOV dword ptr [RDI+0x58], 0x00000000
+                JMP draw_bar
+            draw_bar:
+                add dword ptr [rax], 1
+            draw_bar_only_no_add:
+                pop rsi
+                pop rax
+                VMOVAPS XMM0,xmmword ptr [RDI + 0x50]
+                jmp 0x0140be05
+            -->
+            <!-- Draw bar -->
+            <Line Type="bytes" Address="0x01402a91" Value="50"/>
+            <Line Type="bytes" Address="0x01402a92" Value="56"/>
+            <Line Type="bytes" Address="0x01402a93" Value="48c7472800000000"/>
+            <Line Type="bytes" Address="0x01402a9b" Value="c7473000000042"/>
+            <Line Type="bytes" Address="0x01402aa2" Value="488d354f5f1204"/>
+            <Line Type="bytes" Address="0x01402aa9" Value="8b4604"/>
+            <Line Type="bytes" Address="0x01402aac" Value="c5fa2ac0"/>
+            <Line Type="bytes" Address="0x01402ab0" Value="c5fa114734"/>
+            <Line Type="bytes" Address="0x01402ab5" Value="488d0584950d04"/>
+            <Line Type="bytes" Address="0x01402abc" Value="c747500000803f"/>
+            <Line Type="bytes" Address="0x01402ac3" Value="c747540000803f"/>
+            <Line Type="bytes" Address="0x01402aca" Value="c747580000803f"/>
+            <Line Type="bytes" Address="0x01402ad1" Value="c7475c0000803f"/>
+            <Line Type="bytes" Address="0x01402ad8" Value="833807"/>
+            <Line Type="bytes" Address="0x01402adb" Value="7738"/>
+            <Line Type="bytes" Address="0x01402add" Value="833800"/>
+            <Line Type="bytes" Address="0x01402ae0" Value="743e"/>
+            <Line Type="bytes" Address="0x01402ae2" Value="833801"/>
+            <Line Type="bytes" Address="0x01402ae5" Value="7453"/>
+            <Line Type="bytes" Address="0x01402ae7" Value="833802"/>
+            <Line Type="bytes" Address="0x01402aea" Value="7468"/>
+            <Line Type="bytes" Address="0x01402aec" Value="833803"/>
+            <Line Type="bytes" Address="0x01402aef" Value="747a"/>
+            <Line Type="bytes" Address="0x01402af1" Value="833804"/>
+            <Line Type="bytes" Address="0x01402af4" Value="0f8488000000"/>
+            <Line Type="bytes" Address="0x01402afa" Value="833805"/>
+            <Line Type="bytes" Address="0x01402afd" Value="0f8496000000"/>
+            <Line Type="bytes" Address="0x01402b03" Value="833806"/>
+            <Line Type="bytes" Address="0x01402b06" Value="0f84a4000000"/>
+            <Line Type="bytes" Address="0x01402b0c" Value="833807"/>
+            <Line Type="bytes" Address="0x01402b0f" Value="0f84b2000000"/>
+            <Line Type="bytes" Address="0x01402b15" Value="c70001000000"/>
+            <Line Type="bytes" Address="0x01402b1b" Value="e9c1000000"/>
+            <Line Type="bytes" Address="0x01402b20" Value="c747500000803f"/>
+            <Line Type="bytes" Address="0x01402b27" Value="c747540000803f"/>
+            <Line Type="bytes" Address="0x01402b2e" Value="c747580000803f"/>
+            <Line Type="bytes" Address="0x01402b35" Value="e9a4000000"/>
+            <Line Type="bytes" Address="0x01402b3a" Value="c7475000000000"/>
+            <Line Type="bytes" Address="0x01402b41" Value="c7475400000000"/>
+            <Line Type="bytes" Address="0x01402b48" Value="c747580000803f"/>
+            <Line Type="bytes" Address="0x01402b4f" Value="e98a000000"/>
+            <Line Type="bytes" Address="0x01402b54" Value="c7475000000000"/>
+            <Line Type="bytes" Address="0x01402b5b" Value="c747540000003f"/>
+            <Line Type="bytes" Address="0x01402b62" Value="c747580000003f"/>
+            <Line Type="bytes" Address="0x01402b69" Value="eb73"/>
+            <Line Type="bytes" Address="0x01402b6b" Value="c7475000000000"/>
+            <Line Type="bytes" Address="0x01402b72" Value="c747540000003f"/>
+            <Line Type="bytes" Address="0x01402b79" Value="c7475800000000"/>
+            <Line Type="bytes" Address="0x01402b80" Value="eb5c"/>
+            <Line Type="bytes" Address="0x01402b82" Value="c747500000003f"/>
+            <Line Type="bytes" Address="0x01402b89" Value="c7475400000000"/>
+            <Line Type="bytes" Address="0x01402b90" Value="c7475800000000"/>
+            <Line Type="bytes" Address="0x01402b97" Value="eb45"/>
+            <Line Type="bytes" Address="0x01402b99" Value="c747500000003f"/>
+            <Line Type="bytes" Address="0x01402ba0" Value="c7475400000000"/>
+            <Line Type="bytes" Address="0x01402ba7" Value="c747580000003f"/>
+            <Line Type="bytes" Address="0x01402bae" Value="eb2e"/>
+            <Line Type="bytes" Address="0x01402bb0" Value="c747500000003f"/>
+            <Line Type="bytes" Address="0x01402bb7" Value="c747540000003f"/>
+            <Line Type="bytes" Address="0x01402bbe" Value="c747580000003f"/>
+            <Line Type="bytes" Address="0x01402bc5" Value="eb17"/>
+            <Line Type="bytes" Address="0x01402bc7" Value="c747500000803f"/>
+            <Line Type="bytes" Address="0x01402bce" Value="c747540000803f"/>
+            <Line Type="bytes" Address="0x01402bd5" Value="c7475800000000"/>
+            <Line Type="bytes" Address="0x01402bdc" Value="eb00"/>
+            <Line Type="bytes" Address="0x01402bde" Value="830001"/>
+            <Line Type="bytes" Address="0x01402be1" Value="5e"/>
+            <Line Type="bytes" Address="0x01402be2" Value="58"/>
+            <Line Type="bytes" Address="0x01402be3" Value="c5f8284750"/>
+            <Line Type="bytes" Address="0x01402be8" Value="e918920000"/>
+        </PatchList>
+    </Metadata>
 </Patch>
