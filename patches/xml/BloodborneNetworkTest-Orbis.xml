@@ -2,9 +2,10 @@
 <Patch>
     <TitleID>
         <ID>CUSA01322</ID>
+        <ID>CUSA01333</ID>
     </TitleID>
     <Metadata Title="Bloodborne: Network Test"
-              Name="Boot into TGS Mode"
+              Name="Boot into TGS Mode (Netowrk Bypass)"
               Author="manfightdragon"
               PatchVer="1.0"
               AppVer="01.00"
