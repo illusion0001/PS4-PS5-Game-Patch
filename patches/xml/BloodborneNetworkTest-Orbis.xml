@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
+        <ID>CUSA01318</ID>
         <ID>CUSA01322</ID>
         <ID>CUSA01333</ID>
+        <ID>CUSA01335</ID>
     </TitleID>
     <Metadata Title="Bloodborne: Network Test"
               Name="Boot into TGS Mode (Netowrk Bypass)"
