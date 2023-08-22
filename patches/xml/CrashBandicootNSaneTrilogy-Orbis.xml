@@ -2,11 +2,22 @@
 <Patch>
     <TitleID>
         <ID>CUSA07399</ID>
+        <ID>CUSA07402</ID>
     </TitleID>
     <Metadata Title="Crash Bandicoot N. Sane Trilogy"
               Name="60 FPS"
               Author="illusion"
-              PatchVer="2.0"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00f52de0" Value="be00000000909090909090909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crash Bandicoot N. Sane Trilogy"
+              Name="No Vsync"
+              Author="illusion"
+              PatchVer="1.0"
               AppVer="01.07"
               AppElf="eboot.bin">
         <PatchList>
@@ -14,42 +25,57 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Crash Bandicoot N. Sane Trilogy"
-              Name="Resolution Patch (1080p for PS4 Pro)"
+              Name="Resolution Patch (1800p for PS4 Pro)"
               Author="illusion"
-              PatchVer="2.0"
+              PatchVer="1.0"
               AppVer="01.07"
               AppElf="eboot.bin">
         <PatchList>
+            <Line Type="float32" Address="0x00529cdb" Value="1.667"/>
+            <Line Type="float32" Address="0x01c75680" Value="1.667"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Crash Bandicoot N. Sane Trilogy"
+              Name="Resolution Patch (1080p for PS4 Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="float32" Address="0x00529cdb" Value="1.0"/>
             <Line Type="float32" Address="0x01c75680" Value="1.0"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Crash Bandicoot N. Sane Trilogy"
               Name="Resolution Patch (900p for PS4 Pro)"
               Author="illusion"
-              PatchVer="2.0"
+              PatchVer="1.0"
               AppVer="01.07"
               AppElf="eboot.bin">
         <PatchList>
+            <Line Type="float32" Address="0x00529cdb" Value="0.83"/>
             <Line Type="float32" Address="0x01c75680" Value="0.83"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Crash Bandicoot N. Sane Trilogy"
               Name="Resolution Patch (720p for PS4 Pro)"
               Author="illusion"
-              PatchVer="2.0"
+              PatchVer="1.0"
               AppVer="01.07"
               AppElf="eboot.bin">
         <PatchList>
+            <Line Type="float32" Address="0x00529cdb" Value="0.67"/>
             <Line Type="float32" Address="0x01c75680" Value="0.67"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Crash Bandicoot N. Sane Trilogy"
               Name="Resolution Patch (540p for PS4 Pro)"
               Author="illusion"
-              PatchVer="2.0"
+              PatchVer="1.0"
               AppVer="01.07"
               AppElf="eboot.bin">
         <PatchList>
+            <Line Type="float32" Address="0x00529cdb" Value="0.5"/>
             <Line Type="float32" Address="0x01c75680" Value="0.5"/>
         </PatchList>
     </Metadata>
