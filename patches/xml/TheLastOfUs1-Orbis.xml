@@ -192,9 +192,51 @@
               AppElf="eboot.bin">
         <PatchList>
             <!--
+            // Code to generate hex color
+            #include <stdint.h>
+            #include <stdio.h>
+            
+            #define _rgba(r,g,b,a) (((uint32_t)a << 24) | ((uint32_t)b << 16) | ((uint32_t)g << 8) | r)
+            #define rgba(r,g,b) _rgba(r,g,b,255)
+            
+            int32_t main() {
+                // https://github.com/flightlessmango/MangoHud/blob/41f923b0b2be07f035df221d01625e11f1305fde/src/fcat.h#L20
+                // const std::array<const ImColor,16> sequence={{{255, 255, 255},{0, 255, 0},{0, 0, 255},{255, 0, 0},{0, 128, 128},{0, 0, 128},{0, 128, 0},{0, 255, 255},{128, 0, 0},{192, 192, 192},{128, 0, 128},{128, 128, 0},{128, 128, 128},{255, 0, 255},{255, 255, 0},{255, 128, 0}}};
+                  uint32_t colors[] = {
+                    rgba(255, 255, 255), // White
+                    rgba(0, 255, 0), // Green
+                    rgba(0, 0, 255), // Blue
+                    rgba(255, 0, 0), // Red
+                    rgba(0, 128, 128), // Teal
+                    rgba(0, 0, 128), // Navy
+                    rgba(0, 128, 0), // Green
+                    rgba(0, 255, 255), // Aqua
+                    rgba(128, 0, 0), // Dark Green? It's dark red
+                    rgba(192, 192, 192), // Silver
+                    rgba(128, 0, 128), // Purple
+                    rgba(128, 128, 0), // Olive
+                    rgba(128, 128, 128), // Gray
+                    rgba(255, 0, 255), // Furishia
+                    rgba(255, 255, 0), // Yellow
+                    rgba(255, 128, 0), // Orange
+                };
+                
+                const size_t color_size = sizeof(colors) / sizeof(colors[0]);
+                for (size_t i = 0; i < color_size; ++i)
+                {
+                    printf("color %lu/%lu 0x%08X\n", i+1, color_size, colors[i]);
+                }
+            
+                return 0;
+            }
+            
+            #undef _rgba
+            #undef rgba
+            -->
+            <!--
             Source:
             _start:
-            # Start addr 00c94d40
+            # Start addr 0x00c94d40
             PUSH RBP
             MOV RBP,RSP
             PUSH R15
@@ -229,7 +271,7 @@
             LEA R14,[RBP + -0x88]
             MOV RDI,R14
             LEA R14, [0x01904040]
-            CMP dword ptr [R14],0x7 # above 16 index, reset
+            CMP dword ptr [R14],0xf # above 16 index, reset
             JA color_default
             CMP dword ptr [R14],0x0 # check color index
             JZ color_0
@@ -247,41 +289,76 @@
             JZ color_6
             CMP dword ptr [R14],0x7
             JZ color_7
+            CMP dword ptr [R14],0x8
+            JZ color_8
+            CMP dword ptr [R14],0x9
+            JZ color_9
+            CMP dword ptr [R14],0xa
+            JZ color_10
+            CMP dword ptr [R14],0xb
+            JZ color_11
+            CMP dword ptr [R14],0xc
+            JZ color_12
+            CMP dword ptr [R14],0xd
+            JZ color_13
+            CMP dword ptr [R14],0xe
+            JZ color_14
+            CMP dword ptr [R14],0xf
+            JZ color_15
             color_default:
             MOV ESI, 0xFFFFFFFF # first index color
             MOV dword ptr [R14],1 # next frame, use second index
             JMP draw_bar_only_no_add
-            # Doom Eternal only used 8 colors in platte
             color_0:
-            MOV ESI, 0xFFFFFFFF # White good
+            MOV ESI, 0xFFFFFFFF # White
             JMP draw_bar
             color_1:
-            MOV ESI, 0xFFFF0000 # Lime good
+            MOV ESI, 0xFF00FF00 # Lime (Green)
             JMP draw_bar
             color_2:
-            MOV ESI, 0xFF808000 # Blue bad 000,170,255,255
+            MOV ESI, 0xFFFF0000 # Blue
             JMP draw_bar
             color_3:
-            MOV ESI, 0xFF008000 # Red good
+            MOV ESI, 0xFF0000FF # Red
             JMP draw_bar
             color_4:
-            MOV ESI, 0xFF000080 # Teal?? bad 255,124,231,255
+            MOV ESI, 0xFF808000 # Teal
             JMP draw_bar
             color_5:
-            MOV ESI, 0xFF800080 # Navy bad 231,124,124,255
+            MOV ESI, 0xFF800000 # Navy
             JMP draw_bar
             color_6:
-            MOV ESI, 0xFF808080 # Green 000,216,000,255
+            MOV ESI, 0xFF008000 # Green
             JMP draw_bar
             color_7:
-            MOV ESI, 0xFF00FFFF # Aqua good
+            MOV ESI, 0xFFFFFF00 # Aqua
+            JMP draw_bar
+            color_8:
+            MOV ESI, 0xFF000080 # Dark Green? It's dark red
+            JMP draw_bar
+            color_9:
+            MOV ESI, 0xFFC0C0C0 # Silver
+            JMP draw_bar
+            color_10:
+            MOV ESI, 0xFF800080 # Purple
+            JMP draw_bar
+            color_11:
+            MOV ESI, 0xFF008080 # Olive
+            JMP draw_bar
+            color_12:
+            MOV ESI, 0xFF808080 # Gray
+            JMP draw_bar
+            color_13:
+            MOV ESI, 0xFFFF00FF # Fuchsia
+            JMP draw_bar
+            color_14:
+            MOV ESI, 0xFF00FFFF # Yellow
+            JMP draw_bar
+            color_15:
+            MOV ESI, 0xFF0080FF # Orange
             # JMP draw_bar
             draw_bar:
             ADD dword ptr [R14],1
-            # MOV EAX, [R14]
-            # LEA R14, [0x01c1a87c]
-            # MOV [R14], EAX
-            NOP
             draw_bar_only_no_add:
             CALL 0x00d20230
             exit_func:
@@ -312,7 +389,7 @@
             <Line Type="bytes" Address="0x00c94d4d" Value="4883ec78"/>
             <Line Type="bytes" Address="0x00c94d51" Value="488d3d38120001"/>
             <Line Type="bytes" Address="0x00c94d58" Value="80bfb807000000"/>
-            <Line Type="bytes" Address="0x00c94d5f" Value="0f84e4000000"/>
+            <Line Type="bytes" Address="0x00c94d5f" Value="0f844b010000"/>
             <Line Type="bytes" Address="0x00c94d65" Value="488dbd78ffffff"/>
             <Line Type="bytes" Address="0x00c94d6c" Value="be01000000"/>
             <Line Type="bytes" Address="0x00c94d71" Value="31d2"/>
@@ -332,53 +409,84 @@
             <Line Type="bytes" Address="0x00c94db4" Value="4c8db578ffffff"/>
             <Line Type="bytes" Address="0x00c94dbb" Value="4c89f7"/>
             <Line Type="bytes" Address="0x00c94dbe" Value="4c8d357bf2c600"/>
-            <Line Type="bytes" Address="0x00c94dc5" Value="41833e07"/>
-            <Line Type="bytes" Address="0x00c94dc9" Value="7730"/>
+            <Line Type="bytes" Address="0x00c94dc5" Value="41833e0f"/>
+            <Line Type="bytes" Address="0x00c94dc9" Value="7760"/>
             <Line Type="bytes" Address="0x00c94dcb" Value="41833e00"/>
-            <Line Type="bytes" Address="0x00c94dcf" Value="7438"/>
+            <Line Type="bytes" Address="0x00c94dcf" Value="7468"/>
             <Line Type="bytes" Address="0x00c94dd1" Value="41833e01"/>
-            <Line Type="bytes" Address="0x00c94dd5" Value="7439"/>
+            <Line Type="bytes" Address="0x00c94dd5" Value="7469"/>
             <Line Type="bytes" Address="0x00c94dd7" Value="41833e02"/>
-            <Line Type="bytes" Address="0x00c94ddb" Value="743a"/>
+            <Line Type="bytes" Address="0x00c94ddb" Value="746a"/>
             <Line Type="bytes" Address="0x00c94ddd" Value="41833e03"/>
-            <Line Type="bytes" Address="0x00c94de1" Value="743b"/>
+            <Line Type="bytes" Address="0x00c94de1" Value="746b"/>
             <Line Type="bytes" Address="0x00c94de3" Value="41833e04"/>
-            <Line Type="bytes" Address="0x00c94de7" Value="743c"/>
+            <Line Type="bytes" Address="0x00c94de7" Value="746c"/>
             <Line Type="bytes" Address="0x00c94de9" Value="41833e05"/>
-            <Line Type="bytes" Address="0x00c94ded" Value="743d"/>
+            <Line Type="bytes" Address="0x00c94ded" Value="746d"/>
             <Line Type="bytes" Address="0x00c94def" Value="41833e06"/>
-            <Line Type="bytes" Address="0x00c94df3" Value="743e"/>
+            <Line Type="bytes" Address="0x00c94df3" Value="746e"/>
             <Line Type="bytes" Address="0x00c94df5" Value="41833e07"/>
-            <Line Type="bytes" Address="0x00c94df9" Value="743f"/>
-            <Line Type="bytes" Address="0x00c94dfb" Value="beffffffff"/>
-            <Line Type="bytes" Address="0x00c94e00" Value="41c70601000000"/>
-            <Line Type="bytes" Address="0x00c94e07" Value="eb3b"/>
-            <Line Type="bytes" Address="0x00c94e09" Value="beffffffff"/>
-            <Line Type="bytes" Address="0x00c94e0e" Value="eb2f"/>
-            <Line Type="bytes" Address="0x00c94e10" Value="be0000ffff"/>
-            <Line Type="bytes" Address="0x00c94e15" Value="eb28"/>
-            <Line Type="bytes" Address="0x00c94e17" Value="be008080ff"/>
-            <Line Type="bytes" Address="0x00c94e1c" Value="eb21"/>
-            <Line Type="bytes" Address="0x00c94e1e" Value="be008000ff"/>
-            <Line Type="bytes" Address="0x00c94e23" Value="eb1a"/>
-            <Line Type="bytes" Address="0x00c94e25" Value="be800000ff"/>
-            <Line Type="bytes" Address="0x00c94e2a" Value="eb13"/>
-            <Line Type="bytes" Address="0x00c94e2c" Value="be800080ff"/>
-            <Line Type="bytes" Address="0x00c94e31" Value="eb0c"/>
-            <Line Type="bytes" Address="0x00c94e33" Value="be808080ff"/>
-            <Line Type="bytes" Address="0x00c94e38" Value="eb05"/>
-            <Line Type="bytes" Address="0x00c94e3a" Value="beffff00ff"/>
-            <Line Type="bytes" Address="0x00c94e3f" Value="41830601"/>
-            <Line Type="bytes" Address="0x00c94e43" Value="90"/>
-            <Line Type="bytes" Address="0x00c94e44" Value="e8e7b30800"/>
-            <Line Type="bytes" Address="0x00c94e49" Value="4883c478"/>
-            <Line Type="bytes" Address="0x00c94e4d" Value="5b"/>
-            <Line Type="bytes" Address="0x00c94e4e" Value="415c"/>
-            <Line Type="bytes" Address="0x00c94e50" Value="415d"/>
-            <Line Type="bytes" Address="0x00c94e52" Value="415e"/>
-            <Line Type="bytes" Address="0x00c94e54" Value="415f"/>
-            <Line Type="bytes" Address="0x00c94e56" Value="5d"/>
-            <Line Type="bytes" Address="0x00c94e57" Value="c3"/>
+            <Line Type="bytes" Address="0x00c94df9" Value="746f"/>
+            <Line Type="bytes" Address="0x00c94dfb" Value="41833e08"/>
+            <Line Type="bytes" Address="0x00c94dff" Value="7470"/>
+            <Line Type="bytes" Address="0x00c94e01" Value="41833e09"/>
+            <Line Type="bytes" Address="0x00c94e05" Value="7471"/>
+            <Line Type="bytes" Address="0x00c94e07" Value="41833e0a"/>
+            <Line Type="bytes" Address="0x00c94e0b" Value="7472"/>
+            <Line Type="bytes" Address="0x00c94e0d" Value="41833e0b"/>
+            <Line Type="bytes" Address="0x00c94e11" Value="7473"/>
+            <Line Type="bytes" Address="0x00c94e13" Value="41833e0c"/>
+            <Line Type="bytes" Address="0x00c94e17" Value="7474"/>
+            <Line Type="bytes" Address="0x00c94e19" Value="41833e0d"/>
+            <Line Type="bytes" Address="0x00c94e1d" Value="7475"/>
+            <Line Type="bytes" Address="0x00c94e1f" Value="41833e0e"/>
+            <Line Type="bytes" Address="0x00c94e23" Value="7476"/>
+            <Line Type="bytes" Address="0x00c94e25" Value="41833e0f"/>
+            <Line Type="bytes" Address="0x00c94e29" Value="7477"/>
+            <Line Type="bytes" Address="0x00c94e2b" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x00c94e30" Value="41c70601000000"/>
+            <Line Type="bytes" Address="0x00c94e37" Value="eb72"/>
+            <Line Type="bytes" Address="0x00c94e39" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x00c94e3e" Value="eb67"/>
+            <Line Type="bytes" Address="0x00c94e40" Value="be00ff00ff"/>
+            <Line Type="bytes" Address="0x00c94e45" Value="eb60"/>
+            <Line Type="bytes" Address="0x00c94e47" Value="be0000ffff"/>
+            <Line Type="bytes" Address="0x00c94e4c" Value="eb59"/>
+            <Line Type="bytes" Address="0x00c94e4e" Value="beff0000ff"/>
+            <Line Type="bytes" Address="0x00c94e53" Value="eb52"/>
+            <Line Type="bytes" Address="0x00c94e55" Value="be008080ff"/>
+            <Line Type="bytes" Address="0x00c94e5a" Value="eb4b"/>
+            <Line Type="bytes" Address="0x00c94e5c" Value="be000080ff"/>
+            <Line Type="bytes" Address="0x00c94e61" Value="eb44"/>
+            <Line Type="bytes" Address="0x00c94e63" Value="be008000ff"/>
+            <Line Type="bytes" Address="0x00c94e68" Value="eb3d"/>
+            <Line Type="bytes" Address="0x00c94e6a" Value="be00ffffff"/>
+            <Line Type="bytes" Address="0x00c94e6f" Value="eb36"/>
+            <Line Type="bytes" Address="0x00c94e71" Value="be800000ff"/>
+            <Line Type="bytes" Address="0x00c94e76" Value="eb2f"/>
+            <Line Type="bytes" Address="0x00c94e78" Value="bec0c0c0ff"/>
+            <Line Type="bytes" Address="0x00c94e7d" Value="eb28"/>
+            <Line Type="bytes" Address="0x00c94e7f" Value="be800080ff"/>
+            <Line Type="bytes" Address="0x00c94e84" Value="eb21"/>
+            <Line Type="bytes" Address="0x00c94e86" Value="be808000ff"/>
+            <Line Type="bytes" Address="0x00c94e8b" Value="eb1a"/>
+            <Line Type="bytes" Address="0x00c94e8d" Value="be808080ff"/>
+            <Line Type="bytes" Address="0x00c94e92" Value="eb13"/>
+            <Line Type="bytes" Address="0x00c94e94" Value="beff00ffff"/>
+            <Line Type="bytes" Address="0x00c94e99" Value="eb0c"/>
+            <Line Type="bytes" Address="0x00c94e9b" Value="beffff00ff"/>
+            <Line Type="bytes" Address="0x00c94ea0" Value="eb05"/>
+            <Line Type="bytes" Address="0x00c94ea2" Value="beff8000ff"/>
+            <Line Type="bytes" Address="0x00c94ea7" Value="41830601"/>
+            <Line Type="bytes" Address="0x00c94eab" Value="e880b30800"/>
+            <Line Type="bytes" Address="0x00c94eb0" Value="4883c478"/>
+            <Line Type="bytes" Address="0x00c94eb4" Value="5b"/>
+            <Line Type="bytes" Address="0x00c94eb5" Value="415c"/>
+            <Line Type="bytes" Address="0x00c94eb7" Value="415d"/>
+            <Line Type="bytes" Address="0x00c94eb9" Value="415e"/>
+            <Line Type="bytes" Address="0x00c94ebb" Value="415f"/>
+            <Line Type="bytes" Address="0x00c94ebd" Value="5d"/>
+            <Line Type="bytes" Address="0x00c94ebe" Value="c3"/>
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Remastered"
@@ -605,7 +713,7 @@
             <!--
             Source:
             _start:
-            # Start addr 00e311d0
+            # Start addr 0x00c94d40
             PUSH RBP
             MOV RBP,RSP
             PUSH R15
@@ -640,7 +748,7 @@
             LEA R14,[RBP + -0x88]
             MOV RDI,R14
             LEA R14, [0x01918048]
-            CMP dword ptr [R14],0x7 # above 16 index, reset
+            CMP dword ptr [R14],0xf # above 16 index, reset
             JA color_default
             CMP dword ptr [R14],0x0 # check color index
             JZ color_0
@@ -658,41 +766,76 @@
             JZ color_6
             CMP dword ptr [R14],0x7
             JZ color_7
+            CMP dword ptr [R14],0x8
+            JZ color_8
+            CMP dword ptr [R14],0x9
+            JZ color_9
+            CMP dword ptr [R14],0xa
+            JZ color_10
+            CMP dword ptr [R14],0xb
+            JZ color_11
+            CMP dword ptr [R14],0xc
+            JZ color_12
+            CMP dword ptr [R14],0xd
+            JZ color_13
+            CMP dword ptr [R14],0xe
+            JZ color_14
+            CMP dword ptr [R14],0xf
+            JZ color_15
             color_default:
             MOV ESI, 0xFFFFFFFF # first index color
             MOV dword ptr [R14],1 # next frame, use second index
             JMP draw_bar_only_no_add
-            # Doom Eternal only used 8 colors in platte
             color_0:
-            MOV ESI, 0xFFFFFFFF # White good
+            MOV ESI, 0xFFFFFFFF # White
             JMP draw_bar
             color_1:
-            MOV ESI, 0xFFFF0000 # Lime good
+            MOV ESI, 0xFF00FF00 # Lime (Green)
             JMP draw_bar
             color_2:
-            MOV ESI, 0xFF808000 # Blue bad 000,170,255,255
+            MOV ESI, 0xFFFF0000 # Blue
             JMP draw_bar
             color_3:
-            MOV ESI, 0xFF008000 # Red good
+            MOV ESI, 0xFF0000FF # Red
             JMP draw_bar
             color_4:
-            MOV ESI, 0xFF000080 # Teal?? bad 255,124,231,255
+            MOV ESI, 0xFF808000 # Teal
             JMP draw_bar
             color_5:
-            MOV ESI, 0xFF800080 # Navy bad 231,124,124,255
+            MOV ESI, 0xFF800000 # Navy
             JMP draw_bar
             color_6:
-            MOV ESI, 0xFF808080 # Green 000,216,000,255
+            MOV ESI, 0xFF008000 # Green
             JMP draw_bar
             color_7:
-            MOV ESI, 0xFF00FFFF # Aqua good
+            MOV ESI, 0xFFFFFF00 # Aqua
+            JMP draw_bar
+            color_8:
+            MOV ESI, 0xFF000080 # Dark Green? It's dark red
+            JMP draw_bar
+            color_9:
+            MOV ESI, 0xFFC0C0C0 # Silver
+            JMP draw_bar
+            color_10:
+            MOV ESI, 0xFF800080 # Purple
+            JMP draw_bar
+            color_11:
+            MOV ESI, 0xFF008080 # Olive
+            JMP draw_bar
+            color_12:
+            MOV ESI, 0xFF808080 # Gray
+            JMP draw_bar
+            color_13:
+            MOV ESI, 0xFFFF00FF # Fuchsia
+            JMP draw_bar
+            color_14:
+            MOV ESI, 0xFF00FFFF # Yellow
+            JMP draw_bar
+            color_15:
+            MOV ESI, 0xFF0080FF # Orange
             # JMP draw_bar
             draw_bar:
             ADD dword ptr [R14],1
-            # MOV EAX, [R14]
-            # LEA R14, [0x01c1a87c]
-            # MOV [R14], EAX
-            # NOP
             draw_bar_only_no_add:
             CALL 0x00ec50e0
             exit_func:
@@ -711,7 +854,7 @@
             <Line Type="bytes" Address="0x00e3104a" Value="9090"/>
             <Line Type="bytes" Address="0x00e31056" Value="9090"/>
             <!-- Text -->
-            <Line Type="utf8" Address="0x014f0942" Value="Draw Color Boarder"/>
+            <Line Type="utf8" Address="0x0153b861" Value="Draw Color Boarder"/>
             <!-- Draw Bar -->
             <Line Type="bytes" Address="0x00e311d0" Value="55"/>
             <Line Type="bytes" Address="0x00e311d1" Value="4889e5"/>
@@ -723,7 +866,7 @@
             <Line Type="bytes" Address="0x00e311dd" Value="4883ec78"/>
             <Line Type="bytes" Address="0x00e311e1" Value="488d3d8895de00"/>
             <Line Type="bytes" Address="0x00e311e8" Value="80bfc007000000"/>
-            <Line Type="bytes" Address="0x00e311ef" Value="0f84e3000000"/>
+            <Line Type="bytes" Address="0x00e311ef" Value="0f844b010000"/>
             <Line Type="bytes" Address="0x00e311f5" Value="488dbd78ffffff"/>
             <Line Type="bytes" Address="0x00e311fc" Value="be01000000"/>
             <Line Type="bytes" Address="0x00e31201" Value="31d2"/>
@@ -743,52 +886,84 @@
             <Line Type="bytes" Address="0x00e31244" Value="4c8db578ffffff"/>
             <Line Type="bytes" Address="0x00e3124b" Value="4c89f7"/>
             <Line Type="bytes" Address="0x00e3124e" Value="4c8d35f36dae00"/>
-            <Line Type="bytes" Address="0x00e31255" Value="41833e07"/>
-            <Line Type="bytes" Address="0x00e31259" Value="7730"/>
+            <Line Type="bytes" Address="0x00e31255" Value="41833e0f"/>
+            <Line Type="bytes" Address="0x00e31259" Value="7760"/>
             <Line Type="bytes" Address="0x00e3125b" Value="41833e00"/>
-            <Line Type="bytes" Address="0x00e3125f" Value="7438"/>
+            <Line Type="bytes" Address="0x00e3125f" Value="7468"/>
             <Line Type="bytes" Address="0x00e31261" Value="41833e01"/>
-            <Line Type="bytes" Address="0x00e31265" Value="7439"/>
+            <Line Type="bytes" Address="0x00e31265" Value="7469"/>
             <Line Type="bytes" Address="0x00e31267" Value="41833e02"/>
-            <Line Type="bytes" Address="0x00e3126b" Value="743a"/>
+            <Line Type="bytes" Address="0x00e3126b" Value="746a"/>
             <Line Type="bytes" Address="0x00e3126d" Value="41833e03"/>
-            <Line Type="bytes" Address="0x00e31271" Value="743b"/>
+            <Line Type="bytes" Address="0x00e31271" Value="746b"/>
             <Line Type="bytes" Address="0x00e31273" Value="41833e04"/>
-            <Line Type="bytes" Address="0x00e31277" Value="743c"/>
+            <Line Type="bytes" Address="0x00e31277" Value="746c"/>
             <Line Type="bytes" Address="0x00e31279" Value="41833e05"/>
-            <Line Type="bytes" Address="0x00e3127d" Value="743d"/>
+            <Line Type="bytes" Address="0x00e3127d" Value="746d"/>
             <Line Type="bytes" Address="0x00e3127f" Value="41833e06"/>
-            <Line Type="bytes" Address="0x00e31283" Value="743e"/>
+            <Line Type="bytes" Address="0x00e31283" Value="746e"/>
             <Line Type="bytes" Address="0x00e31285" Value="41833e07"/>
-            <Line Type="bytes" Address="0x00e31289" Value="743f"/>
-            <Line Type="bytes" Address="0x00e3128b" Value="beffffffff"/>
-            <Line Type="bytes" Address="0x00e31290" Value="41c70601000000"/>
-            <Line Type="bytes" Address="0x00e31297" Value="eb3a"/>
-            <Line Type="bytes" Address="0x00e31299" Value="beffffffff"/>
-            <Line Type="bytes" Address="0x00e3129e" Value="eb2f"/>
-            <Line Type="bytes" Address="0x00e312a0" Value="be0000ffff"/>
-            <Line Type="bytes" Address="0x00e312a5" Value="eb28"/>
-            <Line Type="bytes" Address="0x00e312a7" Value="be008080ff"/>
-            <Line Type="bytes" Address="0x00e312ac" Value="eb21"/>
-            <Line Type="bytes" Address="0x00e312ae" Value="be008000ff"/>
-            <Line Type="bytes" Address="0x00e312b3" Value="eb1a"/>
-            <Line Type="bytes" Address="0x00e312b5" Value="be800000ff"/>
-            <Line Type="bytes" Address="0x00e312ba" Value="eb13"/>
-            <Line Type="bytes" Address="0x00e312bc" Value="be800080ff"/>
-            <Line Type="bytes" Address="0x00e312c1" Value="eb0c"/>
-            <Line Type="bytes" Address="0x00e312c3" Value="be808080ff"/>
-            <Line Type="bytes" Address="0x00e312c8" Value="eb05"/>
-            <Line Type="bytes" Address="0x00e312ca" Value="beffff00ff"/>
-            <Line Type="bytes" Address="0x00e312cf" Value="41830601"/>
-            <Line Type="bytes" Address="0x00e312d3" Value="e8083e0900"/>
-            <Line Type="bytes" Address="0x00e312d8" Value="4883c478"/>
-            <Line Type="bytes" Address="0x00e312dc" Value="5b"/>
-            <Line Type="bytes" Address="0x00e312dd" Value="415c"/>
-            <Line Type="bytes" Address="0x00e312df" Value="415d"/>
-            <Line Type="bytes" Address="0x00e312e1" Value="415e"/>
-            <Line Type="bytes" Address="0x00e312e3" Value="415f"/>
-            <Line Type="bytes" Address="0x00e312e5" Value="5d"/>
-            <Line Type="bytes" Address="0x00e312e6" Value="c3"/>
+            <Line Type="bytes" Address="0x00e31289" Value="746f"/>
+            <Line Type="bytes" Address="0x00e3128b" Value="41833e08"/>
+            <Line Type="bytes" Address="0x00e3128f" Value="7470"/>
+            <Line Type="bytes" Address="0x00e31291" Value="41833e09"/>
+            <Line Type="bytes" Address="0x00e31295" Value="7471"/>
+            <Line Type="bytes" Address="0x00e31297" Value="41833e0a"/>
+            <Line Type="bytes" Address="0x00e3129b" Value="7472"/>
+            <Line Type="bytes" Address="0x00e3129d" Value="41833e0b"/>
+            <Line Type="bytes" Address="0x00e312a1" Value="7473"/>
+            <Line Type="bytes" Address="0x00e312a3" Value="41833e0c"/>
+            <Line Type="bytes" Address="0x00e312a7" Value="7474"/>
+            <Line Type="bytes" Address="0x00e312a9" Value="41833e0d"/>
+            <Line Type="bytes" Address="0x00e312ad" Value="7475"/>
+            <Line Type="bytes" Address="0x00e312af" Value="41833e0e"/>
+            <Line Type="bytes" Address="0x00e312b3" Value="7476"/>
+            <Line Type="bytes" Address="0x00e312b5" Value="41833e0f"/>
+            <Line Type="bytes" Address="0x00e312b9" Value="7477"/>
+            <Line Type="bytes" Address="0x00e312bb" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x00e312c0" Value="41c70601000000"/>
+            <Line Type="bytes" Address="0x00e312c7" Value="eb72"/>
+            <Line Type="bytes" Address="0x00e312c9" Value="beffffffff"/>
+            <Line Type="bytes" Address="0x00e312ce" Value="eb67"/>
+            <Line Type="bytes" Address="0x00e312d0" Value="be00ff00ff"/>
+            <Line Type="bytes" Address="0x00e312d5" Value="eb60"/>
+            <Line Type="bytes" Address="0x00e312d7" Value="be0000ffff"/>
+            <Line Type="bytes" Address="0x00e312dc" Value="eb59"/>
+            <Line Type="bytes" Address="0x00e312de" Value="beff0000ff"/>
+            <Line Type="bytes" Address="0x00e312e3" Value="eb52"/>
+            <Line Type="bytes" Address="0x00e312e5" Value="be008080ff"/>
+            <Line Type="bytes" Address="0x00e312ea" Value="eb4b"/>
+            <Line Type="bytes" Address="0x00e312ec" Value="be000080ff"/>
+            <Line Type="bytes" Address="0x00e312f1" Value="eb44"/>
+            <Line Type="bytes" Address="0x00e312f3" Value="be008000ff"/>
+            <Line Type="bytes" Address="0x00e312f8" Value="eb3d"/>
+            <Line Type="bytes" Address="0x00e312fa" Value="be00ffffff"/>
+            <Line Type="bytes" Address="0x00e312ff" Value="eb36"/>
+            <Line Type="bytes" Address="0x00e31301" Value="be800000ff"/>
+            <Line Type="bytes" Address="0x00e31306" Value="eb2f"/>
+            <Line Type="bytes" Address="0x00e31308" Value="bec0c0c0ff"/>
+            <Line Type="bytes" Address="0x00e3130d" Value="eb28"/>
+            <Line Type="bytes" Address="0x00e3130f" Value="be800080ff"/>
+            <Line Type="bytes" Address="0x00e31314" Value="eb21"/>
+            <Line Type="bytes" Address="0x00e31316" Value="be808000ff"/>
+            <Line Type="bytes" Address="0x00e3131b" Value="eb1a"/>
+            <Line Type="bytes" Address="0x00e3131d" Value="be808080ff"/>
+            <Line Type="bytes" Address="0x00e31322" Value="eb13"/>
+            <Line Type="bytes" Address="0x00e31324" Value="beff00ffff"/>
+            <Line Type="bytes" Address="0x00e31329" Value="eb0c"/>
+            <Line Type="bytes" Address="0x00e3132b" Value="beffff00ff"/>
+            <Line Type="bytes" Address="0x00e31330" Value="eb05"/>
+            <Line Type="bytes" Address="0x00e31332" Value="beff8000ff"/>
+            <Line Type="bytes" Address="0x00e31337" Value="41830601"/>
+            <Line Type="bytes" Address="0x00e3133b" Value="e8a03d0900"/>
+            <Line Type="bytes" Address="0x00e31340" Value="4883c478"/>
+            <Line Type="bytes" Address="0x00e31344" Value="5b"/>
+            <Line Type="bytes" Address="0x00e31345" Value="415c"/>
+            <Line Type="bytes" Address="0x00e31347" Value="415d"/>
+            <Line Type="bytes" Address="0x00e31349" Value="415e"/>
+            <Line Type="bytes" Address="0x00e3134b" Value="415f"/>
+            <Line Type="bytes" Address="0x00e3134d" Value="5d"/>
+            <Line Type="bytes" Address="0x00e3134e" Value="c3"/>
         </PatchList>
     </Metadata>
 </Patch>
