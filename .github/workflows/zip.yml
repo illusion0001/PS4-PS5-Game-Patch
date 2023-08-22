@@ -43,7 +43,6 @@ jobs:
         run: |
           mkdir -p output/xml
           mkdir -p output/misc
-          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml"
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
@@ -52,6 +51,7 @@ jobs:
           echo $msg > build.txt
           echo $msg_md > patch_built.md
           echo $msg
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml" "$current"
           mv output patch1
 
       - name: Verify XML files
@@ -59,21 +59,25 @@ jobs:
         run: |
           clang ../.ci/test.c -lmxml -D__PC__
           FILES="../patches/xml/*.xml"
+          i=0
           for f in $FILES
           do
             ./a.out $f
             ((i=i+1))
           done
+          echo "Passed $i files"
 
       - name: Verify Generated XML files
         working-directory: mxml
         run: |
           FILES="../patch1/xml/*.xml"
+          i=0
           for f in $FILES
           do
             ./a.out $f
             ((i=i+1))
           done
+          echo "Passed $i files"
 
       - name: Pack zip
         run: |
