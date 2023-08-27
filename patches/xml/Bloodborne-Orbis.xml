@@ -838,44 +838,6 @@
             <Line Type="bytes" Address="0x01401168" Value="909090"/>
             <Line Type="bytes" Address="0x01402a90" Value="c3"/>
             <Line Type="bytes" Address="0x0140be00" Value="e98c6cffff"/>
-            <!--
-            // Code to generate hex color
-            #include <stdint.h>
-            #include <stdio.h>
-            
-            uint32_t g_idx = 0;
-            
-            uint32_t print_rgba_float(const float r, const float g, const float b, const float a)
-            {
-                printf("g_idx: %02u r: %.1f g: %.1f b: %.1f a: %.1f\n", g_idx, r, g, b, a);
-                g_idx++;
-                return 0;
-            }
-            
-            #define rgba_float(r, g, b, a) print_rgba_float(r / 255.f, g / 255.f, b / 255.f, a / 255.f)
-            
-            int32_t main()
-            {
-                g_idx = 1;
-                rgba_float(255, 255, 255, 255); // White
-                rgba_float(0, 255, 0, 255);     // Green
-                rgba_float(0, 0, 255, 255);     // Blue
-                rgba_float(255, 0, 0, 255);     // Red
-                rgba_float(0, 128, 128, 255);   // Teal
-                rgba_float(0, 0, 128, 255);     // Navy
-                rgba_float(0, 128, 0, 255);     // Green
-                rgba_float(0, 255, 255, 255);   // Aqua
-                rgba_float(128, 0, 0, 255);     // Dark Green? It's dark red
-                rgba_float(192, 192, 192, 255); // Silver
-                rgba_float(128, 0, 128, 255);   // Purple
-                rgba_float(128, 128, 0, 255);   // Olive
-                rgba_float(128, 128, 128, 255); // Gray
-                rgba_float(255, 0, 255, 255);   // Furishia
-                rgba_float(255, 255, 0, 255);   // Yellow
-                rgba_float(255, 128, 0, 255);   // Orange
-                return 0;
-            }
-            -->
             <!-- Source -->
             <!--
                 push rax

@@ -449,48 +449,6 @@ Using Bow?: %i
               AppElf="eboot.bin">
         <PatchList>
             <!--
-            // Code to generate hex color
-            #include <stdint.h>
-            #include <stdio.h>
-            
-            #define _rgba(r,g,b,a) (((uint32_t)a << 24) | ((uint32_t)b << 16) | ((uint32_t)g << 8) | r)
-            #define rgba(r,g,b) _rgba(r,g,b,255)
-            
-            int32_t main() {
-                // https://github.com/flightlessmango/MangoHud/blob/41f923b0b2be07f035df221d01625e11f1305fde/src/fcat.h#L20
-                // const std::array<const ImColor,16> sequence={{{255, 255, 255},{0, 255, 0},{0, 0, 255},{255, 0, 0},{0, 128, 128},{0, 0, 128},{0, 128, 0},{0, 255, 255},{128, 0, 0},{192, 192, 192},{128, 0, 128},{128, 128, 0},{128, 128, 128},{255, 0, 255},{255, 255, 0},{255, 128, 0}}};
-                  uint32_t colors[] = {
-                    rgba(255, 255, 255), // White
-                    rgba(0, 255, 0), // Green
-                    rgba(0, 0, 255), // Blue
-                    rgba(255, 0, 0), // Red
-                    rgba(0, 128, 128), // Teal
-                    rgba(0, 0, 128), // Navy
-                    rgba(0, 128, 0), // Green
-                    rgba(0, 255, 255), // Aqua
-                    rgba(128, 0, 0), // Dark Green? It's dark red
-                    rgba(192, 192, 192), // Silver
-                    rgba(128, 0, 128), // Purple
-                    rgba(128, 128, 0), // Olive
-                    rgba(128, 128, 128), // Gray
-                    rgba(255, 0, 255), // Furishia
-                    rgba(255, 255, 0), // Yellow
-                    rgba(255, 128, 0), // Orange
-                };
-                
-                const size_t color_size = sizeof(colors) / sizeof(colors[0]);
-                for (size_t i = 0; i < color_size; ++i)
-                {
-                    printf("color %lu/%lu 0x%08X\n", i+1, color_size, colors[i]);
-                }
-            
-                return 0;
-            }
-            
-            #undef _rgba
-            #undef rgba
-            -->
-            <!--
             _start:
             # Start addr 0204118c
             LEA RCX, [0x0436bca4] # Show Foreground Stats bool
