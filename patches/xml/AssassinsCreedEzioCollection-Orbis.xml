@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA04893</ID>
+        <ID>CUSA05008</ID>
+        <ID>CUSA05943</ID>
+    </TitleID>
+    <!-- launcher? -->
+    <Metadata Title="Assassin's Creed The Ezio Collection"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00c1b6c6" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed The Ezio Collection"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="ScimitarAC2.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x00ad18de" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed The Ezio Collection"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="ScimitarACB.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x01574466" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed The Ezio Collection"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="ScimitarACR.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x014e1705" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
