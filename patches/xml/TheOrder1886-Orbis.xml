@@ -10,6 +10,7 @@
     </TitleID>
     <Metadata Title="The Order 1886"
               Name="60 FPS Unlock"
+              Note="Softlocks will occur in Chapter 6 and 9 during Quick Time Events.\nDisable patch to progress."
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.02"
