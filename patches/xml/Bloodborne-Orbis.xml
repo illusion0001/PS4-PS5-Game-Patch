@@ -53,6 +53,7 @@
     </Metadata>
     <Metadata Title="Bloodborne"
               Name="60 FPS (With Deltatime)"
+              Note="You may encounter softlock during Laurence (optional DLC boss) cinematic.\nDisable patch to progress."
               Author="Lance McDonald (manfightdragon)"
               PatchVer="1.0"
               AppVer="01.09"

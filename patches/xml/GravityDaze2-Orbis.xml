@@ -39,7 +39,7 @@
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
               Name="60 FPS"
-              Note="Implemented button combos:\nL3 + Cross (X): Cycle through framerate modes.\nR3 + Square: Toggle Replace All Text with Level Names (Debug)"
+              Note="Softlocks may occur in some sections of the game. Use button combination to progress.\nImplemented button combos:\nL3 + Cross (X): Cycle through framerate modes.\nR3 + Square: Toggle Replace All Text with Level Names (Debug)"
               Author="illusion"
               PatchVer="3.0"
               AppVer="01.11"
