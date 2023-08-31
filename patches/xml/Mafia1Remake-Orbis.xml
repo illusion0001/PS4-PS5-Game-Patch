@@ -2,16 +2,42 @@
 <Patch>
     <TitleID>
         <ID>CUSA18097</ID>
+        <ID>CUSA18100</ID>
+        <ID>CUSA19278</ID>
     </TitleID>
     <Metadata Title="Mafia: Definitive Edition"
               Name="60 FPS Unlock"
               Note="CPU/GPU Limited."
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x0312a2a1" Value="eb0590"/>
+            <Line Type="mask" Address="e8 ?? ?? ?? ?? 85 c0 75 ?? 8b 7b 08 41 8b 76 04 31 d2" Value="b801000000"/> <!-- use vsync on base -->
+            <Line Type="mask" Address="41 8b 7c 24 08 31 f6 45 85 f6 40 0f 94 c6" Value="418b7c240831f60f1f8000000000"/> <!-- global -->
+            <Line Type="mask" Address="89 88 08 3d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 25 73 2f 25 73 00" Value="8988083c"/> <!-- menu -->
+            <Line Type="mask" Address="83 f8 ff 74 ?? 41 c7 47 24 21 00 00 00 41 c7 47 18 21 00 00 00" Value="41c7471808000000660f1f4400000f1f8000000000"/> <!-- gameplay -->
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mafia: Definitive Edition"
+              Name="Resolution Patch (1080p PS4 Pro/720p Base PS4)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="ba 00 0a 00 00 41 bc 80 07 00 00 b9 a0 05 00 00 41 bd 38 04 00 00" Value="ba8007000041bc00050000b93804000041bdd0020000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Mafia: Definitive Edition"
+              Name="Skip Logo Videos"
+              Author="PCGamingWiki Contributors, illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="43 5f 53 70 6c 61 73 68 53 63 72 65 65 6e 73 53 74 61 74 65 00" Value="00"/>
+            <Line Type="mask" Address="2f 76 69 64 65 6f 2f 5f 6c 6f 67 6f 5f 32 6b 5f 68 31 33 5f 62 75 6c 6c 65 74 2e 62 69 6b 00" Value="00"/>
         </PatchList>
     </Metadata>
 </Patch>
