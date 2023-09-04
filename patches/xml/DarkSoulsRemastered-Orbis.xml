@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08432</ID>
+        <ID>CUSA08495</ID>
+        <ID>CUSA08526</ID>
+        <ID>CUSA08692</ID>
+    </TitleID>
+    <Metadata Title="Dark Souls Remastered"
+              Name="Restore Debug Camera"
+              Note="Press L3 while holding X button to activate/deactivate freecamera."
+              Author="stagvant"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0059ea79" Value="e9c2f41a01"/>
+            <Line Type="bytes" Address="0x0059ea80" Value="85c0"/>
+            <Line Type="bytes" Address="0x0174df40" Value="56"/>
+            <Line Type="bytes" Address="0x0174df41" Value="57"/>
+            <Line Type="bytes" Address="0x0174df42" Value="51"/>
+            <Line Type="bytes" Address="0x0174df43" Value="52"/>
+            <Line Type="bytes" Address="0x0174df44" Value="4831c9"/>
+            <Line Type="bytes" Address="0x0174df47" Value="4831d2"/>
+            <Line Type="bytes" Address="0x0174df4a" Value="488b3d476b6900"/>
+            <Line Type="bytes" Address="0x0174df51" Value="488bbf18070000"/>
+            <Line Type="bytes" Address="0x0174df58" Value="488b35a18d7900"/>
+            <Line Type="bytes" Address="0x0174df5f" Value="488b7610"/>
+            <Line Type="bytes" Address="0x0174df63" Value="488b7608"/>
+            <Line Type="bytes" Address="0x0174df67" Value="488b7658"/>
+            <Line Type="bytes" Address="0x0174df6b" Value="488b7608"/>
+            <Line Type="bytes" Address="0x0174df6f" Value="4881e640800000"/>
+            <Line Type="bytes" Address="0x0174df76" Value="4881fe40800000"/>
+            <Line Type="bytes" Address="0x0174df7d" Value="7517"/>
+            <Line Type="bytes" Address="0x0174df7f" Value="80871803000001"/>
+            <Line Type="bytes" Address="0x0174df86" Value="80bf1803000001"/>
+            <Line Type="bytes" Address="0x0174df8d" Value="7607"/>
+            <Line Type="bytes" Address="0x0174df8f" Value="c6871803000000"/>
+            <Line Type="bytes" Address="0x0174df96" Value="80bf1803000001"/>
+            <Line Type="bytes" Address="0x0174df9d" Value="7412"/>
+            <Line Type="bytes" Address="0x0174df9f" Value="41c6859000000000"/>
+            <Line Type="bytes" Address="0x0174dfa7" Value="41c6859100000000"/>
+            <Line Type="bytes" Address="0x0174dfaf" Value="eb28"/>
+            <Line Type="bytes" Address="0x0174dfb1" Value="41c6859000000001"/>
+            <Line Type="bytes" Address="0x0174dfb9" Value="41c6859100000001"/>
+            <Line Type="bytes" Address="0x0174dfc1" Value="488bbf20030000"/>
+            <Line Type="bytes" Address="0x0174dfc8" Value="488bb5e8feffff"/>
+            <Line Type="bytes" Address="0x0174dfcf" Value="41c6457001"/>
+            <Line Type="bytes" Address="0x0174dfd4" Value="e83736e4fe"/>
+            <Line Type="bytes" Address="0x0174dfd9" Value="5a"/>
+            <Line Type="bytes" Address="0x0174dfda" Value="59"/>
+            <Line Type="bytes" Address="0x0174dfdb" Value="5f"/>
+            <Line Type="bytes" Address="0x0174dfdc" Value="5e"/>
+            <Line Type="bytes" Address="0x0174dfdd" Value="418b4570"/>
+            <Line Type="bytes" Address="0x0174dfe1" Value="8d48ff"/>
+            <Line Type="bytes" Address="0x0174dfe4" Value="e9970ae5fe"/>
+        </PatchList>
+    </Metadata>
+</Patch>
