@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA25368</ID>
+        <ID>CUSA32598</ID>
+        <ID>CUSA32599</ID>
+        <ID>CUSA32600</ID>
+    </TitleID>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02042469" Value="95"/>
+            <Line Type="bytes" Address="0x02cbb0eb" Value="898334040000"/>
+            <Line Type="bytes" Address="0x02cbb0f1" Value="8bbb30040000"/>
+            <Line Type="bytes" Address="0x02cbb0f7" Value="48c7c601000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="Restore Debug Camera"
+              Note="Press touchpad to activate then triangle to skip frames."
+              Author="stagvant"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c3a6eb" Value="24"/>
+            <Line Type="bytes" Address="0x01c3a5cf" Value="b201"/>
+            <Line Type="bytes" Address="0x01c3a731" Value="b201"/>
+            <Line Type="bytes" Address="0x01badd49" Value="b201"/>
+            <Line Type="bytes" Address="0x01c4477e" Value="80a07101000001"/>
+            <Line Type="bytes" Address="0x01c3a6f9" Value="488b35701e2c02"/>
+            <Line Type="bytes" Address="0x01c3a700" Value="807e4800"/>
+            <Line Type="bytes" Address="0x01c3a704" Value="740b"/>
+            <Line Type="bytes" Address="0x01c3a706" Value="41c684247101000001"/>
+            <Line Type="bytes" Address="0x01c3a70f" Value="eb09"/>
+            <Line Type="bytes" Address="0x01c3a711" Value="41c684247101000000"/>
+            <Line Type="bytes" Address="0x01c3a71a" Value="e9ce000000"/>
+            <Line Type="bytes" Address="0x01c3a71f" Value="488b354a1e2c02"/>
+            <Line Type="bytes" Address="0x01c3a726" Value="80764801"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="Restore Debug Dash"
+              Note="Press dpad right to activate then dpad down for noclip."
+              Author="stagvant"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x011d7279" Value="e95018e301"/>
+            <Line Type="bytes" Address="0x011d727e" Value="c4c17a118570010000"/>
+            <Line Type="bytes" Address="0x03008ace" Value="50"/>
+            <Line Type="bytes" Address="0x03008acf" Value="c5fa114580"/>
+            <Line Type="bytes" Address="0x03008ad4" Value="488b0d953aef00"/>
+            <Line Type="bytes" Address="0x03008adb" Value="488b3d96adcd00"/>
+            <Line Type="bytes" Address="0x03008ae2" Value="488b359ff6ef00"/>
+            <Line Type="bytes" Address="0x03008ae9" Value="488b8180010000"/>
+            <Line Type="bytes" Address="0x03008af0" Value="4885c0"/>
+            <Line Type="bytes" Address="0x03008af3" Value="7507"/>
+            <Line Type="bytes" Address="0x03008af5" Value="488b8698ac0000"/>
+            <Line Type="bytes" Address="0x03008afc" Value="4939c5"/>
+            <Line Type="bytes" Address="0x03008aff" Value="0f85e3000000"/>
+            <Line Type="bytes" Address="0x03008b05" Value="488b4738"/>
+            <Line Type="bytes" Address="0x03008b09" Value="488b4008"/>
+            <Line Type="bytes" Address="0x03008b0d" Value="488b7008"/>
+            <Line Type="bytes" Address="0x03008b11" Value="807e1900"/>
+            <Line Type="bytes" Address="0x03008b15" Value="7544"/>
+            <Line Type="bytes" Address="0x03008b17" Value="488d15b128ef00"/>
+            <Line Type="bytes" Address="0x03008b1e" Value="4c8bf1"/>
+            <Line Type="bytes" Address="0x03008b21" Value="4889c1"/>
+            <Line Type="bytes" Address="0x03008b24" Value="31db"/>
+            <Line Type="bytes" Address="0x03008b26" Value="48395620"/>
+            <Line Type="bytes" Address="0x03008b2a" Value="0f9cc3"/>
+            <Line Type="bytes" Address="0x03008b2d" Value="480f4dce"/>
+            <Line Type="bytes" Address="0x03008b31" Value="48c1e304"/>
+            <Line Type="bytes" Address="0x03008b35" Value="488b341e"/>
+            <Line Type="bytes" Address="0x03008b39" Value="807e1900"/>
+            <Line Type="bytes" Address="0x03008b3d" Value="74e5"/>
+            <Line Type="bytes" Address="0x03008b3f" Value="4839c1"/>
+            <Line Type="bytes" Address="0x03008b42" Value="7417"/>
+            <Line Type="bytes" Address="0x03008b44" Value="48395120"/>
+            <Line Type="bytes" Address="0x03008b48" Value="480f4fc8"/>
+            <Line Type="bytes" Address="0x03008b4c" Value="4839c1"/>
+            <Line Type="bytes" Address="0x03008b4f" Value="740a"/>
+            <Line Type="bytes" Address="0x03008b51" Value="c6413001"/>
+            <Line Type="bytes" Address="0x03008b55" Value="488b5928"/>
+            <Line Type="bytes" Address="0x03008b59" Value="eb08"/>
+            <Line Type="bytes" Address="0x03008b5b" Value="e870d712fe"/>
+            <Line Type="bytes" Address="0x03008b60" Value="488bd8"/>
+            <Line Type="bytes" Address="0x03008b63" Value="4d8b5d78"/>
+            <Line Type="bytes" Address="0x03008b67" Value="488bfb"/>
+            <Line Type="bytes" Address="0x03008b6a" Value="be37000000"/>
+            <Line Type="bytes" Address="0x03008b6f" Value="498d5666"/>
+            <Line Type="bytes" Address="0x03008b73" Value="e8e8b8b3fe"/>
+            <Line Type="bytes" Address="0x03008b78" Value="84c0"/>
+            <Line Type="bytes" Address="0x03008b7a" Value="7405"/>
+            <Line Type="bytes" Address="0x03008b7c" Value="4180765001"/>
+            <Line Type="bytes" Address="0x03008b81" Value="41807e5000"/>
+            <Line Type="bytes" Address="0x03008b86" Value="7437"/>
+            <Line Type="bytes" Address="0x03008b88" Value="488bfb"/>
+            <Line Type="bytes" Address="0x03008b8b" Value="be35000000"/>
+            <Line Type="bytes" Address="0x03008b90" Value="498d5666"/>
+            <Line Type="bytes" Address="0x03008b94" Value="e8c7b8b3fe"/>
+            <Line Type="bytes" Address="0x03008b99" Value="84c0"/>
+            <Line Type="bytes" Address="0x03008b9b" Value="7405"/>
+            <Line Type="bytes" Address="0x03008b9d" Value="4180765101"/>
+            <Line Type="bytes" Address="0x03008ba2" Value="41807e5100"/>
+            <Line Type="bytes" Address="0x03008ba7" Value="740a"/>
+            <Line Type="bytes" Address="0x03008ba9" Value="41808b1f01000001"/>
+            <Line Type="bytes" Address="0x03008bb1" Value="eb25"/>
+            <Line Type="bytes" Address="0x03008bb3" Value="6641c7831f0100000000"/>
+            <Line Type="bytes" Address="0x03008bbd" Value="eb19"/>
+            <Line Type="bytes" Address="0x03008bbf" Value="6641c7831f0100000000"/>
+            <Line Type="bytes" Address="0x03008bc9" Value="41c6465100"/>
+            <Line Type="bytes" Address="0x03008bce" Value="4180a564030000df"/>
+            <Line Type="bytes" Address="0x03008bd6" Value="eb10"/>
+            <Line Type="bytes" Address="0x03008bd8" Value="41808d6403000020"/>
+            <Line Type="bytes" Address="0x03008be0" Value="f30f5905b8d3deff"/>
+            <Line Type="bytes" Address="0x03008be8" Value="58"/>
+            <Line Type="bytes" Address="0x03008be9" Value="e990e61cfe"/>
+        </PatchList>
+    </Metadata>
+</Patch>
