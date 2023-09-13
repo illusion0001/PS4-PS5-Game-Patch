@@ -26,4 +26,14 @@
             <Line Type="bytes32" Address="0x02070e24" Value="0x000002d0"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Horizon Zero Dawn"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.54"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00522e95" Value="31f6"/>
+        </PatchList>
+    </Metadata>
 </Patch>
