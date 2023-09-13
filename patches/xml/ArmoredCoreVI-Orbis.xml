@@ -14,10 +14,43 @@
               AppVer="01.01"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x02042469" Value="95"/>
+            <Line Type="bytes" Address="0x02042468" Value="b00190"/>
             <Line Type="bytes" Address="0x02cbb0eb" Value="898334040000"/>
             <Line Type="bytes" Address="0x02cbb0f1" Value="8bbb30040000"/>
             <Line Type="bytes" Address="0x02cbb0f7" Value="48c7c601000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="60 FPS Unlock"
+              Note="Unlocks Framerate in Base PS4 Mode."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02042468" Value="b00190"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="Resolution Patch (720p for Base)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x03c56708" Value="1280"/>
+            <Line Type="bytes32" Address="0x03c56708" Value="720"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Armored Core VI: Fires of Rubicon"
+              Name="Resolution Patch (1080p Checkerboard for Pro)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x01f931ef" Value="1920"/>
+            <Line Type="bytes32" Address="0x01f931f9" Value="1080"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Armored Core VI: Fires of Rubicon"
