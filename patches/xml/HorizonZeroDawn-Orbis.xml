@@ -2,7 +2,20 @@
 <Patch>
     <TitleID>
         <ID>CUSA01021</ID>
+        <ID>CUSA01967</ID>
+        <ID>CUSA05661</ID>
+        <ID>CUSA05682</ID>
+        <ID>CUSA07319</ID>
+        <ID>CUSA07320</ID>
         <ID>CUSA07326</ID>
+        <ID>CUSA07350</ID>
+        <ID>CUSA07762</ID>
+        <ID>CUSA07798</ID>
+        <ID>CUSA10211</ID>
+        <ID>CUSA10212</ID>
+        <ID>CUSA10213</ID>
+        <ID>CUSA10218</ID>
+        <ID>CUSA10234</ID>
         <ID>CUSA10237</ID>
     </TitleID>
     <Metadata Title="Horizon Zero Dawn"
