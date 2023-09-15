@@ -15,6 +15,7 @@
             <Line Type="bytes" Address="0x015dcc1f" Value="be00000000"/>
             <Line Type="bytes" Address="0x012517d1" Value="c744202800007042"/>
             <Line Type="bytes" Address="0x012517d9" Value="c644205201"/>
+            <Line Type="bytes" Address="0x015dcc5f" Value="b800000000"/> <!-- full vsync -->
         </PatchList>
     </Metadata>
     <Metadata Title="Dragon Age: Inquisition"
