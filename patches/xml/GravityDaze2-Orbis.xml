@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
-        <ID>CUSA03694</ID>
-        <ID>CUSA04943</ID>
         <ID>CUSA00547</ID>
+        <ID>CUSA03694</ID>
+        <ID>CUSA04934</ID>
+        <ID>CUSA04943</ID>
     </TitleID>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
               Name="Boot with loose files exclusively"
@@ -45,38 +46,25 @@
               AppVer="01.11"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x01802d10" Value="657030315f636f6d00"/>
-            <Line Type="bytes" Address="0x01803125" Value="657030305f630000"/>
-            <Line Type="bytes" Address="0x0180312d" Value="657030315f640000"/>
-            <Line Type="bytes" Address="0x01803135" Value="657030325f610000"/>
-            <Line Type="bytes" Address="0x0180313d" Value="736d303800"/>
-            <Line Type="bytes" Address="0x01803142" Value="736d303900"/>
-            <Line Type="bytes" Address="0x01803147" Value="657030335f700000"/>
-            <Line Type="bytes" Address="0x0180314f" Value="657030375f660000"/>
-            <Line Type="bytes" Address="0x01803157" Value="657030375f680000"/>
-            <Line Type="bytes" Address="0x0180315f" Value="657030385f620000"/>
-            <Line Type="bytes" Address="0x01803167" Value="657030385f640000"/>
-            <Line Type="bytes" Address="0x0180316f" Value="657030395f690000"/>
-            <Line Type="bytes" Address="0x01803177" Value="657031325f660000"/>
-            <Line Type="bytes" Address="0x0180317f" Value="657031335f636f00"/>
-            <Line Type="bytes" Address="0x01803187" Value="6570733135000000"/>
-            <Line Type="bytes" Address="0x0180318f" Value="657031355f650000"/>
-            <Line Type="bytes" Address="0x01803197" Value="657031365f610000"/>
-            <Line Type="bytes" Address="0x0180319f" Value="657032325f630000"/>
-            <Line Type="bytes" Address="0x018031bd" Value="736d313000"/>
-            <Line Type="bytes" Address="0x018031c2" Value="736d31325f620000"/>
-            <Line Type="bytes" Address="0x018031ca" Value="736d313300"/>
-            <Line Type="bytes" Address="0x018031d4" Value="657032375f636f00"/>
-            <Line Type="bytes" Address="0x018031ad" Value="646d30365f630000"/>
-            <Line Type="bytes" Address="0x018031b5" Value="646d30365f640000"/>
-            <Line Type="bytes" Address="0x018038e9" Value="5468697320706174636820776173206372656174656420627920696c6c7573696f6e0a57697468206c6f766520746f2047726176697479205275736820446576656c6f7065727320616e642046616e732e"/>
+            <!-- Boot game in unused 60FPS Mode -->
+            <Line Type="bytes" Address="0x00854ac5" Value="c605bc656a0100"/>
+            <Line Type="bytes" Address="0x00854acc" Value="c705ae656a0100007042"/>
+            <Line Type="bytes" Address="0x00854ad6" Value="c705a0656a018988883c"/>
+            <Line Type="bytes" Address="0x00854b12" Value="c705f4656a018988883c"/>
+            <Line Type="bytes" Address="0x00854b1c" Value="c7050a666a018988883c"/>
+            <Line Type="bytes" Address="0x00854b26" Value="c70520666a0100007042"/>
+            <!-- No fliprate -->
             <Line Type="bytes" Address="0x00846980" Value="be00000000"/>
+            <!-- No wait in render thread (up to 240fps) -->
             <Line Type="bytes" Address="0x0084dda4" Value="bf46100000"/>
             <Line Type="bytes" Address="0x0084dda9" Value="eb08"/>
-            <Line Type="bytes" Address="0x0084ddab" Value="90"/>
             <Line Type="bytes" Address="0x0085e9cc" Value="e8cd43fa00"/>
+            <!-- delta time to timestep -->
+            <!-- const -->
             <Line Type="bytes32" Address="0x01802d90" Value="0x49742400"/>
+            <!-- 15fps limit -->
             <Line Type="bytes64" Address="0x01802d94" Value="0x000000000001046b"/>
+            <!-- delta time to timestep func -->
             <Line Type="bytes" Address="0x01802d9e" Value="4889150b533000"/>
             <Line Type="bytes" Address="0x01802da5" Value="48893d0c533000"/>
             <Line Type="bytes" Address="0x01802dac" Value="488b3de1ffffff"/>
@@ -94,6 +82,7 @@
             <Line Type="bytes" Address="0x01802de7" Value="488b15c2523000"/>
             <Line Type="bytes" Address="0x01802dee" Value="488b3dc3523000"/>
             <Line Type="bytes" Address="0x01802df5" Value="c3"/>
+            <!-- menu fixes -->
             <Line Type="bytes32" Address="0x018c4934" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x013e46e8" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x018c491c" Value="0x3c888889"/>
@@ -149,6 +138,7 @@
             <Line Type="bytes" Address="0x013c8f5a" Value="e9249e4300"/>
             <Line Type="bytes" Address="0x01802d83" Value="c605e652300002"/>
             <Line Type="bytes" Address="0x01802d8a" Value="c3"/>
+            <!--
             <Line Type="bytes" Address="0x01627921" Value="e81cb41d00"/>
             <Line Type="bytes" Address="0x01802d42" Value="43c6043c00"/>
             <Line Type="bytes" Address="0x01802d47" Value="e929020000"/>
@@ -335,6 +325,7 @@
             <Line Type="bytes" Address="0x01832f12" Value="45884264"/>
             <Line Type="bytes" Address="0x01832f16" Value="e88c0b0000"/>
             <Line Type="bytes" Address="0x01832f1b" Value="c3"/>
+            -->
         </PatchList>
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
