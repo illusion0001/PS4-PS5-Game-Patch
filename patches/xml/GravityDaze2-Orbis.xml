@@ -28,7 +28,7 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
-              Name="Remove DLC Requirement for loading save data."
+              Name="Remove DLC Requirement for loading save data"
               Note="Removes CE-33678-7 error message when loading save that used DLC previously."
               Author="illusion"
               PatchVer="1.0"
