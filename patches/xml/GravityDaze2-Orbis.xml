@@ -47,11 +47,16 @@
         <PatchList>
             <!-- Boot game in unused 60FPS Mode -->
             <Line Type="bytes" Address="0x00854ac5" Value="c605bc656a0100"/>
+            <!--
             <Line Type="bytes" Address="0x00854acc" Value="c705ae656a0100007042"/>
             <Line Type="bytes" Address="0x00854ad6" Value="c705a0656a018988883c"/>
             <Line Type="bytes" Address="0x00854b12" Value="c705f4656a018988883c"/>
             <Line Type="bytes" Address="0x00854b1c" Value="c7050a666a018988883c"/>
             <Line Type="bytes" Address="0x00854b26" Value="c70520666a0100007042"/>
+            -->
+            <!-- half rate EnemyBrain:getPlayMotionFrame -->
+            <!-- for 120hz, maybe keep this? -->
+            <Line Type="bytes32" Address="0x018c7374" Value="0x41f00000"/>
             <!-- No fliprate -->
             <Line Type="bytes" Address="0x00846980" Value="be00000000"/>
             <!-- No wait in render thread (up to 240fps) -->
