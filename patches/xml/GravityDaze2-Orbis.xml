@@ -62,6 +62,7 @@
             <!-- No wait in render thread (up to 240fps) -->
             <Line Type="bytes" Address="0x0084dda4" Value="bf46100000"/>
             <Line Type="bytes" Address="0x0084dda9" Value="eb08"/>
+            <!-- branch to delta time to timestep func -->
             <Line Type="bytes" Address="0x0085e9cc" Value="e8cd43fa00"/>
             <!-- delta time to timestep -->
             <!-- const -->
@@ -86,7 +87,7 @@
             <Line Type="bytes" Address="0x01802de7" Value="488b15c2523000"/>
             <Line Type="bytes" Address="0x01802dee" Value="488b3dc3523000"/>
             <Line Type="bytes" Address="0x01802df5" Value="c3"/>
-            <!-- menu fixes -->
+            <!-- menu fixes (incomplete) -->
             <Line Type="bytes32" Address="0x018c4934" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x013e46e8" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x018c491c" Value="0x3c888889"/>
