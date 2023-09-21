@@ -423,6 +423,23 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
+              Name="Force Enable 'The Ark of Time: Raven's Choice' DLC"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00430a63" Value="488d3d15000000"/>
+            <Line Type="bytes" Address="0x00430a6a" Value="31f6"/>
+            <Line Type="bytes" Address="0x00430a6c" Value="31d2"/>
+            <Line Type="bytes" Address="0x00430a6e" Value="e8bd5b4300"/>
+            <Line Type="bytes" Address="0x00430a73" Value="0fb605a9ee8a01"/>
+            <Line Type="bytes" Address="0x00430a7a" Value="e9bf554300"/>
+            <Line Type="bytes" Address="0x00430a7f" Value="43524f5700"/>
+            <Line Type="bytes" Address="0x00866037" Value="e927aabcff"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
               Name="Load hidden Levels (ENABLE FIRST)"
               Author="illusion"
               PatchVer="1.0"
