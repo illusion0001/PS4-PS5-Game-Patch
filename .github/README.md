@@ -84,17 +84,19 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
 
 ### Patch types
 
-| `type`    | Info                      | Value (example)        |
-|-----------|---------------------------|------------------------|
-| `byte`    | Hex, 1 byte               | `"0x00"`               |
-| `bytes16` | Hex, 2 bytes              | `"0x0000"`             |
-| `bytes32` | Hex, 4 bytes              | `"0x00000000"`         |
-| `bytes64` | Hex, 8 bytes              | `"0x0000000000000000"` |
-| `bytes`   | Hex, any size (no spaces) | `"####"`               |
-| `float32` | Float, single             | `"1.0"`                |
-| `float64` | Float, double             | `"1.0"`                |
-| `utf8`    | String, UTF-8*            | `"string"`             |
-| `utf16`   | String, UTF-16*           | `"string"`             |
+| `type`        | Info                                                                                                                                                                                                                                                         | Value (example)        |
+|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
+| `byte`        | Hex, 1 byte                                                                                                                                                                                                                                                  | `"0x00"`               |
+| `bytes16`     | Hex, 2 bytes                                                                                                                                                                                                                                                 | `"0x0000"`             |
+| `bytes32`     | Hex, 4 bytes                                                                                                                                                                                                                                                 | `"0x00000000"`         |
+| `bytes64`     | Hex, 8 bytes                                                                                                                                                                                                                                                 | `"0x0000000000000000"` |
+| `bytes`       | Hex, max size is 255 bytes string (no spaces)                                                                                                                                                                                                                | `"####"`               |
+| `float32`     | Float, single                                                                                                                                                                                                                                                | `"1.0"`                |
+| `float64`     | Float, double                                                                                                                                                                                                                                                | `"1.0"`                |
+| `utf8`        | String, UTF-8*                                                                                                                                                                                                                                               | `"string"`             |
+| `utf16`       | String, UTF-16*                                                                                                                                                                                                                                              | `"string"`             |
+| `mask`        | Pattern Scan, max size is 255 bytes string (with spaces)<br>**Parameters**:<br>`Offset`: Offset from first address of found address                                                                                                                          | `"aa bb ?? dd"`        |
+| `mask_jump32` | Pattern Scan With Branch (32 bit), max size is 255 bytes string (with spaces)<br>**Parameters**:<br>`Target`: target bytes string for branch<br>`Size`: size of jump (min: 5) with nop padding after<br>`Offset`: Offset from first address of found address | `"aa bb ?? dd"`        |
 
 * Note: Strings must be manually null terminated.
 
@@ -104,13 +106,14 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <!--
-      This will not be used by the plugin parser.
+      This will not be used by the game patch parser.
       It is only used for generating the files for distribution.
     -->
     <TitleID>
         <ID>EXAMPLE01</ID>
         <ID>EXAMPLE02</ID>
     </TitleID>
+    <!-- `AppVer="mask"` can be used for pattern scan patches --> 
     <Metadata Title="Example Game Title"
               Name="Example Name"
               Note="Example Note"
