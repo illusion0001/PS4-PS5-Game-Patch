@@ -23,7 +23,7 @@
               AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="mask" Address="0f 42 d8 ff cb 85 c0 0f 44 d8 89 de" Value="be0100000090909090909090"/>
+            <Line Type="mask_jump32" Address="0f 95 c1 8b 04 8b 85 c0 89 c1" Value="0f95c1c7048b020000008b048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="6"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Lies of P"
