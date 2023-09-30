@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA36842</ID>
+        <ID>CUSA36843</ID>
+        <ID>CUSA36844</ID>
+        <ID>CUSA36845</ID>
+    </TitleID>
+    <Metadata Title="Red Dead Redemption"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 fe 03 0f 4d f0 ff ce" Value="83fe030f4df031f6"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Red Dead Redemption"
+              Name="1080p for PS4 Pro on 4K Display"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="be 00 0f 00 00 ba 70 08 00 00" Value="be80070000ba38040000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
