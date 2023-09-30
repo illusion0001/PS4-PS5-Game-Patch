@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA36847</ID>
+        <ID>CUSA36848</ID>
+        <ID>CUSA36849</ID>
+        <ID>CUSA36850</ID>
+    </TitleID>
+    <Metadata Title="Lies of P"
+              Name="60 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c5 fa 10 04 8b 49 8b 07" Value="c4a17857c0"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Lies of P"
+              Name="30 FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask_jump32" Address="0f 95 c1 8b 04 8b 85 c0 89 c1" Value="0f95c1c7048b020000008b048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="6"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Lies of P"
+              Name="Resolution Patch (Static 100%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 00 83 f8 02 75 ??" Value="31c0"/>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b c5 fa 5e 05 ?? ?? ?? ?? c5 f0 57 c9 c5 f8 2e c1 76 ??" Value="c7048b0000c842c5fa10048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="5"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Lies of P"
+              Name="Resolution Patch (Static 67%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 00 83 f8 02 75 ??" Value="31c0"/>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b c5 fa 5e 05 ?? ?? ?? ?? c5 f0 57 c9 c5 f8 2e c1 76 ??" Value="c7048b55558542c5fa10048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="5"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Lies of P"
+              Name="Resolution Patch (Static 50%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 00 83 f8 02 75 ??" Value="31c0"/>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b c5 fa 5e 05 ?? ?? ?? ?? c5 f0 57 c9 c5 f8 2e c1 76 ??" Value="c7048b00004842c5fa10048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="5"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Lies of P"
+              Name="Resolution Patch (Static 25%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8b 00 83 f8 02 75 ??" Value="31c0"/>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b c5 fa 5e 05 ?? ?? ?? ?? c5 f0 57 c9 c5 f8 2e c1 76 ??" Value="c7048b0000c841c5fa10048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="5"/>
+        </PatchList>
+    </Metadata>
+</Patch>
