@@ -13,7 +13,7 @@
               AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="mask" Address="41 81 7d ?? e9 03 00 00 0f 8c ?? ?? ?? ??" Value="41c645110190909048e9"/>
+            <Line Type="mask" Address="41 81 7d ?? e9 03 00 00 0f 8c ?? ?? ?? ??" Value="41c645110190909048e9"/> <!-- try not to hardcode branch loc -->
         </PatchList>
     </Metadata>
     <Metadata Title="Red Dead Redemption"
