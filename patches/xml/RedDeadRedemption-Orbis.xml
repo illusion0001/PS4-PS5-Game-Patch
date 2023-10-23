@@ -7,6 +7,16 @@
         <ID>CUSA36845</ID>
     </TitleID>
     <Metadata Title="Red Dead Redemption"
+              Name="Startup Legal + Logo Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="41 81 7d ?? e9 03 00 00 0f 8c ?? ?? ?? ??" Value="41c645110190909048e9"/> <!-- try not to hardcode branch loc -->
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Red Dead Redemption"
               Name="60 FPS"
               Author="illusion"
               PatchVer="1.0"
