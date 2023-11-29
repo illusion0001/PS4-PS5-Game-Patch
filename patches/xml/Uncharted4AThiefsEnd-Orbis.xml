@@ -17,6 +17,16 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Uncharted 4: A Thief's End"
+              Name="Dev Menu (SP)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.33"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x005c8df7" Value="c680792e000001"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 4: A Thief's End"
               Name="Dev Menu Restore for MP executable"
               Author="illusion + TheMagicalBlob"
               PatchVer="1.0"
