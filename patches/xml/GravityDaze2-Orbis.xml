@@ -135,14 +135,29 @@
             <Line Type="bytes32" Address="0x018c3f44" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x018c3f5c" Value="0x3c888889"/>
             <Line Type="bytes32" Address="0x018c3f60" Value="0x3c888889"/>
+            <!-- mode 3 (timestep) -->
             <Line Type="bytes" Address="0x013c8f2f" Value="e8479e4300"/>
             <Line Type="bytes" Address="0x013c8f34" Value="eb1b"/>
             <Line Type="bytes" Address="0x01802d7b" Value="c605ee52300003"/>
             <Line Type="bytes" Address="0x01802d82" Value="c3"/>
             <Line Type="bytes" Address="0x013c8f8e" Value="ebca"/>
+            <!-- mode 2 (timestep) -->
             <Line Type="bytes" Address="0x013c8f5a" Value="e9249e4300"/>
             <Line Type="bytes" Address="0x01802d83" Value="c605e652300002"/>
             <Line Type="bytes" Address="0x01802d8a" Value="c3"/>
+            <!-- dm06_03000 check -->
+            <Line Type="bytes" Address="0x011bb6cc" Value="e9647a6400"/>
+            <Line Type="bytes" Address="0x01802d10" Value="646d30365f303330303000"/>
+            <Line Type="bytes" Address="0x01803135" Value="488d3dd4fbffff"/>
+            <Line Type="bytes" Address="0x0180313c" Value="4889de"/>
+            <Line Type="bytes" Address="0x0180313f" Value="e8dc25ffff"/>
+            <Line Type="bytes" Address="0x01803144" Value="83f800"/>
+            <Line Type="bytes" Address="0x01803147" Value="7507"/>
+            <Line Type="bytes" Address="0x01803149" Value="c605204f300003"/>
+            <Line Type="bytes" Address="0x01803150" Value="4889df"/>
+            <Line Type="bytes" Address="0x01803153" Value="e82825ffff"/>
+            <Line Type="bytes" Address="0x01803158" Value="4989c4"/>
+            <Line Type="bytes" Address="0x0180315b" Value="e977859bff"/>
             <!--
             <Line Type="bytes" Address="0x01627921" Value="e81cb41d00"/>
             <Line Type="bytes" Address="0x01802d42" Value="43c6043c00"/>
@@ -423,20 +438,59 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
-              Name="Force Enable 'The Ark of Time: Raven's Choice' DLC"
+              Name="Unlock All DLC"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.11"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x00430a63" Value="488d3d15000000"/>
-            <Line Type="bytes" Address="0x00430a6a" Value="31f6"/>
-            <Line Type="bytes" Address="0x00430a6c" Value="31d2"/>
-            <Line Type="bytes" Address="0x00430a6e" Value="e8bd5b4300"/>
-            <Line Type="bytes" Address="0x00430a73" Value="0fb605a9ee8a01"/>
-            <Line Type="bytes" Address="0x00430a7a" Value="e9bf554300"/>
-            <Line Type="bytes" Address="0x00430a7f" Value="43524f5700"/>
-            <Line Type="bytes" Address="0x00866037" Value="e927aabcff"/>
+            <!-- Content ID List -->
+            <Line Type="utf8" Address="0x00430a63" Value="CROW"/>
+            <Line Type="utf8" Address="0x00430a68" Value="DENGEKI"/>
+            <Line Type="utf8" Address="0x00430a70" Value="KIT17"/>
+            <Line Type="utf8" Address="0x00430a76" Value="KIT19"/>
+            <Line Type="utf8" Address="0x00430a7c" Value="NIER"/>
+            <Line Type="utf8" Address="0x00430a81" Value="PSO2"/>
+            <!-- Register them on ac iterations -->
+            <Line Type="bytes" Address="0x00866037" Value="e9f840f900"/>
+            <Line Type="bytes" Address="0x017fa134" Value="488d3d2869c3fe"/>
+            <Line Type="bytes" Address="0x017fa13b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa13d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa13f" Value="e8ecc406ff"/>
+            <Line Type="bytes" Address="0x017fa144" Value="488d3d1d69c3fe"/>
+            <Line Type="bytes" Address="0x017fa14b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa14d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa14f" Value="e8dcc406ff"/>
+            <Line Type="bytes" Address="0x017fa154" Value="488d3d1569c3fe"/>
+            <Line Type="bytes" Address="0x017fa15b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa15d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa15f" Value="e8ccc406ff"/>
+            <Line Type="bytes" Address="0x017fa164" Value="488d3d0b69c3fe"/>
+            <Line Type="bytes" Address="0x017fa16b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa16d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa16f" Value="e8bcc406ff"/>
+            <Line Type="bytes" Address="0x017fa174" Value="488d3d0169c3fe"/>
+            <Line Type="bytes" Address="0x017fa17b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa17d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa17f" Value="e8acc406ff"/>
+            <Line Type="bytes" Address="0x017fa184" Value="488d3df668c3fe"/>
+            <Line Type="bytes" Address="0x017fa18b" Value="31f6"/>
+            <Line Type="bytes" Address="0x017fa18d" Value="31d2"/>
+            <Line Type="bytes" Address="0x017fa18f" Value="e89cc406ff"/>
+            <Line Type="bytes" Address="0x017fa194" Value="0fb60588574e00"/>
+            <Line Type="bytes" Address="0x017fa19b" Value="e99ebe06ff"/>
+            <!-- <Line Type="bytes" Address="0x008fcb60" Value="c3"/> -->
+            <!-- <Line Type="bytes" Address="0x010e87e0" Value="b001c3"/> -->
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
+              Name="Unlock All Photo Items"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x010e87e0" Value="b001c3"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
