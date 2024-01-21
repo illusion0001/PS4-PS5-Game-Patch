@@ -18,6 +18,16 @@
             <Line Type="bytes" Address="0x0167361c" Value="be00000000"/>
         </PatchList>
     </Metadata>
+        <Metadata Title="The Witcher 3"
+              Name="60 FPS Unlock"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="04.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x016b030c" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="The Witcher 3"
               Name="Resolution Patch (720p) (Base Only)"
               Author="illusion"
