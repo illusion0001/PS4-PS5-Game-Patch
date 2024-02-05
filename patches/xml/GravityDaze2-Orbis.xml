@@ -516,6 +516,28 @@
             <Line Type="utf8" Address="0x001b08075" Value="Test test_hud_select"/>
         </PatchList>
     </Metadata>
+        <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
+              Name="Load hidden Level test_sound"
+              Note="Needs 'Print+DebugPrint Fixes' patch for working menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x001b08075" Value="TestSound test_sound"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
+              Name="Load hidden Level root_E3"
+              Note="Needs 'Print+DebugPrint Fixes' patch for working menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.11"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x001b08075" Value="LaunchScript root_E3"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="Gravity Rush 2 (Gravity Daze 2)"
               Name="Force Region (ENABLE FIRST)"
               Author="illusion"
