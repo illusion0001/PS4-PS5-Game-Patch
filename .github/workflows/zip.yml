@@ -16,12 +16,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           submodules: recursive
 
       - name: Checkout mxml
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           repository: michaelrsweet/mxml
           path: mxml
@@ -92,13 +92,13 @@ jobs:
           cp patch1.zip build.txt .github/README.md patch_built.md out/
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: patch1
           path: patch1_artifact
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@main
         with:
           name: patches
           path: patches
@@ -133,7 +133,7 @@ jobs:
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
           github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
-        uses: actions/checkout@v3
+        uses: actions/checkout@main
         with:
           repository: illusion0001/illusion0001.github.io
 
