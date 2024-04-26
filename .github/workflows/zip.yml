@@ -14,6 +14,8 @@ on:
 jobs:
   zip-patches:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@main
@@ -43,16 +45,20 @@ jobs:
       - name: Generate TitleID files
         run: |
           mkdir -p output/xml
+          mkdir -p output/xml_prospero
           mkdir -p output/misc
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
           echo $msg > output/xml/build.txt
+          echo $msg > output/xml_prospero/build.txt
           echo $msg > output/misc/patch_ver.txt
-          echo $msg > build.txt
-          echo $msg_md > patch_built.md
+          echo $msg > output/build.txt
+          echo $msg_md > output/patch_built.md
           echo $msg
-          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml" "$current"
+          echo $msg_md
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml" "$current" "output/xml"
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml_prospero/*.xml" "$current" "output/xml_prospero"
           mv output patch1
 
       - name: Verify XML files
@@ -85,12 +91,9 @@ jobs:
           mkdir out
           mv patch1 out/patches
           cd out
-          chmod -R 0777 patches
-          zip -r ../patch1.zip patches/*
-          cd ..
-          mkdir patch1_artifact 
-          mv out/patches patch1_artifact/patches
-          cp patch1.zip build.txt .github/README.md patch_built.md out/
+          zip -r ${{ github.workspace }}/patch1.zip patches/* patches/build.txt patches/misc/patch_ver.txt
+          mkdir ../patch1_artifact 
+          mv patches ../patch1_artifact/patches
 
       - name: Upload artifact
         uses: actions/upload-artifact@main
@@ -98,42 +101,11 @@ jobs:
           name: patch1
           path: patch1_artifact
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: patches
-          path: patches
-
-      - name: Deploy
-        if: |
-          github.ref_name == 'main' &&
-          github.event_name == 'push' &&
-          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
-        run: |
-          cd out
-          git init
-          git add -A
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Actions"
-          git commit -m 'Deploy patch asset'
-
-      - name: Force push to destination branch
-        if: |
-          github.ref_name == 'main' &&
-          github.event_name == 'push' &&
-          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          force: true
-          directory: out
-
       - name: Checkout website
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
         uses: actions/checkout@main
         with:
           repository: illusion0001/illusion0001.github.io
@@ -142,7 +114,7 @@ jobs:
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'GoldHEN/GoldHEN_Patch_Repository'
+          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_RUNNER }}
         run: gh workflow run jekyll.yml

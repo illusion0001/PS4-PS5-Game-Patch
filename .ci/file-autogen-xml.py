@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 import sys
 
 if __name__ == '__main__':
-    if len(sys.argv) == 3:
+    if len(sys.argv) == 4:
         entry = 0
         for patches in glob.glob(sys.argv[1], recursive=True):
             # print('Source: %s' % (patches))
@@ -18,7 +18,7 @@ if __name__ == '__main__':
                     if not (i.text.startswith('CUSA') or i.text.startswith('PPSA')):
                         print(f'Ignored {i.text}')
                         continue
-                    out = ('output/xml/{}.xml'.format(i.text))
+                    out = ('{}/{}.xml'.format(sys.argv[3], i.text))
                     # print('Output: %s' % (out))
                     with open(out, 'w') as fw:
                         fw.write(string_data)
