@@ -1,10 +1,7 @@
 # GoldHEN Patch Repository
 Custom Game Patches for PlayStation 4 Games.
 
-## Features
-* `.xml` support
-
-## Usage
+## Usage (PS4)
 
 #### Manual Installation (Offline via HDD)
 - Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip).
@@ -93,8 +90,8 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
 | `bytes`       | Hex, max size is 255 bytes string (no spaces)                                                                                                                                                                                                                | `"####"`               |
 | `float32`     | Float, single                                                                                                                                                                                                                                                | `"1.0"`                |
 | `float64`     | Float, double                                                                                                                                                                                                                                                | `"1.0"`                |
-| `utf8`        | String, UTF-8*                                                                                                                                                                                                                                               | `"string"`             |
-| `utf16`       | String, UTF-16*                                                                                                                                                                                                                                              | `"string"`             |
+| `utf8`        | String, UTF-8                                                                                                                                                                                                                                                | `"string"`             |
+| `utf16`       | String, UTF-16                                                                                                                                                                                                                                               | `"string"`             |
 | `mask`        | Pattern Scan, max size is 255 bytes string (with spaces)<br>**Parameters**:<br>`Offset`: Offset from first address of found address                                                                                                                          | `"aa bb ?? dd"`        |
 | `mask_jump32` | Pattern Scan With Branch (32 bit), max size is 255 bytes string (with spaces)<br>**Parameters**:<br>`Target`: target bytes string for branch<br>`Size`: size of jump (min: 5) with nop padding after<br>`Offset`: Offset from first address of found address | `"aa bb ?? dd"`        |
 
@@ -114,6 +111,8 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
         <ID>EXAMPLE02</ID>
     </TitleID>
     <!-- `AppVer="mask"` can be used for pattern scan patches --> 
+    <!-- `ImageBase` is only valid for PS5 patches. -->
+    <!-- `ImageBase` can be `0x0000000000000000`, the plugin will use relative offset -->
     <Metadata Title="Example Game Title"
               Name="Example Name"
               Note="Example Note"
@@ -125,7 +124,7 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
             <!-- This is a code comment, improves code readability. -->
             <!-- Code comment at end of line is also supported. -->
             <Line Type="bytes" Address="0x00000000" Value="0102030405060708"/>
-            <Line Type="utf8" Address="0x00000000" Value="Hello World\x00"/>
+            <Line Type="utf8" Address="0x00000000" Value="Hello World"/>
         </PatchList>
     </Metadata>
 </Patch>
