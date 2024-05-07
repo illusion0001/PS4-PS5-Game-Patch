@@ -7,6 +7,16 @@
         <ID>CUSA02320</ID>
     </TitleID>
     <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Logo Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="byte" Address="0x00d98997" Value="0x01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
               Name="Enable Dev Menu"
               Author="illusion"
               PatchVer="1.0"
@@ -53,7 +63,19 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Uncharted: Drake's Fortune Remastered"
-              Name="Intro Skip"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x006cf8b0" Value="4180bfe947000001"/>
+            <Line Type="bytes" Address="0x00fe3f41" Value="01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Logo Skip"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.02"
@@ -106,8 +128,20 @@
             <Line Type="bytes" Address="0x006a43ef" Value="b801000000"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Uncharted: Drake's Fortune Remastered"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x006cfea0" Value="4180bfe947000001"/>
+            <Line Type="bytes" Address="0x00fa7e41" Value="01"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="Uncharted 2: Among Thieves Remastered"
-              Name="Intro Skip"
+              Name="Logo Skip"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.00"
@@ -218,7 +252,19 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Uncharted 2: Among Thieves Remastered"
-              Name="Intro Skip"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x0054c4fd" Value="80b92248000001"/>
+            <Line Type="bytes" Address="0x013d91ba" Value="01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Logo Skip"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.02"
@@ -293,6 +339,18 @@
             <Line Type="bytes" Address="0x005fb370" Value="31c0c3"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Uncharted 2: Among Thieves Remastered"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big2-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x007f8f4b" Value="4180bc242248000001"/>
+            <Line Type="bytes" Address="0x015640b2" Value="01"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="Uncharted 3: Drake's Deception Remastered"
               Name="Enable Dev Menu"
               Author="illusion"
@@ -301,6 +359,30 @@
               AppElf="big3-ps4_Shipping.elf">
         <PatchList>
             <Line Type="bytes" Address="0x009d86a2" Value="41c686ba39000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 3: Drake's Deception Remastered"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="big3-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x0056218d" Value="80b9ff4b000001"/>
+            <Line Type="bytes" Address="0x01e21f90" Value="01"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted 3: Drake's Deception Remastered"
+              Name="Hide Debug Text When Dev Menu Enabled"
+              Note="This patch also remaps L3 + Triangle to Disable FPS"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.02"
+              AppElf="big3-ps4_Shipping.elf">
+        <PatchList>
+            <Line Type="bytes" Address="0x0096cb8b" Value="4180bc24ff4b000001"/>
+            <Line Type="bytes" Address="0x01f3ee60" Value="01"/>
         </PatchList>
     </Metadata>
 </Patch>
