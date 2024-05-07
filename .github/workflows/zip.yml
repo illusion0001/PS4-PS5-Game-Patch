@@ -23,7 +23,8 @@ jobs:
       - name: Checkout mxml
         uses: actions/checkout@main
         with:
-          repository: michaelrsweet/mxml
+          repository: bucanero/mxml
+          ref: f2d6c728b85333a9734bd7eebd4131c65ad11da2
           path: mxml
 
       - name: Configure mxml
