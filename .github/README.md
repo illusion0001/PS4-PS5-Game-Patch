@@ -1,12 +1,17 @@
-# GoldHEN Patch Repository
-Custom Game Patches for PlayStation 4 Games.
+# PS4/PS5 Game Patch Repository
+Custom Game Patches for PlayStation 4 and PlayStation 5 Games.
+
+<details>
+<summary>
 
 ## Usage (PS4)
 
+</summary>
+
 #### Manual Installation (Offline via HDD)
-- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip).
+- Download [patch zip](https://github.com/illusion0001/PS4-PS5-Game-Patch/releases/latest/download/patch1.zip).
 - Copy `patch1.zip` to `/data/GoldHEN/` using an FTP client.
-- Open [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest) and click Update.
+- Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) and click Update.
 - If the patches was installed correctly from Internal HDD, you should see the following message:
 
 <details>
@@ -18,9 +23,9 @@ Custom Game Patches for PlayStation 4 Games.
 
 #### Manual Installation (Offline via USB)
 
-- Download [patch zip](https://github.com/GoldHEN/GoldHEN_Patch_Repository/raw/gh-pages/patch1.zip).
+- Download [patch zip](https://github.com/illusion0001/PS4-PS5-Game-Patch/releases/latest/download/patch1.zip).
 - Copy `patch1.zip` to root of USB drive.
-- Open [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest) and click Update.
+- Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) and click Update.
 - If the patches was installed correctly from USB, you should see the following message:
 
 <details>
@@ -32,7 +37,7 @@ Custom Game Patches for PlayStation 4 Games.
 
 #### Easy Installation
 - Patches can be configured, install/update via:
-  - [GoldHEN Cheat Manager](https://github.com/GoldHEN/GoldHEN_Cheat_Manager/releases/latest)
+  - [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest)
   - [Itemzflow Game Manager](https://github.com/LightningMods/Itemzflow)
 - Run your game.
 
@@ -42,6 +47,19 @@ Custom Game Patches for PlayStation 4 Games.
 * Naming conversion for app and patch engine to recognize: `(TitleID).{format}`
   * e.g. `CUSA00001.xml`
   * e.g. `CUSA03694.xml`
+
+</details>
+
+<details>
+<summary>
+
+## Usage (PS5)
+
+</summary>
+
+To be written.
+
+</details>
 
 ## Developing patches
 
