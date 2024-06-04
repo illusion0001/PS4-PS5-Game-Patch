@@ -48,6 +48,8 @@ jobs:
           mkdir -p output/xml_prospero
           mkdir -p output/misc
           current=$(date '+%Y-%m-%d %H:%M:%S %A (%Z %z)')
+          echo "current_time=$(date +%s)" >> ${{ github.env }}
+          echo "current_date=$current" >> ${{ github.env }}
           msg="Patch database version: $current"
           msg_md="Patch archive built on: \`$current\`"
           echo $msg > output/xml/build.txt
@@ -66,8 +68,14 @@ jobs:
         run: |
           clang ../.ci/test.c -lmxml -D__PC__
           FILES="../patches/xml/*.xml"
+          FILES_PS5="../patches/xml_prospero/*.xml"
           i=0
           for f in $FILES
+          do
+            ./a.out $f
+            ((i=i+1))
+          done
+          for f in $FILES_PS5
           do
             ./a.out $f
             ((i=i+1))
@@ -78,8 +86,14 @@ jobs:
         working-directory: mxml
         run: |
           FILES="../patch1/xml/*.xml"
+          FILES_PS5="../patches/xml_prospero/*.xml"
           i=0
           for f in $FILES
+          do
+            ./a.out $f
+            ((i=i+1))
+          done
+          for f in $FILES_PS5
           do
             ./a.out $f
             ((i=i+1))
@@ -100,6 +114,28 @@ jobs:
         with:
           name: patch1
           path: patch1_artifact
+
+      - name: Create Release
+        if: |
+          github.event_name == 'push' &&
+          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          hash_md="hash.md"
+          echo "# Release date" > $hash_md
+          echo "- \`${{ env.current_date }}\`" >> $hash_md
+          echo "## File details" >> $hash_md
+          echo "" >> $hash_md
+          echo "<details>" >> $hash_md
+          echo "<summary>File hashes (Click to Expand)</summary>" >> $hash_md
+          echo "" >> $hash_md
+          echo "\`\`\`sha256" >> $hash_md
+          echo "$(sha256sum ${{ github.workspace }}/patch1.zip)" >> $hash_md
+          echo "\`\`\`" >> $hash_md
+          echo "" >> $hash_md
+          echo "</details>" >> $hash_md
+          gh release create "${{ env.current_time }}" "${{ github.workspace }}/patch1.zip" --target "${{ GITHUB.SHA }}" -t "${{ env.current_date }}" -F $hash_md
 
       - name: Checkout website
         if: |
