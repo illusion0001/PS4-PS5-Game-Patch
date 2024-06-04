@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA01339</ID>
+        <ID>PPSA01340</ID>
+        <ID>PPSA01341</ID>
+        <ID>PPSA01342</ID>
+    </TitleID>
+    <Metadata Title="Demon Souls"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.000.000"
+              ImageBase="0x35b4c000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x35b4c0bf" Value="cc"/>
+            <Line Type="bytes" Address="0x35b4c0c0" Value="488b03"/>
+            <Line Type="bytes" Address="0x35b4c0c3" Value="483b4308"/>
+            <Line Type="bytes" Address="0x35b4c0c7" Value="c60532b7530302"/>
+            <Line Type="bytes" Address="0x35b4c0ce" Value="eb13"/>
+            <Line Type="bytes" Address="0x35b4c0e3" Value="e9cd4bae00"/>
+            <Line Type="bytes" Address="0x36630cae" Value="e90db451ff"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Demon Souls"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.004.000"
+              ImageBase="0x584a8000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x58cfbb49" Value="e937010000"/>
+            <Line Type="bytes" Address="0x58cfbc85" Value="e8b676ffff"/>
+            <Line Type="bytes" Address="0x58cfbc8a" Value="e9e4000000"/>
+            <Line Type="bytes" Address="0x58cfbd73" Value="c60526058b0202"/>
+            <Line Type="bytes" Address="0x58cfbd7a" Value="e9cffdffff"/>
+        </PatchList>
+    </Metadata>
+</Patch>

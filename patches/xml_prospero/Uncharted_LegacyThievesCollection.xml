@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>PPSA05684</ID>
+        <ID>PPSA05389</ID>
+        <ID>PPSA05686</ID>
+        <ID>PPSA05685</ID>
+    </TitleID>
+    <Metadata Title="Uncharted 4: A Thief's End"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.000.000"
+              ImageBase="0x01000000"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01578838" Value="eb2a"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Uncharted: The Lost Legacy"
+              Name="Debug Menu"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.000.000"
+              ImageBase="0x01000000"
+              AppElf="tllr-boot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x015783e8" Value="eb2a"/>
+        </PatchList>
+    </Metadata>
+</Patch>
