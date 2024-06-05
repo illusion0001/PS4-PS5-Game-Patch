@@ -59,8 +59,8 @@ jobs:
           echo $msg_md > output/patch_built.md
           echo $msg
           echo $msg_md
-          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml" "$current" "output/xml"
-          python .ci/file-autogen-xml.py "$(pwd)/patches/xml_prospero/*.xml" "$current" "output/xml_prospero"
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml/*.xml" "$current" "output/xml" > ${{ github.workspace }}/gen_ps4.log
+          python .ci/file-autogen-xml.py "$(pwd)/patches/xml_prospero/*.xml" "$current" "output/xml_prospero" > ${{ github.workspace }}/gen_ps5.log
           mv output patch1
 
       - name: Verify XML files
@@ -72,12 +72,12 @@ jobs:
           i=0
           for f in $FILES
           do
-            ./a.out $f
+            ./a.out $f >> ${{ github.workspace }}/verify_ps4.log
             ((i=i+1))
           done
           for f in $FILES_PS5
           do
-            ./a.out $f
+            ./a.out $f >> ${{ github.workspace }}/verify_ps5.log
             ((i=i+1))
           done
           echo "Passed $i files"
@@ -90,12 +90,12 @@ jobs:
           i=0
           for f in $FILES
           do
-            ./a.out $f
+            ./a.out $f >> ${{ github.workspace }}/verify_ps4.log
             ((i=i+1))
           done
           for f in $FILES_PS5
           do
-            ./a.out $f
+            ./a.out $f >> ${{ github.workspace }}/verify_ps5.log
             ((i=i+1))
           done
           echo "Passed $i files"
@@ -114,6 +114,12 @@ jobs:
         with:
           name: patch1
           path: patch1_artifact
+
+      - name: Upload artifact logs
+        uses: actions/upload-artifact@main
+        with:
+          name: logs
+          path: ./*.log
 
       - name: Create Release
         if: |
