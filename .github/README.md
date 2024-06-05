@@ -10,14 +10,17 @@ Custom Game Patches for PlayStation 4 and PlayStation 5 Games.
 
 #### Manual Installation (Offline via HDD)
 - Download [patch zip](https://github.com/illusion0001/PS4-PS5-Game-Patch/releases/latest/download/patch1.zip).
-- Copy `patch1.zip` to `/data/GoldHEN/` using an FTP client.
-- Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) and click Update.
+- Copy `patch1.zip` to `/user/data/CheatsManager/backup/patches/` using an FTP client.
+- Install and Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) on your console.
+  - Scroll and select on **Update**.
+  - Scroll and select on **Update Cheats, Patches, Plugins (HDD)**
+  - Find and select entry `patch1.zip`
 - If the patches was installed correctly from Internal HDD, you should see the following message:
 
 <details>
 <summary>Screenshot (Click to Expand)</summary>
 
-![](https://user-images.githubusercontent.com/37698908/204118853-8b34d4d5-e213-44a3-95a4-9462d419f2d2.png)
+![](https://github.com/illusion0001/PS4-PS5-Game-Patch/assets/37698908/9d539d02-bba4-44b5-aa34-b835e9f8aa36)
 
 </details>
 
@@ -25,13 +28,16 @@ Custom Game Patches for PlayStation 4 and PlayStation 5 Games.
 
 - Download [patch zip](https://github.com/illusion0001/PS4-PS5-Game-Patch/releases/latest/download/patch1.zip).
 - Copy `patch1.zip` to root of USB drive.
-- Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) and click Update.
+- Install and Open [PS4 Cheats Manager](https://github.com/bucanero/PS4CheatsManager/releases/latest) on your console.
+  - Scroll and select on **Update**.
+  - Scroll and select on **Update Cheats, Patches, Plugins (USB)**
+  - Find and select entry `patch1.zip`
 - If the patches was installed correctly from USB, you should see the following message:
 
 <details>
 <summary>Screenshot (Click to Expand)</summary>
 
-![](https://user-images.githubusercontent.com/37698908/204118861-ae3fa9c1-a429-4bf9-a357-55a8e7e3df77.png)
+![](https://github.com/illusion0001/PS4-PS5-Game-Patch/assets/37698908/536d3be3-7108-4fbb-b4e5-72791fd4c8f6)
 
 </details>
 
