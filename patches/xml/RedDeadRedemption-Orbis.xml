@@ -36,4 +36,39 @@
             <Line Type="mask" Address="be 00 0f 00 00 ba 70 08 00 00" Value="be80070000ba38040000"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Red Dead Redemption"
+              Name="Disable Cheat Penalty"
+              Note="Should disable the cheat code penalty writing to the save file, remove the 'cheated' status of an existing save, and allow you to receive trophies while cheat codes are enabled."
+              Author="foxyhooligans"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- When loading, check for cheated save flag and turn it off-->
+            <Line Type="bytes" Address="0x0062a9a8" Value="c680fe28000000"/>
+            <Line Type="bytes" Address="0x0062a9af" Value="eb07"/>
+            <Line Type="bytes" Address="0x0062ac31" Value="c680fe28000000"/>
+            <Line Type="bytes" Address="0x0062ac38" Value="eb07"/>
+            <Line Type="bytes" Address="0x0062ac41" Value="c60578bafb0100"/>
+            <!-- When turning cheats on, do not flag the save and skip the warning popups-->
+            <Line Type="bytes" Address="0x00cfce59" Value="eb39"/>
+            <Line Type="bytes" Address="0x00cff493" Value="c680fe28000000"/>
+            <Line Type="bytes" Address="0x00cff49a" Value="e94902000090909090"/>
+            <!-- If cheats are on, do not prefix (*) onto save file name-->
+            <Line Type="bytes" Address="0x0062c39b" Value="eb43"/>
+            <Line Type="bytes" Address="0x0062c612" Value="48e9c3000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Red Dead Redemption"
+              Name="60 FPS Menu toggle"
+              Note="Enabled 60 FPS Menu Toggle."
+              Author="foxyhooligans"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0192ac50" Value="b801000000C3"/>
+            <Line Type="bytes" Address="0x0100d65a" Value="9090"/>
+        </PatchList>
+    </Metadata>
 </Patch>
