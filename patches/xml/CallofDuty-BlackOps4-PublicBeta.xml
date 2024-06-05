@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA13233</ID>
+    </TitleID>
+    <Metadata Title="Call of Duty Black Ops 4 Public Beta"
+              Name="Decrypt Packages and Unlock Main Menu"
+              Author="Scarface"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!--
+                const char* keys = "mp_common,1,LKBcjAtLFtrhGQqXZP3GQN2MXbGe4yBA4CJ8KK+Tmyw=\n"
+                "cp_common,1,1Xms8bivDnvtle9GlNy3IHsDBYi5q6kSJTqMJUZbUBo=\n"
+                "zm_common,1,uVkxOTxN2vKCJHt2piY5tGqy33LKZ0dKlKizutZifuI=\n"
+                "mp_common_script,1,7e6KAmqxCK3nN3W71rjZHpdFaqASeBJrKJX3MLn6TgA=\n"
+                "cp_common_script,1,qegcHT9IT+OjPeB1hD8KdQ1Ly+mjbkc165y2oyJrKjE=\n"
+                "zm_common_script,1,GUPGtrNkdKDbhv9BseRFiBWs75PqywvqD7a3qORZMz4=\n"
+                "wz_common,1,qYOw3RHpf/4LoNqha7D8w0l1uJs1a8f1GXvz9RSlcpc=\n"
+                "wz_common_script,1,gxDQi5HReQ+jVeuM2VidGfYPG/tIhsCCH5zeFi+Ef40=\n"
+                "4k_mp_common,1,8is3WNns3wUz+/iP+gLqOE7PvUrEjAlC654uSCVqRfc=\n"
+                "4k_cp_common,1,Nc4VDeLbPX/uTVFt8dmtNzgCxrimQN8ZZDnuhIw4T4E=\n"
+                "4k_zm_common,1,B23/jgGIk/ZNmQkSC98gITpeNorBkLdVF68+KPSpEcI=\n"
+                "4k_wz_common,1,ad2/QtgA/M6tMUs0gTGlFKHAKBjqr/aD4C7TwQfVAD0=\n"
+                "1080_mp_common,1,HBc65qAKDuV7IOqiHGK6MKhnqgQqEuGrXE40o/PEo5s=\n"
+                "1080_cp_common,1,1vbqZhxvF62GBvY06n6RY1YKNC3rWws8EpH/yWs7yDU=\n"
+                "1080_zm_common,1,TJCTFHZUzkcB5x0pBhWTIfxFmnTaPR1Clr0pSMSCEsw=\n"
+                "1080_wz_common,1,iIV65SIKNvl24hjoe3u8geuPXaJ8rR18dy7GuxK916A=";
+                
+                void(*LiveStorage_ParseKeysTxt)(const char*) = (void(*)(const char*))(0x400000 + 0x787D90);
+                void(*Cbuf_AddText)(int, const char*) = (void(*)(int, const char*))(0x400000 + 0x8E5340);
+                *(int*)(0x400000 + 0x1499B2C) = 1200;
+                *(int*)(0x400000 + 0x8E7A270) = 1;
+                LiveStorage_ParseKeysTxt(keys);
+                Cbuf_AddText(0, "disconnect");
+            -->
+            <Line Type="bytes" Address="0x00babfce" Value="c70598e26c0801000000"/>
+            <Line Type="bytes" Address="0x00af11a0" Value="488d3d2c37a200"/>
+            <Line Type="bytes" Address="0x00af11a7" Value="e8e46b0900"/>
+            <Line Type="bytes" Address="0x00af11ac" Value="c7057689da00b0040000"/>
+            <Line Type="bytes" Address="0x00af11b6" Value="be01000000"/>
+            <Line Type="bytes" Address="0x00af11bb" Value="e975861900"/>
+            <Line Type="bytes" Address="0x00c89830" Value="e96b79e6ff"/>
+            <Line Type="utf8" Address="0x015148d3" Value="mp_common,1,LKBcjAtLFtrhGQqXZP3GQN2MXbGe4yBA4CJ8KK+Tmyw=
+cp_common,1,1Xms8bivDnvtle9GlNy3IHsDBYi5q6kSJTqMJUZbUBo=
+zm_common,1,uVkxOTxN2vKCJHt2piY5tGqy33LKZ0dKlKizutZifuI=
+mp_common_script,1,7e6KAmqxCK3nN3W71rjZHpdFaqASeBJrKJX3MLn6TgA=
+cp_common_script,1,qegcHT9IT+OjPeB1hD8KdQ1Ly+mjbkc165y2oyJrKjE=
+zm_common_script,1,GUPGtrNkdKDbhv9BseRFiBWs75PqywvqD7a3qORZMz4=
+wz_common,1,qYOw3RHpf/4LoNqha7D8w0l1uJs1a8f1GXvz9RSlcpc=
+wz_common_script,1,gxDQi5HReQ+jVeuM2VidGfYPG/tIhsCCH5zeFi+Ef40=
+4k_mp_common,1,8is3WNns3wUz+/iP+gLqOE7PvUrEjAlC654uSCVqRfc=
+4k_cp_common,1,Nc4VDeLbPX/uTVFt8dmtNzgCxrimQN8ZZDnuhIw4T4E=
+4k_zm_common,1,B23/jgGIk/ZNmQkSC98gITpeNorBkLdVF68+KPSpEcI=
+4k_wz_common,1,ad2/QtgA/M6tMUs0gTGlFKHAKBjqr/aD4C7TwQfVAD0=
+1080_mp_common,1,HBc65qAKDuV7IOqiHGK6MKhnqgQqEuGrXE40o/PEo5s=
+1080_cp_common,1,1vbqZhxvF62GBvY06n6RY1YKNC3rWws8EpH/yWs7yDU=
+1080_zm_common,1,TJCTFHZUzkcB5x0pBhWTIfxFmnTaPR1Clr0pSMSCEsw=
+1080_wz_common,1,iIV65SIKNvl24hjoe3u8geuPXaJ8rR18dy7GuxK916"/>
+        </PatchList>
+    </Metadata>
+</Patch>
