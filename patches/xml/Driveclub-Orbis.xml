@@ -9,7 +9,7 @@
     </TitleID>
     <Metadata Title="Driveclub"
               Name="60 FPS"
-              Note="2.0 features deltatime."
+              Note="Patch version 2.0 features deltatime."
               Author="illusion, u/Charlie_Muggins"
               PatchVer="2.0"
               AppVer="01.28"
@@ -17,11 +17,12 @@
         <PatchList>
             <Line Type="bytes" Address="0x01184800" Value="b801000000"/>
             <Line Type="bytes" Address="0x01184725" Value="48b001"/>
-            <Line Type="bytes16" Address="0x00a6306e" Value="0x9090"/>
+            <Line Type="bytes" Address="0x00a6306e" Value="9090"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Driveclub"
-              Name="Unlock All Cars and Bikes"
+              Name="Unlock All DLC Cars and Bikes"
+              Note="This patch unlocks all vehicle, including DLC locked ones"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.28"
