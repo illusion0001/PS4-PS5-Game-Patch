@@ -17,6 +17,17 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Resident Evil 4 Remake"
+              Name="Resolution Scale: 125% (Native 1080p)"
+              Author="illusion, SuleMareVientu"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c5 fa 10 88 48 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780481700000000a03fc3"/>
+            <Line Type="mask" Address="c5 fa 10 88 58 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780581700000000a03fc3"/> <!-- 01.11 -->
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Resident Evil 4 Remake"
               Name="Resolution Scale: 83%"
               Author="illusion"
               PatchVer="1.0"
@@ -24,6 +35,7 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="c5 fa 10 88 48 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c78048170000e17a543fc3"/>
+            <Line Type="mask" Address="c5 fa 10 88 58 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c78058170000e17a543fc3"/> <!-- 01.11 -->
         </PatchList>
     </Metadata>
     <Metadata Title="Resident Evil 4 Remake"
@@ -34,6 +46,7 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="c5 fa 10 88 48 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780481700001f852b3fc3"/>
+            <Line Type="mask" Address="c5 fa 10 88 58 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780581700001f852b3fc3"/> <!-- 01.11 -->
         </PatchList>
     </Metadata>
     <Metadata Title="Resident Evil 4 Remake"
@@ -44,6 +57,7 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="c5 fa 10 88 48 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780481700000000003fc3"/>
+            <Line Type="mask" Address="c5 fa 10 88 58 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780581700000000003fc3"/> <!-- 01.11 -->
         </PatchList>
     </Metadata>
     <Metadata Title="Resident Evil 4 Remake"
@@ -54,6 +68,7 @@
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="c5 fa 10 88 48 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780481700000000803ec3"/>
+            <Line Type="mask" Address="c5 fa 10 88 58 17 00 00 c5 f8 2e c8 75 ?? 7a ?? c3" Value="c780581700000000803ec3"/> <!-- 01.11 -->
         </PatchList>
     </Metadata>
 </Patch>
