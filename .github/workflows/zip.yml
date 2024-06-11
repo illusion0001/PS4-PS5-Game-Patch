@@ -116,6 +116,7 @@ jobs:
           path: patch1_artifact
 
       - name: Upload artifact logs
+        if: success() || failure()
         uses: actions/upload-artifact@main
         with:
           name: logs
