@@ -14,6 +14,8 @@
         <PatchList>
             <Line Type="mask" Address="e8 ?? ?? ?? ?? 84 c0 0f 84 ?? ?? ?? ?? 48 8b 3b c6 87 9b 00 00 00 01" Value="b800000000"/>
             <Line Type="mask" Address="42 8b 3c b3 e8 ?? ?? ?? ?? 42 83 3c b3 01" Value="c60300909090909090"/>
+            <Line Type="mask" Address="48 8d 05 ?? ?? ?? ?? 83 3c 98 01 0f 85 ?? ?? ?? ?? 48 8d 3d ?? ?? ?? ?? 48 8d 35 ?? ?? ?? ??" Value="48e9" Offset="+11"/>
+            <Line Type="mask" Address="48 63 df 48 8d 05 ?? ?? ?? ?? 44 8b 34 98" Value="4531f690" Offset="+10"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Grand Theft Auto V"
