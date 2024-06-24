@@ -442,7 +442,7 @@ Using Bow?: %i
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Part II"
-              Name="Draw Color Boarder"
+              Name="Draw Color Border"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.09"
@@ -574,7 +574,7 @@ Using Bow?: %i
             exit_func:
             JMP 0x20413df
             -->
-            <Line Type="utf8" Address="0x02eb1970" Value="Draw Color Boarder"/>
+            <Line Type="utf8" Address="0x02eb1970" Value="Draw Color Border"/>
             <Line Type="bytes" Address="0x0204118c" Value="488d0d11ab3202"/>
             <Line Type="bytes" Address="0x02041193" Value="803900"/>
             <Line Type="bytes" Address="0x02041196" Value="0f843f010000"/>
