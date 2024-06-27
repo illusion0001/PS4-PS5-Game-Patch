@@ -126,7 +126,7 @@ jobs:
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+          github.repository == 'taxmeifyoucan/patches'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -145,20 +145,11 @@ jobs:
           echo "</details>" >> $hash_md
           gh release create "${{ env.current_time }}" "${{ github.workspace }}/patch1.zip" --target "${{ GITHUB.SHA }}" -t "${{ env.current_date }}" -F $hash_md
 
-      - name: Checkout website
-        if: |
-          github.ref_name == 'main' &&
-          github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
-        uses: actions/checkout@main
-        with:
-          repository: illusion0001/illusion0001.github.io
-
       - name: Run Website Workflow dispatch
         if: |
           github.ref_name == 'main' &&
           github.event_name == 'push' &&
-          github.repository == 'illusion0001/PS4-PS5-Game-Patch'
+          github.repository == 'taxmeifyoucan/patches'
         env:
           GITHUB_TOKEN: ${{ secrets.WORKFLOW_RUNNER }}
         run: gh workflow run jekyll.yml
