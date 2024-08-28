@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA08026</ID>
+        <ID>CUSA08053</ID>
+        <ID>CUSA06093</ID>
+        <ID>CUSA06211</ID>
+        <ID>CUSA05030</ID>
+        <ID>CUSA03828</ID>
+    </TitleID>
+    <Metadata Title="Hatsune Miku: Project DIVA Future Tone"
+              Name="Unlock (Extra) Extreme"
+              Author="M&amp;M, Stewie10"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="8A 87 19 01 00 00 C3" Value="b001c390909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
