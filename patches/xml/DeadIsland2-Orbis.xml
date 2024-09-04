@@ -8,11 +8,11 @@
               Name="60 FPS"
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x03e8602f" Value="31f6"/>
-            <Line Type="bytes" Address="0x066b2948" Value="ebb0"/>
+            <Line Type="mask" Address="83 f9 03 0f 42 d1 ff ca 85 c0 0f 4f da 89 de" Value="31f6" Offset="+13"/>
+            <Line Type="mask" Address="0f 95 c1 c5 f8 57 c0 c5 f8 2e 04 8b c5 f8 28 45 ??" Value="eb" Offset="+17"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Dead Island 2"
@@ -20,11 +20,10 @@
               Note="Enable this for extra performance."
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x03ec2479" Value="eb11"/>
-            <Line Type="bytes" Address="0x0274c7a7" Value="eb21"/>
+            <Line Type="mask" Address="48 8d 75 b8 89 c7 89 c3 e8 ?? ?? ?? ?? 85 c0" Value="eb" Offset="+15"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Dead Island 2"
@@ -32,43 +31,50 @@
               Note="This patch must be enabled first for the other modifiers to work."
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x01a3b196" Value="c7048b0000c842"/>
-            <Line Type="bytes" Address="0x01a3b19d" Value="c5fa10048b"/>
-            <Line Type="bytes" Address="0x01a3b1a2" Value="e9693f5a04"/>
-            <Line Type="bytes" Address="0x05fdf10b" Value="e986c0a5fb"/>
+            <Line Type="mask_jump32" Address="c5 fa 10 04 8b 48 8b 1d ?? ?? ?? ?? c5 fa 11 45 f4" Value="c7048b0000c842c5fa10048b" Target="90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90" Size="5"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Dead Island 2"
               Name="Resolution Scale Modifier (83%)"
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="float32" Address="0x01a3b199" Value="83.3"/>
+            <Line Type="mask" Address="c7 04 8b 00 00 c8 42" Value="c7048babaaa642"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Dead Island 2"
               Name="Resolution Scale Modifier (66.7%)"
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="float32" Address="0x01a3b199" Value="66.7"/>
+            <Line Type="mask" Address="c7 04 8b 00 00 c8 42" Value="c7048b55558542"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Dead Island 2"
               Name="Resolution Scale Modifier (50%)"
               Author="illusion"
               PatchVer="1.0"
-              AppVer="01.03"
+              AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="float32" Address="0x01a3b199" Value="50.0"/>
+            <Line Type="mask" Address="c7 04 8b 00 00 c8 42" Value="c7048b00004842"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dead Island 2"
+              Name="Resolution Scale Modifier (25%)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c7 04 8b 00 00 c8 42" Value="c7048b0000c841"/>
         </PatchList>
     </Metadata>
 </Patch>
