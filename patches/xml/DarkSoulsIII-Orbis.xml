@@ -39,7 +39,6 @@
             <Line Type="bytes" Address="0x011bc036" Value="b201"/>
         </PatchList>
     </Metadata>
-    </Metadata>
     <Metadata Title="Dark Souls III"
               Name="Restore Debug Dash"
               Note="Press L3 to activate/deactivate then hold L2 to increase or L1 to decrease your current altitude and R2 for noclip."
