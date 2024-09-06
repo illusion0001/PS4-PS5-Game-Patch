@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03365</ID>
+        <ID>CUSA03388</ID>
+    </TitleID>
+    <Metadata Title="Dark Souls III"
+              Name="Disable Motion Blur"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x02833165" Value="eb1f"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III"
+              Name="30 FPS Fix (Proper Frame Pacing)"
+              Note="Caps framerate to 30 with proper frame pacing."
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01c314f7" Value="c7430805000000"/>
+            <Line Type="bytes" Address="0x01c314fe" Value="eb07"/>
+            <Line Type="bytes" Address="0x031b9319" Value="be01000000"/>
+            <Line Type="bytes" Address="0x031b931e" Value="eb03"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III"
+              Name="Enable MenuMan.EnableTopMenuDebug"
+              Note="Enables Menu Debug, scroll to the right of settings to access during gameplay. (it doesn't have an icon)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x011bc036" Value="b201"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dark Souls III"
+              Name="Restore Debug Dash"
+              Note="Press L3 to activate/deactivate then hold L2 to increase or L1 to decrease your current altitude and R2 for noclip."
+              Author="stagvant"
+              PatchVer="1.0"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x012736b2" Value="e975091204"/>
+            <Line Type="bytes" Address="0x0539402c" Value="c5fa114584"/>
+            <Line Type="bytes" Address="0x05394031" Value="488b0d10d8c900"/>
+            <Line Type="bytes" Address="0x05394038" Value="488b3de1efc000"/>
+            <Line Type="bytes" Address="0x0539403f" Value="488b35fad7c900"/>
+            <Line Type="bytes" Address="0x05394046" Value="488b8140010000"/>
+            <Line Type="bytes" Address="0x0539404d" Value="4885c0"/>
+            <Line Type="bytes" Address="0x05394050" Value="7507"/>
+            <Line Type="bytes" Address="0x05394052" Value="488b8680000000"/>
+            <Line Type="bytes" Address="0x05394059" Value="4939c5"/>
+            <Line Type="bytes" Address="0x0539405c" Value="0f8555f6edfb"/>
+            <Line Type="bytes" Address="0x05394062" Value="4c8bd9"/>
+            <Line Type="bytes" Address="0x05394065" Value="488d0d5200cd00"/>
+            <Line Type="bytes" Address="0x0539406c" Value="488b4738"/>
+            <Line Type="bytes" Address="0x05394070" Value="488b4008"/>
+            <Line Type="bytes" Address="0x05394074" Value="488d5808"/>
+            <Line Type="bytes" Address="0x05394078" Value="488bd0"/>
+            <Line Type="bytes" Address="0x0539407b" Value="eb06"/>
+            <Line Type="bytes" Address="0x0539407d" Value="488bde"/>
+            <Line Type="bytes" Address="0x05394080" Value="488bd6"/>
+            <Line Type="bytes" Address="0x05394083" Value="488b33"/>
+            <Line Type="bytes" Address="0x05394086" Value="807e1900"/>
+            <Line Type="bytes" Address="0x0539408a" Value="750c"/>
+            <Line Type="bytes" Address="0x0539408c" Value="488d5e10"/>
+            <Line Type="bytes" Address="0x05394090" Value="48394e20"/>
+            <Line Type="bytes" Address="0x05394094" Value="7ced"/>
+            <Line Type="bytes" Address="0x05394096" Value="ebe5"/>
+            <Line Type="bytes" Address="0x05394098" Value="4839c2"/>
+            <Line Type="bytes" Address="0x0539409b" Value="741b"/>
+            <Line Type="bytes" Address="0x0539409d" Value="48394a20"/>
+            <Line Type="bytes" Address="0x053940a1" Value="488bc8"/>
+            <Line Type="bytes" Address="0x053940a4" Value="7f12"/>
+            <Line Type="bytes" Address="0x053940a6" Value="488bca"/>
+            <Line Type="bytes" Address="0x053940a9" Value="4839c1"/>
+            <Line Type="bytes" Address="0x053940ac" Value="740a"/>
+            <Line Type="bytes" Address="0x053940ae" Value="c6413001"/>
+            <Line Type="bytes" Address="0x053940b2" Value="4c8b7128"/>
+            <Line Type="bytes" Address="0x053940b6" Value="eb08"/>
+            <Line Type="bytes" Address="0x053940b8" Value="e8b3a084fb"/>
+            <Line Type="bytes" Address="0x053940bd" Value="4c8bf0"/>
+            <Line Type="bytes" Address="0x053940c0" Value="be18000000"/>
+            <Line Type="bytes" Address="0x053940c5" Value="498bfe"/>
+            <Line Type="bytes" Address="0x053940c8" Value="e8a3d128fb"/>
+            <Line Type="bytes" Address="0x053940cd" Value="84c0"/>
+            <Line Type="bytes" Address="0x053940cf" Value="7405"/>
+            <Line Type="bytes" Address="0x053940d1" Value="4180734801"/>
+            <Line Type="bytes" Address="0x053940d6" Value="41807b4800"/>
+            <Line Type="bytes" Address="0x053940db" Value="0f8487000000"/>
+            <Line Type="bytes" Address="0x053940e1" Value="41808da812000040"/>
+            <Line Type="bytes" Address="0x053940e9" Value="0f280d803ff3ff"/>
+            <Line Type="bytes" Address="0x053940f0" Value="0f590db9c6f6ff"/>
+            <Line Type="bytes" Address="0x053940f7" Value="498b7d50"/>
+            <Line Type="bytes" Address="0x053940fb" Value="488b7f08"/>
+            <Line Type="bytes" Address="0x053940ff" Value="488bbfa8180000"/>
+            <Line Type="bytes" Address="0x05394106" Value="488b7f68"/>
+            <Line Type="bytes" Address="0x0539410a" Value="e8a10ae6fb"/>
+            <Line Type="bytes" Address="0x0539410f" Value="be1a000000"/>
+            <Line Type="bytes" Address="0x05394114" Value="498bfe"/>
+            <Line Type="bytes" Address="0x05394117" Value="e854d128fb"/>
+            <Line Type="bytes" Address="0x0539411c" Value="84c0"/>
+            <Line Type="bytes" Address="0x0539411e" Value="7403"/>
+            <Line Type="bytes" Address="0x05394120" Value="0f58c1"/>
+            <Line Type="bytes" Address="0x05394123" Value="be1b000000"/>
+            <Line Type="bytes" Address="0x05394128" Value="498bfe"/>
+            <Line Type="bytes" Address="0x0539412b" Value="e840d128fb"/>
+            <Line Type="bytes" Address="0x05394130" Value="84c0"/>
+            <Line Type="bytes" Address="0x05394132" Value="7403"/>
+            <Line Type="bytes" Address="0x05394134" Value="0f5cc1"/>
+            <Line Type="bytes" Address="0x05394137" Value="498bfd"/>
+            <Line Type="bytes" Address="0x0539413a" Value="e8717ceefb"/>
+            <Line Type="bytes" Address="0x0539413f" Value="be1c000000"/>
+            <Line Type="bytes" Address="0x05394144" Value="498bfe"/>
+            <Line Type="bytes" Address="0x05394147" Value="e824d128fb"/>
+            <Line Type="bytes" Address="0x0539414c" Value="498b4d50"/>
+            <Line Type="bytes" Address="0x05394150" Value="84c0"/>
+            <Line Type="bytes" Address="0x05394152" Value="7409"/>
+            <Line Type="bytes" Address="0x05394154" Value="80898401000008"/>
+            <Line Type="bytes" Address="0x0539415b" Value="eb07"/>
+            <Line Type="bytes" Address="0x0539415d" Value="c6818401000000"/>
+            <Line Type="bytes" Address="0x05394164" Value="b001"/>
+            <Line Type="bytes" Address="0x05394166" Value="eb0a"/>
+            <Line Type="bytes" Address="0x05394168" Value="4180a5a8120000bf"/>
+            <Line Type="bytes" Address="0x05394170" Value="30c0"/>
+            <Line Type="bytes" Address="0x05394172" Value="c5fa104584"/>
+            <Line Type="bytes" Address="0x05394177" Value="84c0"/>
+            <Line Type="bytes" Address="0x05394179" Value="0f8438f5edfb"/>
+            <Line Type="bytes" Address="0x0539417f" Value="f30f590599dff8ff"/>
+            <Line Type="bytes" Address="0x05394187" Value="e92bf5edfb"/>
+        </PatchList>
+    </Metadata>
+</Patch>
