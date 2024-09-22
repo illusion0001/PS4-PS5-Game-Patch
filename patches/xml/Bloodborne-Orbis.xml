@@ -6,6 +6,7 @@
         <ID>CUSA03173</ID>
         <ID>CUSA00208</ID>
         <ID>CUSA01363</ID>
+        <ID>CUSA03014</ID>
     </TitleID>
     <Metadata Title="Bloodborne"
               Name="Skip Intro"
@@ -827,7 +828,7 @@
         </PatchList>
     </Metadata>
     <Metadata Title="Bloodborne"
-              Name="Draw Color Boarder (FLASHING COLORS WARNING)"
+              Name="Draw Color Border (FLASHING COLORS WARNING)"
               Author="illusion"
               PatchVer="1.0"
               AppVer="01.09"

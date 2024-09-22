@@ -184,7 +184,7 @@
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Remastered"
-              Name="Draw Color Boarder"
+              Name="Draw Color Border"
               Note="Replaces 'Validate Gnm Context' Bool and Paused indicator"
               Author="illusion"
               PatchVer="1.0"
@@ -335,7 +335,7 @@
             <Line Type="bytes" Address="0x00c94ba9" Value="9090"/>
             <Line Type="bytes" Address="0x00c94bbc" Value="9090"/>
             <!-- Text -->
-            <Line Type="utf8" Address="0x014f0942" Value="Draw Color Boarder"/>
+            <Line Type="utf8" Address="0x014f0942" Value="Draw Color Border"/>
             <!-- Draw bar -->
             <Line Type="bytes" Address="0x00c94d40" Value="55"/>
             <Line Type="bytes" Address="0x00c94d41" Value="4889e5"/>
@@ -661,7 +661,7 @@
         </PatchList>
     </Metadata>
     <Metadata Title="The Last of Us: Remastered"
-              Name="Draw Color Boarder"
+              Name="Draw Color Border"
               Note="Replaces 'Validate Gnm Context' Bool and Paused indicator"
               Author="illusion"
               PatchVer="1.0"
@@ -812,7 +812,7 @@
             <Line Type="bytes" Address="0x00e3104a" Value="9090"/>
             <Line Type="bytes" Address="0x00e31056" Value="9090"/>
             <!-- Text -->
-            <Line Type="utf8" Address="0x0153b861" Value="Draw Color Boarder"/>
+            <Line Type="utf8" Address="0x0153b861" Value="Draw Color Border"/>
             <!-- Draw Bar -->
             <Line Type="bytes" Address="0x00e311d0" Value="55"/>
             <Line Type="bytes" Address="0x00e311d1" Value="4889e5"/>
