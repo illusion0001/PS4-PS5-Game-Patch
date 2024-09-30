@@ -1,50 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
-        <ID>CUSA00419</ID>
         <ID>CUSA00411</ID>
+        <ID>CUSA00419</ID>
         <ID>CUSA00880</ID>
     </TitleID>
     <Metadata Title="Grand Theft Auto V"
+              Name="Skip Logo Video and Legal Screens"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="e8 ?? ?? ?? ?? 84 c0 0f 84 ?? ?? ?? ?? 48 8b 3b c6 87 9b 00 00 00 01" Value="b800000000"/>
+            <Line Type="mask" Address="42 8b 3c b3 e8 ?? ?? ?? ?? 42 83 3c b3 01" Value="c60300909090909090"/>
+            <Line Type="mask" Address="48 8d 05 ?? ?? ?? ?? 83 3c 98 01 0f 85 ?? ?? ?? ?? 48 8d 3d ?? ?? ?? ?? 48 8d 35 ?? ?? ?? ??" Value="48e9" Offset="+11"/>
+            <Line Type="mask" Address="48 63 df 48 8d 05 ?? ?? ?? ?? 44 8b 34 98" Value="4531f690" Offset="+10"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Grand Theft Auto V"
               Name="60 FPS Unlock"
               Note="CPU Limited."
-              Author="illusion"
-              PatchVer="1.0"
-              AppVer="01.00"
-              AppElf="eboot.bin">
-        <PatchList>
-            <Line Type="bytes32" Address="0x00e6bf3e" Value="0x00000001"/>
-        </PatchList>
-    </Metadata>
-    <Metadata Title="Grand Theft Auto V"
-              Name="60 FPS Unlock"
-              Author="illusion, GraFfiX_221211"
-              PatchVer="1.0"
-              AppVer="01.38"
-              AppElf="eboot.bin">
-        <PatchList>
-            <Line Type="bytes32" Address="0x01137b5e" Value="0x00000001"/>
-        </PatchList>
-    </Metadata>
-    <Metadata Title="Grand Theft Auto V"
-              Name="Skip Intro"
-              Author="illusion"
-              PatchVer="1.0"
-              AppVer="01.38"
-              AppElf="eboot.bin">
-        <PatchList>
-            <Line Type="bytes32" Address="0x0333a794" Value="0x00000000"/>
-            <Line Type="bytes32" Address="0x02c6afb8" Value="0x00000000"/>
-        </PatchList>
-    </Metadata>
-    <Metadata Title="Grand Theft Auto V"
-              Name="60 FPS Unlock"
               Author="illusion"
               PatchVer="1.0"
               AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="bf 02 00 00 00 31 f6 e8 ?? ?? ?? ?? 48 8b 3b 48 8b 07 ff 50 ?? e8 ?? ?? ?? ??" Value="bf01000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Grand Theft Auto V"
+              Name="Enable Snow in Singleplayer"
+              Note="Source: https://pastebin.com/sxXqG1LB https://pastebin.com/F1QBJ0Zf"
+              Author="rfoodxmodz, x3shakir"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!--
+            // https://pastebin.com/sxXqG1LB
+            // can't include C brackets in xml comments
+                memcpy_p(0x096FEBC + process_base), "\x90\x90", 2);
+                memcpy_p(0x096FF3E + process_base), "\x90\x90", 2);
+                memcpy_p(0x096FF4C + process_base), "\x90\x90", 2);
+                memcpy_p(0x096FEDB + process_base), "\xEB", 1);
+                memcpy_p(0x096FF0F + process_base), "\xEB", 1);
+                memcpy_p(0x096FF65 + process_base), "\x90\x90\x90\x90\x90\x90", 6);
+
+            // https://pastebin.com/F1QBJ0Zf
+            #if GAME_VERSION == 100
+                memcpy((void *)(0x0789CDA + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x0789CF9 + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x0789D2D + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x0789D49 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 127
+                memcpy((void *)(0x096375A + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x096377A + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x09637AE + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x09637EF + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+                memcpy((void *)(0x0963803 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 138
+                memcpy((void *)(0x096A4FA + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x096A51A + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x096A54E + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x096A58F + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+                memcpy((void *)(0x096A5A3 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 146
+                memcpy((void *)(0x0965C1A + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x0965C3A + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x0965C6E + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x0965CAF + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+                memcpy((void *)(0x0965CC3 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 147
+                memcpy((void *)(0x0968F8A + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x0968FAA + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x0968FDE + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x096901F + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+                memcpy((void *)(0x0969033 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 148
+                memcpy((void *)(0x096FEBC + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x096FEDB + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x096FF0F + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x096FF3E + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x096FF4C + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x096FF65 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #elif GAME_VERSION == 149
+                memcpy((void *)(0x082C169 + 0x400000), "\x90\x90", 2);
+                memcpy((void *)(0x082C188 + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x082C1BC + 0x400000), "\xEB", 1);
+                memcpy((void *)(0x082C1E7 + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+                memcpy((void *)(0x082C1FC + 0x400000), "\x90\x90\x90\x90\x90\x90", 6);
+            #endif
+            -->
+            <!-- Base version patterns -->
+            <Line Type="mask" Address="74 ?? 39 83 e8 0c 00 00 0f 95 c1" Value="9090"/>
+            <Line Type="mask" Address="74 ?? 48 8d 15 ?? ?? ?? ?? b8 01 00 00 00 2b 02 eb ?? 48" Value="eb"/>
+            <Line Type="mask" Address="74 ?? b8 01 00 00 00 29 d0 eb ?? 89 d0 48 8d 15 ?? ?? ?? ?? 80 3a 00" Value="eb"/>
+            <Line Type="mask" Address="0f 85 ?? ?? ?? ?? 48 63 c0 48 8d 0d ?? ?? ?? ?? 8a 04 01 84 c0" Value="909090909090"/>
+            <!-- Update versions -->
+            <Line Type="mask" Address="74 ?? 41 39 87 70 0e 00 00 0f 95 c3" Value="9090"/>
+            <Line Type="mask" Address="74 ?? 48 8d 0d ?? ?? ?? ?? b8 01 00 00 00 2b 01 eb ?? 48 83" Value="eb"/>
+            <Line Type="mask" Address="74 ?? b8 01 00 00 00 29 c8 eb ?? 89 c8 48 63 c0 48 8d 0d ?? ?? ?? ?? 44 8a 24 01" Value="eb"/>
+            <Line Type="mask" Address="0f 84 ?? ?? ?? ?? bf 40 00 00 00 e8 ?? ?? ?? ?? 34 01" Value="909090909090"/>
+            <Line Type="mask" Address="0f 85 ?? ?? ?? ?? 45 84 e4 0f 85 ?? ?? ?? ?? 49 8b 45 00" Value="909090909090"/>
         </PatchList>
     </Metadata>
 </Patch>
