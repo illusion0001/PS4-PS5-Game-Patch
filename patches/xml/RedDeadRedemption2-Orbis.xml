@@ -32,10 +32,10 @@
               AppVer="mask"
               AppElf="eboot.bin">
         <PatchList>
-			<!-- SHOOT_SINGLE_BULLET_BETWEEN_COORDS -->
+            <!-- SHOOT_SINGLE_BULLET_BETWEEN_COORDS -->
             <Line Type="mask" Address="89 55 b8 c7 45 c0 00 00 00 00 c7 45 c8 00 00 00 00 c7 45 90 00 00 00 00" Value="9090909090" Offset="+24"/>
-			<!-- FIRE_SINGLE_BULLET - Patch works only on v01.00/v01.02 (Used for New Austin only in v01.00, used in all versions for Guarma) -->
-			<Line Type="mask" Address="03 90 90 90 90 90 48 8b 47 10 48 8b 38 e9" Value="48c7c000000000c39090909090909090" Offset="+6"/>
+            <!-- FIRE_SINGLE_BULLET - Patch works only on v01.00/v01.02 (Used for New Austin only in v01.00, used in all versions for Guarma) -->
+            <Line Type="mask" Address="03 90 90 90 90 90 48 8b 47 10 48 8b 38 e9" Value="48c7c000000000c39090909090909090" Offset="+6"/>
         </PatchList>
     </Metadata>
 </Patch>
