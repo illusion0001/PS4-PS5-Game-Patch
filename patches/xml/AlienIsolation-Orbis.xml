@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
     <TitleID>
+        <ID>CUSA00362</ID>
         <ID>CUSA00363</ID>
     </TitleID>
     <Metadata Title="Alien: Isolation"
