@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12636</ID>
+    </TitleID>
+    <Metadata Title="Persona 3: Dancing in Moonlight"
+            Name="Mod Support"
+            Note="A port of zarroboogs' patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p3d/bind/ (loose files) \n2. /data/p3d/mod.cpk \n3. /data/p3d/mod1.cpk \n4. /data/p3d/mod2.cpk \n5. /data/p3d/mod3.cpk \n6. /app0/data/mod.cpk"
+            Author="zarroboogs, Ahtheerr, Danu"
+            PatchVer="1.0"
+            AppVer="01.00"
+            AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0060b85c" Value="4d31f64c8d254a574400498d7c2404e8c000000085c07410418b342483feff740789c7e89cf7190049ffc64983fe08747a4983c420ebd34831db803c1a00740548ffc3ebf58a5c1aff80fb2f7407e8a1cd1900eb05e84adf1900e9be000000"/>
+            <Line Type="bytes" Address="0x0060b974" Value="e91affffff"/>
+            <Line Type="bytes" Address="0x00a50fb0" Value="ff0000102f646174612f7033642f62696e642f00"/>
+            <Line Type="bytes" Address="0x00a50fd0" Value="fe0000102f646174612f7033642f6d6f642e63706b00"/>
+            <Line Type="bytes" Address="0x00a50ff0" Value="fd0000102f646174612f7033642f6d6f64312e63706b0000"/>
+            <Line Type="bytes" Address="0x00a51010" Value="fc0000102f646174612f7033642f6d6f64322e63706b0000"/>
+            <Line Type="bytes" Address="0x00a51030" Value="fb0000102f646174612f7033642f6d6f64332e63706b0000"/>
+            <Line Type="bytes" Address="0x00a51050" Value="fa0000102f617070302f646174612f6d6f642e63706b0000"/>
+            <Line Type="bytes" Address="0x00a51070" Value="ffffffff2f617070302f646174612f7073342e63706b0000"/>
+            <Line Type="bytes" Address="0x00a51090" Value="ffffffff2f617070302f646174612f646174612e63706b00"/>
+            <Line Type="bytes" Address="0x00a510b4" Value="00000000000000000000000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
