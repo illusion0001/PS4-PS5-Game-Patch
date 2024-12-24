@@ -5,7 +5,7 @@
     </TitleID>
     <Metadata Title="Persona 5: Dancing in Starlight"
             Name="Mod Support"
-            Note="A port of zarroboogs patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p5d/bind/ (loose files) \n2. /data/p5d/mod.cpk \n3. /data/p5d/mod1.cpk \n4. /data/p5d/mod2.cpk \n5. /data/p5d/mod3.cpk \n6. /app0/data/mod.cpk"
+            Note="A port of zarroboogs' patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p5d/bind/ (loose files) \n2. /data/p5d/mod.cpk \n3. /data/p5d/mod1.cpk \n4. /data/p5d/mod2.cpk \n5. /data/p5d/mod3.cpk \n6. /app0/data/mod.cpk"
             Author="zarroboogs, Ahtheerr, Danu"
             PatchVer="1.0"
             AppVer="01.00"

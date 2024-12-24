@@ -5,7 +5,7 @@
     </TitleID>
     <Metadata Title="Persona 3: Dancing in Moonlight"
             Name="Mod Support"
-            Note="A port of zarroboogs patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p3d/bind/ (loose files) \n2. /data/p3d/mod.cpk \n3. /data/p3d/mod1.cpk \n4. /data/p3d/mod2.cpk \n5. /data/p3d/mod3.cpk \n6. /app0/data/mod.cpk"
+            Note="A port of zarroboogs' patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p3d/bind/ (loose files) \n2. /data/p3d/mod.cpk \n3. /data/p3d/mod1.cpk \n4. /data/p3d/mod2.cpk \n5. /data/p3d/mod3.cpk \n6. /app0/data/mod.cpk"
             Author="zarroboogs, Ahtheerr, Danu"
             PatchVer="1.0"
             AppVer="01.00"
