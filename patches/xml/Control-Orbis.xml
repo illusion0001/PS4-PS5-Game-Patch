@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11454</ID>
+    </TitleID>
+    <Metadata Title="Control"
+              Name="Logo Videos Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0066829a" Value="c6803b01000001"/>
+            <Line Type="bytes" Address="0x006682a1" Value="c6803901000001"/>
+            <Line Type="bytes" Address="0x006682a8" Value="e92a010000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
