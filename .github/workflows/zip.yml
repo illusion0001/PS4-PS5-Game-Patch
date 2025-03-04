@@ -72,6 +72,7 @@ jobs:
           i=0
           for f in $FILES
           do
+            echo $f
             ./a.out $f >> ${{ github.workspace }}/verify_ps4.log
             ((i=i+1))
           done
@@ -80,7 +81,7 @@ jobs:
             ./a.out $f >> ${{ github.workspace }}/verify_ps5.log
             ((i=i+1))
           done
-          echo "Passed $i files"
+          echo "Processed $i files"
 
       - name: Verify Generated XML files
         working-directory: mxml
@@ -90,6 +91,7 @@ jobs:
           i=0
           for f in $FILES
           do
+            echo $f
             ./a.out $f >> ${{ github.workspace }}/verify_ps4.log
             ((i=i+1))
           done
@@ -98,7 +100,7 @@ jobs:
             ./a.out $f >> ${{ github.workspace }}/verify_ps5.log
             ((i=i+1))
           done
-          echo "Passed $i files"
+          echo "Processed $i files"
 
       - name: Pack zip
         run: |
