@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA23827</ID>
+	<ID>CUSA23029</ID>
+	<ID>CUSA34032</ID>
+    </TitleID>
+    <Metadata Title="Call of Duty Modern Warfare III (2023)"
+              Name="Unlock All in Local Multiplayer"
+              Author="zhm86 Credits: DeathRGH, DEv_ShOoTz, jydenx, YXBX, peekurchoo, Misaka_Mikoto_01, jocover and DuckBird"
+              Note="Unlock all 12 custom classes, attachments, blueprints, vests, gloves, boots, gears, operators, finishing moves, 5 hidden maps, 13 hidden game modes, and some dev options. Remove the restriction of not being able to switch loadout during a match in split-screen mode."
+              PatchVer="1.0"
+              AppVer="01.33"
+              AppElf="eboot.bin">
+        <PatchList>
+			<Line Type="bytes" Address="0x012bdd25" Value="eb19"/>
+			<Line Type="bytes" Address="0x012be8ae" Value="b901000000909048bfefbda9f950a65c9531f6909090"/>
+			<Line Type="bytes" Address="0x01311ba2" Value="9a94"/>
+			<Line Type="bytes" Address="0x0141de76" Value="b901000000909048bf88852e1f20bbad8b31f6909090"/>
+			<Line Type="bytes" Address="0x012be064" Value="eb19"/>
+			<Line Type="bytes" Address="0x0141de53" Value="b901000000909048bff9ad642611c886e431f6909090"/>			
+        </PatchList>
+    </Metadata>
+</Patch>
