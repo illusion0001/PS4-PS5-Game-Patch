@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA01015</ID>
+    </TitleID>
+    <Metadata Title="Youtube"
+              Name="disable remote play blocking"
+              Author="earthonion"
+              PatchVer="1.0"
+              AppVer="02.32"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x005CB628" Value="BF00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
