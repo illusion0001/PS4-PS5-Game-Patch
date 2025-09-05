@@ -706,4 +706,136 @@
             <Line Type="bytes" Address="0x03265bb9" Value="e9b74cf8fd"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="60 FPS (For Base Console)"
+        Note="Unlocks framerate on Base/Slim PS4 22"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01eec8c3" Value="b805000000" />
+            <Line Type="bytes" Address="0x01eec8c8" Value="0f1f840000000000" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (720p for Base)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x03e57cbc" Value="0x00000500" />
+            <Line Type="bytes32" Address="0x03e57cc0" Value="0x000002d0" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (900p for Base)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x03e57cbc" Value="0x00000640" />
+            <Line Type="bytes32" Address="0x03e57cc0" Value="0x00000384" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (1080p for Pro)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x01e29d7f" Value="0x00000780" />
+            <Line Type="bytes32" Address="0x01e29d89" Value="0x00000438" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Enable MenuMan.EnableTopMenuDebug"
+        Note="Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0203064b" Value="b801000000" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Skip Intro Logos"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.21"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01a648a3" Value="41c686c500000001" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="60 FPS (For Base Console)"
+        Note="Unlocks framerate on Base/Slim PS4 22"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x1eec873" Value="b805000000" />
+            <Line Type="bytes" Address="0x1eec878" Value="0f1f840000000000" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (720p for Base)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x3e57cbc" Value="0x00000500" />
+            <Line Type="bytes32" Address="0x3e57cc0" Value="0x000002d0" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (900p for Base)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x3e57cbc" Value="0x00000640" />
+            <Line Type="bytes32" Address="0x3e57cc0" Value="0x00000384" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Resolution Patch (1080p for Pro)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x1e29d6f" Value="0x00000780" />
+            <Line Type="bytes32" Address="0x1e29d79" Value="0x00000438" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Enable MenuMan.EnableTopMenuDebug"
+        Note="Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x20305fb" Value="b801000000" />
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Elden Ring"
+        Name="Skip Intro Logos"
+        Author="illusion,BestPig"
+        PatchVer="1.0"
+        AppVer="01.22"
+        AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x1a64893" Value="41c686c500000001" />
+        </PatchList>
+    </Metadata>
 </Patch>
