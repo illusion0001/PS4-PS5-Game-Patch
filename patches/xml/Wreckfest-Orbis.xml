@@ -27,4 +27,15 @@
             <Line Type="bytes" Address="0x00e92380" Value="31c0c3"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Wreckfest"
+              Name="60 FPS"
+              Note="Uses adapative sync."
+              Author="illusion,BestPig"
+              PatchVer="1.0"
+              AppVer="02.22"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00eaaf10" Value="31c0c3"/>
+        </PatchList>
+    </Metadata>
 </Patch>
