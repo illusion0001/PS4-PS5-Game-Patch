@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA13034</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.24" PatchVer="1.00" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Watch Dogs Legion">
+    <PatchList>
+      <Line Value="00" Address="0x07d1c76f" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
