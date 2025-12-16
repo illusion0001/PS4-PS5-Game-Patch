@@ -23,6 +23,17 @@
             <Line Type="bytes" Address="0x0683dd60" Value="31c0c3"/>
         </PatchList>
     </Metadata>
+      <Metadata Title="Kena: Bridge of Spirits"
+              Name="60 FPS"
+              Author="Jao"
+              PatchVer="1.0"
+              AppVer="02.08"
+              AppElf="eboot.bin">
+        <PatchList>
+           <Line Type="bytes" Address="0x028ba144" Value="31f690"/>
+           <Line Type="bytes" Address="0x028ba49d" Value="31f6"/>     
+        </PatchList>
+    </Metadata>
     <Metadata Title="Kena: Bridge of Spirits"
               Name="Resolution Patch (66.67% of 1440p/1080p)"
               Author="illusion"
