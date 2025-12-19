@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<Patch>
+  <TitleID>
+    <ID>CUSA24103</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.05" PatchVer="1.00" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Marvel's Guardians of the Galaxy">
+    <PatchList>
+        <Line Value="31f690" Address="0x1527B29" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
