@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA05049</ID>
+  </TitleID>
+  <Metadata isEnabled="true" AppElf="eboot.bin" AppVer="01.06" PatchVer="1.0" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Song Of The Deep">
+    <PatchList>
+        <Line Value="75" Address="0x00d1f8c4" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
