@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA12555</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.62" PatchVer="1.00" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Dying Light 2: Stay Human">
+    <PatchList>
+      <Line Value="01" Address="0x018855a1" Type="bytes"/>
+      <Line Value="01" Address="0x018855dd" Type="bytes"/>
+      <Line Value="03" Address="0x0188fcb8" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
