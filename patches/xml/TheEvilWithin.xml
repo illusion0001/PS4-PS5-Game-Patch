@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00375</ID>
+    </TitleID>
+    <Metadata Title="The Evil Within" Name="60 FPS" Note="Changes the engine target from 30 FPS to 60 FPS" Author="Jao" PatchVer="1.00" AppVer="01.06" AppElf="eboot.bin">
+        <PatchList> 												   
+           	<Line Type="bytes" Address="0x00637ce3" Value="00"/>   
+        </PatchList>
+    </Metadata>
+</Patch>
