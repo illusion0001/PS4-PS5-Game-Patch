@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Patch>
   <TitleID>
-      <ID>CUSA24853</ID>
+      <ID>CUSA16579</ID>
   </TitleID>
   <Metadata AppElf="eboot.bin" AppVer="01.61" PatchVer="1.0" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Cyberpunk 2077">
       <PatchList>
