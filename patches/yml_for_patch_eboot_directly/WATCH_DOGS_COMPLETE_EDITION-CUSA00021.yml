@@ -1,0 +1,17 @@
+- title: "Watch Dogs Complete Edition"
+  app_ver: "01.05"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock (v1.05)"
+  author: "generic0540"
+  note: "Modifying the value for sceVideoOutSetFlipRate unlocks the frame rate. Based on the illusion's method."
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ byte, 0x01e3669bb, "0x00" ]

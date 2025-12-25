@@ -6,6 +6,21 @@
               Name="60 FPS Unlock"
               Note="For PS5 - PS4 PRO"
               Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.07"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- 60FPS Patch -->
+            <Line Type="bytes" Address="050E7163" Value="BE01000000"/> 
+            <Line Type="bytes" Address="050E7168" Value="31F690"/> 
+            <!-- Disable DRS -->
+            <Line Type="bytes" Address="00E29523" Value="C3"/> 
+        </PatchList>
+    </Metadata>
+        <Metadata Title="Assassin's Creed Mirage"
+              Name="60 FPS Unlock"
+              Note="For PS5 - PS4 PRO"
+              Author="Arksama-PHU"
               PatchVer="01.00"
               AppVer="01.11"
               AppElf="eboot.bin">
@@ -13,6 +28,7 @@
             <!-- 60FPS Patch -->
             <Line Type="bytes" Address="051787d3" Value="BE01000000"/> 
             <Line Type="bytes" Address="051787d8" Value="31F690"/> 
+            <!-- Disable DRS -->
             <Line Type="bytes" Address="00E29523" Value="C3"/> 
         </PatchList>
     </Metadata>

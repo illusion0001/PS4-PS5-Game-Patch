@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA17722</ID>
+        <ID>CUSA17776</ID>
+        <ID>CUSA20177</ID>
+        <ID>CUSA17839</ID>
+        <ID>CUSA18748</ID>
+    </TitleID>
+    <Metadata Title="Marvels Spider-Man Miles Morales"
+              Name="60 FPS Unlock (v1.14)"
+              Author="generic0540"
+              PatchVer="1.0"
+              AppVer="01.14"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes32" Address="0x039b6804" Value="0x42700000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

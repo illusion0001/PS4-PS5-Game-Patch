@@ -1,0 +1,19 @@
+- title: "Detroit Become Human"
+  app_ver: "01.08"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock (v1.08)"
+  author: "generic0540"
+  note: "Unlocks frame rate to 60 FPS"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x019ae953, "41c785909f050002000000" ]
+       - [ bytes, 0x019afbfb, "9090" ]
+       - [ bytes, 0x019afc0f, "4030f690" ]

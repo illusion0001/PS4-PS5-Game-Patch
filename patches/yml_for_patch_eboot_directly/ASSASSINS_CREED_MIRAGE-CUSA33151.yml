@@ -1,6 +1,6 @@
 - title: "Assassin's Creed Mirage"
-  app_ver: "01.11"
-  patch_ver: "01.00"
+  app_ver: "01.07"
+  patch_ver: "01.01"
   name: "60 FPS Unlock"
   author: "Arksama-PHU"
   note: "For PS5 - PS4 PRO"
@@ -14,6 +14,19 @@
       # - [ Cell Elf Base  : 0x10000  ] # elf base
       # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
 
+       - [ bytes, 0x050E7163, "BE01000000" ]
+       - [ bytes, 0x050E7168, "31F690" ]
+       - [ bytes, 0xe29523, "C3" ]
+
+- title: "Assassin's Creed Mirage"
+  app_ver: "01.11"
+  patch_ver: "01.00"
+  name: "60 FPS Unlock"
+  author: "Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
        - [ bytes, 0x051787d3, "BE01000000" ]
        - [ bytes, 0x051787d8, "31F690" ]
        - [ bytes, 0xe29523, "C3" ]

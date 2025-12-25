@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA00717</ID>
+  </TitleID>
+  <Metadata
+    Title="Detroit Become Human"
+    Name="60 FPS Unlock (v1.08)"
+    Note="Unlocks frame rate to 60 FPS"
+    Author="generic0540"
+    PatchVer="1.0"
+    AppVer="01.08"
+    AppElf="eboot.bin">
+    <PatchList>
+      <Line Type="bytes" Address="0x019ae953" Value="41c785909f050002000000"/>
+      <Line Type="bytes" Address="0x019afbfb" Value="9090"/>
+      <Line Type="bytes" Address="0x019afc0f" Value="4030f690"/>
+    </PatchList>
+  </Metadata>
+</Patch>
