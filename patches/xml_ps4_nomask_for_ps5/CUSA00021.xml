@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA00021</ID>
+  </TitleID>
+  <Metadata
+    Title="Watch Dogs Complete Edition"
+    Name="60 FPS Unlock (v1.05)"
+    Note="Modifying the value for sceVideoOutSetFlipRate unlocks the frame rate. Based on the illusion's method."
+    Author="generic0540"
+    PatchVer="1.0"
+    AppVer="01.05"
+    AppElf="eboot.bin">
+    <PatchList>
+      <!-- Change (0x01) to (0x00) at memory address -->
+      <Line Type="byte" Address="0x01e3669bb" Value="0x00"/>
+    </PatchList>
+  </Metadata>
+</Patch>

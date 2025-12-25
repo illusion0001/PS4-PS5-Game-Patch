@@ -1,0 +1,17 @@
+- title: "Lies of P"
+  app_ver: "01.08"
+  patch_ver: "01.10"
+  name: "60 FPS"
+  author: "illusion,Arksama-PHU"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x048a2a27, "c4a17857c0" ]

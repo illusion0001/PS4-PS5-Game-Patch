@@ -1,0 +1,19 @@
+- title: "BATMAN ARKHAM KNIGHT"
+  app_ver: "01.18"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "same as 01.15 (illusion) - Arksama001-PHU"
+  note: "For PS4 PRO - PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x9fa57e, "be00000000" ]
+       - [ bytes, 0x9fb766, "41bc04000000" ]
+       - [ bytes, 0x9fb9e1, "0f85a9000000" ]

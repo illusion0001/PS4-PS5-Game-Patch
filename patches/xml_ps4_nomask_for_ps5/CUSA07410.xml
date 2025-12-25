@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA07410</ID>
+    </TitleID>
+    <Metadata Title="God of War 2018"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.36"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00530edd" Value="b800000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War 2018"
+              Name="Disable TAA"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.36"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="007111b6" Value="c6839003000000"/>
+        </PatchList>
+    </Metadata>
+        <Metadata Title="God of War 2018"
+              Name="Disable Sharpness"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.36"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00820e5d" Value="b80000803f90"/>
+        </PatchList>
+    </Metadata>
+</Patch>

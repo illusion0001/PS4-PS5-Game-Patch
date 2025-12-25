@@ -1,0 +1,55 @@
+- title: "God of War Ragnarok"
+  app_ver: "06.05"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "Arksama001-PHU"
+  note: "For PS4 PRO - PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x519f6a, "b800000000" ]
+       - [ bytes, 0x4b8b21, "b800000000" ]
+       - [ bytes, 0x51a953, "b800000000" ]
+
+- title: "God of War Ragnarok"
+  app_ver: "06.05"
+  patch_ver: "1.0"
+  name: "1440P Resolution Patch PS5"
+  author: "Arksama001-PHU"
+  note: "For PS5 6.xx and more"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x78b937, "b884080000" ]
+       - [ bytes, 0x78b93c, "41bc00050000" ]
+       - [ bytes, 0x78b942, "bbd0020000" ]
+       - [ bytes, 0x78b950, "b8ca040000" ]
+       - [ bytes, 0x78b9ce, "48bb000a0000a0050000" ]
+       - [ bytes, 0x78b9d8, "48891d995b6701" ]
+       - [ bytes, 0x78b9df, "448935be746801" ]
+       - [ bytes, 0x78b9e6, "909090" ]
+
+- title: "God of War Ragnarok"
+  app_ver: "06.05"
+  patch_ver: "1.0"
+  name: "1080P Resolution Patch PS4 PRO"
+  author: "Arksama001-PHU"
+  note: "For PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x78b937, "b884080000" ]
+       - [ bytes, 0x78b93c, "41bc00050000" ]
+       - [ bytes, 0x78b942, "bbd0020000" ]
+       - [ bytes, 0x78b950, "b8ca040000" ]
+       - [ bytes, 0x78b9ce, "48bb8007000038040000" ]
+       - [ bytes, 0x78b9d8, "48891d995b6701" ]
+       - [ bytes, 0x78b9df, "448935be746801" ]
+       - [ bytes, 0x78b9e6, "909090" ]

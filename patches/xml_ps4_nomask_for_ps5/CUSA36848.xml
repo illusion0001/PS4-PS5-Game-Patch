@@ -1,0 +1,18 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA36847</ID>
+        <ID>CUSA36848</ID>
+        <ID>CUSA36849</ID>
+        <ID>CUSA36850</ID>
+    </TitleID>
+    <Metadata Title="Lies of P"
+              Name="60 FPS"
+              Author="illusion,Arksama-PHU"
+              PatchVer="01.10"
+              AppVer="01.08"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="048a2a27" Value="c4a17857c0"/>
+        </PatchList>
+    </Metadata>
+</Patch>

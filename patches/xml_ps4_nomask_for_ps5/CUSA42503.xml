@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA42503</ID>
+    </TitleID>
+    <Metadata Title="AtomFall"
+              Name="Unlock FPS"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.06" 
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00b439f5" Value="00"/>
+            <Line Type="bytes" Address="00b43a02" Value="00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

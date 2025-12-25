@@ -1,0 +1,20 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA02231</ID>
+        <ID>CUSA02218</ID>
+        <ID>CUSA02230</ID>
+        <ID>CUSA02441</ID>
+    </TitleID>
+    <Metadata Title="Dishonored Definitive Edition"
+              Name="60 FPS Unlock"
+              Note=""
+              Author="Illusion, Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="009919a8" Value="be00000000"/>
+            <Line Type="bytes" Address="00991a01" Value="ba01000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

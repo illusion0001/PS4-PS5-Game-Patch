@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02000</ID>
+    </TitleID>
+    <Metadata Title="BATMAN ARKHAM CITY"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.03"
+              AppElf="eboot.bin">
+<PatchList>
+            <Line Type="bytes" Address="007a3c9a" Value="be00000000"/>
+            <Line Type="bytes" Address="007a43e5" Value="eb"/>
+            <Line Type="bytes" Address="007a43f0" Value="bf1e000000"/>
+            <Line Type="bytes" Address="044a16d0" Value="e8780e000085c07403c5f82c0522e9b500"/>
+            <Line Type="bytes" Address="05000000" Value="00004040"/>
+        </PatchList>
+    </Metadata>
+</Patch>

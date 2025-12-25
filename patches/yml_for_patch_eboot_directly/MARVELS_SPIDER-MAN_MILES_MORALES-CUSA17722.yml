@@ -1,0 +1,17 @@
+- title: "Marvel's Spider-Man Miles Morales"
+  app_ver: "01.14"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock (v1.14)"
+  author: "generic0540"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes32, 0x039b6804, "0x42700000" ]

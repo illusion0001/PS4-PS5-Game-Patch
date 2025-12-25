@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05573</ID>
+    </TitleID>
+    <Metadata Title="The Witcher 3 Wild Hunt Game of The Year Edition"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="04.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="016b214c" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

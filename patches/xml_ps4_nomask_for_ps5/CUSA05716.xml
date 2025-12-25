@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05716</ID>
+        <ID>CUSA05794</ID>
+    </TitleID>
+    <Metadata Title="Rise of the Tomb Raider 20 Year Celebration"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="same as 01.15 (illusion) - Arksama001-PHU"
+              PatchVer="1.00"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0088e26c" Value="31f6"/>
+        </PatchList>
+</Patch>

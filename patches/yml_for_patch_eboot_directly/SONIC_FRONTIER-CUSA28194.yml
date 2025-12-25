@@ -1,0 +1,17 @@
+- title: "Sonic Frontier"
+  app_ver: "01.41"
+  patch_ver: "01.01"
+  name: "60 FPS Unlock"
+  author: "illusion, Arksama-PHU"
+  note: "For PS5 - PS4 Pro"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x1E62C61, "C7431400007042C5FA104B14" ]

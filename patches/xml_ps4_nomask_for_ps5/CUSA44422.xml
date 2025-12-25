@@ -1,0 +1,15 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA44422</ID>
+    </TitleID>
+    <Metadata Title="Sonic X Shadow Generations"
+              Name="60 FPS"
+              Author="illusion,Gezine"
+              PatchVer="01.10"
+              AppVer="01.10"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x17AD98F" Value="C7431400007042C5FA104B149090909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

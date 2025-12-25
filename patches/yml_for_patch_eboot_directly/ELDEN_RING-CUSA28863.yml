@@ -1,0 +1,76 @@
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "60 FPS (For Base Console)"
+  author: "BestPig"
+  note: "Unlocks framerate on Base/Slim PS4 22"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x01eec8c3, "b805000000" ]
+       - [ bytes, 0x01eec8c8, "0f1f840000000000" ]
+
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "Resolution Patch (720p for Base)"
+  author: "BestPig"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes32, 0x03e57cbc, "0x00000500" ]
+       - [ bytes32, 0x03e57cc0, "0x000002d0" ]
+
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "Resolution Patch (900p for Base)"
+  author: "BestPig"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes32, 0x03e57cbc, "0x00000640" ]
+       - [ bytes32, 0x03e57cc0, "0x00000384" ]
+
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p for Pro)"
+  author: "BestPig"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes32, 0x03e57cbc, "0x00000780" ]
+       - [ bytes32, 0x03e57cc0, "0x00000438" ]
+
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "Enable MenuMan.EnableTopMenuDebug"
+  author: "illusion"
+  note: "Enables Menu Debug, scroll to below system to access during gameplay. (it doesn't have an icon)"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x0203064b, "b801000000" ]
+
+- title: "Elden Ring"
+  app_ver: "01.21"
+  patch_ver: "1.0"
+  name: "Skip Intro Logos"
+  author: "BestPig"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x01a648a3, "41c686c500000001" ]

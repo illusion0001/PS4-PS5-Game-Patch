@@ -63,9 +63,42 @@ Custom Game Patches for PlayStation 4 and PlayStation 5 Games.
 
 </summary>
 
-To be written.
+#### Manual Installation (Offline via HDD)
+Prerequisites:
+- A PS5 firmware 2.xx to 8.xx (atm),
+- FTP,
+- Last Etahen & Itemzflow,
+- XML patches
+
+**Step 1: Update existing patches with Itemzflow**
+- Launch Itemzflow and go to any PS4 game, then click on Trainer. It will ask you if you want to update the patch database , click Yes.
+
+**Important note :** each time you update the patches via itemzflows, your patches that you put manually will be overwritten, always keep a backup of your patches that you had outside of etahen to send them back by ftp .
+
+**Step 2: Sending your patches via FTP**
+- Connect to your PS5 via FTP using FileZilla or your preferred FTP client, then navigate to
+/data/etaHEN/patches/xml for PS4 games
+/data/etaHEN/patches/xml_prospero for PS5 games
+- Here I will copy the patch
+
+**Step 3: Launch Itemzflow_xml_patch_plugin in Etahen**
+- Go to Etahen Tool box then plugin
+- Enable Itemzflow_xml_patch_plugin
+**Note: ** you should enable it every time you jailbreak the console if you want to use the patches
+
+**Step 4: Activating the patch in Itemzflow**
+- launch Itemzflow and go to the game on which you want to use a patch (here it will be GTA V)
+- Click on trainers , a panel appears you can scroll through the patches with the directional cross when there are several
+- To activate a patch, place yourself on the patch and click on the cross, the pane disappears and you have your patch activated.
+
+**Step 5: Launch the game and check that the patch is applied correctly**
+- launch or launch the game from the home screen, a window will appear showing you that the patches are applied
+
+For Ps5 9.xx 10.xx user you must patch eboot directly with py-patch
 
 </details>
+
+
 
 ## Developing patches
 
