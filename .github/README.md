@@ -94,6 +94,8 @@ Prerequisites:
 **Step 5: Launch the game and check that the patch is applied correctly**
 - launch or launch the game from the home screen, a window will appear showing you that the patches are applied
 
+For Ps5 9.xx 10.xx user you must patch eboot directly with py-patch
+
 </details>
 
 
