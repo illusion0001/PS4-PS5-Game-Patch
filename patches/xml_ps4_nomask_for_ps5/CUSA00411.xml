@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00411</ID>
+        <ID>CUSA00419</ID>
+    </TitleID>
+    <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.52"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00fbe5de" Value="01"/>
+        </PatchList>
+    </Metadata>
+        <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.53"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00fc151e" Value="01"/>
+        </PatchList>
+    </Metadata>
+        <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.54"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00fba00e" Value="01"/>
+        </PatchList>
+    </Metadata>
+                <Metadata Title="Grand Theft Auto V"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.55"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00fb9ffe" Value="01"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,31 @@
+- title: "Mafia: Definitive Edition"
+  app_ver: "01.04"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion, Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x0311ea1b, "b801000000" ]
+       - [ bytes, 0x0312a29a, "418b7c240831f60f1f8000000000" ]
+       - [ bytes, 0x045a1a10, "8988083c" ]
+       - [ bytes, 0x01be8ba9, "41c7471808000000660f1f4400000f1f8000000000" ]
+
+- title: "Mafia: Definitive Edition"
+  app_ver: "01.04"
+  patch_ver: "1.0"
+  name: "Resolution Patch (1080p PS4 Pro/720p Base PS4)"
+  author: "illusion"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x01bf7269, "ba8007000041bc00050000b93804000041bdd0020000" ]

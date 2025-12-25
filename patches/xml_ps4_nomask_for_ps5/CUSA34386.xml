@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA34386</ID>
+    </TitleID>
+    <Metadata Title="God of War Ragnarok"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="06.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="00519f6a" Value="b800000000"/>
+            <Line Type="bytes" Address="004b8b21" Value="b800000000"/>        
+            <Line Type="bytes" Address="0051a953" Value="b800000000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="God of War Ragnarok"
+              Name="1440P Resolution Patch PS5"
+              Note="For PS5 6.xx and more"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="06.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0078b937" Value="b884080000"/>
+            <Line Type="bytes" Address="0078b93c" Value="41bc00050000"/>
+            <Line Type="bytes" Address="0078b942" Value="bbd0020000"/>
+            <Line Type="bytes" Address="0078b950" Value="b8ca040000"/>
+            <Line Type="bytes" Address="0078b9ce" Value="48bb000a0000a0050000"/>
+            <Line Type="bytes" Address="0078b9d8" Value="48891d995b6701"/>
+            <Line Type="bytes" Address="0078b9df" Value="448935be746801"/>
+            <Line Type="bytes" Address="0078b9e6" Value="909090"/>
+        </PatchList>
+    </Metadata>    
+    <Metadata Title="God of War Ragnarok"
+              Name="1080P Resolution Patch PS4 PRO"
+              Note="For PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="06.05"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0078b937" Value="b884080000"/>
+            <Line Type="bytes" Address="0078b93c" Value="41bc00050000"/>
+            <Line Type="bytes" Address="0078b942" Value="bbd0020000"/>
+            <Line Type="bytes" Address="0078b950" Value="b8ca040000"/>
+            <Line Type="bytes" Address="0078b9ce" Value="48bb8007000038040000"/>
+            <Line Type="bytes" Address="0078b9d8" Value="48891d995b6701"/>
+            <Line Type="bytes" Address="0078b9df" Value="448935be746801"/>
+            <Line Type="bytes" Address="0078b9e6" Value="909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA00133</ID>
+        <ID>CUSA00135</ID>
+        <ID>CUSA01009</ID>
+    </TitleID>
+    <Metadata Title="BATMAN ARKHAM KNIGHT"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="same as 01.15 (illusion) - Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.18"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="009fa57e" Value="be00000000"/>
+            <Line Type="bytes" Address="009fb766" Value="41bc04000000"/>
+            <Line Type="bytes" Address="009fb9e1" Value="0f85a9000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

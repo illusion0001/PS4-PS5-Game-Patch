@@ -1,0 +1,17 @@
+- title: "Mafia 2: Definitive Edition"
+  app_ver: "01.02"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "illusion"
+  note: "CPU/GPU Limited. For use with 9th generation of game consoles."
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x00e13d16, "94" ]

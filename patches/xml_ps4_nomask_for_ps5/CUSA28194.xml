@@ -1,0 +1,16 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA28194</ID>
+    </TitleID>
+    <Metadata Title="Sonic Frontier"
+              Name="60 FPS Unlock"
+              Note="For PS5 - PS4 Pro"
+              Author="illusion, Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.41"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x1E62C61" Value="C7431400007042C5FA104B14"/>
+        </PatchList>
+    </Metadata>
+</Patch>

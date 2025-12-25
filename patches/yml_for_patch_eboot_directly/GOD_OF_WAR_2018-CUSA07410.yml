@@ -1,0 +1,39 @@
+- title: "God of War 2018"
+  app_ver: "01.36"
+  patch_ver: "1.0"
+  name: "60 FPS Unlock"
+  author: "Arksama001-PHU"
+  note: "For PS4 PRO - PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x530edd, "b800000000" ]
+
+- title: "God of War 2018"
+  app_ver: "01.36"
+  patch_ver: "1.0"
+  name: "Disable TAA"
+  author: "Arksama001-PHU"
+  note: "For PS4 PRO - PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x7111b6, "c6839003000000" ]
+
+- title: "God of War 2018"
+  app_ver: "01.36"
+  patch_ver: "1.0"
+  name: "Disable Sharpness"
+  author: "Arksama001-PHU"
+  note: "For PS4 PRO - PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x820e5d, "b80000803f90" ]

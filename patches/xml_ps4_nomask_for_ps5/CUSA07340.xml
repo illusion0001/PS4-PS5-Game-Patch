@@ -1,0 +1,85 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA07340</ID>
+    </TitleID>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="60 FPS"
+              Note=""
+              Author="Illusion"
+              PatchVer="01.00"
+              AppVer="01.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Force delta time scaler de 30.0f → 60.0f  -->
+            <Line Type="bytes" Address="018e1cb4" Value="42700000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="Résolution 720p (Performance Max)"
+              Note="1280x720 natif. Idéal base PS4"
+              Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Game state width/height (DAT_04906ad0 + 0x20/24) -->
+            <Line Type="bytes" Address="0x4906ad0+0x20" Value="000C4444002F4444"/>
+            <!-- RT1 buffers (0x879018 + 0x10/14) -->
+            <Line Type="bytes" Address="0x879018+0x10" Value="000C4444002F4444"/>
+            <!-- Flip buffers (0x4906ad0 + 0x896168 - 0x8 = width/height prev) -->
+            <Line Type="bytes" Address="0x4906ad0+0x896160" Value="000C4444002F4444"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="Résolution 900p (Équilibré)"
+              Note="1600x900"
+              Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x4906ad0+0x20" Value="803D444460494444"/>
+            <Line Type="bytes" Address="0x879018+0x10" Value="803D444460494444"/>
+            <Line Type="bytes" Address="0x4906ad0+0x896160" Value="803D444460494444"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="Résolution 1440p (Pro Optimal)"
+              Note="2560x1440 natif. PS4 Pro recommandé."
+              Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x4906ad0+0x20" Value="00154444004C4444"/>
+            <Line Type="bytes" Address="0x879018+0x10" Value="00154444004C4444"/>
+            <Line Type="bytes" Address="0x4906ad0+0x896160" Value="00154444004C4444"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="Résolution 4K Natif (Ultra Sharp)"
+              Note="3840x2160. Max qualité@60FPS"
+              Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x4906ad0+0x20" Value="007A4444007A4444"/>
+            <Line Type="bytes" Address="0x879018+0x10" Value="007A4444007A4444"/>
+            <Line Type="bytes" Address="0x4906ad0+0x896160" Value="007A4444007A4444"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Dragon's Dogma: Dark Arisen"
+              Name="Restore 1080p Natif"
+              Note="Revert "
+              Author="Arksama-PHU"
+              PatchVer="01.01"
+              AppVer="01.01"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x4906ad0+0x20" Value="0080434400704444"/>
+            <Line Type="bytes" Address="0x879018+0x10" Value="0080434400704444"/>
+            <Line Type="bytes" Address="0x4906ad0+0x896160" Value="0080434400704444"/>
+        </PatchList>
+    </Metadata>
+</Patch>

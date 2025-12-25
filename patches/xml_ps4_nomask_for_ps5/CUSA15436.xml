@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA15436</ID>
+    </TitleID>
+    <Metadata Title="Kingdom Come: Deliverance"
+              Name="60 FPS Unlock"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.06"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="03ce0673" Value="BE000000009090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

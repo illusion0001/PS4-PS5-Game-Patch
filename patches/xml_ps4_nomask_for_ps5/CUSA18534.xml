@@ -1,0 +1,73 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA18534</ID>
+    </TitleID>
+    <Metadata Title="Assassin's Creed Valhalla"
+              Name="60 FPS"
+              Author="Arksama - PHU"
+              PatchVer="01.01"
+              AppVer="08.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="04e0744a" Value="be0000000090"/>
+            <!-- Patch VSync Off --> 
+            <!--<Line Type="bytes" Address="0x00f2e831" Value="ba00000000"/> crash -->
+        </PatchList>
+     </Metadata>
+     <Metadata Title="Assassin's Creed Valhalla"
+              Name="Resolution Patch (2160p)"
+              Author="Arksama - PHU"
+              PatchVer="01.01"
+              AppVer="08.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Patch resolutionHeight = 2160 -->
+            <Line Type="bytes" Address="0x00bc27ae" Value="c7007008000090"/>
+            <!-- Patch resolutionWidth = 3840 -->
+            <Line Type="bytes" Address="0x00bc280e" Value="c700000f000090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassin's Creed Valhalla"
+              Name="Resolution Patch (1440p)"
+              Author="Arksama - PHU"
+              PatchVer="01.01"
+              AppVer="08.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Patch resolutionHeight = 1440 -->
+            <Line Type="bytes" Address="0x00bc27ae" Value="c700a005000090"/>
+            <!-- Patch resolutionWidth = 2560 -->
+            <Line Type="bytes" Address="0x00bc280e" Value="c700000a000090"/>
+        </PatchList>
+    </Metadata>
+     <Metadata Title="Assassin's Creed Valhalla"
+              Name="Resolution Patch (900p)"
+              Author="Arksama - PHU"
+              PatchVer="01.01"
+              AppVer="08.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Patch (900p) -->
+            <!--<Line Type="bytes" Address="00f2e8e9" Value="be40060000ba840300009090"/>-->
+            <!-- Patch resolutionHeight = 900 -->
+            <Line Type="bytes" Address="0x00bc27ae" Value="c7008403000090"/>
+            <!-- Patch resolutionWidth = 1600 -->
+            <Line Type="bytes" Address="0x00bc280e" Value="c7004006000090"/>
+        </PatchList>
+    </Metadata>
+        <Metadata Title="Assassin's Creed Valhalla"
+              Name="Resolution Patch (720p) For Ps4 Pro 40 fps max"
+              Author="Arksama - PHU"
+              PatchVer="01.01"
+              AppVer="08.00"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- Patch (720p) For Ps4  -->
+            <!--<Line Type="bytes" Address="00f2e8e9" Value="be00050000bad00200009090"/>-->
+            <!-- Patch resolutionHeight = 720 -->
+            <Line Type="bytes" Address="0x00bc27ae" Value="c700d002000090"/>
+            <!-- Patch resolutionWidth = 1280 -->
+            <Line Type="bytes" Address="0x00bc280e" Value="c7000005000090"/>
+        </PatchList>
+    </Metadata>
+</Patch>

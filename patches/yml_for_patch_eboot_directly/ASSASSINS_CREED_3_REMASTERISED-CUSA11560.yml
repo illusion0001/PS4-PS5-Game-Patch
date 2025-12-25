@@ -1,0 +1,51 @@
+- title: "Assassin's Creed 3 Remasterised"
+  app_ver: "01.03"
+  patch_ver: "01.00"
+  name: "Assassin's Creed 3 Remastered Menu 60 FPS Unlock"
+  author: "Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x016e1eaf, "be00000000" ]
+
+- title: "Assassin's Creed 3 Remasterised"
+  app_ver: "01.03"
+  patch_ver: "01.00"
+  name: "Assassin's Creed III Remastered 60 FPS Unlock"
+  author: "Illusion.Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0xca8d8f, "31f6" ]
+       - [ bytes, 0xca8e1a, "31f6" ]
+
+- title: "Assassin's Creed 3 Remasterised"
+  app_ver: "01.03"
+  patch_ver: "01.00"
+  name: "Assassin's Creed Liberation Remastered 60 FPS Unlock"
+  author: "Illusion.Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x016e1eaf, "be00000000" ]
+
+- title: "Assassin's Creed 3 Remasterised"
+  app_ver: "01.03"
+  patch_ver: "01.00"
+  name: "Launcher 60 FPS Unlock"
+  author: "Arksama-PHU"
+  note: "For PS5 - PS4 PRO"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x016e207f, "be00000000" ]

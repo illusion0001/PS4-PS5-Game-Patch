@@ -1,0 +1,22 @@
+- title: "Horizon Forbidden West"
+  app_ver: "01.18"
+  patch_ver: "1.3"
+  name: "Unlock FPS"
+  author: "Arksama001-PHU"
+  note: "For PS5"
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x02896f02, "b901010000" ]
+       - [ bytes, 0x02896f07, "90" ]
+       - [ bytes, 0x02896f08, "66898C2028050000" ]
+       - [ bytes, 0x0289704e, "b901010000" ]
+       - [ bytes, 0x02897053, "90" ]
+       - [ bytes, 0x02897054, "66898C2028050000" ]

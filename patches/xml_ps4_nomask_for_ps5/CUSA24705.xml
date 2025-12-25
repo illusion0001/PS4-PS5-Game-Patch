@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA24705</ID>
+        <ID>CUSA28561</ID>
+        <ID>CUSA28563</ID>
+    </TitleID>
+    <Metadata Title="Horizon Forbidden West"
+              Name="Unlock FPS"
+              Note="For PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.3"
+              AppVer="01.18" 
+              AppElf="eboot.bin">
+        <PatchList>
+            <!--<Line Type="bytes" Address="02896f02" Value="C7C101010000"/>-->
+            <Line Type="bytes" Address="02896f02" Value="b901010000"/>
+            <Line Type="bytes" Address="02896f07" Value="90"/>
+            <Line Type="bytes" Address="02896f08" Value="66898C2028050000"/>
+            <Line Type="bytes" Address="0289704e" Value="b901010000"/>
+            <Line Type="bytes" Address="02897053" Value="90"/>
+            <Line Type="bytes" Address="02897054" Value="66898C2028050000"/>
+            <!--<Line Type="bytes" Address="0289704e" Value="C7C101010000"/>
+            <Line Type="bytes" Address="02897054" Value="66898C2028050000"/>-->
+        </PatchList>
+    </Metadata>
+</Patch>

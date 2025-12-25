@@ -1,0 +1,16 @@
+<Patch>
+    <TitleID>
+        <ID>CUSA16345</ID>
+    </TitleID>
+    <Metadata Title="Immortal Fenyx Rising"
+              Name="60 FPS Unlock"
+              Note="For PS5 - PS4 PRO"
+              Author="Arksama-PHU"
+              PatchVer="01.00"
+              AppVer="01.34"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="01601f3d" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

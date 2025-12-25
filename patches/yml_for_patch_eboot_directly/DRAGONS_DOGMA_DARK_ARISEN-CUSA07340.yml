@@ -1,0 +1,82 @@
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.00"
+  patch_ver: "01.00"
+  name: "60 FPS"
+  author: "Illusion"
+  note: ""
+  enabled: true
+  arch: orbis
+  patch_list:
+      # Patch format:
+      # - [ patch_type, address, value ]
+      # Types: bytes, utf8, utf16, byte, bytes16, bytes32, bytes64, float32, float64
+      # - [ Generic Base   : 0x0      ] # beginning of file
+      # - [ Cell Elf Base  : 0x10000  ] # elf base
+      # - [ Orbis Elf Base : 0x400000 ] # disabled aslr base
+
+       - [ bytes, 0x018e1cb4, "42700000" ]
+
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.01"
+  patch_ver: "01.01"
+  name: "Résolution 720p (Performance Max)"
+  author: "Arksama-PHU"
+  note: "1280x720 natif. Idéal base PS4"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x4906ad0+0x20, "000C4444002F4444" ]
+       - [ bytes, 0x879018+0x10, "000C4444002F4444" ]
+       - [ bytes, 0x4906ad0+0x896160, "000C4444002F4444" ]
+
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.01"
+  patch_ver: "01.01"
+  name: "Résolution 900p (Équilibré)"
+  author: "Arksama-PHU"
+  note: "1600x900"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x4906ad0+0x20, "803D444460494444" ]
+       - [ bytes, 0x879018+0x10, "803D444460494444" ]
+       - [ bytes, 0x4906ad0+0x896160, "803D444460494444" ]
+
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.01"
+  patch_ver: "01.01"
+  name: "Résolution 1440p (Pro Optimal)"
+  author: "Arksama-PHU"
+  note: "2560x1440 natif. PS4 Pro recommandé."
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x4906ad0+0x20, "00154444004C4444" ]
+       - [ bytes, 0x879018+0x10, "00154444004C4444" ]
+       - [ bytes, 0x4906ad0+0x896160, "00154444004C4444" ]
+
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.01"
+  patch_ver: "01.01"
+  name: "Résolution 4K Natif (Ultra Sharp)"
+  author: "Arksama-PHU"
+  note: "3840x2160. Max qualité@60FPS"
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x4906ad0+0x20, "007A4444007A4444" ]
+       - [ bytes, 0x879018+0x10, "007A4444007A4444" ]
+       - [ bytes, 0x4906ad0+0x896160, "007A4444007A4444" ]
+
+- title: "Dragon's Dogma: Dark Arisen"
+  app_ver: "01.01"
+  patch_ver: "01.01"
+  name: "Restore 1080p Natif"
+  author: "Arksama-PHU"
+  note: "Revert "
+  enabled: true
+  arch: orbis
+  patch_list:
+       - [ bytes, 0x4906ad0+0x20, "0080434400704444" ]
+       - [ bytes, 0x879018+0x10, "0080434400704444" ]
+       - [ bytes, 0x4906ad0+0x896160, "0080434400704444" ]

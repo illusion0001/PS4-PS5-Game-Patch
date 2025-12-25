@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA05855</ID>
+    </TitleID>
+   <Metadata Title="Assassins Creed Origins"
+              Name="Unlock FPS 60"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0129aa42" Value="be00000000418975789090909090"/>
+        </PatchList>
+    </Metadata>
+        <Metadata Title="Assassins Creed Origins"
+              Name="Bypass Resolution Check"
+              Note="Need activated for change resolution and stability"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00bc747a" Value="c6c3019090909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassins Creed Origins"
+              Name="Resolution Patch (720p)"
+              Note="For PS4"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x07751450" Value="02d00500"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassins Creed Origins"
+              Name="Resolution Patch (900p)"
+              Note="For PS4 PRO"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x07751450" Value="03840640"/>
+        </PatchList>
+    </Metadata>
+     <Metadata Title="Assassins Creed Origins"
+              Name="Resolution Patch (1080p)"
+              Note="For PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x07751450" Value="04380780"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassins Creed Origins"
+              Name="Resolution Patch (1440p)"
+              Note="For PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x07751450" Value="05a00a00"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Assassins Creed Origins"
+              Name="Resolution Patch (2160p)"
+              Note="For PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.60"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x07751450" Value="08700f00"/>
+        </PatchList>
+    </Metadata>
+</Patch>

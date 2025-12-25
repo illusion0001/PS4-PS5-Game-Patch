@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA03041</ID>
+        <ID>CUSA08519</ID>
+        <ID>CUSA08568</ID>
+    </TitleID>
+    <Metadata Title="Red Dead Redemption 2"
+              Name="Unlock FPS"
+              Note="For PS4 PRO - PS5"
+              Author="Arksama001-PHU"
+              PatchVer="1.0"
+              AppVer="01.32"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x05853027" Value="be00000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>
