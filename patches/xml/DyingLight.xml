@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA02010</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.47" PatchVer="1.00" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Dying Light">
+    <PatchList>
+        <Line Value="31f6" Address="0x0047bc0a" Type="bytes"/>
+        <Line Value="31f690" Address="0x0048168b" Type="bytes"/>
+        <Line Value="31f690" Address="0x00481719" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
