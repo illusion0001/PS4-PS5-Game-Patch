@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA44233</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.22" PatchVer="1.00" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Expeditions: A Mudrunner Game">
+    <PatchList>
+        <Line Value="31f6" Address="0x01cfb717" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
