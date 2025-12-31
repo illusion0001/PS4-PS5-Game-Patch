@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA15436</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.00" PatchVer="1.05" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Kingdom Come: Deliverance Royal Edition">
+    <PatchList>
+        <Line Value="31f69090909090" Address="0x03ce0673" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>
