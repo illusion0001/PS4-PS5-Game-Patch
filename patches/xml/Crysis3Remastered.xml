@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Patch>
+  <TitleID>
+    <ID>CUSA18673</ID>
+  </TitleID>
+  <Metadata AppElf="eboot.bin" AppVer="01.01" PatchVer="1.0" Author="Jao" Note="Changes the engine target from 30 FPS to 60 FPS" Name="60 FPS" Title="Crysis 3 Remastered">
+    <PatchList>
+      <Line Value="31f690" Address="0x0129c1ea" Type="bytes"/>
+      <Line Value="b93c000000" Address="0x01409433" Type="bytes"/>
+    </PatchList>
+  </Metadata>
+</Patch>

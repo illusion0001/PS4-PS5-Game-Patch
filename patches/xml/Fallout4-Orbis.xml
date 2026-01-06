@@ -26,4 +26,24 @@
             <Line Type="bytes32" Address="0x014b4a9c" Value="0x000002d0"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Fallout 4"
+              Name="60 FPS Unlock"
+              Author="boaz"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="c7 05 3f 46 31 02 01 00 00 00" Value="00" Offset="+6"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Fallout 4"
+              Name="Disable Vsync"
+              Author="boaz"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="6a 01 ff 75 c0" Value="02" Offset="+1"/>
+        </PatchList>
+    </Metadata>
 </Patch>

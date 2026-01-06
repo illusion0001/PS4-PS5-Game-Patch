@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA12811</ID>
+    </TitleID>
+    <Metadata Title="Persona 4: Dancing All Night"
+            Name="Mod Support"
+            Note="A port of zarroboogs' patch. \nhttps://github.com/zarroboogs/ppp \n\nHighest to lowest load priority: \n1. /data/p4d/bind/ (loose files) \n2. /data/p4d/mod.cpk \n3. /data/p4d/mod1.cpk \n4. /data/p4d/mod2.cpk \n5. /data/p4d/mod3.cpk \n6. /app0/data/mod.cpk"
+            Author="zarroboogs, Ahtheerr, Danu"
+            PatchVer="1.0"
+            AppVer="01.00"
+            AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x005a41af" Value="4d31f6488d1d375c3a00488d7b04e88e00000085c0740e8b3383feff740789c7e82c121a0049ffc64983fe0874454883c320ebd64831db803c1a00740548ffc3ebf58a5c1aff80fb2f7407e831e81900eb05e8daf91900e98e000000"/>
+            <Line Type="bytes" Address="0x005a4294" Value="e94affffff"/>
+            <Line Type="bytes" Address="0x00949df0" Value="ff0000102f646174612f7034642f62696e642f00"/>
+            <Line Type="bytes" Address="0x00949e10" Value="fe0000102f646174612f7034642f6d6f642e63706b00"/>
+            <Line Type="bytes" Address="0x00949e30" Value="fd0000102f646174612f7034642f6d6f64312e63706b0000"/>
+            <Line Type="bytes" Address="0x00949e50" Value="fc0000102f646174612f7034642f6d6f64322e63706b0000"/>
+            <Line Type="bytes" Address="0x00949e70" Value="fb0000102f646174612f7034642f6d6f64332e63706b0000"/>
+            <Line Type="bytes" Address="0x00949e90" Value="fa0000102f617070302f646174612f6d6f642e63706b0000"/>
+            <Line Type="bytes" Address="0x00949eb0" Value="ffffffff2f617070302f646174612f7073342e63706b0000"/>
+            <Line Type="bytes" Address="0x00949ed0" Value="ffffffff2f617070302f646174612f646174612e63706b00"/>
+            <Line Type="bytes" Address="0x00949ef4" Value="00000000000000000000000000"/>
+        </PatchList>
+    </Metadata>
+</Patch>

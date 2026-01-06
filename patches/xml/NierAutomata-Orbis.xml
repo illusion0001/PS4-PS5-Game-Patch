@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA04480</ID>
+    </TitleID>
+    <Metadata Title="NieR: Automata"
+              Name="Offline Ending E"
+              Note="Get the true ending without internet access."
+              Author="Lance McDonald (manfightdragon)"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="mask" Address="83 bf 28 78" Value="b001c390"/>
+        </PatchList>
+    </Metadata>
+</Patch>

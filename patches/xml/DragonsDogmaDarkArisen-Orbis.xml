@@ -2,12 +2,13 @@
 <Patch>
     <TitleID>
         <ID>CUSA07316</ID>
+        <ID>CUSA07340</ID>
         <ID>CUSA09431</ID>
     </TitleID>
     <Metadata Title="Dragon's Dogma: Dark Arisen"
               Name="60 FPS"
               Author="illusion"
-              PatchVer="1.0"
+              PatchVer="1.1"
               AppVer="01.01"
               AppElf="eboot.bin">
         <PatchList>

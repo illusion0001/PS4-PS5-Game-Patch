@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA11454</ID>
+    </TitleID>
+    <Metadata Title="Control"
+              Name="Logo Videos Skip"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x0066829a" Value="c6803b01000001"/>
+            <Line Type="bytes" Address="0x006682a1" Value="c6803901000001"/>
+            <Line Type="bytes" Address="0x006682a8" Value="e92a010000"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Control"
+              Name="Dev Menu Restore"
+              Note="L3 to open menu\nR3 when menu is opened to toggle debug camera, freeze camera but allow player movement.\nL1/R1 to cycle through menus\nX to select menu items.\n\n(These are custom button binds, not original!!)"
+              Author="illusion"
+              PatchVer="1.0"
+              AppVer="01.12"
+              AppElf="eboot.bin">
+        <PatchList>
+            <!-- store every frame, yuck! -->
+            <!-- this enables mission select + restart checkpoint in pause menu -->
+            <Line Type="bytes" Address="0x00b9c97b" Value="c6803001000001"/>
+            <!-- entry point -->
+            <Line Type="bytes" Address="0x00a04823" Value="e834201c01"/> <!-- render start -->
+            <Line Type="bytes" Address="0x00a04c30" Value="e92c1c1c01"/> <!-- gamepad start -->
+            <Line Type="bytes" Address="0x009e3357" Value="e80a351e01"/> <!-- debug camera start -->
+            <!-- input is a bit limited here -->
+            <!-- because input::InputManager::buttonPressed only allows one button, a combination isn't possible -->
+            <!-- so to get around this, debug camera can only be started when MenuOpen() and buttonPressed(R3) returns true -->
+            <Line Type="bytes" Address="0x1bc685c" Value="e9f6010000"/> <!-- jmp 0x1bc6a57 -->
+            <Line Type="bytes" Address="0x1bc6861" Value="e96a010000"/> <!-- jmp 0x1bc69d0 -->
+            <Line Type="bytes" Address="0x1bc6866" Value="e9c5010000"/> <!-- jmp 0x1bc6a30 -->
+            <Line Type="bytes" Address="0x1bc686b" Value="488d05a2978300"/> <!-- lea rax, [rip + 0x8397a2] -->
+            <Line Type="bytes" Address="0x1bc6872" Value="488938"/> <!-- mov qword ptr [rax], rdi -->
+            <Line Type="bytes" Address="0x1bc6875" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6876" Value="488d0597978300"/> <!-- lea rax, [rip + 0x839797] -->
+            <Line Type="bytes" Address="0x1bc687d" Value="488b00"/> <!-- mov rax, qword ptr [rax] -->
+            <Line Type="bytes" Address="0x1bc6880" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6881" Value="488d058c978300"/> <!-- lea rax, [rip + 0x83978c] -->
+            <Line Type="bytes" Address="0x1bc6888" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6889" Value="488d0574978300"/> <!-- lea rax, [rip + 0x839774] -->
+            <Line Type="bytes" Address="0x1bc6890" Value="408838"/> <!-- mov byte ptr [rax], dil -->
+            <Line Type="bytes" Address="0x1bc6893" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6894" Value="488d0569978300"/> <!-- lea rax, [rip + 0x839769] -->
+            <Line Type="bytes" Address="0x1bc689b" Value="8a00"/> <!-- mov al, byte ptr [rax] -->
+            <Line Type="bytes" Address="0x1bc689d" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc689e" Value="488d05535b8600"/> <!-- lea rax, [rip + 0x865b53] -->
+            <Line Type="bytes" Address="0x1bc68a5" Value="488b00"/> <!-- mov rax, qword ptr [rax] -->
+            <Line Type="bytes" Address="0x1bc68a8" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc68a9" Value="488d05b02d7500"/> <!-- lea rax, [rip + 0x752db0] -->
+            <Line Type="bytes" Address="0x1bc68b0" Value="488b00"/> <!-- mov rax, qword ptr [rax] -->
+            <Line Type="bytes" Address="0x1bc68b3" Value="488b00"/> <!-- mov rax, qword ptr [rax] -->
+            <Line Type="bytes" Address="0x1bc68b6" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc68b7" Value="55"/> <!-- push rbp -->
+            <Line Type="bytes" Address="0x1bc68b8" Value="4889e5"/> <!-- mov rbp, rsp -->
+            <Line Type="bytes" Address="0x1bc68bb" Value="4156"/> <!-- push r14 -->
+            <Line Type="bytes" Address="0x1bc68bd" Value="53"/> <!-- push rbx -->
+            <Line Type="bytes" Address="0x1bc68be" Value="488d0572e3e3fe"/> <!-- lea rax, [rip - 0x11c1c8e] -->
+            <Line Type="bytes" Address="0x1bc68c5" Value="ffe0"/> <!-- jmp rax -->
+            <Line Type="bytes" Address="0x1bc68c7" Value="488d05820be9ff"/> <!-- lea rax, [rip - 0x16f47e] -->
+            <Line Type="bytes" Address="0x1bc68ce" Value="ffe0"/> <!-- jmp rax -->
+            <Line Type="bytes" Address="0x1bc68d0" Value="488d05890be9ff"/> <!-- lea rax, [rip - 0x16f477] -->
+            <Line Type="bytes" Address="0x1bc68d7" Value="ffe0"/> <!-- jmp rax -->
+            <Line Type="bytes" Address="0x1bc68d9" Value="488d0520dfe8ff"/> <!-- lea rax, [rip - 0x1720e0] -->
+            <Line Type="bytes" Address="0x1bc68e0" Value="ffe0"/> <!-- jmp rax -->
+            <Line Type="bytes" Address="0x1bc68e2" Value="4156"/> <!-- push r14 -->
+            <Line Type="bytes" Address="0x1bc68e4" Value="53"/> <!-- push rbx -->
+            <Line Type="bytes" Address="0x1bc68e5" Value="50"/> <!-- push rax -->
+            <Line Type="bytes" Address="0x1bc68e6" Value="89f3"/> <!-- mov ebx, esi -->
+            <Line Type="bytes" Address="0x1bc68e8" Value="e8e3ffffff"/> <!-- call 0x1bc68d0 -->
+            <Line Type="bytes" Address="0x1bc68ed" Value="4885c0"/> <!-- test rax, rax -->
+            <Line Type="bytes" Address="0x1bc68f0" Value="741a"/> <!-- je 0x1bc690c -->
+            <Line Type="bytes" Address="0x1bc68f2" Value="4989c6"/> <!-- mov r14, rax -->
+            <Line Type="bytes" Address="0x1bc68f5" Value="e89affffff"/> <!-- call 0x1bc6894 -->
+            <Line Type="bytes" Address="0x1bc68fa" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc68fc" Value="740e"/> <!-- je 0x1bc690c -->
+            <Line Type="bytes" Address="0x1bc68fe" Value="4c89f7"/> <!-- mov rdi, r14 -->
+            <Line Type="bytes" Address="0x1bc6901" Value="89de"/> <!-- mov esi, ebx -->
+            <Line Type="bytes" Address="0x1bc6903" Value="4883c408"/> <!-- add rsp, 8 -->
+            <Line Type="bytes" Address="0x1bc6907" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc6908" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc690a" Value="ebbb"/> <!-- jmp 0x1bc68c7 -->
+            <Line Type="bytes" Address="0x1bc690c" Value="31c0"/> <!-- xor eax, eax -->
+            <Line Type="bytes" Address="0x1bc690e" Value="4883c408"/> <!-- add rsp, 8 -->
+            <Line Type="bytes" Address="0x1bc6912" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc6913" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc6915" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6916" Value="4157"/> <!-- push r15 -->
+            <Line Type="bytes" Address="0x1bc6918" Value="4156"/> <!-- push r14 -->
+            <Line Type="bytes" Address="0x1bc691a" Value="53"/> <!-- push rbx -->
+            <Line Type="bytes" Address="0x1bc691b" Value="4889f3"/> <!-- mov rbx, rsi -->
+            <Line Type="bytes" Address="0x1bc691e" Value="4989ff"/> <!-- mov r15, rdi -->
+            <Line Type="bytes" Address="0x1bc6921" Value="e85bffffff"/> <!-- call 0x1bc6881 -->
+            <Line Type="bytes" Address="0x1bc6926" Value="4989c6"/> <!-- mov r14, rax -->
+            <Line Type="bytes" Address="0x1bc6929" Value="4c89ff"/> <!-- mov rdi, r15 -->
+            <Line Type="bytes" Address="0x1bc692c" Value="be09000000"/> <!-- mov esi, 9 -->
+            <Line Type="bytes" Address="0x1bc6931" Value="e8acffffff"/> <!-- call 0x1bc68e2 -->
+            <Line Type="bytes" Address="0x1bc6936" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc6938" Value="740e"/> <!-- je 0x1bc6948 -->
+            <Line Type="bytes" Address="0x1bc693a" Value="498b3e"/> <!-- mov rdi, qword ptr [r14] -->
+            <Line Type="bytes" Address="0x1bc693d" Value="48ffc7"/> <!-- inc rdi -->
+            <Line Type="bytes" Address="0x1bc6940" Value="49893e"/> <!-- mov qword ptr [r14], rdi -->
+            <Line Type="bytes" Address="0x1bc6943" Value="e823ffffff"/> <!-- call 0x1bc686b -->
+            <Line Type="bytes" Address="0x1bc6948" Value="4c89ff"/> <!-- mov rdi, r15 -->
+            <Line Type="bytes" Address="0x1bc694b" Value="be08000000"/> <!-- mov esi, 8 -->
+            <Line Type="bytes" Address="0x1bc6950" Value="e88dffffff"/> <!-- call 0x1bc68e2 -->
+            <Line Type="bytes" Address="0x1bc6955" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc6957" Value="740e"/> <!-- je 0x1bc6967 -->
+            <Line Type="bytes" Address="0x1bc6959" Value="498b3e"/> <!-- mov rdi, qword ptr [r14] -->
+            <Line Type="bytes" Address="0x1bc695c" Value="48ffcf"/> <!-- dec rdi -->
+            <Line Type="bytes" Address="0x1bc695f" Value="49893e"/> <!-- mov qword ptr [r14], rdi -->
+            <Line Type="bytes" Address="0x1bc6962" Value="e804ffffff"/> <!-- call 0x1bc686b -->
+            <Line Type="bytes" Address="0x1bc6967" Value="e80affffff"/> <!-- call 0x1bc6876 -->
+            <Line Type="bytes" Address="0x1bc696c" Value="4883f80e"/> <!-- cmp rax, 0xe -->
+            <Line Type="bytes" Address="0x1bc6970" Value="7e04"/> <!-- jle 0x1bc6976 -->
+            <Line Type="bytes" Address="0x1bc6972" Value="31ff"/> <!-- xor edi, edi -->
+            <Line Type="bytes" Address="0x1bc6974" Value="eb0a"/> <!-- jmp 0x1bc6980 -->
+            <Line Type="bytes" Address="0x1bc6976" Value="4885c0"/> <!-- test rax, rax -->
+            <Line Type="bytes" Address="0x1bc6979" Value="790a"/> <!-- jns 0x1bc6985 -->
+            <Line Type="bytes" Address="0x1bc697b" Value="bf0e000000"/> <!-- mov edi, 0xe -->
+            <Line Type="bytes" Address="0x1bc6980" Value="e8e6feffff"/> <!-- call 0x1bc686b -->
+            <Line Type="bytes" Address="0x1bc6985" Value="e814ffffff"/> <!-- call 0x1bc689e -->
+            <Line Type="bytes" Address="0x1bc698a" Value="4885c0"/> <!-- test rax, rax -->
+            <Line Type="bytes" Address="0x1bc698d" Value="741e"/> <!-- je 0x1bc69ad -->
+            <Line Type="bytes" Address="0x1bc698f" Value="4c8b7008"/> <!-- mov r14, qword ptr [rax + 8] -->
+            <Line Type="bytes" Address="0x1bc6993" Value="e8defeffff"/> <!-- call 0x1bc6876 -->
+            <Line Type="bytes" Address="0x1bc6998" Value="498b3cc6"/> <!-- mov rdi, qword ptr [r14 + rax*8] -->
+            <Line Type="bytes" Address="0x1bc699c" Value="488b07"/> <!-- mov rax, qword ptr [rdi] -->
+            <Line Type="bytes" Address="0x1bc699f" Value="488b4010"/> <!-- mov rax, qword ptr [rax + 0x10] -->
+            <Line Type="bytes" Address="0x1bc69a3" Value="4889de"/> <!-- mov rsi, rbx -->
+            <Line Type="bytes" Address="0x1bc69a6" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc69a7" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc69a9" Value="415f"/> <!-- pop r15 -->
+            <Line Type="bytes" Address="0x1bc69ab" Value="ffe0"/> <!-- jmp rax -->
+            <Line Type="bytes" Address="0x1bc69ad" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc69ae" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc69b0" Value="415f"/> <!-- pop r15 -->
+            <Line Type="bytes" Address="0x1bc69b2" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc69b3" Value="50"/> <!-- push rax -->
+            <Line Type="bytes" Address="0x1bc69b4" Value="e817ffffff"/> <!-- call 0x1bc68d0 -->
+            <Line Type="bytes" Address="0x1bc69b9" Value="4885c0"/> <!-- test rax, rax -->
+            <Line Type="bytes" Address="0x1bc69bc" Value="740e"/> <!-- je 0x1bc69cc -->
+            <Line Type="bytes" Address="0x1bc69be" Value="4889c7"/> <!-- mov rdi, rax -->
+            <Line Type="bytes" Address="0x1bc69c1" Value="be06000000"/> <!-- mov esi, 6 -->
+            <Line Type="bytes" Address="0x1bc69c6" Value="58"/> <!-- pop rax -->
+            <Line Type="bytes" Address="0x1bc69c7" Value="e9fbfeffff"/> <!-- jmp 0x1bc68c7 -->
+            <Line Type="bytes" Address="0x1bc69cc" Value="31c0"/> <!-- xor eax, eax -->
+            <Line Type="bytes" Address="0x1bc69ce" Value="59"/> <!-- pop rcx -->
+            <Line Type="bytes" Address="0x1bc69cf" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc69d0" Value="4156"/> <!-- push r14 -->
+            <Line Type="bytes" Address="0x1bc69d2" Value="53"/> <!-- push rbx -->
+            <Line Type="bytes" Address="0x1bc69d3" Value="50"/> <!-- push rax -->
+            <Line Type="bytes" Address="0x1bc69d4" Value="4889f3"/> <!-- mov rbx, rsi -->
+            <Line Type="bytes" Address="0x1bc69d7" Value="e8dbfeffff"/> <!-- call 0x1bc68b7 -->
+            <Line Type="bytes" Address="0x1bc69dc" Value="e8c8feffff"/> <!-- call 0x1bc68a9 -->
+            <Line Type="bytes" Address="0x1bc69e1" Value="4885c0"/> <!-- test rax, rax -->
+            <Line Type="bytes" Address="0x1bc69e4" Value="7442"/> <!-- je 0x1bc6a28 -->
+            <Line Type="bytes" Address="0x1bc69e6" Value="4989c6"/> <!-- mov r14, rax -->
+            <Line Type="bytes" Address="0x1bc69e9" Value="4889c7"/> <!-- mov rdi, rax -->
+            <Line Type="bytes" Address="0x1bc69ec" Value="e8c2ffffff"/> <!-- call 0x1bc69b3 -->
+            <Line Type="bytes" Address="0x1bc69f1" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc69f3" Value="7418"/> <!-- je 0x1bc6a0d -->
+            <Line Type="bytes" Address="0x1bc69f5" Value="e89afeffff"/> <!-- call 0x1bc6894 -->
+            <Line Type="bytes" Address="0x1bc69fa" Value="3401"/> <!-- xor al, 1 -->
+            <Line Type="bytes" Address="0x1bc69fc" Value="0fb6f8"/> <!-- movzx edi, al -->
+            <Line Type="bytes" Address="0x1bc69ff" Value="e885feffff"/> <!-- call 0x1bc6889 -->
+            <Line Type="bytes" Address="0x1bc6a04" Value="e88bfeffff"/> <!-- call 0x1bc6894 -->
+            <Line Type="bytes" Address="0x1bc6a09" Value="4188467a"/> <!-- mov byte ptr [r14 + 0x7a], al -->
+            <Line Type="bytes" Address="0x1bc6a0d" Value="e882feffff"/> <!-- call 0x1bc6894 -->
+            <Line Type="bytes" Address="0x1bc6a12" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc6a14" Value="7412"/> <!-- je 0x1bc6a28 -->
+            <Line Type="bytes" Address="0x1bc6a16" Value="4c89f7"/> <!-- mov rdi, r14 -->
+            <Line Type="bytes" Address="0x1bc6a19" Value="4889de"/> <!-- mov rsi, rbx -->
+            <Line Type="bytes" Address="0x1bc6a1c" Value="4883c408"/> <!-- add rsp, 8 -->
+            <Line Type="bytes" Address="0x1bc6a20" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc6a21" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc6a23" Value="e9eefeffff"/> <!-- jmp 0x1bc6916 -->
+            <Line Type="bytes" Address="0x1bc6a28" Value="4883c408"/> <!-- add rsp, 8 -->
+            <Line Type="bytes" Address="0x1bc6a2c" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc6a2d" Value="415e"/> <!-- pop r14 -->
+            <Line Type="bytes" Address="0x1bc6a2f" Value="c3"/> <!-- ret  -->
+            <Line Type="bytes" Address="0x1bc6a30" Value="be07000000"/> <!-- mov esi, 7 -->
+            <Line Type="bytes" Address="0x1bc6a35" Value="e9a8feffff"/> <!-- jmp 0x1bc68e2 -->
+            <Line Type="bytes" Address="0x1bc6a3a" Value="53"/> <!-- push rbx -->
+            <Line Type="bytes" Address="0x1bc6a3b" Value="e85efeffff"/> <!-- call 0x1bc689e -->
+            <Line Type="bytes" Address="0x1bc6a40" Value="488b5808"/> <!-- mov rbx, qword ptr [rax + 8] -->
+            <Line Type="bytes" Address="0x1bc6a44" Value="e82dfeffff"/> <!-- call 0x1bc6876 -->
+            <Line Type="bytes" Address="0x1bc6a49" Value="488b3cc3"/> <!-- mov rdi, qword ptr [rbx + rax*8] -->
+            <Line Type="bytes" Address="0x1bc6a4d" Value="488b07"/> <!-- mov rax, qword ptr [rdi] -->
+            <Line Type="bytes" Address="0x1bc6a50" Value="5b"/> <!-- pop rbx -->
+            <Line Type="bytes" Address="0x1bc6a51" Value="ffa0e0000000"/> <!-- jmp qword ptr [rax + 0xe0] -->
+            <Line Type="bytes" Address="0x1bc6a57" Value="50"/> <!-- push rax -->
+            <Line Type="bytes" Address="0x1bc6a58" Value="e837feffff"/> <!-- call 0x1bc6894 -->
+            <Line Type="bytes" Address="0x1bc6a5d" Value="84c0"/> <!-- test al, al -->
+            <Line Type="bytes" Address="0x1bc6a5f" Value="7403"/> <!-- je 0x1bc6a64 -->
+            <Line Type="bytes" Address="0x1bc6a61" Value="58"/> <!-- pop rax -->
+            <Line Type="bytes" Address="0x1bc6a62" Value="ebd6"/> <!-- jmp 0x1bc6a3a -->
+            <Line Type="bytes" Address="0x1bc6a64" Value="58"/> <!-- pop rax -->
+            <Line Type="bytes" Address="0x1bc6a65" Value="c3"/> <!-- ret  -->
+        </PatchList>
+    </Metadata>
+</Patch>

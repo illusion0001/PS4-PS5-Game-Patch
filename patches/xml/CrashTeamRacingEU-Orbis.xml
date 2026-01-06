@@ -24,4 +24,14 @@
             <Line Type="bytes" Address="0x00ef0f52" Value="9090909090"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Crash Team Racing Nitro-Fueled"
+              Name="Resolution Patch (1080p for PS4 Pro)"
+              Author="TroyWarez"
+              PatchVer="1.0"
+              AppVer="01.21"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x017a9da3" Value="84"/>
+        </PatchList>
+    </Metadata>
 </Patch>

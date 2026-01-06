@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA40994</ID>
+    </TitleID>
+    <Metadata Title="Amnesia: The Bunker"
+              Name="Turn OFF Resolution Scaling"
+              Author="Maelly Pooh"
+              PatchVer="1.0"
+              AppVer="01.81"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x00A8A09C" Value="909090909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
