@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA31798</ID>
+    </TitleID>
+    <Metadata Title="Souldiers" Name="60 FPS" Note="Changes the engine target from 30 FPS to 60 FPS" Author="Jao" PatchVer="1.00" AppVer="01.07" AppElf="eboot.bin" isEnabled="false">
+        <PatchList>
+            <Line Type="bytes" Address="0x01230914" Value="90909090"/>
+        </PatchList>
+    </Metadata>
+    <Metadata Title="Souldiers" Name="60 FPS" Note="Changes the engine target from 30 FPS to 60 FPS" Author="Jao" PatchVer="1.00" AppVer="02.01" AppElf="eboot.bin" isEnabled="true">
+        <PatchList>
+            <Line Type="bytes" Address="0x01230914" Value="90909090"/>
+        </PatchList>
+    </Metadata>
+</Patch>
