@@ -15,6 +15,11 @@
             <Line Type="bytes" Address="0x0578ab57" Value="be00000000"/>
         </PatchList>
     </Metadata>
+    <Metadata AppElf="eboot.bin" AppVer="01.32" PatchVer="1.0" Author="Jao" Name="Unlock FPS" Title="Red Dead Redemption 2">
+        <PatchList>
+            <Line Value="31f690" Address="0x05853029" Type="bytes"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="Red Dead Redemption 2"
               Name="Skip Intro"
               Author="illusion"

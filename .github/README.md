@@ -96,8 +96,8 @@ Set base address to `0x00400000` when importing binaries for consistency with PS
   * [VSCodium](https://vscodium.com/)
 
 ### Submission Guidelines
-* Patch must be named `GameTitle.json` and be in `/patches/json`.
-<br>For example, a patch file for Gravity Rush 2 must be called `GravityRush2.json`.
+* Patch must be named `GameTitle.xml` and be in `/patches/xml`.
+<br>For example, a patch file for Gravity Rush 2 must be called `GravityRush2.xml`.
 * If you are making a patch for a game that already has a file, then add to it.
 * Submitting patches:
   * No whitespace.
