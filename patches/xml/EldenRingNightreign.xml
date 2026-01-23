@@ -8,4 +8,9 @@
         <Line Value="31f69090" Address="0x0333b8d1" Type="bytes"/>
     </PatchList>
   </Metadata>
+  <Metadata Title="Elden Ring Nightreign" Name="60 FPS" Note="Changes the engine target from 30 FPS to 60 FPS" Author="Jao" PatchVer="1.00" AppVer="01.21" AppElf="eboot.bin">
+        <PatchList> 												   
+            <Line Type="bytes" Address="0x0333f391" Value="31f69090"/>   
+        </PatchList>
+  </Metadata>
 </Patch>
