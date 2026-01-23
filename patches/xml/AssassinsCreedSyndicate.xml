@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA02376</ID>
+    </TitleID>
+    <Metadata Title="Assassin's Creed Syndicate"
+              Name="60 FPS"
+              Author="Jao"
+              PatchVer="1.0"
+              AppVer="01.52"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x03bb0315" Value="00"/>
+        </PatchList>
+    </Metadata>
+</Patch>
