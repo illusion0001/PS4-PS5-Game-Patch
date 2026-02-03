@@ -10,7 +10,7 @@
               Note="For update version, patch version 2 fixes stuttering."
               Author="illusion"
               PatchVer="2.0"
-              AppVer="mask"
+              AppVer="01.18"
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="88 88 28 05 00 00 c6 80 29 05 00 00 01" Value="b90101000066898c2028050000"/>
@@ -21,7 +21,7 @@
               Note="For update version, skips long intro video and first time language selection screen."
               Author="illusion"
               PatchVer="1.0"
-              AppVer="mask"
+              AppVer="01.18"
               AppElf="eboot.bin">
         <PatchList>
             <Line Type="mask" Address="48 85 c0 74 ? 80 b8 e3 00 00 00 00 0f 95 c0 c3 31 c0 c3" Value="b1018888e300000088881801000088c8c3"/>
