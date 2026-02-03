@@ -2,6 +2,9 @@
 <Patch>
     <TitleID>
         <ID>CUSA04480</ID>
+        <ID>CUSA04551</ID>
+        <ID>CUSA02517</ID>
+        <ID>CUSA06592</ID>
     </TitleID>
     <Metadata Title="NieR: Automata"
               Name="Offline Ending E"
