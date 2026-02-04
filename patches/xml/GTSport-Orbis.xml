@@ -90,4 +90,14 @@
             <Line Type="utf8" Address="0x02f72b10" Value="debug"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Gran Turismo Sport"
+          Name="Debug Menu"
+          Author="tonytwostep"
+          PatchVer="1.0"
+          AppVer="01.69"
+          AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="utf8" Address="0x02ab2af0" Value="debug"/>
+        </PatchList>
+    </Metadata>
 </Patch>
