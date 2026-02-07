@@ -5,6 +5,18 @@
         <ID>CUSA00419</ID>
         <ID>CUSA00880</ID>
     </TitleID>
+    <Metadata Title="Grand Theft Auto V (CUSA00411)"
+              Name="60 FPS Unlock"
+              Note="CPU Limited."
+              Author="Jao"
+              PatchVer="1.0"
+              AppVer="01.56"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01dd0089" Value="31f690"/>                       
+            <Line Type="bytes" Address="0x01e0eeaf" Value="31f690"/>
+        </PatchList>
+    </Metadata>
     <Metadata Title="Grand Theft Auto V"
               Name="Skip Logo Video and Legal Screens"
               Author="illusion"
