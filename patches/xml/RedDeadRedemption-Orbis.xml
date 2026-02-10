@@ -76,7 +76,7 @@
 			<Line Type="mask" Address="0f 95 80 06 7d 00 00" Value="eb39" Offset="-4"/>
 			<Line Type="mask" Address="4c 8b 65 b8 e9 63 02 00 00" Value="00e94902000090909090" Offset="+29"/>
 			<!-- If cheats are on, do not prefix (*) onto save file name -->
-			<Line Type="mask" Address="80 b8 06 7d 00 00 00 0f 95 c0" Value="eb43" Offset="-2"/>
+			<Line Type="mask" Address="80 b8 06 7d 00 00 00 0f 95 c0" Value="eb" Offset="-2"/>
 			<Line Type="mask" Address="80 b8 06 7d 00 00 00 0f 94 c0" Value="48e9c3000000" Offset="-6"/>
         </PatchList>
     </Metadata>
@@ -88,7 +88,7 @@
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x0192ac50" Value="b801000000C3"/>
+            <Line Type="bytes" Address="0x0192ac50" Value="b801000000c3"/>
             <Line Type="bytes" Address="0x0100d65a" Value="9090"/>
         </PatchList>
     </Metadata>
@@ -100,7 +100,7 @@
               AppVer="01.04"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x01932610" Value="b801000000C3"/>
+            <Line Type="bytes" Address="0x01932610" Value="b801000000c3"/>
             <Line Type="bytes" Address="0x0101501a" Value="9090"/>
         </PatchList>
     </Metadata>
