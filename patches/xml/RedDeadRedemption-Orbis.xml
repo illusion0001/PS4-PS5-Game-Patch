@@ -36,6 +36,7 @@
             <Line Type="mask" Address="be 00 0f 00 00 ba 70 08 00 00" Value="be80070000ba38040000"/>
         </PatchList>
     </Metadata>
+<!--
     <Metadata Title="Red Dead Redemption"
               Name="Disable Cheat Penalty"
               Note="Should disable the cheat code penalty writing to the save file, remove the 'cheated' status of an existing save, and allow you to receive trophies while cheat codes are enabled."
@@ -44,19 +45,39 @@
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
-            <!-- When loading, check for cheated save flag and turn it off-->
             <Line Type="bytes" Address="0x0062a9a8" Value="c680fe28000000"/>
             <Line Type="bytes" Address="0x0062a9af" Value="eb07"/>
             <Line Type="bytes" Address="0x0062ac31" Value="c680fe28000000"/>
             <Line Type="bytes" Address="0x0062ac38" Value="eb07"/>
             <Line Type="bytes" Address="0x0062ac41" Value="c60578bafb0100"/>
-            <!-- When turning cheats on, do not flag the save and skip the warning popups-->
+
             <Line Type="bytes" Address="0x00cfce59" Value="eb39"/>
             <Line Type="bytes" Address="0x00cff493" Value="c680fe28000000"/>
             <Line Type="bytes" Address="0x00cff49a" Value="e94902000090909090"/>
-            <!-- If cheats are on, do not prefix (*) onto save file name-->
+
             <Line Type="bytes" Address="0x0062c39b" Value="eb43"/>
             <Line Type="bytes" Address="0x0062c612" Value="48e9c3000000"/>
+        </PatchList>
+    </Metadata>
+-->
+    <Metadata Title="Red Dead Redemption"
+              Name="Disable Cheat Penalty"
+              Note="Should disable the cheat code penalty writing to the save file, remove the 'cheated' status of an existing save, and allow you to receive trophies while cheat codes are enabled."
+              Author="foxyhooligans, SuleMareVientu"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+			<!-- When loading, check for cheated save flag and turn it off -->
+            <Line Type="mask" Address="48 8b 84 c1 f8 2a 00 00 48 85 c0 74 69" Value="00eb" Offset="+58"/>
+            <Line Type="mask" Address="48 8b 84 c3 f8 2a 00 00 48 85 c0 74 3e" Value="00eb" Offset="+58"/>
+			<Line Type="mask" Address="48 8b 84 c3 f8 2a 00 00 48 85 c0 74 3e" Value="00" Offset="+74"/>
+			<!-- When turning cheats on, do not flag the save and skip the warning popups -->
+			<Line Type="mask" Address="0f 95 80 06 7d 00 00" Value="eb39" Offset="-4"/>
+			<Line Type="mask" Address="4c 8b 65 b8 e9 63 02 00 00" Value="00e94902000090909090" Offset="+29"/>
+			<!-- If cheats are on, do not prefix (*) onto save file name -->
+			<Line Type="mask" Address="80 b8 06 7d 00 00 00 0f 95 c0" Value="eb" Offset="-2"/>
+			<Line Type="mask" Address="80 b8 06 7d 00 00 00 0f 94 c0" Value="48e9c3000000" Offset="-6"/>
         </PatchList>
     </Metadata>
     <Metadata Title="Red Dead Redemption"
@@ -67,8 +88,35 @@
               AppVer="01.03"
               AppElf="eboot.bin">
         <PatchList>
-            <Line Type="bytes" Address="0x0192ac50" Value="b801000000C3"/>
+            <Line Type="bytes" Address="0x0192ac50" Value="b801000000c3"/>
             <Line Type="bytes" Address="0x0100d65a" Value="9090"/>
         </PatchList>
     </Metadata>
+    <Metadata Title="Red Dead Redemption"
+              Name="60 FPS Menu toggle"
+              Note="Enabled 60 FPS Menu Toggle."
+              Author="foxyhooligans, SuleMareVientu"
+              PatchVer="1.0"
+              AppVer="01.04"
+              AppElf="eboot.bin">
+        <PatchList>
+            <Line Type="bytes" Address="0x01932610" Value="b801000000c3"/>
+            <Line Type="bytes" Address="0x0101501a" Value="9090"/>
+        </PatchList>
+    </Metadata>
+<!--
+    <Metadata Title="Red Dead Redemption"
+              Name="60 FPS Menu toggle"
+              Note="Enabled 60 FPS Menu Toggle."
+              Author="foxyhooligans, SuleMareVientu"
+              PatchVer="1.0"
+              AppVer="mask"
+              AppElf="eboot.bin">
+        <PatchList>
+			<Line Type="mask" Address="31 c0 c3 0b 5d 00" Value="b801000000c3"/>	//v1.03 
+            <Line Type="mask" Address="ff 25 b2 94 5c 00" Value="b801000000c3"/>	//v1.04
+			<Line Type="mask" Address="48 83 ec 18 80 bf 45 01 00 00 00 74 11 31 c0 48 83 c4 18" Value="9090" Offset="+13"/>
+        </PatchList>
+    </Metadata>
+-->
 </Patch>
