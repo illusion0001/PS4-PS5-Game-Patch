@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Patch>
+    <TitleID>
+        <ID>CUSA33778</ID>
+    </TitleID>
+    <Metadata Title="Star Wars: Jedi Survivor" Name="60 FPS" Author="Jao" PatchVer="01.00" AppVer="01.03" AppElf="eboot.bin">
+        <PatchList>
+        	<Line Type="bytes" Address="0x0166d6b4" Value="31f690"/>  
+        	<Line Type="bytes" Address="0x0166d81c" Value="31f690"/>  
+        </PatchList>
+    </Metadata>
+</Patch>
